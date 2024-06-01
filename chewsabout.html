@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chew's Wisely Ice Cream</title>
+<link href="css/chews.css" rel="stylesheet" type="text/css">
+<script src="js/document.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Caudex' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Spectral' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+</head>
+
+<body>   
+    <div class="menu-btn">
+     <i class="fas fa-bars"></i>
+   </div>
+
+   <div class="side-bar">
+     <header>
+         <div class="close-btn">
+           <i class="fas fa-times"></i>
+         </div>
+		 <a href="chewshome.html"><img id="logo" src="img/logo1.png" alt="logo"></a>
+              <p class="menuwords">Menus</p>
+     </header>
+     <div class="menu">
+       <div class="item"><a class="sub-btn">Ice Cream</a>
+           <div class="sub-menu">
+            <a href="chewshome.html" class="sub-item">Home</a>
+            <a href="chewsflavors.html" class="sub-item">Flavors</a>
+            <a href="chewstoppings.html" class="sub-item">Toppings</a>
+           <a href="chewsingredients.html" class="sub-item">Ingredients</a>
+           <a href="chewsabout.html" class="sub-item">About</a>
+           </div>
+         </div>
+       <div class="item">
+         <a class="sub-btn">Pizza</a>
+            <div class="sub-menu">
+            <a href="chewstoppings1.html" class="sub-item">Toppings</a>
+           <a href="chewsaboutpizza.html" class="sub-item">About</a>
+           </div>
+       </div>
+       <div class="item"><a href="chewsgrill.html">Grill</a></div>
+       <div class="item">
+         <a class="sub-btn">About</a>
+         <div class="sub-menu">
+           <a href="chewsabout.html" class="sub-item">Ice Cream</a>
+           <a href="chewsaboutpizza.html" class="sub-item">Pizza</a>
+           <a href="0.1_StartHere.html" class="sub-item">Philosophy</a>
+         </div>
+       </div>
+       <div class="item"><a href="index.html">Voluntaryism +</a></div>
+     </div>
+   </div>
+   <div class="title">
+        <img id = "hibiscus" src="img/hibiscus1.png">
+        <div class = "reggae-one-regular">Chew's Wisely</div>
+        <img id = "hibiscus1" src="img/hibiscus1.png">
+        <h1>Agorist Ice Cream</h1>
+    </div>
+    <img id="blackhibiscus" src="img/blackhibiscus1.png">
+    <img id="blackhibiscus1" src="img/blackhibiscus1.png">
+    <div class="buttons">
+        <div class="about">
+            <div class="button1">
+                <a href="chewsabout.html"><h2>About</h2></a>
+            </div>
+            <div class="abouttext">
+				<h4>We strive to make our ice cream as agorist as possible, as economic warriors against the state.</h4><p>Chew's Wisely Ice Cream is proud to serve our local community, wherever we are.  We are a mobile Ice Cream business that makes and delivers custom ice cream by the pint. Sourcing ingredients from local, agorist cources when possible, we use all-organic ingredients and notify customers of any exceptions. Our goal is to provide the best quality of custom ice cream to anyone interested, while offering an option that doesn't fund the State and its war-machine.  Ice Cream will be made to-order and delivered next-day.  We accept cash as well as trade/barter and a number of other currencies.  Our ice cream is $8/pint (plus $2 delivery fee) and delivery is free if you purchase 3 or more pints.  If you're more interested in trade or barter, let us know what you'd like to trade.
+                </p>
+				<div class="griffin"><img src="img/nighttent.jpg"><img src="img/insidetent.jpg"><img src="img/griffin.png"></div>
+            </div>
+        </div>
+        <div class="ingredients">
+            <div class="button2">
+                <a href="chewsingredients.html"><h2>Ingredients</h2></a>
+            </div>
+            <div class="ingredientstext">
+                <ul>
+                    <li>Heavy Cream</li><br>
+                    <li>Milk</li><br>
+                    <li>Sugar</li><br>
+                    <li>Egg Yolks</li><br>
+                    <li>Milk Powder</li><br>
+                    <li>Vanilla Bean Paste</li><br>
+                    <a href="chewsingredients.html">more info...</a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+   <script type="text/javascript">
+   $(document).ready(function(){
+     //jquery for toggle sub menus
+     $('.sub-btn').click(function(){
+       $(this).next('.sub-menu').slideToggle();
+       $(this).find('.dropdown').toggleClass('rotate');
+     });
+
+     //jquery for expand and collapse the sidebar
+     $('.menu-btn').click(function(){
+       $('.side-bar').addClass('active');
+       $('.menu-btn').css("visibility", "hidden");
+     });
+
+     $('.close-btn').click(function(){
+       $('.side-bar').removeClass('active');
+       $('.menu-btn').css("visibility", "visible");
+     });
+   });
+   </script>
+    
+</body>
+    
+</html>

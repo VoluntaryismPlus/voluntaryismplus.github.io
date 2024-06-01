@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voluntaryism Plus Index</title>
+<script src="js/document.js"></script><link 
+  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" 
+  rel="stylesheet"  type='text/css'>
+<link href="css/custom.css" rel="stylesheet" type="text/css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Caudex' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Spectral' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>    
+
+  <!-- Overlay content -->
+<div id="myNav" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <!-- Overlay content -->
+  <div class="overlay-content">
+	<a href="index.html" class="logo1"><img src="img/vroad.png"></a>
+	<p>Roadmap</p>
+	  <ul>
+		<li><a href="0.1_Index.html">Index</a></li>
+	  </ul>
+	<p>We Are Network Support</p>
+	  <ul>
+		<li><a href="index.html">Intro to The Network</a></li>
+		<li><a href="1.2_IntroVoluntaryism.html">Intro to Voluntaryism</a></li>
+		<li><a href="1.3_VoluntaryismPlus.html">Voluntaryism, Plus</a></li>
+		<li><a href="1.4_OurPlan.html">Our Plan</a></li>
+		<li><a href="1.5_OutreachCaravan.html">Outreach Caravan</a></li>
+	  </ul>
+	<p>Pragmatic Guide to Creating Yourself</p>
+		<ul>
+		<li><a href="2.1_SauronAndShire.html">Sauron and the Shire</a></li>
+		<li><a href="2.3_Location.html">Location</a></li>
+		<li><a href="2.4_YouAndNetwork.html">You and the Network</a></li>
+	  </ul>
+	<p>Create Your Own Adventure</p>
+	  <ul>
+		<li><a href="3.1_CaravanWelcomeOutpost.html">Caravan Welcome Outpost</a></li>
+		<li><a href="3.2_StartHere.html">Start Here</a></li>
+		<li><a href="3.3_EntryGuide.html">Entry Guide</a></li>
+		<li><a href="3.4_FreedomPrompts.html">Freedom Prompts</a></li>
+		<li><a href="3.5_AnarchyDegrees.html">Anarchy Degrees</a></li>
+	  </ul>
+	<p>Admissions Portal/Applied Learning Grounds</p>
+	  <ul>
+		<li><a href="4.1_AdmissionsPortal.html">Admissions Portal</a></li>
+		<li><a href="4.3_NetworkHosts.html">Network Hosts</a></li>
+		<li><a href="4.4_Associations.html">Assiciations</a></li>
+		<li><a href="4.5_FreedomGuard.html">Freedom Guard</a></li>
+		<li><a href="4.6_SecurityMesh.html">Security Mesh</a></li>
+	  </ul>
+	<p>Anarchist Innovation Station</p>
+	  <ul>
+		<li><a href="5.1_InnovationStation.html">Anarchist Innovation Station</a></li>
+		<li><a href="5.2_NewLexicon.html">New Lexicon</a></li>
+		<li><a href="5.3_SelfEncagement.html">Perpetuated Self-Encagement</a></li>
+		<li><a href="5.4_ToBeHappy.html">To Be Happy</a></li>
+		<li><a href="5.5_DownfallGreats.html">Downfall of the Greats</a></li>
+		<li><a href="5.6_ConsensualConversation.html">Consensual Conversation Table</a></li>
+		<li><a href="5.7_CreatingCommunities.html">Creating Communities</a></li>
+	  </ul>
+	<p>The Agora</p>
+	  <ul>
+		<li><a href="6.1_BountyBoard.html">Bounty Board</a></li>
+		<li><a href="6.2_Events.html">Events</a></li>
+		<li><a href="6.3_Festivals.html">Festivals</a></li>
+		<li><a href="6.4_Links.html">Links</a></li>
+	    <li><a href="6.5_Map.html">Map</a></li>
+		<li><a href="chewshome.html">Chew's Wisely</a></li>
+	  </ul>
+  </div>
+</div>
+
+<div class="topnav">
+  <a href="index.html" class="logo"><img src="img/vroad.png"></a>
+	<span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; Navigation<span class="caravanarchy">Caravanarchy</span></span></div> 
+	
+<div class="menu-btn">
+	<i class="fas fa-bars"></i>
+</div>
+
+<div id= "sideNav" class="sidenav">
+	<header>
+	 <img id="logo" src="img/vroad.png" alt="logo image">
+		  <p class="side_header">Network Support</p>
+	</header>
+    <hr>
+    <div class="side">
+	  <button id="acti" class="dropdown-btn" onclick="rotate()">Roadmap
+		<i class="my_class fa fa-caret-right"></i>
+	  </button>
+	  <div class="dropdown-container">
+		  <div class="thispage"><a href="0.1_Index.html">Index</a></div>
+	  </div>
+	  <button class="dropdown-btn" onclick="rotate()">We Are Network Support
+		<i class="my_class fa fa-caret-right"></i>
+	  </button>
+		<div class="dropdown-container">
+		<a href="index.html">Intro to The Network</a>
+		<a href="1.2_IntroVoluntaryism.html">Intro to Voluntaryism</a>
+		<a href="1.3_VoluntaryismPlus.html">Voluntaryism, Plus</a>
+		<a href="1.4_OurPlan.html">Our Plan</a>
+		<a href="1.5_OutreachCaravan.html">Outreach Caravan</a>
+	  </div>
+	  <button class="dropdown-btn" onclick="rotate()">Guide to Self Establishment
+		<i class="my_class fa fa-caret-right"></i>
+	  </button>
+	  <div class="dropdown-container">
+		<a href="2.1_SauronAndShire.html">Sauron and the Shire</a>
+		<a href="2.3_Location.html">Transcending Location</a>
+		<a href="2.4_YouAndNetwork.html">You and The Network</a>
+	</div>
+	  <button class="dropdown-btn" onclick="rotate()">Create Your Own Adventure
+		<i class="my_class fa fa-caret-right"></i>
+	  </button>
+	  <div class="dropdown-container">
+		<a href="3.1_CaravanWelcomeOutpost.html">Caravan Welcome Outpost</a>
+		<a href="3.2_StartHere.html">Start Here</a>
+		<a href="3.3_EntryGuide.html">Entry Guide</a>
+		<a href="3.4_FreedomPrompts.html">Freedom Prompts</a>
+		<a href="3.5_AnarchyDegrees.html">Anarchy Degrees</a>
+	  </div>
+	  <button class="dropdown-btn" onclick="rotate()">Admissions Portal/Applied Learning Grounds
+		<i class="my_class fa fa-caret-right"></i>
+	  </button>
+	  <div class="dropdown-container">
+		<a href="4.1_AdmissionsPortal.html">Admissions Portal</a>
+		<a href="4.3_NetworkHosts.html">Network Hosts</a>
+		<a href="4.4_Associations.html">Associations</a>
+		<a href="4.5_FreedomGuard.html">Freedom Guard</a>
+		<a href="4.6_SecurityMesh.html">Security Mesh</a>
+	  </div>
+	  <button class="dropdown-btn" onclick="rotate()">Anarchist Innovation Station
+		<i class="my_class fa fa-caret-right"></i>
+	  </button>
+	  <div class="dropdown-container">
+		<a href="5.1_InnovationStation.html">Anarchist Innovation Station</a>
+		<a href="5.2_NewLexicon.html">New Lexicon</a>
+		<a href="5.3_SelfEncagement.html">Perpetuated Self-Encagement</a>
+		<a href="5.4_ToBeHappy.html">To Be Happy</a>
+		<a href="5.5_DownfallGreats.html">Downfall of the Greats</a>
+		<a href="5.6_ConsensualConversation.html">Consensual Conversation Table</a>
+		<a href="5.7_CreatingCommunities.html">Creating Healthy Communities</a>
+	  </div>
+	  <button class="dropdown-btn" onclick="rotate()">The Agora
+		<i class="my_class fa fa-caret-right"></i>
+	  </button>
+	  <div class="dropdown-container">
+		<a href="6.1_BountyBoard.html">Bounty Board</a>
+		<a href="6.2_Events.html">Events</a>
+		<a href="6.3_Festivals.html">Festivals</a>
+		<a href="6.4_Links.html">Links</a>
+		<a href="6.5_Map.html">Map</a>		
+		<a href="chewshome.html">Chew's Wisely</a>
+	  </div>
+	</div>
+</div>
+
+		<div class="bodytext">
+<h1>Volume 1: Intro to The Network</h1>
+<h2><a href="index.html"><strong>Booklet One: The Network</strong></a></h2>
+	<h3><strong><a href="index.html#section1">Intro</a></strong></h3>
+	<h3><strong><a href="index.html#section1a">The True Realm is HERE!</a></strong></h3>
+		<h4><em><a href="index.html#section1b">Making the Switch</a></em></h4>
+		<h4><em><a href="index.html#section1c">We Believe in Real Solutions, Right Now</a></em></h4>
+	<h3><strong><a href="index.html">Igniting the Engine</a></strong></h3>
+		<h4><em><a href="index.html">The Infrastructure for Freedom</a></em></h4>
+		<h4><em><a href="index.html">We are the Support Network. And we are igniting the engine.&nbsp;</a></em></h4>
+		<h4><em><a href="index.html">The Perpetual Engine</a></em></h4>
+	<h3><strong><a href="index.html">The Purpose of this book</a></strong></h3>
+		<h4><em><a href="index.html">Our Mission</a></em></h4>
+		<h4><em><a href="index.html">Other Goals</a></em></h4>
+		<h4><em><a href="index.html">How to Utilize This Guide?</a></em></h4>
+	<h3><strong><a href="index.html">How to Utilize This Guide</a></strong></h3>
+		<h4><em><a href="index.html">Get Involved Today</a></em></h4>
+<br>
+<h2><a href="1.2_IntroVoluntaryism.html"><strong>Booklet Two: Intro to Voluntaryism</strong></a></h2>
+	<h3><a href="1.2_IntroVoluntaryism.html"><strong>Intro</strong></a></h3>
+		<h4><a href="1.2_IntroVoluntaryism.html"><em>Property</em></a></h4>
+		<h4><a href="1.2_IntroVoluntaryism.html"><em>Voluntary Pluralism</em></a></h4>
+		<h4><a href="1.2_IntroVoluntaryism.html"><em>You Own Your Self</em></a></h4>
+	<h3><a href="1.2_IntroVoluntaryism.html"><strong>Am I a Voluntaryist?</strong></a></h3>
+		<h4><a href="1.2_IntroVoluntaryism.html"><em>Voluntaryism answers these questions:</em></a></h4>
+		<h4><a href="1.2_IntroVoluntaryism.html"><em>Am I still a voluntaryist if&hellip;</em></a></h4>
+		<h4><a href="1.2_IntroVoluntaryism.html"><em>Am I a statist if&hellip;</em></a></h4>
+	<h3><a href="1.2_IntroVoluntaryism.html"><strong>Agorism: Empowering People to Choose</strong></a></h3>
+		<h4><a href="1.2_IntroVoluntaryism.html"><em>Agorism and Networks</em></a></h4>
+	<h3><a href="1.2_IntroVoluntaryism.html"><strong>Consent-Only Culture</strong></a></h3>
+		<h4><a href="1.2_IntroVoluntaryism.html"><em>We already live without rules</em></a></h4>
+		<h4><a href="1.2_IntroVoluntaryism.html"><em>Voluntaryism and Anarchy: The Same Thing</em></a></h4>
+		<h4><a href="1.2_IntroVoluntaryism.html"><em>Decentralization</em></a></h4>
+		<h4><a href="1.2_IntroVoluntaryism.html"><em>Come With Us</em></a></h4>
+		<h4><a href="1.2_IntroVoluntaryism.html"><em>What can We Do About the Current &ldquo;State&rdquo; of Affairs?</em></a></h4>
+<h2><a href="1.2_IntroVoluntaryism.html"><strong><a href="1.3_VoluntaryismPlus.html">Booklet Three: Voluntaryism, Plus</a></strong></a></h2>
+		<h4><a href="1.3_VoluntaryismPlus.html"><em><a href="1.3_VoluntaryismPlus.html#section1">We are voluntaryists with a cause.</a></em></a></h4>
+		<h4><a href="1.3_VoluntaryismPlus.html"><em>Essential Functions and Strengths of Voluntaryism+</em></a></h4>
+		<h4><a href="1.3_VoluntaryismPlus.html"><em>Creating a New World</em></a></h4>
+		<h4><a href="1.3_VoluntaryismPlus.html"><em>Pragmatism: Contractual Language</em></a></h4>
+	<h3><a href="1.3_VoluntaryismPlus.html"><strong>Criteria</strong></a></h3>
+			<h4><a href="1.3_VoluntaryismPlus.html"><em>For Individuals, Intention is the Criteria</em></a></h4>
+			<h4><a href="1.3_VoluntaryismPlus.html"><em>For Communities, Conflict Resolution is the Criteria</em></a></h4>
+			<h4><a href="1.3_VoluntaryismPlus.html"><em>We believe in real solutions, right now!</em></a></h4>
+	<h3><a href="1.3_VoluntaryismPlus.html"><strong>Abundance Loops</strong></a></h3>
+		<h4><a href="1.3_VoluntaryismPlus.html"><em>We Are Creating Abundance Loops</em></a></h4>
+		<h4><a href="1.3_VoluntaryismPlus.html"><em>Concentration of Wealth</em></a></h4>
+		<h4><a href="1.3_VoluntaryismPlus.html"><em>Keeping it in the Family</em></a></h4>
+		<h4><a href="1.3_VoluntaryismPlus.html"><em>Strength in Numbers</em></a></h4>
+		<h3><a href="1.3_VoluntaryismPlus.html"><strong>Philosophy of Abundance</strong></a></h3>
+		<h4><a href="1.3_VoluntaryismPlus.html"><em>Win-win</em></a></h4>
+		<h4><a href="1.3_VoluntaryismPlus.html"><em>Our Exit Strategy</em></a></h4>
+		<h4><a href="1.3_VoluntaryismPlus.html"><em>What is Lacking in the Current Ideology?</em></a></h4>
+<h2><a href="1.4_OurPlan.html"><strong>Booklet Four: Our Plan</strong></h2>
+	<h3><a href="1.4_OurPlan.html"><strong>A Plan That Cannot Fail</strong></h3>
+		<h4><a href="1.4_OurPlan.html"><em>Bring Everyone Along&nbsp;</em></a></h4>
+<h4><em>The Current Lies</em></h4>
+<h4><em>Current Limiting Structural Beliefs</em></h4>
+<h4><em>When All Actions Lead Towards Freedom</em></h4>
+<h3><strong>Business and Ethics:</strong></h3>
+<h4><em>Interaction Receipts</em></h4>
+<h4><em>Creating Free Spaces: Crowdfunding and Charity</em></h4>
+<h4><em>Network Hosts</em></h4>
+<h3><strong>Trade and Barter</strong></h3>
+<h4><em>The Supply and Demand Issue</em></h4>
+<h4><em>Free Market Solutions</em></h4>
+<h3><strong>Value Exchanges</strong></h3>
+<h4><em>Front-Swap</em></h4>
+<h4><em>Don&rsquo;t have the cash to diversify?</em></h4>
+<h4><em>When you give a statist Silver/Gold // Turning Statists into Unwitting Economic Agorists</em></h4>
+<h4><em>Value Preservation (beyond gardening)</em></h4>
+<h4><em>ATA: Join the Agorist Traders Association</em></h4>
+<h2><strong>Booklet Five: Freedom Prompts</strong></h2>
+<h2><strong>Booklet Six: Anarchy Degrees</strong></h2>
+<h2><strong>Booklet Seven: New Lexicon</strong></h2>
+<h4><em>A New Language, Decolonized</em></h4>
+<h4><em>Positive Self-Programming</em></h4>
+<h4><em>The True Realm - Filling out the Story</em></h4>
+<h4><em>Definitions of Terms:</em></h4>
+<h4><em>Anarchy Verbiage</em></h4>
+<h4><em>Test your principles: Where is your line?</em></h4>
+<h4><em>Revisiting Restitution</em></h4>
+<h3><strong>State of Coercion</strong></h3>
+<h4><em>A Better Use of Resources</em></h4>
+<h4><em>Voluntary Welcome Desks</em></h4>
+<h4><em>Policing The Cops</em></h4>
+<h4><em>ABC&rsquo;s of the Alphabet Soup</em></h4>
+<h4><em>Police State&nbsp;</em></h4>
+<h4><em>Love, Peace &amp; Militia</em></h4>
+<h3><strong>Beyond Utopian Ideal Societies</strong></h3>
+<h4><em>Capitalism: what can we agree on?</em></h4>
+<h4><em>Statist claim: Voluntaryism Has Never Been Tried</em></h4>
+<h4><em>Use Case: Fixing Our Environment w/voluntaryism</em></h4>
+<h4><em>Against Monetization Of Ideas</em></h4>
+<h2><strong>Booklet Eight: The Outreach Caravan</strong></h2>
+<h1><br /><br /></h1>
+<h1>Volume 2: Pragmatic Guide to Self Establishment</h1>
+<h2><strong>Booklet One: Sauron and the Shire</strong></h2>
+<h2><strong>Booklet Two: Directionality</strong></h2>
+<h2><strong>Booklet Three: Transcending Location</strong></h2>
+<h3><strong>Locational Philosophy</strong></h3>
+<h3><strong>Healthy Habitation</strong></h3>
+<h4><em>Nomadic or Stationary: Where We Fit With You</em></h4>
+<h4><em>Become a Nomadic or Stationary Bountier</em></h4>
+<h3><strong>Agora Locations</strong></h3>
+<h4><em>Voluntary Welcome Hub</em></h4>
+<h4><em>Free Market Hub</em></h4>
+<h4><em>Nomadic/Temporary Hubs</em></h4>
+<h3><strong>Transportation Hub</strong></h3>
+<h4><em>Levels Of Properties</em></h4>
+<h2><strong>Booklet Four: You and the Network</strong></h2>
+<h3><strong>The Road to the Top</strong></h3>
+<h4><em>Do You Ever Feel Your Plan Could Be Larger?</em></h4>
+<h4><em>Would you only like to have voluntary interactions from now on?</em></h4>
+<h3><strong>What You Bring</strong></h3>
+<h4><em>The most valuable resource</em></h4>
+<h4><em>What We Value</em></h4>
+<h4><em>Get Involved Today</em></h4>
+<h3><strong>Create Your Role: What Do You Want to Achieve?</strong></h3>
+<h4><em>Work/Life</em></h4>
+<h4><em>The Inhumanity of Modern Work</em></h4>
+<h4><em>Healthy Jobs</em></h4>
+<h4><em>Become Your Best Self</em></h4>
+<h4><em>Example Adventure Trades</em></h4>
+<h2><strong>Booklet Five: Entry Guide</strong></h2>
+<h1>Volume 3: Applied Learning Grounds</h1>
+<h2><strong>Booklet One: Caravan Welcome Outpost</strong></h2>
+<h3><strong>Caravan Welcome Outpost</strong></h3>
+<h4><em>Tour of the Outpost</em></h4>
+<h4><em>Main Hall</em></h4>
+<h3><strong>The True Realm</strong></h3>
+<h4><em>Free Market Hub</em></h4>
+<h4><em>Voluntary Welcome Desk</em></h4>
+<h3><strong>The Infrastructure for Freedom</strong></h3>
+<h4><em>The Voluntaryism Brigade</em></h4>
+<h4><em>Freedom Guides</em></h4>
+<h3><strong>Caravanarchy</strong></h3>
+<h4><em>Our Bus: The Time Machine</em></h4>
+<h4><em>What We Offer:</em></h4>
+<h4><em>Core Principles:</em></h4>
+<h4><em>Caravan Offerings:</em></h4>
+<h4><em>Slow Traveling Faire</em></h4>
+<h4><em>Caravaneers Wanted</em></h4>
+<h4><em>Lifestyles for Freedom</em></h4>
+<h4><em>Bringing Everybody Along</em></h4>
+<h4><em>Potential Vehicles</em></h4>
+<h4><em>Core Caravan Team</em></h4>
+<p><em>Core Roles</em></p>
+<h4><em>Core Teams Descriptions</em></h4>
+<h3><strong>To Be Mobile?</strong></h3>
+<h4><em>How to Become Nomadic</em></h4>
+<h4><em>Nomad Questions</em></h4>
+<h4><em>Benefits/Expenses of Mobile Life</em></h4>
+<h4><em>Sauron and the Shire</em></h4>
+<h2><strong>Booklet Two: Admissions Portal</strong></h2>
+<h2><strong>Booklet Three: Network Hosts</strong></h2>
+<h2><strong>Booklet Four: Associations</strong></h2>
+<h2><strong>Booklet Five: Freedom Guard</strong></h2>
+<h2><strong>Booklet Six: Security Mesh&nbsp;</strong></h2>
+<h1>Volume 4: Anarchist Innovation Station</h1>
+<h2><strong>Booklet One: Anarchist Innovation Station</strong></h2>
+<h4><em>Morals, Vices, and Boundaries</em></h4>
+<h4><em>Fears and Insurance</em></h4>
+<h4><em>Example: Consensual Conversation Table</em></h4>
+<h2><strong>Booklet Two: Socially-Perpetuated Self-Encagement</strong></h2>
+<h4><em>Top Mishandled Questions</em></h4>
+<h4><em>Philosophy - Excuses for Inaction</em></h4>
+<h4><em>Animal Tranquility</em></h4>
+<h4><em>Downfall of the Greats</em></h4>
+<h4><em>Against Coercion</em></h4>
+<h2><strong>Booklet Three: Common Arguments</strong></h2>
+<h1>Volume 5:</h1>
+<h2><strong>Booklet One: Achievements</strong></h2>
+<h2><strong>Booklet Two: Healthy Relationships</strong></h2>
+<h2><strong>Booklet Three: Creating Community</strong></h2>
+<h1>Volume 6: The Agora</h1>
+<h2><strong>Bounty Board</strong></h2>
+<h4><em>Housing</em></h4>
+<h4><em>Goods</em></h4>
+<h2><strong>Festivals/Events</strong></h2>
+<h4><em>Voluntaryist Bazaar map and Info</em></h4>
+<h4><em>Festivals listings</em></h4>
+<h4><em>Events Listings</em></h4>
+<h4><em>Events Calendar</em></h4>
+<h2><strong>Agorist Links</strong></h2>
+<h4><em>Websites</em></h4>
+<h4><em>etc.</em></h4>
+<h2><strong>Maps</strong></h2>
+<h4><em>Festival Route</em></h4>
+<h4><em>Farm Map</em></h4>
+<h4><em>Bounty Map</em></h4>
+<h1><br /><br /><br /><br /><br /><br /><br /><br /></h1>
+<p>Security Guard for your children</p>
+<h1><br /><br /><br /></h1>
+<h2><strong>Friend Zone</strong></h2>
+<h4><em>Value</em></h4>
+<h4><em>Anti-Politeness Pt. 2</em></h4>
+<h4><em>Dating Section</em></h4>
+<h2><strong>Creating Healthy Communities</strong></h2>
+<h4><em>Community vs Individualism</em></h4>
+<h4><em>Epistemology</em></h4>
+<h4><em>Group Infiltration Guide:</em></h4>
+<h4><em>Waking People Up</em></h4>
+<h4><em>Value / Super Powers</em></h4>
+<h2><strong>Spirituality</strong></h2>
+<h2><strong>How to be a Better Soulmate</strong></h2>
+<h2><strong>Rapture Network</strong><strong><br /><br /></strong></h2>
+<p>Philosophical route vs Dumb route</p>
+<h1><br /><br /><br /><br /><br /></h1>
+		</div>
+
+
+		<script>
+			/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+window.onload=function(){
+document.getElementById("acti").click();
+};
+	
+var dropdown = document.getElementsByClassName("dropdown-btn");
+	
+var i; 
+
+for (i = 0; i < dropdown.length; i++) {
+
+dropdown[i].addEventListener("click", function() {
+	
+	var lst = document.getElementsByClassName("dropdown-container");
+	
+	for (var j = 0; j < lst.length; j++) { lst[j].style.display = "none"; }
+	
+	var act = document.getElementsByClassName("dropdown-btn");
+	
+	for (var k = 0; k <act.length; k++) {
+	   act[k].classList.remove("active");
+	}
+	
+	this.classList.toggle("active");
+	
+	var dropdownContent = this.nextElementSibling;
+	
+	if (dropdownContent.style.display === "block") {
+	  dropdownContent.style.display = "none";
+	} else {
+	  dropdownContent.style.display = "block";
+	}
+//    this.classList.toggle("active"); 
+//    this.style.backgroundColor = "#AA0000";
+  });
+}
+function rotate(){
+	var element = event.target;
+	var child = element.children[0];
+	
+	var myIcon = document.getElementsByClassName("my_class fa fa-caret-down");
+	var m;
+	for (var m = 0; m < myIcon.length; m++) {
+	myIcon[m].className = "my_class fa fa-caret-right";
+	}
+	
+	child.className = "my_class fa fa-caret-down";
+}
+	
+/* Open when someone clicks on the span element */
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+	
+		</script>
+
+	</body>
+</html>
