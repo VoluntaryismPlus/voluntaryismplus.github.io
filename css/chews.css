@@ -13,6 +13,24 @@ p {
 	font-size: 22px;
 }
 
+.reggae-one-regular {
+  font-family: "Reggae One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  text-align: center;
+  font-size: 9vw;
+}
+
+.title {
+    border: 10px solid;
+    border-color: #1D6A7E;
+    background-color: rgba(83,179,203,0.7);
+    margin-left: 20px;
+	margin-right: 0.5vw;
+    z-index: -1;
+}
+
 h1 {
 	font-family: "Reggae One";
 	color: white;
@@ -82,43 +100,10 @@ ul {
 	width: 50vw;
 }
 
-.griffin {
-/*	width: 93vw;*/
-	width: 65vw;
-	margin-left: 20px;
-    border: 15px solid;
-    border-color: #1D6A7E;
-    background-color: rgba(83,179,203,0.7);
-/*	display: none;*/
-}
-
-.griffin img{
-/*	width: 93vw;*/
-	width: 65vw;
-}
-
 .organic {
     text-align: right;
     margin: 0;
     font-size: 1.2em;
-}
-
-.reggae-one-regular {
-  font-family: "Reggae One", system-ui;
-  font-weight: 400;
-  font-style: normal;
-  color: white;
-  text-align: center;
-  font-size: 9vw;
-}
-
-.title {
-    border: 15px solid;
-    border-color: #1D6A7E;
-    background-color: rgba(83,179,203,0.7);
-    margin-left: 20px;
-	margin-right: 0.5vw;
-    z-index: -1;
 }
 
 .break {
@@ -162,18 +147,29 @@ ul {
     z-index: -1;
 }
 
-.flavors {
-    display: grid;
-    color: white;
-    margin: 20px;
+/*about*/
+
+.griffin {
+/*	width: 93vw;*/
+	width: 65vw;
+	margin-left: 20px;
+    border: 15px solid;
+    border-color: #1D6A7E;
+    background-color: rgba(83,179,203,0.7);
+/*	display: none;*/
+}
+
+.griffin img{
+/*	width: 93vw;*/
+	width: 65vw;
 }
 
 .buttons {
     display: grid;
-    margin: 20px 0.5vw 20px 20px;
+    margin: 20px 0 20px 20px;
     overflow: hidden;
-    height: 100%;
-/*	width: 96vw;*/
+    height: 73vh;
+	width: 94vw;
 }
 
 .buttons a:link {
@@ -181,7 +177,56 @@ ul {
 }
 
 .about {
-    height: calc(100vh - 340px);
+    /*height: calc(100vh - 340px);*/
+    height: 70vh;
+    width: 64vw;
+}
+
+.aboutbutton1 {
+    grid-column: 1;
+    background-color: rgba(99,159,171,0.7);
+    border: 10px solid;
+    border-color: #639FAB;
+}
+
+aboutbutton1 a:hover {
+  background-color: rgba(99,159,171,0.9);
+}
+
+.abouttext {
+    background-color: rgba(99,159,171,0.9);
+    border-right: 10px solid;
+    border-left: 10px solid;
+    border-bottom: 10px solid;
+    border-color: #639FAB;
+    padding: 15px 5px 15px 15px;
+    height: calc();
+    overflow-y: scroll;
+    overflow-x: hidden; 
+}
+
+.ingredients {
+    grid-column: 2;
+    margin-left: 2vw;
+    width: 27vw;
+}
+
+.small {
+    font-size: 3vw;
+}
+
+.aboutbutton2 {
+    background-color: rgba(184,211,218,0.7);
+    border: 10px solid;
+    border-color: #B8D3DA;
+}
+
+/*flavors*/
+
+.flavors {
+    display: grid;
+    color: white;
+    margin: 20px;
 }
 
 .button1 {
@@ -193,22 +238,6 @@ ul {
 
 button1 a:hover {
   background-color: rgba(99,159,171,0.9);
-}
-
-.abouttext {
-    background-color: rgba(99,159,171,0.9);
-    border-right: 10px solid;
-    border-left: 10px solid;
-    border-bottom: 10px solid;
-    border-color: #639FAB;
-    padding: 15px 5px 15px 15px;
-    height: calc(100vh - 340px);
-    overflow: scroll;
-}
-
-.ingredients {
-    grid-column: 2;
-    margin-left: 2vw;
 }
 
 .button2 {
@@ -451,7 +480,7 @@ button1 a:hover {
 ::-webkit-scrollbar-thumb {
     border-radius: 5px;
     background-color: rgba(0,0,0,.4);
-      -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+      /*-webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);*/
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -476,7 +505,7 @@ button1 a:hover {
 	z-index: 1;
 }
 .side-bar::-webkit-scrollbar {
-	width: 0px;
+	width: 0;
 }
 .side-bar.active{
 	left: 0;
@@ -530,7 +559,7 @@ button1 a:hover {
 	position: absolute;
 	color: #fff;
 	font-size: 23px;
-	right:  0px;
+	right:  0;
 	margin: 15px;
 	cursor: pointer;
 }
@@ -565,6 +594,7 @@ header{
 	background: #33363a;
 }
 
+/*
 @media (max-width: 3024px) {
 	.column1 {
 	    height: 68vh;
@@ -585,11 +615,9 @@ header{
 
 @media (min-width: 1262px) {
     .column1 {
-/*        height: calc(780px - 30vw);*/
 	    height: 70vh;
     }
     .column2 {
-/*        height: calc(780px - 30vw);     */
 	    height: 70vh;
     }	
 	.reggae-one-regular {
@@ -622,11 +650,9 @@ header{
 
 @media (max-width: 1261px) {
     .column1 {
-/*        height: calc(780px - 30vw);*/
 	    height: 72vh;
     }
     .column2 {
-/*        height: calc(780px - 30vw);     */
 	    height: 72vh;
     }
     #blackhibiscus {
@@ -645,11 +671,9 @@ header{
 
 @media (max-width: 1121px) {
     .column1 {
-/*        height: calc(780px - 30vw);*/
 	    height: 68vh;
     }
     .column2 {
-/*        height: calc(780px - 30vw);     */
 	    height: 68vh;
     }
     #blackhibiscus {
@@ -665,11 +689,9 @@ header{
 
 @media (max-width: 1000px) {
     .column1 {
-/*        height: calc(730px - 30vw);*/
 	    height: 70vh;
     }
     .column2 {
-/*        height: calc(730px - 30vw);     */
 		height: 70vh;
 
     }
@@ -708,14 +730,6 @@ header{
     }
     #blackhibiscus1 {
         top: 230px;
-    }
-    .column1 {
-/*        height: calc(700px - 30vw);*/
-
-    }
-    .column2 {
-/*        height: calc(700px - 30vw);     */
-
     }
     li {
         font-size: 3vw;
@@ -1015,3 +1029,5 @@ header{
 		height: 10vh;
 	}
 }
+
+*/
