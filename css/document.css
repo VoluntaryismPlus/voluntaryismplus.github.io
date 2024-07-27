@@ -33,6 +33,10 @@ h7 {
 	font-size: 15px;
 }
 
+.aftertext {
+    display: none;
+}
+
 .questions {
 	color: #cecece;
 }
@@ -637,7 +641,7 @@ section {
 	width: 92vw;
 	margin-left: 0;
 	}
-	
+    
 	p {
 		font-size: 4vw;
 	}
@@ -733,7 +737,10 @@ section {
 }
 
 @media (min-width: 900px) {
-	p {
+    .aftertext {
+        display: block;
+    }
+    p {
 		font-size: 1.5vw;
 	}
 	li {
