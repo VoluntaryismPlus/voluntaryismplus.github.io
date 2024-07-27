@@ -629,6 +629,10 @@ section {
     .caravanarchy {
         display: none;
     }
+    .index {
+        width: 95vw;
+        margin-bottom: 20px;
+    }
 	.image img {
 	width: 92vw;
 	margin-left: 0;
