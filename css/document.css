@@ -13,6 +13,7 @@ body {
 	overflow-x: hidden;
 	margin: 0;
 	padding: 0 10px;
+    max-height: 100%;
 }
 
 .index {
@@ -20,8 +21,8 @@ body {
 	outline: 1px solid white;
 	padding: 0 10px 10px 10px;
 	float: right;
-	width: 240px;
-	margin: 15px 5px 0 10px;
+    width: 95vw;
+    margin-bottom: 20px;
 	
 }
 .index h6 {
@@ -88,13 +89,15 @@ h7 {
 }
 
 .image img {
-	width: 75vw;
+	width: 92vw;
+	margin-left: 0;
 }
 
 .caravanarchy {
 	position: absolute;
 	right: 63px;
 	top: 5px;
+    display: none;
 }
 
 .caravanarchy:hover {
@@ -119,16 +122,16 @@ a:-webkit-any-link {
 	text-decoration: none;
 }
 li {
-	font-size: 2vw;
+    font-size: 4vw;
 	font-family: spectral;	
 }
 
 p {
-	font-size: 2vw;
+    font-size: 4vw;
 	font-family: spectral;
 }
 h1 {
-	font-size: 10vw;
+	font-size: 9vw;
 	text-align: center;
 	margin: 0;
 	margin-left: -5px;
@@ -137,7 +140,7 @@ h1 {
 }
 
 h2 {
-	font-size: 5vw;
+	font-size: 7vw;
 	color: white;	
 	margin: 5px;
 	margin-top: 30px;
@@ -154,7 +157,7 @@ h2 {
 }
 
 h3 {
-	font-size: 3vw;
+	font-size: 6vw;
 	text-align: center;
 	margin: 0;
 	margin-left: -5px;
@@ -163,7 +166,7 @@ h3 {
 	text-decoration: none;
 }
 h4 {
-	font-size: 2.5vw;
+	font-size: 5vw;
 	padding: 0;
 	margin: 5px;
 	font-family: caudex;
@@ -173,7 +176,7 @@ h4 {
 
 
 h5 {
-	font-size: 2vw;
+	font-size: 4vw;
 	padding: 0;
 	margin: 5px;
 	font-family: caudex;
@@ -183,13 +186,13 @@ h5 {
 h6 {
 	margin: 6px;
 	margin-left: 40px;
-	font-size: 1.5vw;
+	font-size: 3vw;
 }
 
 #logo {
 /*	margin-left: 1vw;*/
 	width: 17.5vw;
-/*	margin-top: 1vw;*/
+	margin-top: 1px;
 }
 
 /* The Overlay (background) */
@@ -256,7 +259,7 @@ h6 {
 	position: absolute;
 	top: 3px;
 	right: 3px;
-	margin-right: 10px;
+	margin-right: 20px;
 }
 
 .logo1 {
@@ -298,9 +301,10 @@ h6 {
 }
 
 .bodytext {
-	width: 75vw;
-	margin-left: 22vw;
 	overflow: scroll;
+    margin-top: 40px;
+    margin-left: 2vw;
+    width: 94vw;
 }
 
 .sidenav {
@@ -313,6 +317,7 @@ h6 {
 	overflow: hidden;
 	padding: 0 0 10px 5px;
 	height: 23.7vh;
+    display: none;
 /*	margin-bottom: 20px;*/
 /*	bottom: 20px;*/
 }
@@ -339,6 +344,11 @@ body, .side {
 	scrollbar-width: thin;
 	scrollbar-color: #8f54a0 #000000;
   }
+
+::-webkit-scrollbar {
+    display: none;
+    width: 0;
+}
 
   /* Chrome, Edge, and Safari */
   .main, .side::-webkit-scrollbar {
@@ -473,6 +483,7 @@ body, .side {
 .fa-bars {
 	position: fixed;
 	outline: none;
+    display: none;
 }
 
 :root {
@@ -607,7 +618,6 @@ section {
   display: block;
 }
 
-/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
 @media screen and (max-height: 450px) {
   .overlay a {font-size: 20px}
   .overlay .closebtn {
@@ -615,68 +625,6 @@ section {
 	top: 15px;
 	right: 35px;
   }
-}
-
-@media (max-width: 522px), (orientation:portrait) {
-	body {
-		max-height: 100%;
-	}
-	.sidenav {
-		display: none;
-	}
-	
-	.bodytext {
-		margin-top: 40px;
-		margin-left: 2vw;
-		width: 94vw;
-	}
-    .caravanarchy {
-        display: none;
-    }
-    .index {
-        width: 95vw;
-        margin-bottom: 20px;
-    }
-	.image img {
-	width: 92vw;
-	margin-left: 0;
-	}
-    
-	p {
-		font-size: 4vw;
-	}
-	li {
-		font-size: 4vw;
-	}
-	h1 {
-		font-size: 9vw;
-	}
-	
-	h2 {
-		font-size: 7vw;
-	}
-	
-	h3 {
-		font-size: 6vw;
-	}
-	
-	h4 {
-		font-size: 5vw;
-	}
-	
-	h5 {
-		font-size: 4vw;
-	}
-	h6 {
-		font-size: 3vw;
-	}
-	
-	.logo {
-		margin-right: 20px;
-	}
-	#logo {
-		margin-top: 1px;
-	}
 }
 
 @media (min-width: 523px) {
@@ -689,17 +637,61 @@ section {
 	 .sidenav {
 		display: block;
 	}
-	/*
- p {
-		font-size: 3vw;
+    .bodytext {
+        width: 75vw;
+        margin-left: 22vw;
+    }
+	.caravanarchy {
+        display: block;
+    }
+    .index {
+	   width: 240px;
+	   margin: 15px 5px 0 10px;
+    }
+	.image img {
+	   width: 75vw;
+	}
+	p {
+		font-size: 2vw;
 	}
 	li {
+		font-size: 2vw;
+	}
+	h1 {
+		font-size: 10vw;
+	}
+    h2 {
+		font-size: 5vw;
+	}
+	h3 {
 		font-size: 3vw;
 	}
- */
+	h4 {
+		font-size: 2.5vw;
+	}
+	
+	h5 {
+		font-size: 2vw;
+	}
+	h6 {
+		font-size: 1.5vw;
+	}
+	
+	.logo {
+		margin-right: 10px;
+	}
+	#logo {
+		margin-top: 1px;
+	}
 	.side_header {
 		font-size: 20px;
 	}
+    .vehicles img {
+        width: 37vw;
+    }
+    .fa-bars {
+    display: block;
+}
 }
 
 @media (523px < width < 900px){
@@ -792,16 +784,4 @@ section {
 	.vehicles img{
 		width: 43vw;
 	}
-}
-
-@media print {
-	.sidenav {
-		display: none;
-	}
-	.pdf object{
-		width: 100vw;
-		height: 100vh;
-		margin-left: 0;
-		display: block;
-	}     
 }
