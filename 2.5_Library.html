@@ -176,12 +176,33 @@
 	</div>
 </div>
 <div class = "bodytext">
+	<div class="image"><img src="img/library.jpeg"></div> 
 	<h1>Library</h1>
 	<ul>
 	<li></li>
 	<li></li>
 	<li></li>
 	</ul>
+<br><h3><a href="3.1_CaravanWelcomeOutpost.html">Next Chapter: Caravan Welcome Outpost</a></h3><br>
+<div class="footer"><p>Contact us by Email: cavanarchy@proton.me</p></div>
 </div>
+	
+<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+</script>
 </body>
 </html>
