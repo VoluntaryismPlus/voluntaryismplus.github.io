@@ -1,0 +1,248 @@
+.side_header {
+	font-size: 25px;
+	text-align: center;
+	margin-bottom: 5px;
+	font-family: caudex;
+	color: white;
+	line-height: 25px;
+}
+
+#logo {
+/*	margin-left: 1vw;*/
+	width: 17.5vw;
+	margin-top: 1px;
+	margin-bottom: 0;
+}
+
+.sidenav {
+	width: 20vw;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #111;
+	overflow: hidden;
+	padding: 0 0 10px 5px;
+	height: 25vh;
+    display: none;
+	margin: 3px;
+/*	margin-bottom: 20px;*/
+/*	bottom: 20px;*/
+}
+
+.side {
+	width: 20vw;
+	position: fixed;
+	z-index: 1;
+	top: 25vh;
+	left: 0;
+	background-color: #111;
+	overflow-y: scroll;
+	overflow-x: hidden; 
+	padding: 5px;
+	height: 75vh;
+	margin: 3px;
+}
+
+.thispage {
+	background-color: black;
+	outline: 1px solid white;
+	color: white;
+	padding: 3px 0 3px 1px;
+	max-width: 19.7vw;
+}
+.thispage a:hover {
+	width: 20vw;
+	margin-left: .3vw;
+}
+
+.side a {
+	font-family: 'Caudex';
+	padding: 6px 6px 6px 12px;
+	text-decoration: none;
+	color: #818181;
+	display: block;
+	width: 19.7vw;
+	cursor: pointer;
+}
+
+.dropdown-btn {
+	background-color: #111;
+	width: 20vw;
+	font-family: 'Caudex';
+	padding: 5px 5px 5px 8px;
+	font-size: 2.5vw;
+	color: #818181;
+	display: block;
+	border: none;
+	text-align: left;
+	cursor: pointer;
+}
+
+.dropdown-btn:active {
+	margin-top: 5px;
+}
+
+.sidenav img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	image-rendering: pixelated;
+}
+
+.dropdown-container a, .dropdown-container-open a{
+	font-family: 'Spectral';
+	font-size: 1.5vw;
+	padding: 3px 0 3px 5x;
+/*	max-width: calc(20vw - 26px);*/
+	color: #b5b5b5;
+	max-width: 20vw;
+}
+
+/*
+.dropdown-container a:hover {
+	background-color: white;
+	outline: 1px solid white;
+}
+*/
+
+.sidenav a:hover, .dropdown-btn:hover {
+	color: #f1f1f1;
+}
+
+.sidenav a:hover {
+	color: #f1f1f1;
+	background-color: #1a1a1a;
+	/*outline: 0.5px solid white;*/
+	margin-left: 0;
+	max-width: 20vw;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+	background-color: #5a5a5a;
+	color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+	display: none;
+	background-color: #262626;
+	max-width: 20vw;
+/*
+	padding-left: 8px;
+	margin-right: 5px;
+*/
+}
+
+.dropdown-container-open {
+	display: block;
+	background-color: #272727;
+	padding: 0 8px 0 8px;
+	margin-right: 5px;
+	/*  max-width: calc(20vw - 5px);*/
+}
+/* Optional: Style the caret down icon */
+
+.fa-caret-down {
+	float: right;
+	padding-top: 5px;
+	padding-right: 2px;
+	color: white;
+	font-size: 15px;
+}
+
+.fa-caret-right {
+	float: right;
+	padding-top: 5px;
+	padding-right: 2px;
+	color: white;
+	font-size: 15px;    
+}
+
+@media (min-width: 523px) {
+	 .sidenav {
+		display: block;
+	}
+	#logo {
+		margin-top: 1px;
+	}
+	.side_header {
+		font-size: 20px;
+	}
+}
+
+@media (523px < width < 900px){
+
+	.sidenav {
+		padding: 5px 5px 0 5px;
+	} 
+	
+	.side {
+		padding: 2px 2px 21px 2px;
+	} 
+	.dropdown-container a, .dropdown-container-open a{
+	  font-size: 14px;
+	}
+	p {
+		font-size: 15px;
+	}
+	li {
+		font-size: 15px;
+	}
+}
+
+@media (min-width: 735px){
+
+	.sidenav {
+		height: 27vh;
+	} 
+	
+	.side {
+		top: 27vh;
+	}
+}
+
+@media (min-width: 801px) {
+	.sidenav a, .dropdown-btn {
+	  font-size: 18px;
+	}
+
+	.dropdown-container a, .dropdown-container-open a{
+	  font-size: 16px;
+	}
+}
+
+@media (min-width: 900px) {
+	#logo {
+		width: 160px;
+		margin-left: 10.14px;
+		margin-top: 10.14px;
+	}
+	.sidenav {
+		width: 187px;
+		height: 207px;
+	}
+	.side {
+		width: 187px;
+		top: 207px;
+		height: calc(100vh - 207px);
+		padding: 0 1px 18px 1px;
+	}
+	.dropdown-btn {
+		max-width: 182px;
+	}
+	.dropdown-container {
+		max-width: 182px;
+	}
+	.dropdown-container a:hover {
+		max-width: 182px;
+	}
+	.side_header {
+		font-size: 21px;
+	}
+.side a, .dropdown-btn {
+		width: 187px;
+	}
+}

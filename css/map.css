@@ -1,0 +1,170 @@
+svg {
+	color: white;
+	display: block;
+	margin: 0 auto;
+	max-width: 1000px;
+}
+path {
+	fill: currentColor;
+	stroke: #000;
+	stroke-width: 1;
+}
+
+.festivals {
+	background-color: black;
+	margin: 10px;
+	padding: 5px;
+	border: 1px solid #7c7272
+}
+
+.maplinks a:hover {
+	color: aliceblue;
+}
+
+.maplinks a:visited {
+	color: #6ab4f5;
+}
+.inactive {
+	color: #759bbc;
+	border: none;
+}
+#MA {
+	color: #759bbc;
+	border: none;
+}
+#MN {
+	color: #759bbc;
+	border: none;
+}
+#MT {
+	color: #759bbc;
+	border: none;
+}
+#ND {
+	color: #759bbc;
+	border: none;
+}
+#SD {
+	color: #759bbc;
+	border: none;
+}
+#NE {
+	color: #759bbc;
+	border: none;
+}
+#WI {
+	color: #759bbc;
+	border: none;
+}
+#WY {
+	color: #759bbc;
+	border: none;
+}
+#OH {
+	color: #759bbc;
+	border: none;
+}
+#GA {
+	color: #759bbc;
+	border: none;
+}
+#KY {
+	color: #759bbc;
+	border: none;
+}
+#KS {
+	color: #759bbc;
+	border: none;
+}
+#GA {
+	color: #759bbc;
+	border: none;
+}
+#KY {
+	color: #759bbc;
+	border: none;
+}
+#KS {
+	color: #759bbc;
+	border: none;
+}
+#WV {
+	color: #759bbc;
+	border: none;
+}
+#VA {
+	color: #759bbc;
+	border: none;
+}
+#ID {
+	color: #759bbc;
+	border: none;
+}
+#AL {
+	color: #759bbc;
+	border: none;
+}
+#MS {
+	color: #759bbc;
+	border: none;
+}
+#ID {
+	color: #759bbc;
+	border: none;
+}
+#NY {
+	color: #759bbc;
+	border: none;
+}
+#HI {
+	color: #759bbc;
+	border: none;
+}
+#AK {
+	color: #759bbc;
+	border: none;
+}
+#ME {
+	color: #759bbc;
+	border: none;
+}
+#PA {
+	color: #759bbc;
+	border: none;
+}
+#NJ {
+	color: #759bbc;
+	border: none;
+}
+#RI {
+	color: #759bbc;
+	border: none;
+}
+#DE {
+	color: #759bbc;
+	border: none;
+}
+#VT {
+	color: #759bbc;
+	border: none;
+}
+#CT {
+	color: #759bbc;
+	border: none;
+}
+#MD {
+	color: #759bbc;
+	border: none;
+}
+#IN {
+	color: #759bbc;
+	border: none;
+}
+#SC {
+	color: #759bbc;
+	border: none;
+}
+#LA {
+	color: #759bbc;
+	border: none;
+}

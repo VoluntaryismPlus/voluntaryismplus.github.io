@@ -1,0 +1,24 @@
+body, .side {
+	scrollbar-width: 1px;
+	scrollbar-color: #8f54a0 #000000;
+	
+  }
+ -webkit-scrollbar {
+    display: none;
+    width: 0;
+}
+
+/* Chrome, Edge, and Safari */
+.main, .side::-webkit-scrollbar {
+	width: thin;
+}
+
+.main, .side::-webkit-scrollbar-track {
+	background: #000000;
+}
+
+.main, .side::-webkit-scrollbar-thumb {
+	background-color: #8f54a0;
+	border-radius: 10px;
+	border: 3px solid #ffffff;
+}
