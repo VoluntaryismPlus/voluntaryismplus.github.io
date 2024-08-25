@@ -23,6 +23,8 @@ body {
 
 a {
 	transition: color 1s;
+	text-decoration: none;
+	color: #cccccc;
 }
 
 a:hover {
@@ -45,7 +47,16 @@ a:hover {
 	background-color: black;
 }
 
+.businessimage1 {
+	width: 100%;
+	margin-right: 0;
+}
+
 .businessimage img {
+	width: 94vw;
+}
+
+.businessimage1 img {
 	width: 94vw;
 }
 
@@ -59,11 +70,6 @@ a:hover {
 	margin-top: -30px;
 	padding: 5px;
 	}
-
-a {
-	text-decoration: none;
-	color: #cccccc;
-}
 
 a:-webkit-any-link {
 	color: #cccccc;
@@ -132,13 +138,14 @@ h6 {
 .bodytext {
 	/*overflow: scroll;*/
     margin-top: 40px;
-    margin-left: 2vw;
+    margin-left: 1.5vw;
     width: 94vw;
 }
-.textboxes {
+
+.innersection {
 	/*background-color: rgba(0, 0, 0, 0.76);*/
-	padding: 0 12px;
-	margin: 5px 0;
+	margin: 3px 3px 18px 3px;
+	padding: 0 6px;
 }
 
 #lyrics {
@@ -153,7 +160,7 @@ h6 {
 
 
 .footer {
-	padding: 5px;
+	padding: 5px 5px 5px 20px;
 	background-color: black;
 	border: 1px solid white;
 	margin: -10px;
