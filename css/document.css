@@ -6,7 +6,7 @@ html {
 
 body {
 	background-color: rgba(0, 0, 0, 0.9);
-	/*background-image: url("../img/compassgreendrker.jpeg");*/
+	background-image: url("../img/compass.jpeg");
     background-attachment: fixed;
 	background-size: 100%;
 	height: 100vh;
@@ -39,12 +39,12 @@ a:hover {
 
 .image img {
 	width: 94vw;
+	border: 5px solid black;
 }
 
 .businessimage {
 	width: 100%;
 	margin-right: 0;
-	background-color: black;
 }
 
 .businessimage1 {
@@ -54,14 +54,18 @@ a:hover {
 
 .businessimage img {
 	width: 94vw;
+	background-color: black;
+	border: 5px solid white;
 }
 
 .businessimage1 img {
 	width: 94vw;
+	border: 5px solid white;
 }
 
 .vehicles img {
 	width: 47vw;
+	border: 5px solid black;	
 }
 
 .warning {
@@ -84,21 +88,22 @@ p {
     font-size: 4vw;
 	font-family: spectral;
 	margin-bottom: 6.5px;
+	/*color: whitesmoke;*/
+	color:#e3e3e3;
 }
 h1 {
 	font-size: 9vw;
 	text-align: center;
 	margin: 0;
-	margin-left: -5px;
 	font-family: 'Averia Serif Libre';
 	color: white;
+	background-color: rgba(0, 0, 0, 0.89);
 }
 
 h2 {
 	font-size: 7vw;
 	color: white;	
 	margin: 5px;
-	margin-top: 30px;
 	font-family: caudex;
 }
 
@@ -133,6 +138,10 @@ h6 {
 	margin: 6px;
 	margin-left: 40px;
 	font-size: 3vw;
+	/*
+	margin-left: 18px;
+	font-size: 15px;
+	*/
 }
 
 .bodytext {
@@ -143,9 +152,31 @@ h6 {
 }
 
 .innersection {
-	/*background-color: rgba(0, 0, 0, 0.76);*/
+	background-color: rgba(0, 0, 0, 0.85);
 	margin: 3px 3px 18px 3px;
-	padding: 0 6px;
+	padding: 6px 7px 7px 9px;
+}
+
+.headerbox {
+	background-color: rgba(0, 0, 0, 0.76);
+	margin: 0 0 1px -9px;
+	padding: 6px 6px 6px 6px;	
+	width: 92vw;
+}
+
+.outerheader {
+	background-color: rgba(0, 0, 0, 0.86);
+	margin: 0 0 1px 0;
+	padding: 6px 6px 6px 6px;	
+	width: 100%;	
+}
+
+.nextpage {
+	background-color: rgba(0, 0, 0, 0.86);
+	margin: 0 0 1px 0;
+	padding: 16px 6px 16px 6px;	
+	width: 100%;	
+	border: 2px solid white;
 }
 
 #lyrics {
@@ -200,16 +231,26 @@ h6 {
 	}
 
     .vehicles img {
-        width: 35vw;
+        width: 37.5vw;
     }
 	.businessimage {
 		width: 75vw;
 		display: flex;
 	}
 	.businessimage img{
-		width: 39vw;
+		width: 35.5vw;
 		margin: 5px;
 	}
+	.businessimage1 {
+		width: 74vw;
+	}
+	.businessimage1 img{
+		width: 73vw;
+		margin: 5px;
+	}
+	.headerbox {
+		width: 74vw;
+}
 
 }
 
@@ -232,7 +273,15 @@ h6 {
 		display: flex;
 	}
 	.businessimage img{
-		width: 39vw;
+		width: 36vw;
+		margin: 5px;
+	}
+	.businessimage1 {
+		width: 75vw;
+		display: flex;
+	}
+	.businessimage1 img{
+		width: 36vw;
 		margin: 5px;
 	}
 }
@@ -248,6 +297,9 @@ h6 {
 		width: calc(100vw - 225px);
 		margin-left: 200px;
 	}
+	.headerbox {
+		width: calc(100vw - 232px);
+}
 	.image img {
 		width: calc(100vw - 225px);
 	}
@@ -263,6 +315,16 @@ h6 {
 		width: calc((100vw - 265px)/2);
 		margin: 5px;
 	}
+	.businessimage1 {
+		width: calc(100vw - 225px);
+		display: flex;
+		padding: 10px;
+	}
+	.businessimage1 img{
+		width: calc((100vw - 265px)/2);
+		margin: 5px;
+	}
+	
 }
 
 @media (min-width: 1200px) {

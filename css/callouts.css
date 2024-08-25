@@ -1,27 +1,31 @@
 .index {
-	background-color: #1d1d1d;
+	background-color: rgba(29, 29, 29, 0.86);
 	outline: 1px solid white;
-	padding: 0 0 10px 0;
+	padding: 0 1px 10px 1px;
 	float: right;
     width: 95vw;
     margin-bottom: 20px;
 	text-align: center;
 	
 }
-.indextitle {
-	padding: 11px 5px 5px 5px;
+.index h3 {
+	width: 230px;
+	margin-left: 5px;
 }
+
+.indextitle {
+	padding: 6px 5px 1px 5px;
+	background-color: rgba(51, 51, 51, 0.63);
+	margin: 0 0 5px 0;
+}
+
 .index h6 {
 	margin-left: 3px;
 	font-size: 18px;
 }
-h6 {
-	margin-left: 18px;
-	font-size: 15px;
-}
 
 .callout {
-	background-color: #2f2f2f;
+	background-color: rgba(47, 47, 47, 0.91);
 	outline: 1px solid white;
 	color: #cccccc;
 	margin: 10px;
@@ -46,8 +50,13 @@ h6 {
 	padding: 8px 2px ;
 }
 
+.callouttextlist {
+	margin-left: 28px;
+	padding: 8px;
+}
+
 .callout1 {
-	background-color: #525252;
+	background-color: rgba(82, 82, 82, 0.91);
 	outline: 1px solid white;
 	padding: 2px 0 2px 0;
 	color: #cccccc;
