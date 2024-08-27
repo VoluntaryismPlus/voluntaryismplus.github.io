@@ -21,17 +21,6 @@ body {
 	scrollbar-color: #8f54a0 #000000;
 }
 
-a {
-	transition: color 1s;
-	text-decoration: none;
-	color: #cccccc;
-}
-
-a:hover {
-	color: #a00;
-	transition: color 0s;
-}
-
 .image {
 	width: 100%;
 	margin-right: 0;
@@ -75,75 +64,6 @@ a:hover {
 	padding: 5px;
 	}
 
-a:-webkit-any-link {
-	color: #cccccc;
-	text-decoration: none;
-}
-li {
-    font-size: 4vw;
-	font-family: spectral;	
-}
-
-p {
-    font-size: 4vw;
-	font-family: spectral;
-	margin-bottom: 6.5px;
-	/*color: whitesmoke;*/
-	color:#e3e3e3;
-}
-h1 {
-	font-size: 9vw;
-	text-align: center;
-	margin: 0;
-	font-family: 'Averia Serif Libre';
-	color: white;
-	background-color: rgba(0, 0, 0, 0.89);
-}
-
-h2 {
-	font-size: 7vw;
-	color: white;	
-	margin: 5px;
-	font-family: caudex;
-}
-
-h3 {
-	font-size: 6vw;
-	text-align: center;
-	margin: 0;
-	margin-left: -5px;
-	font-family: caudex;
-	color: white;
-	text-decoration: none;
-}
-h4 {
-	font-size: 5vw;
-	padding: 0;
-	margin: 5px;
-	font-family: caudex;
-	text-align: center;
-	color: white;
-}
-
-
-h5 {
-	font-size: 4vw;
-	padding: 0;
-	margin: 5px;
-	font-family: caudex;
-	color: white;	
-}
-
-h6 {
-	margin: 6px;
-	margin-left: 40px;
-	font-size: 3vw;
-	/*
-	margin-left: 18px;
-	font-size: 15px;
-	*/
-}
-
 .bodytext {
 	/*overflow: scroll;*/
     margin-top: 40px;
@@ -158,7 +78,14 @@ h6 {
 }
 
 .headerbox {
-	background-color: rgba(0, 0, 0, 0.76);
+	/*background-color: rgba(0, 0, 0, 0.76);*/
+	margin: 0 0 1px -9px;
+	padding: 6px 6px 6px 6px;	
+	width: 92vw;
+}
+
+.headerboxindex {
+	/*background-color: rgba(0, 0, 0, 0.76);*/
 	margin: 0 0 1px -9px;
 	padding: 6px 6px 6px 6px;	
 	width: 92vw;
@@ -189,7 +116,6 @@ h6 {
 	border: solid 3px #000000;
 }
 
-
 .footer {
 	padding: 5px 5px 5px 20px;
 	background-color: black;
@@ -204,32 +130,6 @@ h6 {
 	.image img {
 	   width: 75vw;
 	}
-	p {
-		font-size: 2vw;
-	}
-	li {
-		font-size: 2vw;
-	}
-	h1 {
-		font-size: 10vw;
-	}
-    h2 {
-		font-size: 5vw;
-	}
-	h3 {
-		font-size: 3vw;
-	}
-	h4 {
-		font-size: 2.5vw;
-	}
-	
-	h5 {
-		font-size: 2vw;
-	}
-	h6 {
-		font-size: 1.5vw;
-	}
-
     .vehicles img {
         width: 37.5vw;
     }
@@ -250,20 +150,16 @@ h6 {
 	}
 	.headerbox {
 		width: 74vw;
-}
-
+	}
+	.headerboxindex {
+		width: calc(72vw - 240px);
+	}
 }
 
 @media (523px < width < 900px){
 	.bodytext {
 		margin-left: 22vw;
 		width: 75vw;
-	}
-	p {
-		font-size: 15px;
-	}
-	li {
-		font-size: 15px;
 	}
 }
 
@@ -287,12 +183,6 @@ h6 {
 }
 
 @media (min-width: 900px) {
-    p {
-		font-size: 1.5vw;
-	}
-	li {
-		font-size: 1.5vw;
-	}
 	.bodytext {
 		width: calc(100vw - 225px);
 		margin-left: 200px;
@@ -325,13 +215,4 @@ h6 {
 		margin: 5px;
 	}
 	
-}
-
-@media (min-width: 1200px) {
-	p {
-		font-size: 1.2vw;
-	}
-	li {
-		font-size: 1.5vw;
-	}
 }
