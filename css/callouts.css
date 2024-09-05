@@ -39,6 +39,9 @@
 	border: 1px solid #1f1f1f;
 }
 
+.calloutimage img{
+	width: 59vw;
+}
 .callouttext {
 	padding: 8px 27px 8px 27px;	
 }
