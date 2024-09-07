@@ -1,7 +1,7 @@
 a {
 	transition: color 1s;
 	text-decoration: none;
-	color: #8f55ea;
+	color: #708cdb;
 	cursor: auto;
 }
 
@@ -17,7 +17,8 @@ a:-webkit-any-link {
 }
 
 h6 a:-webkit-any-link{
-	color: #9d87f2;
+	/*color: #9d87f2;*/
+	color: #708cdb;
 }
 li {
     font-size: 4vw;
@@ -25,7 +26,7 @@ li {
 }
 
 p {
-    font-size: 4vw;
+    font-size: 4.5vw;
 	font-family: spectral;
 	margin-bottom: 6.5px;
 	/*color: whitesmoke;*/
@@ -84,7 +85,11 @@ h6 {
 	font-size: 15px;
 	*/
 }
-
+@media (min-width: 423px) {
+	p {
+		font-size: 3.5vw;
+	}
+}
 @media (min-width: 523px) {
 	p {
 		font-size: 2vw;

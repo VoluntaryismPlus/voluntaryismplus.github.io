@@ -77,6 +77,10 @@ body {
 	padding: 6px 7px 7px 9px;
 }
 
+.innersection h5 a{
+	color: #708cdb;
+}
+
 .headerbox {
 	/*background-color: rgba(0, 0, 0, 0.76);*/
 	margin: 0 0 1px -9px;
@@ -89,14 +93,6 @@ body {
 	margin: 0 0 1px 0;
 	padding: 6px 6px 6px 6px;	
 	width: 100%;	
-}
-
-.nextpage {
-	background-color: rgba(0, 0, 0, 0.86);
-	margin: 0 0 1px 0;
-	padding: 16px 6px 16px 6px;	
-	width: 100%;	
-	border: 2px solid white;
 }
 
 #lyrics {
