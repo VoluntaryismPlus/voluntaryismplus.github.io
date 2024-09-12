@@ -36,7 +36,8 @@
 	color: white;
 }
 
-/*
 @media (min-width: 523px) {
-	
-}*/
+	.headerboxindex {
+		width: calc(72vw - 240px);
+	}
+}
