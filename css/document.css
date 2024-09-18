@@ -149,7 +149,7 @@ body {
 	}
 }
 
-@media (523px < width < 900px){
+@media (522px < width < 900px){
 	.bodytext {
 		margin-left: 22vw;
 		width: 75vw;

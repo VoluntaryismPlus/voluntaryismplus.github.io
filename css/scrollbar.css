@@ -1,7 +1,7 @@
 body, .side {
-	scrollbar-width: 1px;
+	scrollbar-width: 5px;
 	scrollbar-color: #8f54a0 #000000;
-	
+	scroll-padding-left: 0;
   }
  -webkit-scrollbar {
     display: none;
