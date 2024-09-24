@@ -3,7 +3,7 @@
 	outline: 1px solid white;
 	padding: 0 1px 10px 1px;
 	float: right;
-    width: 94vw;
+    width: 90vw;
     margin-bottom: 20px;
 	text-align: center;
 	
@@ -21,6 +21,17 @@
 .index h6 {
 	margin-left: 3px;
 	font-size: 18px;
+}
+
+.indextitle {
+	padding: 6px 5px 1px 5px;
+	background-color: rgba(51, 51, 51, 0.63);
+	margin: 0 0 5px 0;
+	text-align: center;
+}
+.indextitle h3 {
+	width: auto;
+	/*margin-left: 33vw; */
 }
 
 .callout {
@@ -124,5 +135,9 @@
     .index {
 	   width: 240px;
 	   margin: 15px 5px 10px 10px;
+	}
+	.indextitle h3 {
+	margin-left: 0;
+	width: auto;
 	}
 }

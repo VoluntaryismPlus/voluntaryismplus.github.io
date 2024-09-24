@@ -14,6 +14,9 @@
 	margin-bottom: 0;
 }
 
+.logolink a:hover {
+	margin: 0;
+}
 .sidenav {
 	width: 20vw;
 	position: fixed;
