@@ -86,6 +86,11 @@ ul {
     font-size: 3.5vw;    
 }
 
+.c {
+	margin-left: 38px;
+}
+
+
 .image img{
 	width: 42vw;
 	z-index: -2;	
