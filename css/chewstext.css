@@ -1,0 +1,127 @@
+p {
+    text-align: center;
+    font-family: "Goudy Bookletter 1911";
+	font-size: 4.5vw;
+}
+
+.reggae-one-regular {
+  font-family: "Reggae One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  text-align: center;
+  font-size: 9vw; 
+    /*font-size: 52px;*/
+}
+
+h1 {
+	font-family: "Reggae One";
+	color: white;
+	font-size: 5vw;  
+	text-align: center;
+	border: 0;
+	margin: 0 0 15px 0;
+}
+
+h2 {
+/*    padding: 10px;*/
+    margin: 5px;
+    text-align: center;
+    font-family: "Reggae One";
+/*    font-size: 4.5vw;  */
+    font-size: 7vw;
+    color: white;
+}
+
+h3 {
+    margin: 5px;
+    text-align: center;
+    font-family: "Reggae One";
+    font-size: 5.5vw; 
+}
+
+h4 {
+    font-size: 5vw;
+    font-family: "Goudy Bookletter 1911";
+    font-weight: 600;
+    margin: 5px;
+}
+
+li {
+    /*list-style-type: none;*/
+    list-style-type: "⪢ ";
+    font-family: "Goudy Bookletter 1911";
+    font-size: 4.1vw;
+}
+
+ul {
+    margin-left: -10px;
+}
+
+.a {
+    font-size: 4vw;
+    list-style-type: none;
+}
+
+.b {
+    font-size: 3.5vw;    
+}
+
+.c {
+	margin-left: 38px;
+    font-size: 3.2vw;
+}
+
+.flavor {
+    font-size: 3vw;
+    margin-left: 37px;
+}
+
+.small {
+    font-size: 20px;
+}
+
+.menuwords {
+	font-family: "Reggae One";
+	color: white;
+	font-size: 28px;
+	text-align: center;
+	border: 0;
+	padding-bottom: 5px;
+	margin: 0 0 15px 0;
+	background-color: #222222;
+}
+
+@media (min-width: 580px) {
+    h2 {
+        font-size: 28px;
+    }
+    
+    h3 {
+        font-size: 3.5vw;    
+    }
+    
+    h4 {
+        font-size: 21px; 
+    }
+    p {
+    	font-size: 17px;
+    }
+    li {
+        font-size: 2.5vw;
+    }
+    .reggae-one-regular {
+        font-size: 59px;
+    }
+    .a {
+        font-size: 25px;
+    }
+    .c {
+        font-size: 17px;
+    }
+}
+@media (min-width: 680px) {
+    .reggae-one-regular {
+        font-size: 75px;
+    }
+}
