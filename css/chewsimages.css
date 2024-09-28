@@ -58,6 +58,9 @@
     z-index: -1;
 }
 
+.icecreamflavor img{
+    display: none;
+}
 @media (min-width: 500px) {
     .halfimages img {
         width: 44vw;
