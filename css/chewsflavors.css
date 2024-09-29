@@ -78,6 +78,9 @@
 	display: block;
 }
 
+.innertitle {
+	display: block;
+}
 .innertitle h3{
 	font-size: 6vw;
 	margin: 0 -5px 0 -5px; 
@@ -142,14 +145,21 @@
 	    height: calc(100vh - 202px);
 		display: block;
     }
+	.flavorslist1 {
+		width: inherit;
+	}
     .buttons {
         overflow-y: scroll;
     }
+	.innertitle {
+		display: none;
+	}
 	.innerlist {
 		display: none;
 	}
 	.smalltitle1 {
 	    height: 7vw;
+		width: inherit;
 	}
 	.smalltitle2 {
 	    height: 7vw;
