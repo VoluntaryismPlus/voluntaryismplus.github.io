@@ -64,7 +64,8 @@ ul {
 }
 
 .b {
-    font-size: 3.5vw;    
+    font-size: 3.5vw; 
+    margin-left: 12px;
 }
 
 .c {
@@ -118,6 +119,9 @@ ul {
     }
     .c {
         font-size: 17px;
+    }
+    .flavor {
+        font-size: 2.3vw;
     }
 }
 @media (min-width: 680px) {
