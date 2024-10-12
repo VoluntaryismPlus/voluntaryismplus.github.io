@@ -110,5 +110,8 @@ body {
 	}
 	.headerbox {
 		width: calc(100vw - 232px);
-}	
+	}
+	.innersection {
+		width: calc(100vw - 230px);
+	}
 }

@@ -8,20 +8,6 @@
 	text-align: center;
 	
 }
-.index p {
-	font-size: 2.7vw;;
-	padding: 0;
-	margin: 0;
-}
-.index h3 {
-	width: 230px;
-	margin-left: 5px;
-}
-
-.index h6 {
-	margin-left: 3px;
-	font-size: 18px;
-}
 
 .indextitle {
 	padding: 6px 5px 1px 5px;
@@ -135,9 +121,5 @@
     .index {
 	   width: 240px;
 	   margin: 15px 5px 10px 10px;
-	}
-	.indextitle h3 {
-	margin-left: 0;
-	width: auto;
 	}
 }
