@@ -26,6 +26,7 @@ body {
 	text-align: center;
 	margin-top: -30px;
 	padding: 5px;
+	font-size: 20px;
 	}
 
 .bodytext {
@@ -101,6 +102,9 @@ body {
 		margin-left: 21vw;
 		width: 75vw;
 	}
+	.outerheader {
+	width: 100%;	
+}
 }
 
 @media (min-width: 900px) {

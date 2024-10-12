@@ -1,6 +1,6 @@
 .index {
 	background-color: rgba(29, 29, 29, 0.86);
-	outline: 1px solid white;
+	outline: 1spx solid white;
 	padding: 0 1px 10px 1px;
 	float: right;
     width: 90vw;
@@ -27,6 +27,13 @@
 	margin: 10px;
 }
 
+.outercallout {
+	background-color: rgba(43, 42, 46, 0.91);
+	outline: 1px solid white;
+	color: #cccccc;
+	margin: 10px;
+	width: 100%;
+}
 .callouttitle {
 	margin: 0;
 	padding: 10px;
@@ -121,5 +128,18 @@
     .index {
 	   width: 240px;
 	   margin: 15px 5px 10px 10px;
+	}
+	.callout {
+		width: calc(100vw - 29.5vw);
+	}
+	.outercallout {
+		width: calc(100vw - 28vw);
+
+	}
+}
+@media (min-width: 900px) {
+	.callout {
+		width: calc(100vw - 267px);
+
 	}
 }
