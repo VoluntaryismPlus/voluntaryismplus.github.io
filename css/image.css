@@ -1,4 +1,6 @@
-
+body {
+	background-color: #1D1D1D;
+}
 .image {
 	width: 100%;
 	margin-right: 0;
@@ -7,6 +9,15 @@
 .image img {
 	width: 94vw;
 	border: 5px solid black;
+}
+
+.imagenoborder {
+	width: 100%;
+	margin-right: 0;
+}
+
+.imagenoborder img{
+	width: 94vw;
 }
 
 .outerimage img {
@@ -41,6 +52,10 @@
 	border: 5px solid black;	
 }
 
+.bigimage img{
+	width: 100%;
+}
+
 @media (min-width: 523px) {
 	.image img {
 	   width: 73vw;
@@ -65,7 +80,12 @@
 	}
 	.outerimage img {
 		width: 74.5vw;
-	}	
+	}
+
+	.imagenoborder img{
+		width: 73vw;
+	}
+
 }
 
 @media (min-width: 680px) {

@@ -57,6 +57,14 @@
 	padding: 10px 8px 8px 8px;
 }
 
+.callouttext1 ul{
+	list-style-type: none;
+}
+
+.callouttext1 li {
+	margin: 0 5px 13px 5px;
+}
+
 .callouttext2 {
 	padding: 8px 2px ;
 }
