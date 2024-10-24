@@ -1,8 +1,5 @@
 .roadmap{
-    width: 26vw;
-    height: 26vw;
-    float: right;
-    margin: -26px 5px 5px 5px;
+    display: none;
 }
 .rmap {
 	margin: 10px;
@@ -145,6 +142,14 @@ section {
 	width: 10px;
 }
 
+@media (min-width: 523px) {
+  .roadmap{
+      width: 26vw;
+      height: 26vw;
+      float: right;
+      margin: -26px 5px 5px 5px;
+  }
+}
 @media (min-width: 900px) {
     .moretext {
         display: block;
