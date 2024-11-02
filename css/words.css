@@ -22,12 +22,12 @@ h6 a:-webkit-any-link{
 }
 li {
     font-size: 4vw;
-	font-family: spectral;	
+	font-family: spectral, garamond;	
 }
 
 p {
     font-size: 4.5vw;
-	font-family: spectral;
+	font-family: spectral, garamond;
 	margin-bottom: 6.5px;
 	/*color: whitesmoke;*/
 	color:#ffffff;
@@ -37,7 +37,7 @@ h1 {
 	text-align: center;
 	margin: 0;
 	padding: 6px;
-	font-family: 'Averia Serif Libre';
+	font-family: 'Averia Serif Libre', garamond;
 	color: white;
 	background-color: rgba(0, 0, 0, 0.89);
 }
@@ -46,7 +46,9 @@ h2 {
 	font-size: 7vw;
 	color: white;	
 	margin: 5px;
-	font-family: caudex;
+	letter-spacing: .1rem;
+	font-weight: 800;
+	font-family: caudex, Georgia,;
 }
 
 h3 {
@@ -54,7 +56,8 @@ h3 {
 	text-align: center;
 	margin: 0;
 	margin-left: -5px;
-	font-family: caudex;
+	letter-spacing: .05rem;
+	font-family: caudex, Georgia, ;
 	color: white;
 	text-decoration: none;
 }
@@ -62,7 +65,7 @@ h4 {
 	font-size: 4vw;
 	padding: 0;
 	margin: 5px;
-	font-family: caudex;
+	font-family: caudex, georgia;
 	text-align: center;
 	color: white;
 }
@@ -72,7 +75,7 @@ h5 {
 	font-size: 4vw;
 	padding: 0;
 	margin: 5px;
-	font-family: caudex;
+	font-family: caudex, georgia;
 	color: white;	
 }
 
