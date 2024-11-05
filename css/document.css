@@ -69,7 +69,7 @@ body {
 }
 
 #lyrics {
-	background-color: #0b2117;
+	background-color: rgba(23, 41, 33, 0.8);
 	text-align: center;
 	width: fit-content;
 	padding: 10px;
@@ -113,7 +113,15 @@ body {
 }
 
 #bounty tr:nth-child(even){
-	background-color: rgba(47, 47, 47, 0.49);
+	background-color: rgba(56, 56, 57, 0.49);
+}
+
+#bounty tr:nth-child(odd){
+	background-color: rgba(31, 31, 31, 0.49);
+}
+
+#bounty tr:hover {
+	background-color: rgba(65, 65, 67, 0.8);
 }
 
 .footer {
