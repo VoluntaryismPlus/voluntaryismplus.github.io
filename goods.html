@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html lang=en>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Skooliepalooza</title>
-<script src="js/document.js"></script><link 
+<title>Bounty Board</title>
+<script src="js/document.js"></script>
+<link 
   href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" 
   rel="stylesheet"  type='text/css'>
 <link href="css/document.css" rel="stylesheet" type="text/css">
-	<link href="css/image.css" rel="stylesheet" type="text/css"><link href="css/words.css" rel="stylesheet" type="text/css"> 
-	<link href="css/sidebar.css" rel="stylesheet" type="text/css"> 
-	<link href="css/overlay.css" rel="stylesheet" type="text/css"> 
-	<link href="css/accordion.css" rel="stylesheet" type="text/css"> 
-	<link href="css/scrollbar.css" rel="stylesheet" type="text/css"> 
-	<link href="css/callouts.css" rel="stylesheet" type="text/css">
+<link href="css/image.css" rel="stylesheet" type="text/css"><link href="css/words.css" rel="stylesheet" type="text/css">
+<link href="css/sidebar.css" rel="stylesheet" type="text/css">
+<link href="css/overlay.css" rel="stylesheet" type="text/css">
+<link href="css/accordion.css" rel="stylesheet" type="text/css">
+<link href="css/scrollbar.css" rel="stylesheet" type="text/css">
+<link href="css/callouts.css" rel="stylesheet" type="text/css">
+<link href="css/map.css" rel="stylesheet" type="text/css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
@@ -21,10 +23,17 @@
 <link href='https://fonts.googleapis.com/css?family=Spectral' rel='stylesheet'>
 <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<meta http-equiv='cache-control' content='no-cache'> 
+<meta http-equiv='expires' content='0'> 
+<meta http-equiv='pragma' content='no-cache'>
+<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet"> 
+<link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
 </head>
 
 <body>    
-    
+
+<!-- The overlay -->
 <div id="myNav" class="overlay">
 
   <!-- Button to close the overlay navigation -->
@@ -32,15 +41,14 @@
 
   <!-- Overlay content -->
   <div class="overlay-content">
-	<a href="index.html" class="logo1"><img src="img/vroad.png"></a>
+	<a href="index.html" class="logo"><img src="img/vroad.png"></a>
 	<p>Roadmap</p>
 	  <ul>
 		<li><a href="0.1_Index.html">Index</a></li>
 	  </ul>
 	<p>We Are Network Support</p>
 	  <ul>
-		<li><a href="index.html">Welcome</a></li>
-		<li><a href="1_TheNetwork.html">The Network</a></li>
+		<li><a href="index.html">Welcome</a></li><li><a href="1_TheNetwork.html">The Network</a></li>
 		<li><a href="1.2_IntroVoluntaryism.html">What is Voluntaryism?</a></li>
 		<li><a href="1.3_VoluntaryismPlus.html">Voluntaryism, Plus</a></li>
 		<li><a href="1.4_OurPlan.html">Our Plan</a></li>
@@ -50,10 +58,11 @@
 		<ul>
 		<li><a href="2.1_SauronAndShire.html">Sauron and the Shire</a></li>
 		<li><a href="2.3_Location.html">Location</a></li>
-		<li><a href="2.4_YouAndNetwork.html">You and the Network</a></li><li><a href="2.5_Library.html">Library</a></li>	  </ul>
+		<li><a href="2.4_YouAndNetwork.html">You and the Network</a></li>
+		<li><a href="2.5_Library.html">Library</a></li>	  </ul>
 	<p>Create Your Own Adventure</p>
 	  <ul>
-		<li><a href="3.1_CaravanWelcomeOutpost.html">Caravan Welcome Outpost</a></li>
+		<li><a href="3.1_CaravanomeomeOutpost.html">Caravan Welcome Outpost</a></li>
 		<li><a href="3.2_StartHere.html">Start Here</a></li>
 		<li><a href="3.3_EntryGuide.html">Entry Guide</a></li>
 		<li><a href="3.4_FreedomPrompts.html">Freedom Prompts</a></li>
@@ -110,12 +119,12 @@
 	  <div class="dropdown-container">
 		<a href="0.1_Index.html">Index</a>
 	  </div>
-	  <button class="dropdown-btn" onclick="rotate()">We Are Network Support
+	  <button id="acti" class="dropdown-btn" onclick="rotate()">We Are Network Support
 		<i class="my_class fa fa-caret-right"></i>
 	  </button>
 		<div class="dropdown-container">
-		<a href="index.html">Welcome</a>
-		<a href="1_TheNetwork.html">The Network</a>
+		<div class="thispage"><a href="index.html">Welcome</a></div>
+		<a href="1_TheNetwork.html">The Network</a>	
 		<a href="1.2_IntroVoluntaryism.html">What is Voluntaryism?</a>
 		<a href="1.3_VoluntaryismPlus.html">Voluntaryism, Plus</a>
 		<a href="1.4_OurPlan.html">Our Plan</a>
@@ -125,10 +134,10 @@
 		<i class="my_class fa fa-caret-right"></i>
 	  </button>
 	  <div class="dropdown-container">
-	  <a href="2.1_SauronAndShire.html">Sauron and the Shire</a>
-	  <a href="2.3_Location.html">Transcending Location</a>
-	  <a href="2.4_YouAndNetwork.html">You and The Network</a>
-	  <a href="2.5_Library.html">Library</a>
+		<a href="2.1_SauronAndShire.html">Sauron and the Shire</a>
+		<a href="2.3_Location.html">Transcending Location</a>
+		<a href="2.4_YouAndNetwork.html">You and The Network</a>
+		<a href="2.5_Library.html">Library</a>
 	</div>
 	  <button class="dropdown-btn" onclick="rotate()">Create Your Own Adventure
 		<i class="my_class fa fa-caret-right"></i>
@@ -162,120 +171,137 @@
 		<a href="5.6_ConsensualConversation.html">Consensual Conversation Table</a>
 		<a href="5.7_CreatingCommunities.html">Creating Healthy Communities</a>
 	  </div>
-	  <button id="acti" class="dropdown-btn" onclick="rotate()">The Agora
+	  <button class="dropdown-btn" onclick="rotate()">The Agora
 		<i class="my_class fa fa-caret-right"></i>
 	  </button>
 	  <div class="dropdown-container">
 		<a href="6.1_BountyBoard.html">Bounty Board</a>
 		<a href="6.2_Events.html">Events</a>
-		<div class="thispage"><a href="6.3_Festivals.html">Festivals</a></div>
+		<a href="6.3_Festivals.html">Festivals</a>
 		<a href="6.4_Links.html">Links</a>
 		<a href="6.5_Map.html">Map</a>		
 		<a href="chewshome.html">Chew's Wisely</a>
 	  </div>
 	</div>
 </div>
-	
-<div class="bodytext">
-<div class="image"><img src="img/sk99.jpeg"></div>
-<h1>Skooliepalooza</h1>
-<div class="innersection">
-	<div class="headerboxcolor"><h2>Info</h2></div>
-		<p>Skooliepalooza is a festival held in the Desert of Ehrenberg, AZ.</p>
-		<p></p>
-	<div class="headerboxcolor"><h2>Disputed Territory</h2></div>
-		<p>In 2023, the Skooliepalooza name was used by a new group who threw their festival at the same location as the original Skooliepalooza event.</p>
-		<p>As of 2024, that group has decided to change the location of their paid event to Moab, Utah.</p>
-	<div class="headerboxcolor"><h2>Skooliepalooza Links</h2></div>
-	<a href="https://skooliepalooza.com/"><h3>Official Version Website</h3></a>
-	<a href="https://www.facebook.com/groups/1304375057035293"><h3>Unofficial Version Facebook Page</h3></a>
-</div>
-<div class="image"><img src="img/sksign.PNG"></div>
-<div class="innersection">
-	<div class="headerboxcolor"><h2>Fall 2024 Schedule</h2></div>
-	<h3>Wednesday</h3>
-		<div class="festivals">
-			<h4>TBA</h4>
-				<p></p>
-			<h4>TBA</h4>
-				<p></p>
-			<h4>Pizza and Ice Cream</h4>
-				<p></p>
-		</div>
-	<h3>Thursday</h3>
-		<div class="festivals">
-			<h4>TBA</h4>
-				<p></p>
-			<h4>TBA</h4>
-				<p></p>
-			<h4>Pizza and Ice Cream</h4>
-				<p></p>
-		</div>
-	<h3>Friday</h3>
-		<div class="festivals">
-			<h4>1-2 PM - Presentation of The Network</h4>
-				<p></p>
-			<h4>TBA</h4>
-				<p></p>
-			<h4>Pizza and Ice Cream</h4>
-				<p></p>
-		</div>
-	<h3>Saturday</h3>
-		<div class="festivals">
-			<h4>1-2 PM - Presentation on Caravanarchy</h4>
-				<p></p>
-			<h4>TBA</h4>
-				<p></p>
-			<h4>Pizza and Ice Cream</h4>
-				<p></p>
-		</div>
-	<h3>Sunday</h3>
-		<div class="festivals">
-			<h4>1-2 PM - Discussion of Intent and Inheritance</h4>
-				<p></p>
-			<h4>TBA</h4>
-				<p></p>
-			<h4>Pizza and Ice Cream</h4>
-				<p></p>
-		</div>
-</div>
-<div class="innersection">
-		<div class="headerboxcolor"><h2>Photo Gallery</h2></div>
-</div>
-<div class="image"><img src="img/sk1.JPEG"></div>
-<div class="image"><img src="img/sk2.JPEG"></div>
-<div class="image"><img src="img/sk4.JPEG"></div>
-<div class="image"><img src="img/sk5.JPEG"></div>
-<div class="image"><img src="img/sk6.JPEG"></div>
-<div class="image"><img src="img/sk7.JPEG"></div>
-<div class="image"><img src="img/sk8.JPEG"></div>
-<div class="image"><img src="img/sk9.JPEG"></div>
-<div class="image"><img src="img/sk10.JPEG"></div>
-<div class="image"><img src="img/sk11.JPEG"></div>
-<div class="image"><img src="img/sk12.JPEG"></div>
-<div class="image"><img src="img/sk3.JPEG"></div>
 
-<br><div class="nextpage"><h3><a href="6.4_Links.html">Next Chapter: Agorist Links</a></h3></div><br>
-<div class="footer"><p>Contact us by Email: caravanarchy@proton.me</p></div>
+<div class = "bodytext">
+<h1 id="section0">Bounty Board</h1>
+	<div class="innersection"><div class="headerbox"><h4><em>All about the carvan</em></h4></div>
+		<p></p>
+	</div>
+<div class="outerimage">
+    <img src="img/vehicles.jpg"></div>
+	<div class="innersection">
+        <div class="headerbox"><h1 id="section0.1"><strong>Goods</strong></h1></div>
+		<div class="bountylist">
+			<div class="headerbox"><h3>All Listings</h3></div>
+			<h4 style="text-align: end">Organized By: Date</h4>
+			<div class="bountylisttext">
+				<table id="bounty">
+					<tr>
+						<th>Title</th>
+						<th>Location</th>
+						<th>Date</th>
+					</tr>
+					<tr>
+						<td>Alfreds Futterkiste</td>
+						<td>Maria Anders</td>
+						<td>Germany</td>
+					</tr>
+					<tr>
+						<td>Berglunds snabbköp</td>
+						<td>Christina Berglund</td>
+						<td>Sweden</td>
+					</tr>
+					<tr>
+						<td>Centro Moctezuma</td>
+						<td>Francisco Chang</td>
+						<td>Mexico</td>
+					</tr>
+					<tr>
+						<td>Ernst Handel</td>
+						<td>Roland Mendel</td>
+						<td>Austria</td>
+					</tr>
+					<tr>
+						<td>Island Trading</td>
+						<td>Helen Bennett</td>
+						<td>UK</td>
+					</tr>
+					<tr>
+						<td>Königlich Essen</td>
+						<td>Philip Cramer</td>
+						<td>Germany</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
 </div>
-    
+
 <script>
 /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+
+window.onload=function(){
+document.getElementById("acti").click();
+};
+	
 var dropdown = document.getElementsByClassName("dropdown-btn");
-var i;
+	
+var i; 
 
 for (i = 0; i < dropdown.length; i++) {
-  dropdown[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var dropdownContent = this.nextElementSibling;
-    if (dropdownContent.style.display === "block") {
-      dropdownContent.style.display = "none";
-    } else {
-      dropdownContent.style.display = "block";
-    }
+
+dropdown[i].addEventListener("click", function() {
+	
+	var lst = document.getElementsByClassName("dropdown-container");
+	
+	for (var j = 0; j < lst.length; j++) { lst[j].style.display = "none"; }
+	
+	var act = document.getElementsByClassName("dropdown-btn");
+	
+	for (var k = 0; k <act.length; k++) {
+	   act[k].classList.remove("active");
+	}
+	
+	this.classList.toggle("active");
+	
+	var dropdownContent = this.nextElementSibling;
+	
+	if (dropdownContent.style.display === "block") {
+	  dropdownContent.style.display = "none";
+	} else {
+	  dropdownContent.style.display = "block";
+	}
+//    this.classList.toggle("active"); 
+//    this.style.backgroundColor = "#AA0000";
   });
 }
+function rotate(){
+	var element = event.target;
+	var child = element.children[0];
+	
+	var myIcon = document.getElementsByClassName("my_class fa fa-caret-down");
+	var m;
+	for (var m = 0; m < myIcon.length; m++) {
+	myIcon[m].className = "my_class fa fa-caret-right";
+	}
+	
+	child.className = "my_class fa fa-caret-down";
+}
+	
+/* Open when someone clicks on the span element */
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+	
 </script>
 
-  </body>
+</body>
 </html>

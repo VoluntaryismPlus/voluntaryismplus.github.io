@@ -105,6 +105,10 @@ body {
 		width: 36vw;
 		margin: 5px;
 	}
+	.outerimage img {
+		margin-left: 2px;
+		width: calc(100vw - 225px);
+	}
 }
 
 @media (min-width: 900px) {
