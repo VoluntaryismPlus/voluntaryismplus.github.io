@@ -96,6 +96,10 @@ body {
 	width: 88vw;
 }
 
+.bountylisttext {
+	margin: 10px 0 10px 8px;
+}
+
 #bounty {
 	border-collapse: collapse;
 	width: 89vw;
