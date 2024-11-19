@@ -142,7 +142,8 @@ body {
 		width: 74vw;
 	}
 	.innersection {
-		width: 75.5vw;
+		width: 76vw;
+		
 	}
 }
 
@@ -166,5 +167,6 @@ body {
 	}
 	.innersection {
 		width: calc(100vw - 230px);
+		/*margin-left: 123px;*/
 	}
 }

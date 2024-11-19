@@ -144,7 +144,7 @@
 		width: calc(100vw - 29.5vw);
 	}
 	.outercallout {
-		width: calc(100vw - 28vw);
+		width: calc(100vw - 25.7vw);
 
 	}
 	.callouttext {
@@ -157,6 +157,10 @@
 @media (min-width: 900px) {
 	.callout {
 		width: calc(100vw - 267px);
+
+	}
+	.outercallout {
+		width: calc(100vw - 28vw);
 
 	}
 }

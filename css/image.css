@@ -11,6 +11,20 @@ body {
 	border: 5px solid black;
 }
 
+.imgrt img{
+	position: absolute;
+	margin-right: 1vw;
+	display: none;
+}
+
+.imglt img{
+	display: none;
+    float: left;
+	margin: 5px 0 0 1vw;
+	padding: 6px;
+	width: 40vw;
+}
+
 .imagenoborder {
 	width: 100%;
 	margin-right: 0;
@@ -24,6 +38,7 @@ body {
 	margin-left: 2px;
 	width: 95.8vw;
 	border: 5px solid black;
+	display: block;
 }
 
 .businessimage {
@@ -58,7 +73,8 @@ body {
 
 @media (min-width: 523px) {
 	.image img {
-	   width: 73vw;
+		width: 60vw;
+		margin: 0 0 0 7vw;
 	}
     .vehicles img {
         width: 37.5vw;
@@ -79,7 +95,8 @@ body {
 		margin: 5px;
 	}
 	.outerimage img {
-		width: 74.5vw;
+		width: 60vw;
+		margin: 0 0 0 8.5vw;
 	}
 
 	.imagenoborder img{
@@ -105,15 +122,12 @@ body {
 		width: 36vw;
 		margin: 5px;
 	}
-	.outerimage img {
-		margin-left: 2px;
-		width: calc(100vw - 225px);
-	}
 }
 
 @media (min-width: 900px) {
 	.image img {
-		width: calc(100vw - 225px);
+		width: calc(80vw - 225px);
+		margin: 0 0 0 8.7vw;
 	}
 	.vehicles img{
 		width: calc((100vw - 225px)/2);
@@ -136,5 +150,18 @@ body {
 		width: calc((100vw - 265px)/2);
 		margin: 5px;
 	}
+	.outerimage img {
+		margin-left: calc((100vw - 225px)/4);
+		width: calc((100vw - 225px)/2);
+		display: none;
+	}
 	
+	imgrt img{
+		display: block;
+	}
+	
+	imglt img{
+		display: block;
+		width: 50vw;
+	}
 }
