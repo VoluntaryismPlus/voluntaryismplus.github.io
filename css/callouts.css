@@ -25,6 +25,7 @@
 	outline: 1px solid white;
 	color: #cccccc;
 	margin: 10px;
+	width: 81.5vw;
 }
 
 .outercallout {
@@ -45,7 +46,8 @@
 	width: 59vw;
 }
 .callouttext {
-	padding: 8px 27px 8px 27px;	
+	padding: 8px 27px 8px 27px;
+	width: 82vw;
 }
 
 .calloutcenter{
@@ -55,6 +57,7 @@
 
 .callouttext1 {
 	padding: 10px 8px 8px 8px;
+	width: 81vw;
 }
 
 .callouttext1 ul{
@@ -143,6 +146,12 @@
 	.outercallout {
 		width: calc(100vw - 28vw);
 
+	}
+	.callouttext {
+		width: calc(100vw - 30.5vw);	
+	}
+	.callouttext1 {
+		width: calc(100vw - 30.5vw);	
 	}
 }
 @media (min-width: 900px) {
