@@ -40,7 +40,7 @@ body {
 	background-color: rgba(0, 0, 0, 0.85);
 	margin: 3px 3px 18px 3px;
 	padding: 6px 7px 7px 9px;
-	width: 90.7vw;
+	width: 95.2vw;
 }
 
 .innersection h5 a{
@@ -51,7 +51,6 @@ body {
 	/*background-color: rgba(0, 0, 0, 0.76);*/
 	margin: 0 0 1px -0.5vw;
 	padding: 6px 6px 6px 6px;	
-	width: 92vw;
 }
 
 .headerboxcolor {
@@ -65,7 +64,7 @@ body {
 	background-color: rgba(0, 0, 0, 0.86);
 	margin: 0 0 1px 0;
 	padding: 6px 6px 6px 6px;	
-	width: 100%;	
+	width: 92vw;	
 }
 
 #lyrics {
