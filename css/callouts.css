@@ -50,6 +50,15 @@
 	width: 87vw;
 }
 
+.callouttextsmall {
+	padding: 8px 23px 8px 32px;
+	width: 87vw;
+}
+
+.callouttextsmall li{
+	font-size: 3vw;
+}
+
 .calloutcenter{
 	padding: 12px 8px 8px 8px;
 	text-align: center;
