@@ -20,6 +20,22 @@
 	/*margin-left: 33vw; */
 }
 
+.indexcallout {
+	background-color: rgba(43, 42, 46, 0.91);
+	outline: 1px solid white;
+	color: #cccccc;
+	margin: 10px;
+	width: 86.9vw;
+}
+
+.indexcallout2 {
+	background-color: rgba(43, 42, 46, 0.91);
+	outline: 1px solid white;
+	color: #cccccc;
+	margin: 10px;
+	width: 86.9vw;
+}
+
 .callout {
 	background-color: rgba(43, 42, 46, 0.91);
 	outline: 1px solid white;
@@ -149,6 +165,12 @@
 	   width: 240px;
 	   margin: 15px 5px 10px 10px;
 	}
+	.indexcallout {
+		width: calc(100vw - 29.5vw - 240px);
+	}
+	.indexcallout2 {
+		width: calc(100vw - 29.5vw);
+	}
 	.callout {
 		width: calc(100vw - 29.5vw);
 	}
@@ -162,6 +184,9 @@
 	.callouttext1 {
 		width: calc(100vw - 30.5vw);	
 	}
+	.nextpage {
+		width: 	calc(100vw - 25.7vw);
+	}
 }
 @media (min-width: 900px) {
 	.callout {
@@ -171,5 +196,15 @@
 	.outercallout {
 		width: calc(100vw - 28vw);
 
+	}
+	.nextpage {
+		margin-left: -3px;
+		width: 	calc(100vw - 225px);
+	}
+	.indexcallout {
+		width: calc(100vw - 510px);
+	}
+	.indexcallout2 {
+		width: calc(100vw - 510px);
 	}
 }
