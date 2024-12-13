@@ -1,23 +1,23 @@
-.image img{
-	width: 42vw;
-	z-index: -2;	
+.image img {
+    width: 42vw;
+    z-index: -2;
     text-align: center;
 }
 
 .imagelarge {
-	width: 50vw;
+    width: 50vw;
     display: flex;
- 	align-items: center;
+    align-items: center;
 }
 
-.imagelarge img{
-	z-index: 0;
-	width: 50vw;
+.imagelarge img {
+    z-index: 0;
+    width: 50vw;
 }
 
 .halfimages img {
     width: calc(100vw - 90px);
-    border: 10px solid #B8D3DA;
+    border: 10px solid #b8d3da;
 }
 
 #hibiscus {
@@ -58,11 +58,21 @@
     z-index: -1;
 }
 
-.icecreamflavor img{
+.icecreamflavor img {
     display: none;
 }
 @media (min-width: 500px) {
     .halfimages img {
-        width: 44vw;
+        width: 38.5vw;
+    }
+}
+@media (min-width: 680px) {
+    .halfimages img {
+        width: 41vw;
+    }
+}
+@media (min-width: 880px) {
+    .halfimages img {
+        width: 43vw;
     }
 }

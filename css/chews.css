@@ -10,11 +10,10 @@ html, body {
 }
 
 .title {
-    width: calc(100vw - 70px);
+    width: calc(100vw - 75px);
     border: 10px solid #1D6A7E;
     background-color: rgba(83,179,203,0.7);
     margin-left: 20px;
-	margin-right: 0.5vw;
     z-index: -1;
 }
 

@@ -1,5 +1,5 @@
 body {
-	background-color: #1D1D1D;
+	background-color: #1d1d1d;
 }
 .image {
 	width: 100%;
@@ -11,15 +11,15 @@ body {
 	border: 5px solid black;
 }
 
-.imgrt img{
+.imgrt img {
 	position: absolute;
 	margin-right: 1vw;
 	display: none;
 }
 
-.imglt img{
+.imglt img {
 	display: none;
-    float: left;
+	float: left;
 	margin: 5px 0 0 1vw;
 	padding: 6px;
 	width: 40vw;
@@ -30,7 +30,7 @@ body {
 	margin-right: 0;
 }
 
-.imagenoborder img{
+.imagenoborder img {
 	width: 94vw;
 }
 
@@ -64,10 +64,10 @@ body {
 
 .vehicles img {
 	width: 47vw;
-	border: 5px solid black;	
+	border: 5px solid black;
 }
 
-.bigimage img{
+.bigimage img {
 	width: 100%;
 }
 
@@ -76,21 +76,21 @@ body {
 		width: 60vw;
 		margin: 0 0 0 7vw;
 	}
-    .vehicles img {
-        width: 37.5vw;
-    }
+	.vehicles img {
+		width: 37.5vw;
+	}
 	.businessimage {
 		width: 75vw;
 		display: flex;
 	}
-	.businessimage img{
+	.businessimage img {
 		width: 35.5vw;
 		margin: 5px;
 	}
 	.businessimage1 {
 		width: 74vw;
 	}
-	.businessimage1 img{
+	.businessimage1 img {
 		width: 73vw;
 		margin: 5px;
 	}
@@ -99,10 +99,9 @@ body {
 		margin: 0 0 0 8.5vw;
 	}
 
-	.imagenoborder img{
+	.imagenoborder img {
 		width: 73vw;
 	}
-
 }
 
 @media (min-width: 680px) {
@@ -110,7 +109,7 @@ body {
 		width: 75vw;
 		display: flex;
 	}
-	.businessimage img{
+	.businessimage img {
 		width: 36vw;
 		margin: 5px;
 	}
@@ -118,7 +117,7 @@ body {
 		width: 75vw;
 		display: flex;
 	}
-	.businessimage1 img{
+	.businessimage1 img {
 		width: 36vw;
 		margin: 5px;
 	}
@@ -129,16 +128,16 @@ body {
 		width: calc(80vw - 225px);
 		margin: 0 0 0 8.7vw;
 	}
-	.vehicles img{
-		width: calc((100vw - 225px)/2);
+	.vehicles img {
+		width: calc((100vw - 225px) / 2);
 	}
 	.businessimage {
 		width: calc(100vw - 225px);
 		display: flex;
 		padding: 10px;
 	}
-	.businessimage img{
-		width: calc((100vw - 265px)/2);
+	.businessimage img {
+		width: calc((100vw - 265px) / 2);
 		margin: 5px;
 	}
 	.businessimage1 {
@@ -146,21 +145,21 @@ body {
 		display: flex;
 		padding: 10px;
 	}
-	.businessimage1 img{
-		width: calc((100vw - 265px)/2);
+	.businessimage1 img {
+		width: calc((100vw - 265px) / 2);
 		margin: 5px;
 	}
 	.outerimage img {
-		margin-left: calc((100vw - 225px)/4);
-		width: calc((100vw - 225px)/2);
+		margin-left: calc((100vw - 225px) / 4);
+		width: calc((100vw - 225px) / 2);
 		/*display: none;*/
 	}
-	
-	imgrt img{
+
+	imgrt img {
 		display: block;
 	}
-	
-	imglt img{
+
+	imglt img {
 		display: block;
 		width: 50vw;
 	}

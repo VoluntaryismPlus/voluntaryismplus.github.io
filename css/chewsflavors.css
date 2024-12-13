@@ -1,77 +1,38 @@
-/*ingredients*/
-
-.mainingredients {
-    background-color: rgba(184,211,218,0.7);
-    border: 10px solid;
-    border-color: #B8D3DA;
-    margin-left: 20px;
-    margin-top: 10px;
-	width: calc(100vw - 70px);
-	height: calc(100vh - 162px);
-	overflow-y: scroll;
-}
-
-.organic {
-    text-align: right;
-    margin: 0;
-    font-size: 1.2em;
-}
-
-.ingredientstitle {
-    margin-top: -10px;
-    background-color: rgba(184,211,218,0.6);
-    border-bottom: 7px solid;
-    border-color: rgba(184,211,218,0.9);
-}
-
-.ingredients1 {
-    background-color: rgba(99,159,171,0.4);
-    border: 7px solid;
-    border-color: rgba(99,159,171,0.9);
-    margin-bottom: 7px;
-    padding-left: 20px;
-}
-.ingredients2 {
-    background-color: rgba(99,159,171,0.4);
-    border: 7px solid;
-    border-color: rgba(99,159,171,0.9);
-    margin-bottom: 7px;
-    padding-left: 20px;
-}
-
-/*flavors*/
-
 .bodybox {
-    display: grid;
+	display: grid;
 	grid-auto-rows: min-content;
-	/*grid-auto-columns: min-content;*/
-    color: white;
-    margin-top: 8px;
-	width: calc(100vw - 34px);
+	grid-auto-columns: min-content;
+	/*column-gap: 2.5vw;*/
+	color: white;
+	margin-top: 8px;
+	width: calc(100vw - 50px);
 	margin-left: 20px;
 	overflow-y: scroll;
-	height: calc(100vh - 158px);
+	height: calc(100vh - 120px);
 }
 
 .column1 {
-    background-color: rgba(99,159,171,0.7);
-    border: 10px solid #639FAB;
-    grid-column: 1;
-	grid-row: 1;
-    display: grid;
+	background-color: rgba(99, 159, 171, 0.7);
+	border: 7px solid #639fab;
+	grid-column: 1;
+	grid-row: 2;
+	display: grid;
 	grid-auto-columns: min-content;
-    width: calc(100vw - 70px);
-    height: auto;
+	width: calc(100vw - 68px);
+	overflow-x: none;
+	height: auto;
+	margin: -7px 0 0 0;
 }
 
 .column2 {
-    background-color: rgba(184,211,218,0.7);
-    border: 10px solid #B8D3DA;
-    grid-column: 1;
-	grid-row: 2;
-    width: calc(100vw - 70px);
-    height: auto;
-	display: none;
+	background-color: rgba(184, 211, 218, 0.7);
+	border: 7px solid #b8d3da;
+	grid-column: 1;
+	grid-row: 4;
+	width: calc(100vw - 68px);
+	height: auto;
+	overflow-x: none;
+	margin-top: -7px;
 }
 
 .innerlist {
@@ -81,76 +42,81 @@
 .innertitle {
 	display: block;
 }
-.innertitle h3{
+
+.innertitle h3 {
 	font-size: 6vw;
-	margin: 0 -5px 0 -5px; 
-	padding: 5px; 
-	background-color: rgba(99,159,171,0.6); 
-	border: 5px solid #639FAB
+	margin: 0 -5px 0 -5px;
+	padding: 5px;
+	background-color: rgba(99, 159, 171, 0.6);
+	border: 5px solid #639fab;
 }
 
 .smalltitle1 {
-    background-color: rgba(99,159,171,0.7);
-    border-bottom: 7px solid;
-    border-color: rgba(99,159,171,0.9);
-    grid-row: 1;
+	background-color: rgba(99, 159, 171, 0.7);
+	border: 7px solid;
+	border-color: rgba(99, 159, 171, 0.9);
+	grid-row: 1;
+	grid-column: 1;
 }
 
 .smalltitle2 {
-    background-color: rgba(184,211,218,0.7);
-    border-bottom: 7px solid;
-    border-color: rgba(184,211,218,0.9);
-    margin-top: -5px;
-	padding-top: 1vw;
-	grid-row: 1;
+	background-color: rgba(184, 211, 218, 0.7);
+	border: 7px solid;
+	border-color: rgba(184, 211, 218, 0.9);
+	grid-row: 3;
+	grid-column: 1;
+	margin-top: 10px;
 }
 
-.flavorslist1 {
-    grid-row: 2;
-	width:  calc(100vw - 70px);
-}
-
-.flavorslist1 a{
+.flavorslist1 a {
 	text-decoration: none;
 }
 
-.flavorslist2 {
-    grid-row: 2;
-}
-
 .innerflavorslist {
-	background-color: rgba(184,211,218,0.7);
+	background-color: rgba(184, 211, 218, 0.7);
 	display: block;
 	margin: -16px 0;
 }
 
-.name {
-    background-color:  rgba(99,159,171,0.6);
-    border: none;
-    margin-top: -10px;
-    margin-left: -25px;
-}
-
 @media (min-width: 500px) {
-    .column1 {
-        grid-column: 1;
-        grid-row: 1;
-	    width: 42vw;
-	    height: calc(100vh - 202px);
-    }
-    .column2 {
-        grid-column: 2;
-        grid-row: 1;
-	    width: 42vw;
-	    height: calc(100vh - 202px);
-		display: block;
-    }
-	.flavorslist1 {
-		width: inherit;
+	.bodybox {
+		overflow-y: none;
+		overflow-x: scroll;
+		grid-auto-columns: calc(50vw - 28px);
+		width: calc(100vw - 47px);
 	}
-    .buttons {
-        overflow-y: scroll;
-    }
+	.column1 {
+		grid-column: 1;
+		grid-row: 2;
+		width: auto;
+		height: 72vh;
+		overflow-x: scroll;
+		overflow-y: none;
+	}
+	.column2 {
+		grid-column: 2;
+		grid-row: 2;
+		width: auto;
+		height: 72vh;
+		display: block;
+		overflow-x: scroll;
+		overflow-y: none;
+	}
+	.flavorslist1 {
+		width: 41vw;
+	}
+	.flavorslist1 ul {
+		margin-left: -20px;
+	}
+	.flavorslist2 {
+		width: 41vw;
+	}
+	.flavorslist2 ul {
+		margin-left: -20px;
+	}
+	.buttons {
+		overflow-y: scroll;
+	}
 	.innertitle {
 		display: none;
 	}
@@ -158,13 +124,31 @@
 		display: none;
 	}
 	.smalltitle1 {
-	    height: 7vw;
-		width: inherit;
+		/*height: 7vw;*/
+		grid-column: 1;
+		grid-row: 1;
 	}
 	.smalltitle2 {
-	    height: 7vw;
+		/*height: 7vw;*/
+		grid-column: 2;
+		grid-row: 1;
+		margin-top: 0;
 	}
 	.innerflavorslist {
 		display: none;
+	}
+}
+
+@media (min-width: 680px) {
+	.column1 {
+		height: calc(100vh - 272px);
+	}
+
+	.column2 {
+		height: calc(100vh - 272px);
+	}
+	.flavorslist1 {
+		width: 43vw;
+		margin-left: auto;
 	}
 }

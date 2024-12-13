@@ -3,10 +3,9 @@
 	outline: 1spx solid white;
 	padding: 0 1px 10px 1px;
 	float: right;
-    width: 90vw;
-    margin-bottom: 20px;
+	width: 90vw;
+	margin-bottom: 20px;
 	text-align: center;
-	
 }
 
 .indextitle {
@@ -58,7 +57,7 @@
 	border: 1px solid #1f1f1f;
 }
 
-.calloutimage img{
+.calloutimage img {
 	width: 59vw;
 }
 .callouttext {
@@ -71,11 +70,11 @@
 	width: 87vw;
 }
 
-.callouttextsmall li{
+.callouttextsmall li {
 	font-size: 3vw;
 }
 
-.calloutcenter{
+.calloutcenter {
 	padding: 12px 8px 8px 8px;
 	text-align: center;
 }
@@ -85,7 +84,7 @@
 	width: 87vw;
 }
 
-.callouttext1 ul{
+.callouttext1 ul {
 	list-style-type: none;
 }
 
@@ -94,7 +93,7 @@
 }
 
 .callouttext2 {
-	padding: 8px 2px ;
+	padding: 8px 2px;
 }
 
 .callouttextlist {
@@ -119,7 +118,7 @@
 .callout2 {
 	background-color: #2f2f2f;
 	outline: 1px solid white;
-	padding: 2px 10px 2px 10px;	
+	padding: 2px 10px 2px 10px;
 }
 
 .callout4title {
@@ -147,13 +146,13 @@
 .nextpage {
 	background-color: rgba(0, 0, 0, 0.86);
 	margin: 0 0 1px 0;
-	padding: 16px 6px 16px 6px;	
-	width: 96.5vw;	
+	padding: 16px 6px 16px 6px;
+	width: 96.5vw;
 	border: 2px solid white;
 }
 
 .nextpage a {
-	color:#ffffff;
+	color: #ffffff;
 }
 
 .festivals {
@@ -164,9 +163,9 @@
 }
 
 @media (min-width: 523px) {
-    .index {
-	   width: 240px;
-	   margin: 15px 5px 10px 10px;
+	.index {
+		width: 240px;
+		margin: 15px 5px 10px 10px;
 	}
 	.indexcallout {
 		width: calc(100vw - 29.5vw - 240px);
@@ -179,30 +178,27 @@
 	}
 	.outercallout {
 		width: calc(100vw - 25.7vw);
-
 	}
 	.callouttext {
-		width: calc(100vw - 30.5vw);	
+		width: calc(100vw - 30.5vw);
 	}
 	.callouttext1 {
-		width: calc(100vw - 30.5vw);	
+		width: calc(100vw - 30.5vw);
 	}
 	.nextpage {
-		width: 	calc(100vw - 25.7vw);
+		width: calc(100vw - 25.7vw);
 	}
 }
 @media (min-width: 900px) {
 	.callout {
 		width: calc(100vw - 267px);
-
 	}
 	.outercallout {
 		width: calc(100vw - 28vw);
-
 	}
 	.nextpage {
 		margin-left: -3px;
-		width: 	calc(100vw - 225px);
+		width: calc(100vw - 225px);
 	}
 	.indexcallout {
 		width: calc(100vw - 510px);
