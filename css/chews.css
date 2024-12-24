@@ -111,13 +111,14 @@ homebutton1 a:hover {
 
 @media (min-width: 500px) {
 	.homebuttons {
-		width: calc(100vw - 41px);
+		width: calc(100vw - 50px);
 		height: calc(100vh - 185.8px);
 		grid-template-columns: fit-content fit-content;
+		margin-left: 20px;
 	}
 
 	.homebuttons img {
-		width: calc(44.9vw - 21px);
+		width: calc(50vw - 53px);
 	}
 
 	.homebutton1 {
