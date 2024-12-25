@@ -49,13 +49,6 @@ homebutton1 a:hover {
 	border: 10px solid #b8d3da;
 }
 
-.homeimg1 {
-	grid-row: 2;
-	grid-column: 1;
-	margin-top: -20px;
-	height: 238px;
-}
-
 .homebutton2 {
 	grid-column: 1;
 	grid-row: 3;
@@ -63,28 +56,11 @@ homebutton1 a:hover {
 	border: 10px solid #b8d3da;
 }
 
-.homeimg2 {
-	grid-row: 4;
-	grid-column: 1;
-	background-color: rgba(99, 159, 171, 0.7);
-	border: 10px solid #b8d3da;
-	margin-top: -20px;
-	height: 237px;
-}
-
 .homebutton3 {
 	grid-column: 1;
 	grid-row: 5;
 	background-color: rgba(99, 159, 171, 0.7);
 	border: 10px solid #b8d3da;
-	margin-top: 0;
-}
-
-.homeimg3 {
-	grid-row: 6;
-	grid-column: 1;
-	margin-top: -20px;
-	height: 237px;
 }
 
 .homebutton4 {
@@ -92,21 +68,12 @@ homebutton1 a:hover {
 	grid-row: 7;
 	background-color: rgba(184, 211, 218, 0.7);
 	border: 10px solid #b8d3da;
-	margin-top: 10px;
-}
-
-.homeimg4 {
-	grid-row: 8;
-	grid-column: 1;
-	background-color: rgba(99, 159, 171, 0.7);
-	border: 10px solid #b8d3da;
-	margin-top: -20px;
-	height: 237px;
 }
 
 .homebuttons img {
 	width: calc(100vw - 75px);
 	border-top: 10px solid #b8d3da;
+	margin-bottom: -4px;
 }
 
 @media (min-width: 500px) {
@@ -124,54 +91,24 @@ homebutton1 a:hover {
 	.homebutton1 {
 		grid-column: 1;
 		grid-row: 1;
-		height: fit-content;
-	}
-
-	.homeimg1 {
-		grid-row: 2;
-		grid-column: 1;
-		margin-top: -20px;
-		height: min-content;
+		/*height: fit-content;*/
 	}
 
 	.homebutton2 {
 		grid-column: 2;
 		grid-row: 1;
-		height: fit-content;
-	}
-
-	.homeimg2 {
-		grid-row: 2;
-		grid-column: 2;
-		margin-top: -20px;
-		height: min-content;
+		/*height: fit-content;*/
 	}
 
 	.homebutton3 {
 		grid-column: 1;
 		grid-row: 3;
-		height: fit-content;
-		margin-top: 10px;
-	}
-
-	.homeimg3 {
-		grid-row: 4;
-		grid-column: 1;
-		margin-top: -20px;
-		height: min-content;
+		/*height: fit-content;*/
 	}
 
 	.homebutton4 {
 		grid-column: 2;
 		grid-row: 3;
-		height: fit-content;
-		margin-top: 10px;
-	}
-
-	.homeimg4 {
-		grid-row: 4;
-		grid-column: 2;
-		margin-top: -20px;
-		height: min-content;
+		/*height: fit-content;*/
 	}
 }
