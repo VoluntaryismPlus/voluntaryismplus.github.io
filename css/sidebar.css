@@ -1,8 +1,7 @@
 .side_header {
-	font-size: 25px;
+	font-size: 20px;
 	text-align: center;
 	margin-bottom: 5px;
-	font-family: caudex;
 	color: white;
 	line-height: 25px;
 }
@@ -25,10 +24,11 @@
 	left: 0;
 	background-color: #111;
 	overflow: hidden;
-	padding: 0 0 10px 5px;
+	/*padding: 0 0 10px 5px;*/
 	height: 25vh;
 	display: none;
 	margin: 0;
+	padding: 5px 5px 0 5px;
 	/*	margin-bottom: 20px;*/
 	/*	bottom: 20px;*/
 }
@@ -42,41 +42,39 @@
 	background-color: #111;
 	overflow-y: scroll;
 	overflow-x: hidden;
-	padding: 5px;
 	height: 75vh;
 	margin: 0;
+	padding: 2px 2px 21px 2px;
 }
 
 .side a {
-	font-family: "Caudex";
 	padding: 6px 6px 6px 12px;
 	text-decoration: none;
-	color: #818181;
 	display: block;
 	width: calc(20vw - 10px);
 	cursor: pointer;
 }
 
 .thispage {
-	background-color: black;
+	background-color: #e6ff5f;
 	outline: 1px solid white;
-	color: white;
 	padding: 3px 0 3px 3px;
 	width: calc(20vw - 11px);
 }
 
 .thispage a:hover {
-	width: calc(20vw - 22px);
-	padding-left: 10px;
+	padding: 3px 12px 3px 3px;
+	border: none;
+	width: calc(20vw - 17px);
 }
 
 .dropdown-btn {
 	background-color: #111;
-	width: calc(20vw - 10px);
-	font-family: "Caudex";
+	width: calc(20vw - 16px);
+	font-family: courier new;
 	padding: 5px 5px 5px 8px;
-	font-size: 2.9vw;
-	color: #818181;
+	font-size: 2vw;
+	color: #767676;
 	display: block;
 	border: none;
 	text-align: left;
@@ -84,6 +82,7 @@
 }
 
 .dropdown-btn:active {
+	font-size: 2.5vw;
 	margin-top: 5px;
 }
 
@@ -112,17 +111,19 @@
 .active {
 	background-color: #5a5a5a;
 	color: white;
+	width: calc(20vw - 20px);
 }
 
 /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
 .dropdown-container {
 	display: none;
-	background-color: #303030;
-	width: calc(20vw - 10px);
-	/*
-	padding-left: 8px;
+	background-color: #262627;
+	width: calc(20vw - 20px);
+	/*padding-left: 8px;*/
 	margin-right: 5px;
-*/
+	border-right: 0.5px solid white;
+	border-left: 0.5px solid white;
+	border-bottom: 0.5px solid white;
 }
 
 .dropdown-container-open {
@@ -135,16 +136,24 @@
 
 .dropdown-container a,
 .dropdown-container-open a {
-	font-family: "Spectral";
-	font-size: 2vw;
-	padding: 3px 0 3px 5px;
-	color: #b5b5b5;
+	font-size: 1.7vw;
+	padding: 3px 0 3px 14px;
+	color: #7b7b7b;
 	width: calc(20vw - 11px);
+	font-family: courier;
+	max-width: calc(20vw - 24.9px);
+	/*font-size: 14px;*/
 }
+
 .dropdown-container a:hover {
 	background-color: #000000;
 	outline: 1px solid white;
 	width: calc(20vw - 11px);
+}
+
+.thispage a {
+	font-weight: 500;
+	color: #000000;
 }
 
 /* Optional: Style the caret down icon */
@@ -169,48 +178,6 @@
 	.sidenav {
 		display: block;
 	}
-	#logo {
-		margin-top: 1px;
-	}
-	.side_header {
-		font-size: 20px;
-	}
-	.dropdown-container a,
-	.dropdown-container-open a {
-		font-family: "Spectral";
-		font-size: 1.5vw;
-		padding: 3px 0 3px 5x;
-		color: #b5b5b5;
-		max-width: calc(20vw - 10.5px);
-	}
-	.thispage a:hover {
-		padding: 3px 12px 3px 3px;
-		border: none;
-		width: calc(20vw - 17px);
-	}
-	.dropdown-btn {
-		font-size: 2.4vw;
-	}
-}
-
-@media (522px < width < 900px) {
-	.sidenav {
-		padding: 5px 5px 0 5px;
-	}
-
-	.side {
-		padding: 2px 2px 21px 2px;
-	}
-	.dropdown-container a,
-	.dropdown-container-open a {
-		font-size: 14px;
-	}
-	p {
-		font-size: 15px;
-	}
-	li {
-		font-size: 15px;
-	}
 }
 
 @media (min-width: 735px) {
@@ -226,12 +193,15 @@
 @media (min-width: 801px) {
 	.sidenav a,
 	.dropdown-btn {
-		font-size: 18px;
+		font-size: 13px;
 	}
 
 	.dropdown-container a,
 	.dropdown-container-open a {
-		font-size: 16px;
+		font-size: 15px;
+	}
+	.active {
+		font-size: 19px;
 	}
 }
 
@@ -251,30 +221,28 @@
 		height: calc(100vh - 207px);
 		padding: 0 1px 18px 1px;
 	}
-
 	.thispage {
-		width: 182px;
+		width: 170px;
 	}
 	.thispage a:hover {
-		width: 176px;
+		width: 170px;
 	}
 	.dropdown-btn {
-		max-width: 182px;
+		max-width: 171px;
 	}
 	.dropdown-container {
-		max-width: 182px;
+		max-width: 170px;
 	}
 	.dropdown-container a:hover {
-		max-width: 182px;
+		max-width: 170px;
 	}
 	.side_header {
 		font-size: 21px;
 	}
 	.side a,
 	.dropdown-btn {
-		width: 187px;
+		width: 170px;
 	}
-
 	.fa-caret-down {
 		padding-right: 12px;
 	}
