@@ -18,7 +18,12 @@
 	z-index: 1; /* Sit on top */
 	left: 0;
 	top: 0;
-	background-color: rgba(0, 0, 0, 0.9); /* Black w/opacity */
+	background-color: rgba(
+		0,
+		0,
+		0,
+		0.9
+	); /* Black w/opacity */
 	overflow-x: hidden; /* Disable horizontal scroll */
 	transition: 0.4s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
@@ -26,10 +31,21 @@
 /* Position the content inside the overlay */
 .overlay-content {
 	position: relative;
-	top: 25%; /* 25% from the top */
+	top: 45vw; /* 25% from the top */
 	width: 100%; /* 100% width */
 	text-align: left; /* Centered text/links */
-	margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+	margin-top: 0; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+.overlaylogo {
+	position: absolute;
+	top: -47vw;
+	right: 24%;
+}
+
+.overlaylogo img {
+	width: 40vw;
+	margin: 0;
 }
 
 /* The navigation links inside the overlay */
@@ -44,7 +60,7 @@
 }
 
 .overlay p {
-	font-size: 7vw;
+	font-size: 6vw;
 	margin: 5px;
 	font-family: "Share Tech Mono", monospace;
 	padding: 5px;
@@ -61,12 +77,25 @@
 	color: #f1f1f1;
 }
 
+.overlay h3 {
+	text-align: center;
+	background-color: #32717c;
+	border: 5px solid #163342;
+	width: inherit;
+	margin-left: 1px;
+	padding: 4px;
+	font-family: "Share Tech Mono", monospace;
+	font-size: 8vw;
+}
+
 /* Position the close button (top right corner) */
 .overlay .closebtn {
 	position: absolute;
-	top: 20px;
-	right: 45px;
-	font-size: 60px;
+	top: 1px;
+	right: 1px;
+	margin: 1px;
+	padding: 1px;
+	font-size: 37px;
 }
 
 .logo {
@@ -123,15 +152,43 @@
 
 @media screen and (max-height: 450px) {
 	.overlay a {
-		font-size: 20px;
+		font-size: 14px;
 	}
 	.overlay .closebtn {
-		font-size: 40px;
-		top: 15px;
-		right: 35px;
+		font-size: 30px;
+		top: 5px;
+		right: 5px;
+	}
+
+	.overlay p {
+		font-size: 17px;
+	}
+
+	.overlay h3 {
+		font-size: 20px;
+	}
+	.overlay-content {
+		top: 105px;
+	}
+	.overlaylogo {
+		right: 26vw;
+		top: -113px;
+	}
+
+	.overlaylogo img {
+		width: 100px;
 	}
 }
+@media (min-width: 400px) {
+	.overlaylogo {
+		right: 23vw;
+		top: -188px;
+	}
 
+	.overlaylogo img {
+		width: 40vw;
+	}
+}
 @media (min-width: 523px) {
 	.topnav {
 		display: none;

@@ -16,6 +16,14 @@
 .logolink a:hover {
 	margin: 0;
 }
+
+.sideheader {
+	background-color: #343439;
+	margin: 0;
+	padding: 6px;
+	font-family: courier new;
+	font-weight: 100;
+}
 .sidenav {
 	width: 20vw;
 	position: fixed;
@@ -59,7 +67,7 @@
 	background-color: #e6ff5f;
 	outline: 1px solid white;
 	padding: 3px 0 3px 3px;
-	width: calc(20vw - 11px);
+	width: calc(20vw - 22px);
 }
 
 .thispage a:hover {
@@ -238,6 +246,9 @@
 	}
 	.side_header {
 		font-size: 21px;
+	}
+	.sideheader {
+		font-size: 23px;
 	}
 	.side a,
 	.dropdown-btn {

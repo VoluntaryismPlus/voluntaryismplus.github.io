@@ -13,6 +13,28 @@ body {
 	border: 5px solid black;
 }
 
+.image1 {
+	width: 100%;
+	margin-right: 0;
+}
+
+.image1 img {
+	width: inherit;
+	margin-right: 10px;
+	display: none;
+}
+
+.image2 {
+	width: 100%;
+	margin-right: 0;
+}
+
+.image2 img {
+	width: inherit;
+	margin: 10px 0 10px 0;
+	display: block;
+}
+
 .linkimage {
 	width: 100%;
 	margin-right: 0;
@@ -197,6 +219,12 @@ body {
 	.imagelarge {
 		display: block;
 	}
+	.image1 img {
+		display: block;
+	}
+	.image2 img {
+		display: none;
+	}
 }
 
 @media (min-width: 900px) {
@@ -230,7 +258,9 @@ body {
 		width: calc((100vw - 225px) / 2);
 		/*display: none;*/
 	}
-
+	.openerimage img {
+		width: calc(100vw - 260px);
+	}
 	imgrt img {
 		display: block;
 	}
