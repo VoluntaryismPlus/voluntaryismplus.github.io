@@ -47,6 +47,7 @@ body {
 	margin: 3px 3px 18px 3px;
 	padding: 6px 7px 7px 9px;
 	width: 95.2vw;
+	align-items: center;
 }
 
 .innersection h5 a {
@@ -70,7 +71,7 @@ body {
 	background-color: rgba(0, 0, 0, 0.86);
 	margin: 0 0 1px 0;
 	padding: 6px 6px 6px 6px;
-	width: 92vw;
+	width: 96.5vw;
 }
 
 #lyrics {
@@ -165,7 +166,7 @@ body {
 		width: 75vw;
 	}
 	.outerheader {
-		width: 100%;
+		width: 102%;
 	}
 }
 
@@ -180,5 +181,8 @@ body {
 	.innersection {
 		width: calc(100vw - 230px);
 		/*margin-left: 123px;*/
+	}
+	.outerheader {
+		width: calc(100vw - 227px);
 	}
 }

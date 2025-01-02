@@ -117,7 +117,7 @@ h6 {
 	}
 	h1 {
 		font-size: 8vw;
-		width: 76.5vw;
+		width: 75vw;
 	}
 	h2 {
 		font-size: 4.8vw;
@@ -167,7 +167,7 @@ h6 {
 	}
 	h1 {
 		font-size: 7.5vw;
-		width: calc(100vw - 225px);
+		width: calc(100vw - 241px);
 	}
 	h2 {
 		font-size: 3.75vw;

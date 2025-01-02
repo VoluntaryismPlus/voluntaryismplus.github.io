@@ -1,12 +1,26 @@
 .indexheader {
 	text-align: center;
 	/*margin: 0 0 1px -9px;*/
-	padding: 6px 6px 6px 6px;	
+	padding: 6px 6px 6px 6px;
 	/*width: 92vw;*/
 }
 
-.indexheader h2 a {
+.indexheader h2 {
+	font-size: 26px;
+}
+
+.indexmainheader {
+	text-align: center;
+	/*margin: 0 0 1px -9px;*/
+	padding: 6px 6px 6px 6px;
+	/*width: 92vw;*/
+	background-color: rgba(48, 50, 64, 0.79);
+	border: 4px solid #191b27;
+}
+
+.indexmainheader h2 {
 	color: #ffffff;
+	font-size: 35px;
 }
 
 .indexchapter {
@@ -15,23 +29,40 @@
 	padding: 8px;
 }
 
-.indexchapter a {
-	color: white;
-	
-}
 .indexbook {
 	margin: 10px 10px 0 10px;
-	padding: 10px;
+	padding: 5px;
 	background-color: rgba(87, 89, 113, 0.59);
 	border: 1px solid grey;
 }
 
-.indexbook h3 a {
+.indexbook a h3 {
 	color: white;
+	font-size: 17px;
 }
 
 @media (min-width: 523px) {
 	.headerboxindex {
 		width: calc(72vw - 240px);
+	}
+	.indexmainheader h2 {
+		color: #ffffff;
+		font-size: 56px;
+	}
+	.indexheader h2 {
+		font-size: 30px;
+	}
+	.indexbook {
+		padding: 7px;
+	}
+	.indexbook a h3 {
+		color: white;
+		font-size: 21px;
+	}
+}
+@media (min-width: 750px) {
+	.indexbook {
+		width: 409px;
+		margin-left: calc(36vw - 194px);
 	}
 }
