@@ -83,6 +83,32 @@ body {
 	border: solid 3px #000000;
 }
 
+.buttona {
+	text-align: center;
+	padding: 14px 7px 7px 7px;
+	margin: 10px;
+	border: 1px solid white;
+	background-color: rgba(28, 59, 54, 0.8);
+	border-radius: 14px;
+}
+
+.buttona:hover {
+	background-color: rgba(42, 98, 89, 0.92);
+}
+
+.buttonb {
+	text-align: center;
+	padding: 14px 7px 7px 7px;
+	margin: 10px;
+	border: 1px solid white;
+	background-color: rgba(28, 59, 54, 0.8);
+	border-radius: 14px;
+}
+
+.buttonb:hover {
+	background-color: rgba(42, 89, 98, 0.92);
+}
+
 .bounty {
 	display: flex;
 }
@@ -144,16 +170,20 @@ body {
 	.bodytext {
 		width: 75vw;
 	}
+	
 	.opener {
 		display: flex;
 		flex-direction: row;
 	}
+	
 	.headerbox {
 		width: 74vw;
 	}
+	
 	.innersection {
 		width: 76vw;
 	}
+	
 	.warning {
 		margin-top: -30px;
 	}
@@ -167,6 +197,9 @@ body {
 	.outerheader {
 		width: 102%;
 	}
+	.buttona, .buttonb {
+		margin: 10px 76px;
+	}	
 }
 
 @media (min-width: 900px) {
@@ -184,4 +217,7 @@ body {
 	.outerheader {
 		width: calc(100vw - 227px);
 	}
+	.buttona, .buttonb {
+		margin: 10px 95px;
+	}	
 }
