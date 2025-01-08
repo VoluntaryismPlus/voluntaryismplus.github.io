@@ -175,6 +175,10 @@ body {
 	border-radius: 10px;
 }
 
+.startheader {
+	background-color: rgba(22, 8, 23, 0.76);
+}
+
 .link {
 	background-color: black;
 	color: white;

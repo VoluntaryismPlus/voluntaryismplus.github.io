@@ -63,30 +63,21 @@
 	cursor: pointer;
 }
 
-.thispage {
-	background-color: #e6ff5f;
-	outline: 1px solid white;
-	padding: 3px 0 3px 3px;
-	width: calc(20vw - 22px);
-}
-
-.thispage a:hover {
-	padding: 3px 12px 3px 3px;
-	border: none;
-	width: calc(20vw - 17px);
-}
-
 .dropdown-btn {
 	background-color: #111;
 	width: calc(20vw - 16px);
 	font-family: courier new;
 	padding: 5px 5px 5px 8px;
 	font-size: 2vw;
-	color: #767676;
+	color: #686877;
 	display: block;
 	border: none;
 	text-align: left;
 	cursor: pointer;
+}
+
+.dropdown-btn:hover {
+	background-color: #1f1f22;
 }
 
 .dropdown-btn:active {
@@ -102,32 +93,36 @@
 	image-rendering: pixelated;
 }
 
+/*
 .sidenav a:hover,
 .dropdown-btn:hover {
 	color: #f1f1f1;
 }
 
+
 .sidenav a:hover {
 	color: #f1f1f1;
 	background-color: #1a1a1a;
-	/*outline: 0.5px solid white;*/
+	outline: 0.5px solid white;
 	padding-left: 12px;
 	max-width: calc(20vw - 10px);
 }
+*/
 
 /* Add an active class to the active dropdown button */
 .active {
-	background-color: #5a5a5a;
+	background-color: #5a5a64;
 	color: white;
 	width: calc(20vw - 20px);
 }
-
+.active:hover {
+	background-color: #757583;
+}
 /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
 .dropdown-container {
 	display: none;
-	background-color: #262627;
+	background-color: #2a2a30;
 	width: calc(20vw - 20px);
-	/*padding-left: 8px;*/
 	margin-right: 5px;
 	border-right: 0.5px solid white;
 	border-left: 0.5px solid white;
@@ -146,22 +141,39 @@
 .dropdown-container-open a {
 	font-size: 1.7vw;
 	padding: 3px 0 3px 14px;
-	color: #7b7b7b;
-	width: calc(20vw - 11px);
+	color: #777785;
+	width: calc(20vw - 23px);
 	font-family: courier;
-	max-width: calc(20vw - 24.9px);
-	/*font-size: 14px;*/
 }
 
 .dropdown-container a:hover {
 	background-color: #000000;
+	outline: 0.5px solid #ffffff;
+	width: calc(20vw - 21px);
+	padding: 10px;
+	color: #f1f1f1;
+	font-size: 2vw;
+}
+
+.thispage {
+	background-color: #e6ff5f;
 	outline: 1px solid white;
-	width: calc(20vw - 11px);
+	padding: 3px 0 3px 0;
+	width: calc(20vw - 22px);
+}
+
+.thispage a:hover {
+	/*padding: 3px 12px 3px 3px;*/
+	margin-left: 3px;
+	border: none;
+	width: calc(20vw - 27px);
+	font-size: 2vw;
 }
 
 .thispage a {
-	font-weight: 500;
+	/*font-weight: 503;*/
 	color: #000000;
+	font-size: 1.9vw;
 }
 
 /* Optional: Style the caret down icon */

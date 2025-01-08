@@ -37,6 +37,10 @@
 	margin-top: 0; /* 30px top margin to avoid conflict with the close button on smaller screens */
 }
 
+.overlay-content ul {
+	margin-bottom: 5px;
+}
+
 .overlaylogo {
 	position: absolute;
 	top: -47vw;
@@ -61,7 +65,7 @@
 
 .overlay p {
 	font-size: 6vw;
-	margin: 5px;
+	margin: 5px 5px 5px 5px;
 	font-family: "Share Tech Mono", monospace;
 	padding: 5px;
 	border: 5px solid #2f5569;
