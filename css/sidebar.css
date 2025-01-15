@@ -6,6 +6,11 @@
 	line-height: 25px;
 }
 
+.my_class {
+	color: #565e65;
+	display: none;
+}
+
 #logo {
 	/*	margin-left: 1vw;*/
 	width: 17.5vw;
