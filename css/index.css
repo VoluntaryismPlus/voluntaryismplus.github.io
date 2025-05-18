@@ -1,3 +1,8 @@
+.flexi {
+	display: block;
+	width: 92vw;
+}
+
 .indexheader {
 	text-align: center;
 	/*margin: 0 0 1px -9px;*/
@@ -30,7 +35,7 @@
 }
 
 .indexbook {
-	margin: 10px 10px 0 10px;
+	margin: auto;
 	padding: 5px;
 	background-color: rgba(87, 89, 113, 0.59);
 	border: 1px solid grey;
@@ -61,8 +66,25 @@
 	}
 }
 @media (min-width: 750px) {
+	/*
+	.indexheader h2 {
+		width: auto;
+	}
+	*/
+
+	.flexi {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	/*
+	.flexi div {
+		max-width: calc(100vw - 202px);
+	}
+	*/
+
 	.indexbook {
-		width: 409px;
-		margin-left: calc(36vw - 194px);
+		width: 535px;
+		margin: auto;
+		padding: 10px 43px 10px 43px;
 	}
 }
