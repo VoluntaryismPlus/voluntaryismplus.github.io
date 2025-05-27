@@ -74,7 +74,7 @@
 
 	.flexi {
 		display: flex;
-		flex-wrap: wrap;
+		flex-wrap: none;
 	}
 	/*
 	.flexi div {
@@ -83,7 +83,7 @@
 	*/
 
 	.indexbook {
-		width: 535px;
+		max-width: 31vw;
 		margin: auto;
 		padding: 10px 43px 10px 43px;
 	}

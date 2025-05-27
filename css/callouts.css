@@ -59,6 +59,7 @@
 
 .calloutimage img {
 	width: 59vw;
+	display: none;
 }
 .callouttext {
 	padding: 8px 23px 8px 32px;

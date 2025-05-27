@@ -1,0 +1,49 @@
+.bounty {
+    display: flex;
+}
+
+.bountybox {
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px black solid;
+    background: rgba(47, 47, 47, 0.8);
+    width: 100vw;
+    text-align: center;
+    font-family: "Averia Serif Libre", garamond;
+}
+
+.bountylist {
+    width: 88vw;
+}
+
+.bountylisttext {
+    margin: 10px 0 10px 8px;
+}
+
+#bounty {
+    border-collapse: collapse;
+    width: 89vw;
+    background-color: rgba(26, 26, 26, 0.8);
+}
+
+#bounty th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#bounty td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#bounty tr:nth-child(even) {
+    background-color: rgba(56, 56, 57, 0.49);
+}
+
+#bounty tr:nth-child(odd) {
+    background-color: rgba(31, 31, 31, 0.49);
+}
+
+#bounty tr:hover {
+    background-color: rgba(65, 65, 67, 0.8);
+}

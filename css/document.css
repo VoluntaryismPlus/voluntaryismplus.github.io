@@ -73,6 +73,25 @@ body {
 	width: 96.5vw;
 }
 
+.book {
+	border: 2px white solid;
+	padding: 5px;
+	margin: 10px;
+}
+
+.bookheader {
+	margin: 10px;
+	padding: 10px;
+	border: 2px dashed white;
+}
+
+.book h4 {
+	background-color: black;
+	padding: 11px 11px 11px 15px;
+	margin: -5px -5px 10px -5px;
+	text-align: left;
+}
+
 #lyrics {
 	background-color: rgba(23, 41, 33, 0.8);
 	text-align: center;
@@ -107,56 +126,6 @@ body {
 
 .buttonb:hover {
 	background-color: rgba(42, 89, 98, 0.92);
-}
-
-.bounty {
-	display: flex;
-}
-
-.bountybox {
-	padding: 20px;
-	border-radius: 10px;
-	border: 2px black solid;
-	background: rgba(47, 47, 47, 0.8);
-	width: 100vw;
-	text-align: center;
-	font-family: "Averia Serif Libre", garamond;
-}
-
-.bountylist {
-	width: 88vw;
-}
-
-.bountylisttext {
-	margin: 10px 0 10px 8px;
-}
-
-#bounty {
-	border-collapse: collapse;
-	width: 89vw;
-	background-color: rgba(26, 26, 26, 0.8);
-}
-
-#bounty th {
-	border: 1px solid #ddd;
-	padding: 8px;
-}
-
-#bounty td {
-	border: 1px solid #ddd;
-	padding: 8px;
-}
-
-#bounty tr:nth-child(even) {
-	background-color: rgba(56, 56, 57, 0.49);
-}
-
-#bounty tr:nth-child(odd) {
-	background-color: rgba(31, 31, 31, 0.49);
-}
-
-#bounty tr:hover {
-	background-color: rgba(65, 65, 67, 0.8);
 }
 
 .footer {
