@@ -1,16 +1,11 @@
 :root {
-	/* Shared sidebar width and gap for ALL layouts */
-	--sidebar-width: clamp(
-		160px,
-		20vw,
-		220px
-	); /* Default tablet width */
-	--sidebar-width-desktop: 187px; /* Desktop override */
-	--sidebar-gap: 7px; /* Set to 20px if you want space between sidebar and content */
+	--sidebar-width: clamp(160px, 20vw, 220px);
+	--sidebar-width-desktop: 187px;
+	--sidebar-gap: 0px;
+	--body-max-width: 1100px;
 }
 
-/* --- SIDEBAR LAYOUT, LOGO, AND NAVIGATION --- */
-
+/* --- SIDEBAR LAYOUT --- */
 .sidenav {
 	position: fixed;
 	top: 0;
@@ -78,7 +73,6 @@
 	scrollbar-color: #8f54a0 #000000;
 }
 
-/* Webkit scrollbar styling */
 .side::-webkit-scrollbar {
 	width: 8px;
 }
@@ -92,7 +86,6 @@
 }
 
 /* --- NAVIGATION LINKS --- */
-
 .side a {
 	padding: 6px 6px 6px 12px;
 	text-decoration: none;
@@ -113,16 +106,16 @@
 }
 
 /* --- DROPDOWN BUTTONS --- */
-
 .dropdown-btn {
 	background-color: #111;
 	width: 100%;
 	font-family: "Courier New", Courier, monospace;
-	padding: 5px 5px 5px 8px;
+	padding: 5px 14px 5px 8px; /* right padding for caret spacing */
 	font-size: clamp(15px, 2vw, 19px);
 	color: #686877;
 	display: flex;
 	align-items: center;
+	justify-content: space-between; /* caret always at far right */
 	border: none;
 	text-align: left;
 	cursor: pointer;
@@ -137,22 +130,20 @@
 	background-color: #23232a;
 	color: #ffe97c;
 }
-.dropdown-btn .fa,
-.dropdown-btn .my_class {
-	margin-left: auto;
-	padding-right: 7px;
+.dropdown-btn .caret {
+	display: inline-block;
+	margin-left: 0.7em;
+	font-size: 0.9em; /* smaller caret */
+	color: #dddddd; /* lighter grey */
 	transition: transform 0.25s;
-	font-size: 1.2em;
+	flex-shrink: 0;
 }
-.dropdown-btn.active .fa,
-.dropdown-btn[aria-expanded="true"] .fa,
-.dropdown-btn.active .my_class,
-.dropdown-btn[aria-expanded="true"] .my_class {
+.dropdown-btn.active .caret,
+.dropdown-btn[aria-expanded="true"] .caret {
 	transform: rotate(90deg);
 }
 
 /* --- DROPDOWN CONTAINERS --- */
-
 .dropdown-container {
 	display: none;
 	background-color: #2a2a30;
@@ -164,7 +155,6 @@
 	display: flex;
 	flex-direction: column;
 }
-
 .dropdown-container a {
 	font-size: clamp(13px, 1.1vw, 17px);
 	padding: 4px 0 4px 14px;
@@ -180,7 +170,6 @@
 }
 
 /* --- "THIS PAGE" HIGHLIGHT --- */
-
 .thispage {
 	background-color: #e6ff5f;
 	outline: 1px solid white;
@@ -193,13 +182,7 @@
 	font-weight: 600;
 }
 
-.fa-caret-right {
-	color: #ffe97c;
-	font-size: 15px;
-}
-
 /* --- SIDEBAR SECTION HEADERS --- */
-
 .sideheader {
 	background-color: #343439;
 	margin: 0;
@@ -212,23 +195,17 @@
 }
 
 /* --- SIDEBAR RESPONSIVE VISIBILITY AND WIDTH --- */
-
-/* Hide sidebar at mobile widths */
 @media (max-width: 522px) {
 	.sidenav {
 		display: none !important;
 	}
 }
-
-/* Show sidebar and set width at tablet widths */
 @media (min-width: 523px) and (max-width: 899px) {
 	.sidenav {
 		display: flex !important;
 		width: var(--sidebar-width);
 	}
 }
-
-/* Desktop: fixed width */
 @media (min-width: 900px) {
 	.sidenav {
 		width: var(--sidebar-width-desktop);

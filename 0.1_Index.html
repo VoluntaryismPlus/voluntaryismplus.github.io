@@ -6,11 +6,6 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1.0" />
 		<title>Voluntaryism Plus Index</title>
-		<script src="js/document.js"></script>
-		<link
-			href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
-			rel="stylesheet"
-			type="text/css" />
 		<link
 			href="css/document.css"
 			rel="stylesheet"
@@ -69,6 +64,7 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
 			rel="stylesheet" />
+		<script src="js/sidebar.js" defer></script>
 	</head>
 
 	<body>
@@ -327,7 +323,7 @@
 					class="dropdown-btn"
 					onclick="rotate()">
 					Roadmap
-					<i class="my_class fa fa-caret-right"></i>
+					<span class="caret">&#9654;</span>
 				</button>
 				<div class="dropdown-container">
 					<div class="thispage">
@@ -344,9 +340,9 @@
 					-->
 				</div>
 				<h5 class="sideheader">Who We Are</h5>
-				<button class="dropdown-btn" onclick="rotate()">
+				<button class="dropdown-btn" aria-expanded="false">
 					Our Philosophy
-					<i class="my_class fa fa-caret-right"></i>
+					<span class="caret">&#9654;</span>
 				</button>
 				<div class="dropdown-container">
 					<a href="index.html">Welcome</a>
@@ -367,9 +363,9 @@
 						>Frequently Asked Questions</a
 					>
 				</div>
-				<button class="dropdown-btn" onclick="rotate()">
+				<button class="dropdown-btn" aria-expanded="false">
 					We Are Network Support
-					<i class="my_class fa fa-caret-right"></i>
+					<span class="caret">&#9654;</span>
 				</button>
 				<div class="dropdown-container">
 					<a href="1.4_OurPlan.html">Our Plan</a>
@@ -381,9 +377,9 @@
 					>
 					<a href="chewshome.html">Chew's Wisely</a>
 				</div>
-				<button class="dropdown-btn" onclick="rotate()">
+				<button class="dropdown-btn" aria-expanded="false">
 					Applied Learning Grounds
-					<i class="my_class fa fa-caret-right"></i>
+					<span class="caret">&#9654;</span>
 				</button>
 				<div class="dropdown-container">
 					<a href="2.1_AdmissionsPortal.html"
@@ -402,9 +398,9 @@
 					<a href="2.8_Library.html">Library</a>
 				</div>
 				<h5 class="sideheader">You and The Network</h5>
-				<button class="dropdown-btn" onclick="rotate()">
+				<button class="dropdown-btn" aria-expanded="false">
 					Strategic Lifestyle Planning
-					<i class="my_class fa fa-caret-right"></i>
+					<span class="caret">&#9654;</span>
 				</button>
 				<div class="dropdown-container">
 					<a href="3.1_SauronAndShire.html"
@@ -424,9 +420,9 @@
 						>Anarchist Innovation Station</a
 					>
 				</div>
-				<button class="dropdown-btn" onclick="rotate()">
+				<button class="dropdown-btn" aria-expanded="false">
 					Create Your Own Adventure
-					<i class="my_class fa fa-caret-right"></i>
+					<span class="caret">&#9654;</span>
 				</button>
 				<div class="dropdown-container">
 					<a href="4.1_StartHere.html">Start Here</a>
@@ -444,26 +440,26 @@
 					<a href="connections.html">Connections Page</a>
 				</div>
 				<h5 class="sideheader">The Agora</h5>
-				<button class="dropdown-btn" onclick="rotate()">
+				<button class="dropdown-btn" aria-expanded="false">
 					Bounty Board
-					<i class="my_class fa fa-caret-right"></i>
+					<span class="caret">&#9654;</span>
 				</button>
 				<div class="dropdown-container">
 					<a href="5.1_BountyBoard.html">Bounty Board</a>
 					<a href="5.2_Goods.html">Goods</a>
 					<a href="5.3_Services.html">Services</a>
 				</div>
-				<button class="dropdown-btn" onclick="rotate()">
+				<button class="dropdown-btn" aria-expanded="false">
 					Events
-					<i class="my_class fa fa-caret-right"></i>
+					<span class="caret">&#9654;</span>
 				</button>
 				<div class="dropdown-container">
 					<a href="6.1_Events.html">Events</a>
 					<a href="6.2_Festivals.html">Festivals</a>
 				</div>
-				<button class="dropdown-btn" onclick="rotate()">
+				<button class="dropdown-btn" aria-expanded="false">
 					Maps
-					<i class="my_class fa fa-caret-right"></i>
+					<span class="caret">&#9654;</span>
 				</button>
 				<div class="dropdown-container">
 					<a href="7.1_Map.html">Main Map</a>
@@ -481,9 +477,9 @@
 					>
 					<a href="7.6_Farms.html">Find a Farm</a>
 				</div>
-				<button class="dropdown-btn" onclick="rotate()">
+				<button class="dropdown-btn" aria-expanded="false">
 					Links
-					<i class="my_class fa fa-caret-right"></i>
+					<span class="caret">&#9654;</span>
 				</button>
 				<div class="dropdown-container">
 					<a href="8.1_Links.html">Links</a
@@ -896,72 +892,60 @@
 		</div>
 
 		<script>
-			/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-			window.onload = function () {
-				document.getElementById("acti").click();
-			};
+			document.addEventListener(
+				"DOMContentLoaded",
+				function () {
+					const dropdownButtons =
+						document.querySelectorAll(".dropdown-btn");
 
-			var dropdown =
-				document.getElementsByClassName("dropdown-btn");
+					// Allow only one open at a time
+					dropdownButtons.forEach(function (btn) {
+						btn.addEventListener("click", function () {
+							// If this is already open, close it and return
+							const isActive =
+								this.classList.contains("active");
+							closeAllDropdowns();
 
-			var i;
+							if (!isActive) {
+								this.classList.add("active");
+								this.setAttribute("aria-expanded", "true");
+								const dropdown = this.nextElementSibling;
+								if (
+									dropdown &&
+									dropdown.classList.contains(
+										"dropdown-container"
+									)
+								) {
+									dropdown.classList.add("show");
+								}
+							}
+						});
+					});
 
-			for (i = 0; i < dropdown.length; i++) {
-				dropdown[i].addEventListener("click", function () {
-					var lst = document.getElementsByClassName(
-						"dropdown-container"
-					);
-
-					for (var j = 0; j < lst.length; j++) {
-						lst[j].style.display = "none";
+					function closeAllDropdowns() {
+						dropdownButtons.forEach(function (btn) {
+							btn.classList.remove("active");
+							btn.setAttribute("aria-expanded", "false");
+							const dropdown = btn.nextElementSibling;
+							if (
+								dropdown &&
+								dropdown.classList.contains(
+									"dropdown-container"
+								)
+							) {
+								dropdown.classList.remove("show");
+							}
+						});
 					}
 
-					var act =
-						document.getElementsByClassName("dropdown-btn");
-
-					for (var k = 0; k < act.length; k++) {
-						act[k].classList.remove("active");
+					// Auto-open a specific dropdown on load if you like
+					// For example, open the one with id="acti"
+					const autoOpen = document.getElementById("acti");
+					if (autoOpen) {
+						autoOpen.click();
 					}
-
-					this.classList.toggle("active");
-
-					var dropdownContent = this.nextElementSibling;
-
-					if (dropdownContent.style.display === "block") {
-						dropdownContent.style.display = "none";
-					} else {
-						dropdownContent.style.display = "block";
-					}
-					//    this.classList.toggle("active");
-					//    this.style.backgroundColor = "#AA0000";
-				});
-			}
-			function rotate() {
-				var element = event.target;
-				var child = element.children[0];
-
-				var myIcon = document.getElementsByClassName(
-					"my_class fa fa-caret-down"
-				);
-				var m;
-				for (var m = 0; m < myIcon.length; m++) {
-					myIcon[m].className =
-						"my_class fa fa-caret-right";
 				}
-
-				child.className = "my_class fa fa-caret-down";
-			}
-
-			/* Open when someone clicks on the span element */
-			function openNav() {
-				document.getElementById("myNav").style.width =
-					"100%";
-			}
-
-			/* Close when someone clicks on the "x" symbol inside the overlay */
-			function closeNav() {
-				document.getElementById("myNav").style.width = "0%";
-			}
+			);
 		</script>
 	</body>
 </html>
