@@ -1,82 +1,97 @@
-.side_header {
-	font-size: clamp(18px, 2vw, 24px);
-	text-align: center;
-	margin-bottom: 5px;
-	color: white;
-	line-height: 25px;
+:root {
+	/* Shared sidebar width and gap for ALL layouts */
+	--sidebar-width: clamp(
+		160px,
+		20vw,
+		220px
+	); /* Default tablet width */
+	--sidebar-width-desktop: 187px; /* Desktop override */
+	--sidebar-gap: 7px; /* Set to 20px if you want space between sidebar and content */
 }
 
-.my_class {
-	color: #565e65;
-	display: inline;
-	transition: transform 0.2s;
+/* --- SIDEBAR LAYOUT, LOGO, AND NAVIGATION --- */
+
+.sidenav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: var(--sidebar-width);
+	height: 100vh;
+	background: #111;
+	color: #f5f6fa;
+	display: flex;
+	flex-direction: column;
+	z-index: 2;
+	box-shadow: 2px 0 10px #0003;
+	margin: 0;
+	padding: 0;
+	transition: width 0.2s;
+}
+
+.sidenav-header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px 0 0 0;
+}
+
+.logolink {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 #logo {
+	max-width: 80%;
 	width: clamp(100px, 17.5vw, 180px);
-	margin-top: 1px;
-	margin-bottom: 0;
+	height: auto;
+	display: block;
+	margin: 0 auto 7px auto;
 }
 
-.logolink a:hover {
-	margin: 0;
+.side_header {
+	font-size: clamp(18px, 2vw, 24px);
+	text-align: center;
+	color: white;
+	margin: 0 0 7px 0;
+	line-height: 1.2;
 }
 
-.sideheader {
-	background-color: #343439;
-	margin: 0;
-	padding: 6px;
-	font-family: "Courier New", Courier, monospace;
-	font-weight: 100;
-	font-size: clamp(14px, 2vw, 23px);
-	color: #cfcfd6;
-	letter-spacing: 0.04em;
-}
-
-.sidenav {
-	width: clamp(160px, 20vw, 220px);
-	position: fixed;
-	z-index: 1;
-	top: 0;
-	left: 0;
-	background-color: #111;
-	overflow: hidden;
-	display: none;
-	margin: 0;
-	padding: 5px 5px 0 5px;
+.sidenav-header hr {
+	width: 90%;
+	border: 0;
+	height: 1px;
+	background: #2c2c2c;
+	margin: 10px auto 0 auto;
 }
 
 .side {
-	width: clamp(160px, 20vw, 220px);
-	position: fixed;
-	z-index: 1;
-	top: auto;
-	left: 0;
-	background-color: #111;
+	flex: 1 1 0;
 	overflow-y: auto;
-	overflow-x: hidden;
-	margin: 0;
-	padding: 2px 2px 21px 2px;
-
-	/* Custom scrollbar for Firefox */
+	padding: 8px 0 24px 0;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background-color: #111;
 	scrollbar-width: thin;
 	scrollbar-color: #8f54a0 #000000;
 }
 
-/* Custom scrollbar for Webkit browsers */
+/* Webkit scrollbar styling */
 .side::-webkit-scrollbar {
 	width: 8px;
 }
-
 .side::-webkit-scrollbar-track {
 	background: #000000;
 }
-
 .side::-webkit-scrollbar-thumb {
 	background-color: #8f54a0;
 	border-radius: 10px;
 	border: 2px solid #000000;
 }
+
+/* --- NAVIGATION LINKS --- */
 
 .side a {
 	padding: 6px 6px 6px 12px;
@@ -96,6 +111,8 @@
 	background-color: #23232a;
 	color: #ffe97c;
 }
+
+/* --- DROPDOWN BUTTONS --- */
 
 .dropdown-btn {
 	background-color: #111;
@@ -123,18 +140,18 @@
 .dropdown-btn .fa,
 .dropdown-btn .my_class {
 	margin-left: auto;
-	padding-right: 7px; /* Extra space to the right of the arrow */
+	padding-right: 7px;
 	transition: transform 0.25s;
 	font-size: 1.2em;
 }
-
-/* Dropdown active state: caret rotates down */
 .dropdown-btn.active .fa,
 .dropdown-btn[aria-expanded="true"] .fa,
 .dropdown-btn.active .my_class,
 .dropdown-btn[aria-expanded="true"] .my_class {
 	transform: rotate(90deg);
 }
+
+/* --- DROPDOWN CONTAINERS --- */
 
 .dropdown-container {
 	display: none;
@@ -162,6 +179,8 @@
 	color: #ffe97c;
 }
 
+/* --- "THIS PAGE" HIGHLIGHT --- */
+
 .thispage {
 	background-color: #e6ff5f;
 	outline: 1px solid white;
@@ -179,30 +198,42 @@
 	font-size: 15px;
 }
 
-@media (min-width: 523px) {
+/* --- SIDEBAR SECTION HEADERS --- */
+
+.sideheader {
+	background-color: #343439;
+	margin: 0;
+	padding: 6px;
+	font-family: "Courier New", Courier, monospace;
+	font-weight: 100;
+	font-size: clamp(14px, 2vw, 23px);
+	color: #cfcfd6;
+	letter-spacing: 0.04em;
+}
+
+/* --- SIDEBAR RESPONSIVE VISIBILITY AND WIDTH --- */
+
+/* Hide sidebar at mobile widths */
+@media (max-width: 522px) {
 	.sidenav {
-		display: block;
+		display: none !important;
 	}
 }
-@media (min-width: 735px) {
+
+/* Show sidebar and set width at tablet widths */
+@media (min-width: 523px) and (max-width: 899px) {
 	.sidenav {
-		height: 27vh;
-	}
-	.side {
-		top: 27vh;
+		display: flex !important;
+		width: var(--sidebar-width);
 	}
 }
+
+/* Desktop: fixed width */
 @media (min-width: 900px) {
+	.sidenav {
+		width: var(--sidebar-width-desktop);
+	}
 	#logo {
 		width: 160px;
-	}
-	.sidenav {
-		width: 187px;
-		height: 207px;
-	}
-	.side {
-		width: 187px;
-		top: 207px;
-		height: calc(100vh - 207px);
 	}
 }

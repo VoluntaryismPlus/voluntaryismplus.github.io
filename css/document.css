@@ -1,26 +1,129 @@
+:root {
+	/* Shared sidebar width and gap with sidebar.css */
+	--sidebar-width: clamp(
+		160px,
+		20vw,
+		220px
+	); /* Tablet default */
+	--sidebar-width-desktop: 187px; /* Desktop override */
+	--sidebar-gap: 5px; /* Set to 20px for extra space between sidebar and main content */
+}
+
 html {
 	height: 100%;
 	font-size: 10px;
 	box-sizing: border-box;
 }
-
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
 body {
 	background-color: rgba(0, 0, 0, 0.9);
 	background-image: url("../img/compass.jpeg");
 	background-attachment: fixed;
-	background-size: 100%;
-	height: 100vh;
+	background-size: cover;
+	min-height: 100vh;
 	color: #7f8c8d;
 	font-size: 13px;
 	overflow-y: scroll;
 	overflow-x: hidden;
 	margin: 0;
 	padding: 0;
-	max-height: 100%;
 	scrollbar-width: thin;
 	scrollbar-color: #8f54a0 #000000;
 }
 
+/* --- Main Content Layout --- */
+/* Mobile: sidebar hidden */
+.bodytext {
+	margin-top: 33px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 96vw;
+	max-width: var(--body-max-width);
+	padding-left: 0;
+	padding-right: 0;
+	transition:
+		margin 0.2s,
+		width 0.2s;
+}
+
+/* Tablet: 523px–899px, sidebar visible, width = clamp(160px, 20vw, 220px) */
+@media (min-width: 523px) and (max-width: 899px) {
+	.bodytext {
+		margin-left: calc(
+			var(--sidebar-width) + var(--sidebar-gap)
+		);
+		width: calc(
+			100vw - var(--sidebar-width) - var(--sidebar-gap) -
+				2vw
+		);
+		max-width: var(--body-max-width);
+	}
+}
+
+/* Desktop: 900px+, sidebar width = 187px */
+@media (min-width: 900px) {
+	.bodytext {
+		margin-left: calc(
+			var(--sidebar-width-desktop) + var(--sidebar-gap)
+		);
+		width: calc(
+			100vw - var(--sidebar-width-desktop) -
+				var(--sidebar-gap) - 2vw
+		);
+		max-width: var(--body-max-width);
+	}
+}
+
+/* Mobile: 0–522px, sidebar hidden */
+@media (max-width: 522px) {
+	.bodytext {
+		margin-left: auto;
+		margin-right: auto;
+		width: 96vw;
+		max-width: 99vw;
+	}
+}
+
+/* --- Section Containers --- */
+.innersection {
+	background-color: rgba(0, 0, 0, 0.85);
+	margin: 2.2rem 0 2.4rem 0;
+	padding: 1.2rem 1.5rem;
+	border-radius: 10px;
+	box-shadow: 0 2px 8px #0002;
+	width: 100%;
+	max-width: 100%;
+	overflow-x: auto;
+}
+
+.outerheader {
+	background-color: rgba(0, 0, 0, 0.86);
+	margin: 0 0 2rem 0;
+	padding: 1.3rem 1.2rem;
+	width: 100%;
+	max-width: var(--body-max-width);
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+	box-shadow: 0 2px 8px #0003;
+	text-align: center;
+}
+
+/* --- Other Styles (streamlined) --- */
+.headerbox,
+.headerboxcolor {
+	margin: 0 0 1rem 0;
+	padding: 1.2rem 1.2rem;
+	width: 100%;
+	max-width: var(--body-max-width);
+}
+.headerboxcolor {
+	background-color: rgba(0, 0, 0, 0.76);
+}
 .warning {
 	background-color: #5a0000;
 	text-align: center;
@@ -28,70 +131,31 @@ body {
 	padding: 5px;
 	font-size: 20px;
 	margin-right: 10px;
+	border-radius: 6px;
 }
-
 .opener {
 	display: flex;
 	flex-direction: column;
 }
-
-.bodytext {
-	/*overflow: scroll;*/
-	margin-top: 40px;
-	margin-left: 0.4vw;
-	width: 94vw;
-}
-
-.innersection {
-	background-color: rgba(0, 0, 0, 0.85);
-	margin: 3px 3px 18px 3px;
-	padding: 6px 7px 7px 9px;
-	width: 95.2vw;
-}
-
-.innersection h5 a {
-	color: #708cdb;
-}
-
-.headerbox {
-	/*background-color: rgba(0, 0, 0, 0.76);*/
-	margin: 0 0 1px -0.5vw;
-	padding: 6px 6px 6px 6px;
-}
-
-.headerboxcolor {
-	background-color: rgba(0, 0, 0, 0.76);
-	margin: -6px 0 1px -9px;
-	padding: 6px 6px 6px 6px;
-	width: 92vw;
-}
-
-.outerheader {
-	background-color: rgba(0, 0, 0, 0.86);
-	margin: 0 0 1px 0;
-	padding: 6px 6px 6px 6px;
-	width: 96.5vw;
-}
-
 .book {
-	border: 2px white solid;
+	border: 2px solid #fff;
 	padding: 5px;
-	margin: 10px;
+	margin: 10px 0;
+	border-radius: 8px;
 }
-
 .bookheader {
-	margin: 10px;
+	margin: 10px 0;
 	padding: 10px;
-	border: 2px dashed white;
+	border: 2px dashed #fff;
+	border-radius: 8px;
 }
-
 .book h4 {
 	background-color: black;
-	padding: 11px 11px 11px 15px;
+	padding: 11px 15px;
 	margin: -5px -5px 10px -5px;
 	text-align: left;
+	border-radius: 6px;
 }
-
 #lyrics {
 	background-color: rgba(23, 41, 33, 0.8);
 	text-align: center;
@@ -100,93 +164,59 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	border: solid 3px #000000;
+	border-radius: 8px;
 }
-
-.buttona {
-	text-align: center;
-	padding: 14px 7px 7px 7px;
-	margin: 10px;
-	border: 1px solid white;
-	background-color: rgba(28, 59, 54, 0.8);
-	border-radius: 14px;
-}
-
-.buttona:hover {
-	background-color: rgba(42, 98, 89, 0.92);
-}
-
+.buttona,
 .buttonb {
 	text-align: center;
 	padding: 14px 7px 7px 7px;
 	margin: 10px;
-	border: 1px solid white;
+	border: 1px solid #fff;
 	background-color: rgba(28, 59, 54, 0.8);
 	border-radius: 14px;
+	transition: background 0.2s;
+	cursor: pointer;
 }
-
+.buttona:hover {
+	background-color: rgba(42, 98, 89, 0.92);
+}
 .buttonb:hover {
 	background-color: rgba(42, 89, 98, 0.92);
 }
-
-.footer {
-	padding: 5px 5px 5px 20px;
-	background-color: black;
-	border: 1px solid white;
-	margin: -10px;
-}
-
-@media (min-width: 523px) {
-	.bodytext {
-		width: 75vw;
-	}
-	
-	.opener {
-		display: flex;
-		flex-direction: row;
-	}
-	
-	.headerbox {
-		width: 74vw;
-	}
-	
-	.innersection {
-		width: 76vw;
-	}
-	
-	.warning {
-		margin-top: -30px;
-	}
-}
-
-@media (522px < width < 900px) {
-	.bodytext {
-		margin-left: 21vw;
-		width: 75vw;
-	}
-	.outerheader {
-		width: 102%;
-	}
-	.buttona, .buttonb {
-		margin: 10px 76px;
-	}	
-}
-
 @media (min-width: 900px) {
-	.bodytext {
-		width: calc(100vw - 225px);
-		margin-left: 200px;
-	}
-	.headerbox {
-		width: calc(100vw - 232px);
-	}
-	.innersection {
-		width: calc(100vw - 230px);
-		/*margin-left: 123px;*/
-	}
-	.outerheader {
-		width: calc(100vw - 227px);
-	}
-	.buttona, .buttonb {
+	.buttona,
+	.buttonb {
 		margin: 10px 95px;
-	}	
+	}
+}
+@media (min-width: 523px) and (max-width: 899px) {
+	.buttona,
+	.buttonb {
+		margin: 10px 76px;
+	}
+}
+.footer {
+	padding: 5px 20px;
+	background-color: black;
+	border: 1px solid #fff;
+	margin: -10px 0 0 0;
+	border-radius: 6px;
+}
+.innersection h5 a {
+	color: #708cdb;
+}
+@media (max-width: 520px) {
+	.outerheader,
+	.headerbox,
+	.headerboxcolor,
+	.bodytext {
+		padding-left: 4vw;
+		padding-right: 4vw;
+	}
+	.innersection,
+	.book,
+	.bookheader {
+		padding-left: 2vw;
+		padding-right: 2vw;
+	}
 }

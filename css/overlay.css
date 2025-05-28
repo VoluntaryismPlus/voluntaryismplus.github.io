@@ -1,40 +1,25 @@
-.caravanarchy {
-	position: absolute;
-	right: 63px;
-	top: 5px;
-	display: none;
-}
-
-.caravanarchy:hover {
-	background-color: white;
-	color: black;
-}
+/* --- OVERLAY (MOBILE NAVIGATION) --- */
 
 .overlay {
-	/* Height & width depends on how you want to reveal the overlay (see JS below) */
 	height: 100%;
 	width: 0;
-	position: fixed; /* Stay in place */
-	z-index: 1; /* Sit on top */
+	position: fixed;
+	z-index: 1;
 	left: 0;
 	top: 0;
-	background-color: rgba(
-		0,
-		0,
-		0,
-		0.9
-	); /* Black w/opacity */
-	overflow-x: hidden; /* Disable horizontal scroll */
-	transition: 0.4s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+	background-color: rgba(0, 0, 0, 0.9);
+	overflow-x: hidden;
+	transition: 0.4s;
+	display: block;
 }
 
 /* Position the content inside the overlay */
 .overlay-content {
 	position: relative;
-	top: 45vw; /* 25% from the top */
-	width: 100%; /* 100% width */
-	text-align: left; /* Centered text/links */
-	margin-top: 0; /* 30px top margin to avoid conflict with the close button on smaller screens */
+	top: 45vw;
+	width: 100%;
+	text-align: left;
+	margin-top: 0;
 }
 
 .overlay-content ul {
@@ -52,33 +37,28 @@
 	margin: 0;
 }
 
-/* The navigation links inside the overlay */
+/* Overlay navigation links */
 .overlay a {
 	padding: 8px;
 	text-decoration: none;
 	font-size: 4vw;
 	color: #818181;
-	display: block; /* Display block instead of inline */
-	transition: 0.3s; /* Transition effects on hover (color) */
+	display: block;
+	transition: 0.3s;
 	font-family: "Kode Mono", monospace;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+	color: #f1f1f1;
 }
 
 .overlay p {
 	font-size: 6vw;
-	margin: 5px 5px 5px 5px;
+	margin: 5px;
 	font-family: "Share Tech Mono", monospace;
 	padding: 5px;
 	border: 5px solid #2f5569;
-}
-
-.overlay li {
-	list-style-type: none;
-	outline: none;
-}
-/* When you mouse over the navigation links, change their color */
-.overlay a:hover,
-.overlay a:focus {
-	color: #f1f1f1;
 }
 
 .overlay h3 {
@@ -92,7 +72,11 @@
 	font-size: 8vw;
 }
 
-/* Position the close button (top right corner) */
+.overlay li {
+	list-style-type: none;
+	outline: none;
+}
+
 .overlay .closebtn {
 	position: absolute;
 	top: 1px;
@@ -102,45 +86,38 @@
 	font-size: 37px;
 }
 
-.logo {
-	width: 30px;
-	position: absolute;
-	top: 3px;
-	right: 3px;
-	margin-right: 20px;
-}
-
-.logo1 {
-	width: 30vw;
-	position: absolute;
-	top: -200px;
-	right: 30vw;
-	margin-right: 10px;
-}
-
-.logo img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-.logo1 img {
-	max-width: 100%;
-	max-height: 100%;
-}
+/* --- TOP NAV (MOBILE NAVIGATION BAR) --- */
 
 .topnav {
 	overflow: hidden;
-	background-color: #000000;
-	padding: 5px;
+	background-color: #000;
+	padding: 0;
 	position: fixed;
 	top: 0;
 	display: block;
 	width: 100%;
+	height: 40px;
 	margin: 0;
 }
 
 .topnav span {
 	font-family: "Kode Mono", monospace;
+	line-height: 40px;
+	margin-left: 12px;
+}
+
+/* Small logo in .topnav (mobile) */
+.topnav .logo {
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: auto;
+	height: 38px;
+	margin: 0;
+	padding: 0;
+	display: block;
+	z-index: 2;
 }
 
 .topnav a:hover {
@@ -148,12 +125,23 @@
 	color: black;
 }
 
-.fa-bars {
-	position: fixed;
-	outline: none;
-	display: none;
+.topnav .logo img {
+	width: auto !important;
+	height: 38px !important;
+	max-width: none !important;
+	max-height: 40px !important;
+	display: block;
 }
 
+/* --- MOBILE-ONLY: Hide overlay and topnav on desktop --- */
+@media (min-width: 523px) {
+	.overlay,
+	.topnav {
+		display: none !important;
+	}
+}
+
+/* --- MOBILE LAYOUT TWEAKS --- */
 @media screen and (max-height: 450px) {
 	.overlay a {
 		font-size: 14px;
@@ -163,11 +151,9 @@
 		top: 5px;
 		right: 5px;
 	}
-
 	.overlay p {
 		font-size: 17px;
 	}
-
 	.overlay h3 {
 		font-size: 20px;
 	}
@@ -178,7 +164,6 @@
 		right: 26vw;
 		top: -113px;
 	}
-
 	.overlaylogo img {
 		width: 100px;
 	}
@@ -188,28 +173,7 @@
 		right: 23vw;
 		top: -188px;
 	}
-
 	.overlaylogo img {
 		width: 40vw;
-	}
-}
-@media (min-width: 523px) {
-	.topnav {
-		display: none;
-	}
-	.overlay {
-		display: none;
-	}
-
-	.logo {
-		margin-right: 10px;
-	}
-
-	.fa-bars {
-		display: block;
-	}
-
-	.caravanarchy {
-		display: block;
 	}
 }

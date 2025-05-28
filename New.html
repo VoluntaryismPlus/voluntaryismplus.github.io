@@ -78,7 +78,7 @@
 	</head>
 
 	<body>
-		<!-- The overlay -->
+		<!-- The overlay (mobile navigation, hidden on desktop) -->
 		<div id="myNav" class="overlay">
 			<!-- Button to close the overlay navigation -->
 			<a
@@ -87,12 +87,13 @@
 				onclick="closeNav()"
 				>&times;</a
 			>
-
 			<!-- Overlay content -->
 			<div class="overlay-content">
 				<div class="overlaylogo">
 					<a href="index.html"
-						><img src="img/vroad.png"
+						><img
+							src="img/vroad.png"
+							alt="Logo"
 					/></a>
 				</div>
 				<p>Roadmap</p>
@@ -178,13 +179,11 @@
 							Table</a
 						>
 					</li>
-
 					<li>
 						<a href="2.7_DownfallGreats.html"
 							>Downfall of the Greats</a
 						>
 					</li>
-
 					<li>
 						<a href="2.8_Library.html"
 							>Library</a
@@ -324,13 +323,27 @@
 				<p>Links</p>
 				<ul>
 					<li>
-						<a href="8.1_Links.html">Links</a
-						><a href="8.2_Videos.html"
-							>Videos</a
-						>
+						<a href="8.1_Links.html">Links</a>
+					</li>
+					<li>
+						<a href="8.2_Videos.html">Videos</a>
 					</li>
 				</ul>
 			</div>
+		</div>
+
+		<!-- The mobile top navigation bar -->
+		<div class="topnav">
+			<span
+				style="font-size: 20px; cursor: pointer"
+				onclick="openNav()">
+				&#9776; Navigation<span class="caravanarchy"
+					>Caravanarchy</span
+				>
+			</span>
+			<a href="index.html" class="logo">
+				<img src="img/vroad.png" alt="Logo" />
+			</a>
 		</div>
 
 		<div class="topnav">
