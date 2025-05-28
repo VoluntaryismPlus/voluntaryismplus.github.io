@@ -65,6 +65,7 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
 			rel="stylesheet" />
+		<script src="js/sidebar.js" defer></script>
 	</head>
 
 	<body>
@@ -327,7 +328,8 @@
 			<div class="side">
 				<button class="dropdown-btn" aria-expanded="false">
 					Roadmap
-					<span class="caret">&#9654;</span> </button>
+					<span class="caret">&#9654;</span>
+				</button>
 				<div class="dropdown-container">
 					<a href="0.1_Index.html">Directory</a>
 					<!--
@@ -338,7 +340,8 @@
 				<h5 class="sideheader">Who We Are</h5>
 				<button class="dropdown-btn" aria-expanded="false">
 					Our Philosophy
-					<span class="caret">&#9654;</span> </button>
+					<span class="caret">&#9654;</span>
+				</button>
 				<div class="dropdown-container">
 					<a href="index.html">Welcome</a>
 					<a href="1_TheNetwork.html">The Network</a>
@@ -360,7 +363,8 @@
 					class="dropdown-btn"
 					onclick="rotate()">
 					We Are Network Support
-					<span class="caret">&#9654;</span> </button>
+					<span class="caret">&#9654;</span>
+				</button>
 				<div class="dropdown-container">
 					<div class="thispage">
 						<a href="1.4_OurPlan.html">Our Plan</a>
@@ -375,7 +379,8 @@
 				</div>
 				<button class="dropdown-btn" aria-expanded="false">
 					Applied Learning Grounds
-					<span class="caret">&#9654;</span> </button>
+					<span class="caret">&#9654;</span>
+				</button>
 				<div class="dropdown-container">
 					<a href="2.1_AdmissionsPortal.html"
 						>Admissions Portal</a
@@ -395,7 +400,8 @@
 				<h5 class="sideheader">You and The Network</h5>
 				<button class="dropdown-btn" aria-expanded="false">
 					Strategic Lifestyle Planning
-					<span class="caret">&#9654;</span> </button>
+					<span class="caret">&#9654;</span>
+				</button>
 				<div class="dropdown-container">
 					<a href="3.1_SauronAndShire.html"
 						>Sauron and the Shire</a
@@ -416,7 +422,8 @@
 				</div>
 				<button class="dropdown-btn" aria-expanded="false">
 					Create Your Own Adventure
-					<span class="caret">&#9654;</span> </button>
+					<span class="caret">&#9654;</span>
+				</button>
 				<div class="dropdown-container">
 					<a href="4.1_StartHere.html">Start Here</a>
 					<a href="4.2_EntryGuide.html">Entry Guide</a>
@@ -435,7 +442,8 @@
 				<h5 class="sideheader">The Agora</h5>
 				<button class="dropdown-btn" aria-expanded="false">
 					Bounty Board
-					<span class="caret">&#9654;</span> </button>
+					<span class="caret">&#9654;</span>
+				</button>
 				<div class="dropdown-container">
 					<a href="5.1_BountyBoard.html">Bounty Board</a>
 					<a href="5.2_Goods.html">Goods</a>
@@ -443,14 +451,16 @@
 				</div>
 				<button class="dropdown-btn" aria-expanded="false">
 					Events
-					<span class="caret">&#9654;</span> </button>
+					<span class="caret">&#9654;</span>
+				</button>
 				<div class="dropdown-container">
 					<a href="6.1_Events.html">Events</a>
 					<a href="6.2_Festivals.html">Festivals</a>
 				</div>
 				<button class="dropdown-btn" aria-expanded="false">
 					Maps
-					<span class="caret">&#9654;</span> </button>
+					<span class="caret">&#9654;</span>
+				</button>
 				<div class="dropdown-container">
 					<a href="7.1_Map.html">Main Map</a>
 					<a href="7.2_Freelocations.html"
@@ -469,7 +479,8 @@
 				</div>
 				<button class="dropdown-btn" aria-expanded="false">
 					Links
-					<span class="caret">&#9654;</span> </button>
+					<span class="caret">&#9654;</span>
+				</button>
 				<div class="dropdown-container">
 					<a href="8.1_Links.html">Links</a
 					><a href="8.2_Videos.html">Videos</a>
@@ -762,7 +773,7 @@
 					nonviolent, non-confrontational means.
 				</p>
 			</div>
-				<div class="innersection">
+			<div class="innersection">
 				<div class="headerbox">
 					<h2 id="section3">
 						<strong
@@ -1163,7 +1174,6 @@
 					as close as possible to anarchy in this lifetime.
 				</p>
 			</div>
-			</div>
 			<div class="nextpage">
 				<h3>
 					<a href="1.5_CaravanWelcomeOutpost.html"
@@ -1176,74 +1186,5 @@
 				<p>Contact us by Email: caravanarchy@proton.me</p>
 			</div>
 		</div>
-
-		<script>
-			/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-			window.onload = function () {
-				document.getElementById("acti").click();
-			};
-
-			var dropdown =
-				document.getElementsByClassName("dropdown-btn");
-
-			var i;
-
-			for (i = 0; i < dropdown.length; i++) {
-				dropdown[i].addEventListener("click", function () {
-					var lst = document.getElementsByClassName(
-						"dropdown-container"
-					);
-
-					for (var j = 0; j < lst.length; j++) {
-						lst[j].style.display = "none";
-					}
-
-					var act =
-						document.getElementsByClassName("dropdown-btn");
-
-					for (var k = 0; k < act.length; k++) {
-						act[k].classList.remove("active");
-					}
-
-					this.classList.toggle("active");
-
-					var dropdownContent = this.nextElementSibling;
-
-					if (dropdownContent.style.display === "block") {
-						dropdownContent.style.display = "none";
-					} else {
-						dropdownContent.style.display = "block";
-					}
-					//    this.classList.toggle("active");
-					//    this.style.backgroundColor = "#AA0000";
-				});
-			}
-			function rotate() {
-				var element = event.target;
-				var child = element.children[0];
-
-				var myIcon = document.getElementsByClassName(
-					"my_class fa fa-caret-down"
-				);
-				var m;
-				for (var m = 0; m < myIcon.length; m++) {
-					myIcon[m].className =
-						"my_class fa fa-caret-right";
-				}
-
-				child.className = "my_class fa fa-caret-down";
-			}
-
-			/* Open when someone clicks on the span element */
-			function openNav() {
-				document.getElementById("myNav").style.width =
-					"100%";
-			}
-
-			/* Close when someone clicks on the "x" symbol inside the overlay */
-			function closeNav() {
-				document.getElementById("myNav").style.width = "0%";
-			}
-		</script>
 	</body>
 </html>

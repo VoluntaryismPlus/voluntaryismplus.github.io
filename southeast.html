@@ -77,6 +77,7 @@
         <link
             href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
             rel="stylesheet" />
+        <script src="js/sidebar.js" defer></script>
     </head>
 
     <body>
@@ -100,7 +101,9 @@
                 <p>Roadmap</p>
                 <ul>
                     <li>
-                        <a href="0.1_Index.html">Directory</a>
+                        <a href="0.1_Index.html"
+                            >Directory</a
+                        >
                     </li>
                 </ul>
                 <h3>Who We Are</h3>
@@ -159,9 +162,7 @@
                         >
                     </li>
                     <li>
-                        <a href="2.3_Guilds.html"
-                            >Guilds</a
-                        >
+                        <a href="2.3_Guilds.html">Guilds</a>
                     </li>
                     <li>
                         <a href="2.4_FreedomGuard.html"
@@ -1973,7 +1974,9 @@
             </div>
 
             <div class="index">
-                <div class="indextitle"><h3>Directory</h3></div>
+                <div class="indextitle">
+                    <h3>Directory</h3>
+                </div>
                 <h6>
                     <a href="index.html#section0"
                         >The Network</a
@@ -2938,103 +2941,5 @@
                 </p>
             </div>
         </div>
-        <script>
-            /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-
-            window.onload = function () {
-                document.getElementById("acti").click();
-            };
-
-            var dropdown =
-                document.getElementsByClassName(
-                    "dropdown-btn"
-                );
-
-            var i;
-
-            for (i = 0; i < dropdown.length; i++) {
-                dropdown[i].addEventListener(
-                    "click",
-                    function () {
-                        var lst =
-                            document.getElementsByClassName(
-                                "dropdown-container"
-                            );
-
-                        for (
-                            var j = 0;
-                            j < lst.length;
-                            j++
-                        ) {
-                            lst[j].style.display = "none";
-                        }
-
-                        var act =
-                            document.getElementsByClassName(
-                                "dropdown-btn"
-                            );
-
-                        for (
-                            var k = 0;
-                            k < act.length;
-                            k++
-                        ) {
-                            act[k].classList.remove(
-                                "active"
-                            );
-                        }
-
-                        this.classList.toggle("active");
-
-                        var dropdownContent =
-                            this.nextElementSibling;
-
-                        if (
-                            dropdownContent.style
-                                .display === "block"
-                        ) {
-                            dropdownContent.style.display =
-                                "none";
-                        } else {
-                            dropdownContent.style.display =
-                                "block";
-                        }
-                        //    this.classList.toggle("active");
-                        //    this.style.backgroundColor = "#AA0000";
-                    }
-                );
-            }
-            function rotate() {
-                var element = event.target;
-                var child = element.children[0];
-
-                var myIcon =
-                    document.getElementsByClassName(
-                        "my_class fa fa-caret-down"
-                    );
-                var m;
-                for (var m = 0; m < myIcon.length; m++) {
-                    myIcon[m].className =
-                        "my_class fa fa-caret-right";
-                }
-
-                child.className =
-                    "my_class fa fa-caret-down";
-            }
-
-            /* Open when someone clicks on the span element */
-            function openNav() {
-                document.getElementById(
-                    "myNav"
-                ).style.width = "100%";
-            }
-
-            /* Close when someone clicks on the "x" symbol inside the overlay */
-            function closeNav() {
-                document.getElementById(
-                    "myNav"
-                ).style.width = "0%";
-            }
-        </script>
     </body>
 </html>

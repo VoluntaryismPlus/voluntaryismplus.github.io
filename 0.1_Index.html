@@ -66,7 +66,6 @@
 			rel="stylesheet" />
 		<script src="js/sidebar.js" defer></script>
 	</head>
-
 	<body>
 		<!-- The overlay -->
 		<div id="myNav" class="overlay">
@@ -890,62 +889,5 @@
 				</div>
 			</div>
 		</div>
-
-		<script>
-			document.addEventListener(
-				"DOMContentLoaded",
-				function () {
-					const dropdownButtons =
-						document.querySelectorAll(".dropdown-btn");
-
-					// Allow only one open at a time
-					dropdownButtons.forEach(function (btn) {
-						btn.addEventListener("click", function () {
-							// If this is already open, close it and return
-							const isActive =
-								this.classList.contains("active");
-							closeAllDropdowns();
-
-							if (!isActive) {
-								this.classList.add("active");
-								this.setAttribute("aria-expanded", "true");
-								const dropdown = this.nextElementSibling;
-								if (
-									dropdown &&
-									dropdown.classList.contains(
-										"dropdown-container"
-									)
-								) {
-									dropdown.classList.add("show");
-								}
-							}
-						});
-					});
-
-					function closeAllDropdowns() {
-						dropdownButtons.forEach(function (btn) {
-							btn.classList.remove("active");
-							btn.setAttribute("aria-expanded", "false");
-							const dropdown = btn.nextElementSibling;
-							if (
-								dropdown &&
-								dropdown.classList.contains(
-									"dropdown-container"
-								)
-							) {
-								dropdown.classList.remove("show");
-							}
-						});
-					}
-
-					// Auto-open a specific dropdown on load if you like
-					// For example, open the one with id="acti"
-					const autoOpen = document.getElementById("acti");
-					if (autoOpen) {
-						autoOpen.click();
-					}
-				}
-			);
-		</script>
-	</body>
+</body>
 </html>
