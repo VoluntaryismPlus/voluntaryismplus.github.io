@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const dropdownButtons = document.querySelectorAll(".dropdown-btn");
+  // --- DROPDOWN FUNCTIONALITY ---
+  const dropdownButtons =
+    document.querySelectorAll(".dropdown-btn");
 
-  // Allow only one open at a time
   dropdownButtons.forEach(function (btn) {
     btn.addEventListener("click", function (e) {
-      // Allow keyboard and mouse activation
       e.preventDefault();
       const isActive = this.classList.contains("active");
       closeAllDropdowns();
@@ -13,7 +13,10 @@ document.addEventListener("DOMContentLoaded", function () {
         this.classList.add("active");
         this.setAttribute("aria-expanded", "true");
         const dropdown = this.nextElementSibling;
-        if (dropdown && dropdown.classList.contains("dropdown-container")) {
+        if (
+          dropdown &&
+          dropdown.classList.contains("dropdown-container")
+        ) {
           dropdown.classList.add("show");
         }
       }
@@ -25,7 +28,10 @@ document.addEventListener("DOMContentLoaded", function () {
       btn.classList.remove("active");
       btn.setAttribute("aria-expanded", "false");
       const dropdown = btn.nextElementSibling;
-      if (dropdown && dropdown.classList.contains("dropdown-container")) {
+      if (
+        dropdown &&
+        dropdown.classList.contains("dropdown-container")
+      ) {
         dropdown.classList.remove("show");
       }
     });
@@ -35,5 +41,31 @@ document.addEventListener("DOMContentLoaded", function () {
   const autoOpen = document.getElementById("acti");
   if (autoOpen) {
     autoOpen.click();
+  }
+
+  // --- OVERLAY FUNCTIONALITY ---
+  const overlay = document.getElementById("myNav");
+  const hamburger = document.getElementById("hamburger");
+  const closeBtn = document.getElementById("closeNav");
+
+  if (hamburger && overlay) {
+    hamburger.addEventListener("click", function () {
+      overlay.style.width = "100%";
+    });
+  }
+
+  if (closeBtn && overlay) {
+    closeBtn.addEventListener("click", function () {
+      overlay.style.width = "0%";
+    });
+  }
+
+  // Optional: close overlay when clicking outside sidebar
+  if (overlay) {
+    overlay.addEventListener("click", function (e) {
+      if (e.target === overlay) {
+        overlay.style.width = "0%";
+      }
+    });
   }
 });

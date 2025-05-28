@@ -67,22 +67,22 @@
 		<script src="js/sidebar.js" defer></script>
 	</head>
 	<body>
-		<!-- The overlay -->
+		<!-- Overlay (Hamburger Menu) -->
 		<div id="myNav" class="overlay">
-			<!-- Button to close the overlay navigation -->
-			<a
-				href="javascript:void(0)"
-				class="closebtn"
-				onclick="closeNav()"
-				>&times;</a
-			>
-
-			<!-- Overlay content -->
+			<!-- Overlay Content -->
 			<div class="overlay-content">
-				<div class="overlaylogo">
-					<a href="index.html"
-						><img src="img/vroad.png"
-					/></a>
+				<div class="overlay-header">
+					<div class="overlaylogo">
+						<a href="index.html"
+							><img src="img/vroad.png"
+						/></a>
+					</div>
+					<a
+						href="javascript:void(0)"
+						class="closebtn"
+						id="closeNav"
+						>&times;</a
+					>
 				</div>
 				<p>Roadmap</p>
 				<ul>
@@ -287,16 +287,16 @@
 		</div>
 
 		<div class="topnav">
-			<a href="index.html" class="logo"
-				><img src="img/vroad.png"
-			/></a>
-			<span
-				style="font-size: 20px; cursor: pointer"
-				onclick="openNav()"
-				>&#9776; Navigation<span class="caravanarchy"
-					>Caravanarchy</span
-				></span
-			>
+			<a href="index.html" class="logo">
+				<img src="img/vroad.png" />
+			</a>
+			<button
+				id="hamburger"
+				class="hamburger-btn"
+				aria-label="Open navigation">
+				&#9776; Navigation
+				<span class="caravanarchy">Caravanarchy</span>
+			</button>
 		</div>
 
 		<div class="menu-btn">
@@ -889,5 +889,5 @@
 				</div>
 			</div>
 		</div>
-</body>
+	</body>
 </html>
