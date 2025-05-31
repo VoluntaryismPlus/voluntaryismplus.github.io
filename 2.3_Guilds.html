@@ -65,20 +65,29 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
 			rel="stylesheet" />
-			<script src="js/sidebar.js" defer></script> 	</head>
+		<script src="js/sidebar.js" defer></script>
+	</head>
 
 	<body>
-		<!-- The overlay -->
+		<!-- Overlay content --><!-- Overlay (Hamburger Menu) -->
 		<div id="myNav" class="overlay">
-			<!-- Button to close the overlay navigation -->
+			<!-- Close Button (× symbol, top right) -->
 			<a
 				href="javascript:void(0)"
 				class="closebtn"
-				onclick="closeNav()"
+				id="closeNav"
 				>&times;</a
 			>
-
-			<!-- Overlay content --><!-- Overlay (Hamburger Menu) --> <div id="myNav" class="overlay">   <!-- Close Button (× symbol, top right) -->   <a href="javascript:void(0)" class="closebtn" id="closeNav">&times;</a>   <!-- Overlay Content -->   <div class="overlay-content">     <div class="overlaylogo">       <a href="index.html"><img src="img/vroad.png" /></a>     </div>     <p>Roadmap</p>     <ul>       <li>         <a href="0.1_Index.html">Directory</a>       </li>
+			<!-- Overlay Content -->
+			<div class="overlay-content">
+				<div class="overlaylogo">
+					<a href="index.html"
+						><img src="img/vroad.png"
+					/></a>
+				</div>
+				<p>Roadmap</p>
+				<ul>
+					<li><a href="0.1_Index.html">Directory</a></li>
 					<li>
 						<a href="0.2_Philosophy.html">Philosphy</a>
 					</li>
@@ -295,9 +304,18 @@
 			</div>
 		</div>
 
-<div class="topnav">   <a href="index.html" class="logo">     <img src="img/vroad.png" />   </a>   <button id="hamburger" class="hamburger-btn" aria-label="Open navigation">     &#9776; <span class="caravanarchy">Caravanarchy</span>   </button> </div>
-
-
+		<div class="topnav">
+			<a href="index.html" class="logo">
+				<img src="img/vroad.png" />
+			</a>
+			<button
+				id="hamburger"
+				class="hamburger-btn"
+				aria-label="Open navigation">
+				&#9776;
+				<span class="caravanarchy">Caravanarchy</span>
+			</button>
+		</div>
 
 		<div id="sideNav" class="sidenav">
 			<header>
@@ -315,7 +333,8 @@
 			<div class="side">
 				<button class="dropdown-btn" aria-expanded="false">
 					Roadmap
-					<span class="caret">&#9654;</span> </button>
+					<span class="caret">&#9654;</span>
+				</button>
 				<div class="dropdown-container">
 					<a href="0.1_Index.html">Directory</a>
 					<!--
@@ -326,7 +345,8 @@
 				<h5 class="sideheader">Who We Are</h5>
 				<button class="dropdown-btn" aria-expanded="false">
 					Our Philosophy
-					<span class="caret">&#9654;</span> </button>
+					<span class="caret">&#9654;</span>
+				</button>
 				<div class="dropdown-container">
 					<a href="index.html">Welcome</a>
 					<a href="1_TheNetwork.html">The Network</a>
@@ -345,7 +365,8 @@
 				</div>
 				<button class="dropdown-btn" aria-expanded="false">
 					We Are Network Support
-					<span class="caret">&#9654;</span> </button>
+					<span class="caret">&#9654;</span>
+				</button>
 				<div class="dropdown-container">
 					<a href="1.4_OurPlan.html">Our Plan</a>
 					<a href="1.5_CaravanWelcomeOutpost.html"
@@ -361,7 +382,8 @@
 					class="dropdown-btn"
 					onclick="rotate()">
 					Applied Learning Grounds
-					<span class="caret">&#9654;</span> </button>
+					<span class="caret">&#9654;</span>
+				</button>
 				<div class="dropdown-container">
 					<a href="2.1_AdmissionsPortal.html"
 						>Admissions Portal</a
@@ -383,7 +405,8 @@
 				<h5 class="sideheader">You and The Network</h5>
 				<button class="dropdown-btn" aria-expanded="false">
 					Strategic Lifestyle Planning
-					<span class="caret">&#9654;</span> </button>
+					<span class="caret">&#9654;</span>
+				</button>
 				<div class="dropdown-container">
 					<a href="3.1_SauronAndShire.html"
 						>Sauron and the Shire</a
@@ -404,7 +427,8 @@
 				</div>
 				<button class="dropdown-btn" aria-expanded="false">
 					Create Your Own Adventure
-					<span class="caret">&#9654;</span> </button>
+					<span class="caret">&#9654;</span>
+				</button>
 				<div class="dropdown-container">
 					<a href="4.1_StartHere.html">Start Here</a>
 					<a href="4.2_EntryGuide.html">Entry Guide</a>
@@ -423,7 +447,8 @@
 				<h5 class="sideheader">The Agora</h5>
 				<button class="dropdown-btn" aria-expanded="false">
 					Bounty Board
-					<span class="caret">&#9654;</span> </button>
+					<span class="caret">&#9654;</span>
+				</button>
 				<div class="dropdown-container">
 					<a href="5.1_BountyBoard.html">Bounty Board</a>
 					<a href="5.2_Goods.html">Goods</a>
@@ -431,14 +456,16 @@
 				</div>
 				<button class="dropdown-btn" aria-expanded="false">
 					Events
-					<span class="caret">&#9654;</span> </button>
+					<span class="caret">&#9654;</span>
+				</button>
 				<div class="dropdown-container">
 					<a href="6.1_Events.html">Events</a>
 					<a href="6.2_Festivals.html">Festivals</a>
 				</div>
 				<button class="dropdown-btn" aria-expanded="false">
 					Maps
-					<span class="caret">&#9654;</span> </button>
+					<span class="caret">&#9654;</span>
+				</button>
 				<div class="dropdown-container">
 					<a href="7.1_Map.html">Main Map</a>
 					<a href="7.2_Freelocations.html"
@@ -457,7 +484,8 @@
 				</div>
 				<button class="dropdown-btn" aria-expanded="false">
 					Links
-					<span class="caret">&#9654;</span> </button>
+					<span class="caret">&#9654;</span>
+				</button>
 				<div class="dropdown-container">
 					<a href="8.1_Links.html">Links</a
 					><a href="8.2_Videos.html">Videos</a>

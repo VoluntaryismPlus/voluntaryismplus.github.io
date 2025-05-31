@@ -17,7 +17,6 @@
 	width: inherit;
 	margin-left: 1px;
 	padding: 4px;
-	font-family: "Share Tech Mono", monospace;
 	font-size: 8vw;
 }
 
@@ -44,10 +43,6 @@
 	color: #818181;
 	text-decoration: none;
 	transition: color 0.3s;
-}
-.overlay a:hover,
-.overlay a:focus {
-	color: #f1f1f1;
 }
 
 body.overlay-open .topnav {
@@ -193,4 +188,10 @@ body.overlay-open .topnav {
 		width: 80vw;
 	}
 	*/
+}
+
+@media (min-width: 523px) {
+	.topnav {
+		display: none !important;
+	}
 }

@@ -41,7 +41,7 @@
 	width: clamp(100px, 17.5vw, 180px);
 	height: auto;
 	display: block;
-	margin: 0 auto 7px auto;
+	margin: 13px auto 7px auto;
 }
 
 .side_header {
@@ -125,7 +125,7 @@
 }
 .dropdown-btn:hover,
 .dropdown-btn:focus {
-	background-color: #23232a;
+	background-color: #19191f;
 	color: #da52f2;
 }
 .dropdown-btn .caret {
@@ -144,7 +144,7 @@
 /* --- DROPDOWN CONTAINERS --- */
 .dropdown-container {
 	display: none;
-	background-color: #2a2a30;
+	background-color: #1a1a1f;
 	width: calc(100% - 2px);
 	margin: 0 0 0 1px;
 	border-left: 1.5px solid #23232a;
