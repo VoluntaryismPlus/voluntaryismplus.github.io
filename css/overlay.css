@@ -4,7 +4,7 @@
 }
 
 .overlay p {
-	font-size: 6vw;
+	font-size: 4vw;
 	margin: 5px;
 	padding: 5px;
 	border: 5px solid #2f5569;
@@ -17,7 +17,7 @@
 	width: inherit;
 	margin-left: 1px;
 	padding: 4px;
-	font-size: 8vw;
+	font-size: 6vw;
 }
 
 .overlay li {
@@ -25,6 +25,7 @@
 	outline: none;
 	padding: 5px;
 	text-align: center;
+	font-size: 3vw;
 }
 
 .overlay,
@@ -167,31 +168,34 @@ body.overlay-open .topnav {
 /* (Other overlay styles remain unchanged) */
 
 /* --- MOBILE LAYOUT TWEAKS --- */
+/*
 @media screen and (max-height: 450px) {
 	.overlay a {
-		font-size: 14px;
+		font-size: 11px;
 	}
 	.overlay .closebtn {
 		font-size: 30px;
 	}
 	.overlay p {
-		font-size: 17px;
+		font-size: 13px;
 	}
 	.overlay h3 {
-		font-size: 20px;
+		font-size: 16px;
 	}
 	.overlay-content {
 		padding-top: 10px;
 	}
-	/*
 	.overlaylogo img {
 		width: 80vw;
 	}
-	*/
 }
+*/
 
 @media (min-width: 523px) {
 	.topnav {
 		display: none !important;
+	}
+	.overlay {
+		display: none;
 	}
 }

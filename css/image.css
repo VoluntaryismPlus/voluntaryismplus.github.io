@@ -115,10 +115,11 @@ body {
 
 .outerimage img {
 	margin-left: 2px;
-	width: 95vw;
+	width: 87vw;
 	border: 5px solid black;
 	display: block;
 	margin-right: 1px;
+	margin-bottom: 10px;
 }
 
 .businessimage {

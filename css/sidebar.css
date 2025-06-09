@@ -109,7 +109,7 @@
 	width: 100%;
 	font-family: "Courier New", Courier, monospace;
 	padding: 5px 14px 5px 8px; /* right padding for caret spacing */
-	font-size: clamp(15px, 2vw, 19px);
+	font-size: clamp(15px, 2vw, 15px);
 	color: #686877;
 	display: flex;
 	align-items: center;
@@ -131,7 +131,7 @@
 .dropdown-btn .caret {
 	display: inline-block;
 	margin-left: 0.7em;
-	font-size: 0.9em; /* smaller caret */
+	font-size: 0.8em; /* smaller caret */
 	color: #dddddd; /* lighter grey */
 	transition: transform 0.25s;
 	flex-shrink: 0;
@@ -144,7 +144,7 @@
 /* --- DROPDOWN CONTAINERS --- */
 .dropdown-container {
 	display: none;
-	background-color: #1a1a1f;
+	background-color: #25252a;
 	width: calc(100% - 2px);
 	margin: 0 0 0 1px;
 	border-left: 1.5px solid #23232a;
