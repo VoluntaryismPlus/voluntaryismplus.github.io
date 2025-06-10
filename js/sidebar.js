@@ -102,6 +102,25 @@ if (thisPageDiv) {
   }
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  var path = window.location.pathname.split("/").pop();
+  document
+    .querySelectorAll(".overlay-content a")
+    .forEach(function (link) {
+      if (link.getAttribute("href") === path) {
+        // For <li><a>...</a></li>
+        if (
+          link.parentElement.tagName.toLowerCase() === "li"
+        ) {
+          link.parentElement.classList.add("thispage");
+        } else {
+          // For <a> directly in <ul>
+          link.classList.add("thispage");
+        }
+      }
+    });
+});
+
 //// Optional: attach events if not inline in HTML
 //document.addEventListener("DOMContentLoaded", function () {
 //  var openBtn = document.getElementById("hamburger");
