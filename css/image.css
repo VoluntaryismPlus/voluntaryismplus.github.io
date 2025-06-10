@@ -113,6 +113,11 @@ body {
 	width: 73.5vw;
 }
 
+.listimage img {
+	width: 100%;
+	max-width: 220px;
+	margin: 0 auto;
+}
 .outerimage img {
 	margin-left: 2px;
 	width: 87vw;
@@ -166,7 +171,9 @@ body {
 	.openerversion img {
 		display: none;
 	}
-
+	.listimage img {
+		width: 30vw;
+	}
 	.vehicles img {
 		width: 37.5vw;
 	}

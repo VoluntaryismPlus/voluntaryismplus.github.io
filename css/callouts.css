@@ -122,6 +122,13 @@
 	padding: 2px 10px 2px 10px;
 }
 
+.callout3 {
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  align-items: center;     /* centers vertically (if you want) */
+  height: 100px; 
+}
+
 .callout4title {
 	background-color: #1f1f1f;
 	float: right;

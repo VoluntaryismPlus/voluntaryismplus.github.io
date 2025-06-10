@@ -50,6 +50,58 @@ body {
 		width 0.2s;
 }
 
+.button {
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+
+.button1 {
+	background-color: white;
+	color: black;
+	padding: 16px 32px;
+
+	border: 2px solid #04aa6d;
+}
+
+.button1:hover {
+	background-color: #04aa6d;
+	color: white;
+}
+
+.button2 {
+	background-color: white;
+	color: black;
+	padding: 7px 4px;
+
+	border: 2px solid #008cba;
+}
+
+.button2:hover {
+	background-color: #008cba;
+	color: white;
+}
+
+.listsection {
+	background-color: rgba(0, 0, 0, 0.85);
+	padding: 1.2rem 1.5rem;
+	border-radius: 10px;
+	box-shadow: 0 2px 8px #0002;
+	width: 100%;
+	max-width: 100%;
+	overflow-x: auto;
+	display: flex;
+	gap: 1.4rem;
+	flex-direction: column;
+	align-items: stretch; /* flex-start or center if you want vertical centering */
+}
+
 /* Tablet: 523px–899px, sidebar visible, width = clamp(160px, 20vw, 220px) */
 @media (min-width: 523px) and (max-width: 899px) {
 	.bodytext {
@@ -168,23 +220,7 @@ body {
 	border: solid 3px #000000;
 	border-radius: 8px;
 }
-.buttona,
-.buttonb {
-	text-align: center;
-	padding: 14px 7px 7px 7px;
-	margin: 10px;
-	border: 1px solid #fff;
-	background-color: rgba(28, 59, 54, 0.8);
-	border-radius: 14px;
-	transition: background 0.2s;
-	cursor: pointer;
-}
-.buttona:hover {
-	background-color: rgba(42, 98, 89, 0.92);
-}
-.buttonb:hover {
-	background-color: rgba(42, 89, 98, 0.92);
-}
+
 @media (min-width: 900px) {
 	.buttona,
 	.buttonb {
