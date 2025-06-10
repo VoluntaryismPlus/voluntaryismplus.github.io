@@ -120,9 +120,7 @@ body.overlay-open .topnav {
 }
 
 /* Layout fix: Ensure space for left/right so center text doesn't overlap */
-.topnav {
-	position: relative;
-}
+
 .hamburger-btn,
 .topnav .logo {
 	flex: 0 0 44px;
