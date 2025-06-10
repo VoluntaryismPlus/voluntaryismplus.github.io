@@ -91,7 +91,7 @@ body {
 }
 
 .imagenoborder img {
-	width: 94vw;
+	width: 84vw;
 }
 
 .imagenoborder1 {
@@ -115,9 +115,10 @@ body {
 
 .listimage img {
 	width: 100%;
-	max-width: 220px;
+
 	margin: 0 auto;
 }
+
 .outerimage img {
 	margin-left: 2px;
 	width: 87vw;
