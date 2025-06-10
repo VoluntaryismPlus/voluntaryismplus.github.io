@@ -80,6 +80,28 @@ function closeNav() {
   document.body.classList.remove("overlay-open");
 }
 
+const thisPageDiv = document.querySelector(".thispage");
+if (thisPageDiv) {
+  // Find the .dropdown-container that contains this .thispage div
+  const dropdownContainer = thisPageDiv.closest(
+    ".dropdown-container"
+  );
+  if (dropdownContainer) {
+    // Find the corresponding dropdown button (it is the previousElementSibling)
+    const dropdownBtn =
+      dropdownContainer.previousElementSibling;
+    if (
+      dropdownBtn &&
+      dropdownBtn.classList.contains("dropdown-btn")
+    ) {
+      // Open this dropdown
+      dropdownBtn.classList.add("active");
+      dropdownBtn.setAttribute("aria-expanded", "true");
+      dropdownContainer.classList.add("show");
+    }
+  }
+}
+
 //// Optional: attach events if not inline in HTML
 //document.addEventListener("DOMContentLoaded", function () {
 //  var openBtn = document.getElementById("hamburger");
