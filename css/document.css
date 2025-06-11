@@ -52,39 +52,43 @@ body {
 
 .button {
 	border: none;
-	color: white;
+	color: #0b6d98;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-	font-size: 16px;
 	margin: 4px 2px;
 	transition-duration: 0.4s;
 	cursor: pointer;
+	font-family: courier new;
 }
 
 .button1 {
-	background-color: white;
+	background-color: #0b4467;
 	color: black;
 	padding: 16px 32px;
-
-	border: 2px solid #04aa6d;
+	margin: 10px;
+	border-radius: 10px;
+	font-size: 5vw;
+	border: 2px solid #1ea2ad;
 }
 
 .button1:hover {
-	background-color: #04aa6d;
+	background-color: #1ea2ad;
 	color: white;
 }
 
 .button2 {
-	background-color: white;
+	background-color: #1c5364;
+	font-size: 3vw;
 	color: black;
-	padding: 7px 4px;
+	padding: 7px 9px;
+	border-radius: 6px;
 
 	border: 2px solid #008cba;
 }
 
 .button2:hover {
-	background-color: #008cba;
+	background-color: #096d8e;
 	color: white;
 }
 
@@ -100,6 +104,157 @@ body {
 	gap: 1.4rem;
 	flex-direction: column;
 	align-items: stretch; /* flex-start or center if you want vertical centering */
+}
+
+/* --- Section Containers --- */
+.innersection {
+	background-color: rgba(0, 0, 0, 0.85);
+	margin: 2.2rem 0 2.4rem 0;
+	padding: 1.2rem 1.5rem;
+	border-radius: 10px;
+	box-shadow: 0 2px 8px #0002;
+	width: 99%;
+	max-width: 100%;
+	overflow-x: auto;
+}
+
+.outerheader {
+	background-color: rgba(0, 0, 0, 0.86);
+	margin: 0 0 2rem 0;
+	padding: 1.3rem 1.2rem;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+	box-shadow: 0 2px 8px #0003;
+	text-align: center;
+}
+
+/* --- Other Styles (streamlined) --- */
+.headerbox,
+.headerboxcolor {
+	margin: 0 0 1rem 0;
+	padding: 0.6rem 0.7rem;
+	width: 100%;
+	max-width: var(--body-max-width);
+}
+.headerboxcolor {
+	background-color: rgba(0, 0, 0, 0.76);
+}
+.warning {
+	background-color: #3c0101;
+	text-align: center;
+	margin-top: 0;
+	padding: 5px;
+	font-size: 20px;
+	margin-right: 10px;
+	border-radius: 6px;
+}
+.opener {
+	display: flex;
+	flex-direction: column;
+}
+.book {
+	border: 2px solid #fff;
+	padding: 5px;
+	margin: 10px 0;
+	border-radius: 8px;
+}
+.bookheader {
+	margin: 10px 0;
+	padding: 10px;
+	border: 2px dashed #fff;
+	border-radius: 8px;
+}
+.book h4 {
+	background-color: black;
+	padding: 11px 15px;
+	margin: -5px -5px 10px -5px;
+	text-align: left;
+	border-radius: 6px;
+}
+#lyrics {
+	background-color: rgba(23, 41, 33, 0.8);
+	text-align: center;
+	width: fit-content;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	border: solid 3px #000000;
+	border-radius: 8px;
+}
+
+.overview-flex {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-bottom: 1em;
+	position: relative;
+	background-color: rgba(13, 13, 13, 0.92);
+}
+
+.overview-title {
+	flex: 0 0 100%;
+	width: 100%;
+	font-size: 1.4em;
+	font-weight: bold;
+	text-align: left;
+}
+
+/*
+.overview-title {
+  flex-basis: 100%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 0 0.7em 0;
+}
+*/
+
+.overview-text {
+	flex: 2;
+}
+
+.overview-image {
+	flex: 1;
+	max-width: 150px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.overview-image img {
+	width: 100%;
+	aspect-ratio: 1/1;
+	object-fit: cover;
+	border-radius: 8px;
+	display: block;
+}
+
+@media (max-width: 500px) {
+	.overview-flex {
+		flex-direction: column;
+		gap: 1em;
+		align-items: stretch;
+	}
+	.overview-title {
+		text-align: center;
+	}
+	.overview-image {
+		max-width: 100%;
+		margin: 0 auto;
+		width: 70vw;
+		min-width: 120px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.overview-image img {
+		width: 100%;
+		max-width: 200px;
+		margin: 0 auto;
+	}
 }
 
 /* Tablet: 523px–899px, sidebar visible, width = clamp(160px, 20vw, 220px) */
@@ -141,84 +296,6 @@ body {
 		width: 96vw;
 		max-width: 99vw;
 	}
-}
-
-/* --- Section Containers --- */
-.innersection {
-	background-color: rgba(0, 0, 0, 0.85);
-	margin: 2.2rem 0 2.4rem 0;
-	padding: 1.2rem 1.5rem;
-	border-radius: 10px;
-	box-shadow: 0 2px 8px #0002;
-	width: 99%;
-	max-width: 100%;
-	overflow-x: auto;
-}
-
-.outerheader {
-	background-color: rgba(0, 0, 0, 0.86);
-	margin: 0 0 2rem 0;
-	padding: 1.3rem 1.2rem;
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	border-radius: 10px;
-	box-shadow: 0 2px 8px #0003;
-	text-align: center;
-}
-
-/* --- Other Styles (streamlined) --- */
-.headerbox,
-.headerboxcolor {
-	margin: 0 0 1rem 0;
-	padding: 0.6rem 0.7rem;
-	width: 100%;
-	max-width: var(--body-max-width);
-}
-.headerboxcolor {
-	background-color: rgba(0, 0, 0, 0.76);
-}
-.warning {
-	background-color: #5a0000;
-	text-align: center;
-	margin-top: 0;
-	padding: 5px;
-	font-size: 20px;
-	margin-right: 10px;
-	border-radius: 6px;
-}
-.opener {
-	display: flex;
-	flex-direction: column;
-}
-.book {
-	border: 2px solid #fff;
-	padding: 5px;
-	margin: 10px 0;
-	border-radius: 8px;
-}
-.bookheader {
-	margin: 10px 0;
-	padding: 10px;
-	border: 2px dashed #fff;
-	border-radius: 8px;
-}
-.book h4 {
-	background-color: black;
-	padding: 11px 15px;
-	margin: -5px -5px 10px -5px;
-	text-align: left;
-	border-radius: 6px;
-}
-#lyrics {
-	background-color: rgba(23, 41, 33, 0.8);
-	text-align: center;
-	width: fit-content;
-	padding: 10px;
-	margin-left: auto;
-	margin-right: auto;
-	border: solid 3px #000000;
-	border-radius: 8px;
 }
 
 @media (min-width: 900px) {
