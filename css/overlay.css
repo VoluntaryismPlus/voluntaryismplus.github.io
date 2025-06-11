@@ -3,13 +3,6 @@
 	color: #f1f1f1;
 }
 
-.overlay p {
-	font-size: 4vw;
-	margin: 5px;
-	padding: 5px;
-	border: 5px solid #2f5569;
-}
-
 .overlay h3 {
 	text-align: center;
 	background-color: #32717c;
@@ -17,7 +10,7 @@
 	width: inherit;
 	margin-left: 1px;
 	padding: 4px;
-	font-size: 6vw;
+	font-size: 4vw;
 }
 
 .overlay li {
@@ -25,7 +18,7 @@
 	outline: none;
 	padding: 5px;
 	text-align: center;
-	font-size: 3vw;
+	font-size: 2.5vw;
 }
 
 .overlay,
@@ -50,9 +43,16 @@ body.overlay-open .topnav {
 	display: none !important;
 }
 
+.overlaylogo {
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+}
 .overlaylogo img {
 	width: 70vw;
-	margin-left: 12vw;
+	max-width: 196px; /* or your preferred max-width */
+	height: auto;
+	display: inline-block;
 }
 
 /* --- TOP NAV (MOBILE NAVIGATION BAR) --- */
@@ -188,6 +188,30 @@ body.overlay-open .topnav {
 	}
 }
 */
+
+@media (max-width: 300px) {
+	.overlaylogo img {
+		max-width: 150px;
+	}
+	.overlay h3 {
+		font-size: 4vw;
+	}
+	.overlay li {
+		font-size: 3.4vw;
+	}
+}
+
+@media (max-width: 250px) {
+	.overlay li {
+		font-size: 4.8vw;
+	}
+	.overlaylogo img {
+		max-width: 123px;
+	}
+	.overlay h3 {
+		font-size: 5vw;
+	}
+}
 
 @media (min-width: 523px) {
 	.topnav {

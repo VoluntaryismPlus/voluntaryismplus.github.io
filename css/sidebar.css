@@ -38,7 +38,7 @@
 
 #logo {
 	max-width: 80%;
-	width: clamp(100px, 17.5vw, 180px);
+	/*width: clamp(100px, 17.5vw, 180px);*/
 	height: auto;
 	display: block;
 	margin: 13px auto 7px auto;
@@ -171,7 +171,7 @@
 
 /* --- "THIS PAGE" HIGHLIGHT --- */
 .thispage {
-	background-color: #6ebce0;
+	background-color: #163e50;
 	outline: 1px solid white;
 	padding: 3px 0 3px 0;
 	width: 100%;

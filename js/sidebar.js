@@ -80,27 +80,125 @@ function closeNav() {
   document.body.classList.remove("overlay-open");
 }
 
-const thisPageDiv = document.querySelector(".thispage");
-if (thisPageDiv) {
-  // Find the .dropdown-container that contains this .thispage div
-  const dropdownContainer = thisPageDiv.closest(
-    ".dropdown-container"
-  );
-  if (dropdownContainer) {
-    // Find the corresponding dropdown button (it is the previousElementSibling)
-    const dropdownBtn =
-      dropdownContainer.previousElementSibling;
-    if (
-      dropdownBtn &&
-      dropdownBtn.classList.contains("dropdown-btn")
-    ) {
-      // Open this dropdown
-      dropdownBtn.classList.add("active");
-      dropdownBtn.setAttribute("aria-expanded", "true");
-      dropdownContainer.classList.add("show");
-    }
+//const thisPageDiv = document.querySelector(".thispage");
+//if (thisPageDiv) {
+//  // Find the .dropdown-container that contains this .thispage div
+//  const dropdownContainer = thisPageDiv.closest(
+//    ".dropdown-container"
+//  );
+//  if (dropdownContainer) {
+//    // Find the corresponding dropdown button (it is the previousElementSibling)
+//    const dropdownBtn =
+//      dropdownContainer.previousElementSibling;
+//    if (
+//      dropdownBtn &&
+//      dropdownBtn.classList.contains("dropdown-btn")
+//    ) {
+//      // Open this dropdown
+//      dropdownBtn.classList.add("active");
+//      dropdownBtn.setAttribute("aria-expanded", "true");
+//      dropdownContainer.classList.add("show");
+//    }
+//  }
+//}
+
+//document.addEventListener("DOMContentLoaded", function () {
+//  // Get the current page filename
+//  var path = window.location.pathname.split("/").pop();
+//  // For sidebar: find all links inside #sideNav
+//  document
+//    .querySelectorAll("#sideNav .dropdown-container a")
+//    .forEach(function (link) {
+//      if (link.getAttribute("href") === path) {
+//        // For <a> directly in .dropdown-container
+//        // If parent is a div.thispage or li.thispage, add class there
+//        if (
+//          link.parentElement.classList.contains(
+//            "dropdown-container"
+//          )
+//        ) {
+//          // Option 1: wrap in a div.thispage (optional, if you use <a> directly)
+//          link.classList.add("thispage");
+//        } else {
+//          // Option 2: parent is already special (<div> or <li>)
+//          link.parentElement.classList.add("thispage");
+//        }
+//        // Ensure dropdown is open:
+//        const dropdownContainer = link.closest(
+//          ".dropdown-container"
+//        );
+//        if (dropdownContainer) {
+//          const dropdownBtn =
+//            dropdownContainer.previousElementSibling;
+//          if (
+//            dropdownBtn &&
+//            dropdownBtn.classList.contains("dropdown-btn")
+//          ) {
+//            dropdownBtn.classList.add("active");
+//            dropdownBtn.setAttribute(
+//              "aria-expanded",
+//              "true"
+//            );
+//            dropdownContainer.classList.add("show");
+//          }
+//        }
+//      }
+//    });
+//});
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Get the current page filename (no query string)
+  var path = window.location.pathname.split("/").pop();
+
+  // Helper: highlight and open dropdown for a given root selector (overlay or sidebar)
+  function highlightNav(rootSelector) {
+    document
+      .querySelectorAll(
+        rootSelector + " .dropdown-container a"
+      )
+      .forEach(function (link) {
+        // Compare only href without query/hash
+        let linkHref = link.getAttribute("href")
+          ? link.getAttribute("href").split(/[?#]/)[0]
+          : "";
+        if (linkHref === path) {
+          // Highlight: add 'thispage' class to parent (div or li) if possible, else to <a>
+          if (
+            link.parentElement.classList.contains(
+              "dropdown-container"
+            )
+          ) {
+            link.classList.add("thispage");
+          } else {
+            link.parentElement.classList.add("thispage");
+          }
+          // Open dropdown
+          const dropdownContainer = link.closest(
+            ".dropdown-container"
+          );
+          if (dropdownContainer) {
+            const dropdownBtn =
+              dropdownContainer.previousElementSibling;
+            if (
+              dropdownBtn &&
+              dropdownBtn.classList.contains("dropdown-btn")
+            ) {
+              dropdownBtn.classList.add("active");
+              dropdownBtn.setAttribute(
+                "aria-expanded",
+                "true"
+              );
+              dropdownContainer.classList.add("show");
+            }
+          }
+        }
+      });
   }
-}
+
+  // Highlight in both sidebar and overlay
+  highlightNav("#sideNav");
+  highlightNav(".overlay-content");
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   var path = window.location.pathname.split("/").pop();

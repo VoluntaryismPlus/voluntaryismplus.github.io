@@ -5,12 +5,11 @@ body {
 .image {
 	width: 100%;
 	margin-right: 0;
-	/*display: none;*/
 }
 
 .image img {
 	width: inherit;
-	margin-right: 10px;
+	margin: inherit;
 	border: 5px solid black;
 }
 
@@ -22,7 +21,6 @@ body {
 .image1 img {
 	width: inherit;
 	margin-right: 10px;
-	/*display: none;*/
 }
 
 .image2 {
@@ -139,13 +137,13 @@ body {
 }
 
 .businessimage img {
-	width: 94vw;
+	width: 88vw;
 	background-color: black;
 	border: 5px solid white;
 }
 
 .businessimage1 img {
-	width: 94vw;
+	width: 87vw;
 	border: 5px solid white;
 }
 
@@ -158,6 +156,12 @@ body {
 	width: 100%;
 }
 
+@media (max-width: 300px) {
+	.vehicles img {
+		width: 87vw;
+		border: 5px solid black;
+	}
+}
 @media (min-width: 523px) {
 	.image img {
 		width: 60vw;
@@ -195,8 +199,7 @@ body {
 	}
 	.outerimage img {
 		width: 60vw;
-		margin: 0 0 0 8.5vw;
-		display: none;
+		margin: auto;
 	}
 
 	.imagenoborder img {

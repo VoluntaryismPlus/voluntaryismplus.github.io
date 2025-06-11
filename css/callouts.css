@@ -155,7 +155,7 @@
 	background-color: rgba(0, 0, 0, 0.86);
 	margin: 0 0 1px 0;
 	padding: 16px 6px 16px 6px;
-	width: 96.5vw;
+	width: 88.1vw;
 	border: 2px solid white;
 }
 
@@ -194,7 +194,7 @@
 		width: calc(100vw - 30.5vw);
 	}
 	.nextpage {
-		width: calc(100vw - 25.7vw);
+		width: calc(100vw - 30.4vw);
 	}
 }
 @media (min-width: 900px) {
