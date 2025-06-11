@@ -263,3 +263,8 @@ body {
 		flex-direction: row;
 	}
 }
+@media (max-width: 320px) {
+	body {
+		background-attachment: scroll;
+	}
+}
