@@ -5,7 +5,7 @@
 		<meta
 			name="viewport"
 			content="width=device-width, initial-scale=1.0" />
-		<title>Caravan Welcome Outpost</title>
+		<title>Freedom Prompts</title>
 		<script src="js/document.js"></script>
 		<link
 			href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
@@ -65,30 +65,10 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
 			rel="stylesheet" />
-		<script src="js/sidebar.js" defer></script>
-	</head>
+			<script src="js/sidebar.js" defer></script> 	</head>
 
 	<body>
-		<!-- The overlay -->
-		<div id="myNav" class="overlay">
-			<!-- Button to close the overlay navigation -->
-			<a
-				href="javascript:void(0)"
-				class="closebtn"
-				onclick="closeNav()"
-				>&times;</a
-			>
-
-			<!-- Overlay content -->
-			<div class="overlay-content">
-				<div class="overlaylogo">
-					<a href="index.html"
-						><img src="img/vroad.png"
-					/></a>
-				</div>
-				<p>Roadmap</p>
-				<ul>
-					<li><a href="0.1_Index.html">Directory</a></li>
+<!-- Overlay content --><!-- Overlay (Hamburger Menu) --> <div id="myNav" class="overlay">   <!-- Close Button (× symbol, top right) -->   <a href="javascript:void(0)" class="closebtn" id="closeNav">&times;</a>   <!-- Overlay Content -->   <div class="overlay-content">     <div class="overlaylogo">       <a href="index.html"><img src="img/vroad.png" /></a>     </div>     <p>Roadmap</p>     <ul>       <li>         <a href="0.1_Index.html">Directory</a>       </li>
 					<li>
 						<a href="0.2_Philosophy.html">Philosphy</a>
 					</li>
@@ -104,7 +84,9 @@
 				<h3>Who We Are</h3>
 				<p>Our Philosophy</p>
 				<ul>
-					<li><a href="index.html">Welcome</a></li>
+					<li>
+						<a href="index.html">Welcome</a>
+					</li>
 					<li>
 						<a href="1_TheNetwork.html">The Network</a>
 					</li>
@@ -126,7 +108,9 @@
 				</ul>
 				<p>We Are Network Support</p>
 				<ul>
-					<li><a href="1.4_OurPlan.html">Our Plan</a></li>
+					<li>
+						<a href="1.4_OurPlan.html">Our Plan</a>
+					</li>
 					<li>
 						<a href="1.5_CaravanWelcomeOutpost.html"
 							>Caravan Welcome Outpost</a
@@ -195,7 +179,9 @@
 							>You and the Network</a
 						>
 					</li>
-					<li><a href="3.3_Location.html">Location</a></li>
+					<li>
+						<a href="3.3_Location.html">Location</a>
+					</li>
 					<li>
 						<a href="3.4_NewLexicon.html">New Lexicon</a>
 					</li>
@@ -255,7 +241,9 @@
 				</ul>
 				<p>Events</p>
 				<ul>
-					<li><a href="6.1_Events.html">Events</a></li>
+					<li>
+						<a href="6.1_Events.html">Events</a>
+					</li>
 					<li>
 						<a href="6.2_Festivals.html">Festivals</a>
 					</li>
@@ -283,7 +271,9 @@
 							>Inner City Outposts</a
 						>
 					</li>
-					<li><a href="7.6_Farms.html">Find A Farm</a></li>
+					<li>
+						<a href="7.6_Farms.html">Find A Farm</a>
+					</li>
 				</ul>
 				<p>Links</p>
 				<ul>
@@ -295,18 +285,9 @@
 			</div>
 		</div>
 
-		<div class="topnav">
-			<a href="index.html" class="logo">
-				<img src="img/vroad.png" />
-			</a>
-			<button
-				id="hamburger"
-				class="hamburger-btn"
-				aria-label="Open navigation">
-				&#9776;
-				<span class="caravanarchy">Caravanarchy</span>
-			</button>
-		</div>
+<div class="topnav">   <a href="index.html" class="logo">     <img src="img/vroad.png" />   </a>   <button id="hamburger" class="hamburger-btn" aria-label="Open navigation">     &#9776; <span class="caravanarchy">Caravanarchy</span>   </button> </div>
+
+
 
 		<div id="sideNav" class="sidenav">
 			<header>
@@ -324,8 +305,7 @@
 			<div class="side">
 				<button class="dropdown-btn" aria-expanded="false">
 					Roadmap
-					<span class="caret">&#9654;</span>
-				</button>
+					<span class="caret">&#9654;</span> </button>
 				<div class="dropdown-container">
 					<a href="0.1_Index.html">Directory</a>
 					<!--
@@ -336,8 +316,7 @@
 				<h5 class="sideheader">Who We Are</h5>
 				<button class="dropdown-btn" aria-expanded="false">
 					Our Philosophy
-					<span class="caret">&#9654;</span>
-				</button>
+					<span class="caret">&#9654;</span> </button>
 				<div class="dropdown-container">
 					<a href="index.html">Welcome</a>
 					<a href="1_TheNetwork.html">The Network</a>
@@ -354,20 +333,14 @@
 						>Frequently Asked Questions</a
 					>
 				</div>
-				<button
-					id="acti"
-					class="dropdown-btn"
-					onclick="rotate()">
+				<button class="dropdown-btn" aria-expanded="false">
 					We Are Network Support
-					<span class="caret">&#9654;</span>
-				</button>
+					<span class="caret">&#9654;</span> </button>
 				<div class="dropdown-container">
 					<a href="1.4_OurPlan.html">Our Plan</a>
-					<div class="thispage">
-						<a href="1.5_CaravanWelcomeOutpost.html"
-							>Caravan Welcome Outpost</a
-						>
-					</div>
+					<a href="1.5_CaravanWelcomeOutpost.html"
+						>Caravan Welcome Outpost</a
+					>
 					<a href="1.6_OutreachCaravan.html"
 						>Outreach Caravan</a
 					>
@@ -375,8 +348,7 @@
 				</div>
 				<button class="dropdown-btn" aria-expanded="false">
 					Applied Learning Grounds
-					<span class="caret">&#9654;</span>
-				</button>
+					<span class="caret">&#9654;</span> </button>
 				<div class="dropdown-container">
 					<a href="2.1_AdmissionsPortal.html"
 						>Admissions Portal</a
@@ -396,8 +368,7 @@
 				<h5 class="sideheader">You and The Network</h5>
 				<button class="dropdown-btn" aria-expanded="false">
 					Strategic Lifestyle Planning
-					<span class="caret">&#9654;</span>
-				</button>
+					<span class="caret">&#9654;</span> </button>
 				<div class="dropdown-container">
 					<a href="3.1_SauronAndShire.html"
 						>Sauron and the Shire</a
@@ -416,16 +387,20 @@
 						>Anarchist Innovation Station</a
 					>
 				</div>
-				<button class="dropdown-btn" aria-expanded="false">
+				<button
+					id="acti"
+					class="dropdown-btn"
+					onclick="rotate()">
 					Create Your Own Adventure
-					<span class="caret">&#9654;</span>
-				</button>
+					<span class="caret">&#9654;</span> </button>
 				<div class="dropdown-container">
 					<a href="4.1_StartHere.html">Start Here</a>
 					<a href="4.2_EntryGuide.html">Entry Guide</a>
-					<a href="4.3_FreedomPrompts.html"
-						>Freedom Prompts</a
-					>
+					<div class="thispage">
+						<a href="4.3_FreedomPrompts.html"
+							>Freedom Prompts</a
+						>
+					</div>
 					<a href="4.4_AnarchyDegrees.html"
 						>Anarchy Degrees</a
 					>
@@ -438,8 +413,7 @@
 				<h5 class="sideheader">The Agora</h5>
 				<button class="dropdown-btn" aria-expanded="false">
 					Bounty Board
-					<span class="caret">&#9654;</span>
-				</button>
+					<span class="caret">&#9654;</span> </button>
 				<div class="dropdown-container">
 					<a href="5.1_BountyBoard.html">Bounty Board</a>
 					<a href="5.2_Goods.html">Goods</a>
@@ -447,16 +421,14 @@
 				</div>
 				<button class="dropdown-btn" aria-expanded="false">
 					Events
-					<span class="caret">&#9654;</span>
-				</button>
+					<span class="caret">&#9654;</span> </button>
 				<div class="dropdown-container">
 					<a href="6.1_Events.html">Events</a>
 					<a href="6.2_Festivals.html">Festivals</a>
 				</div>
 				<button class="dropdown-btn" aria-expanded="false">
 					Maps
-					<span class="caret">&#9654;</span>
-				</button>
+					<span class="caret">&#9654;</span> </button>
 				<div class="dropdown-container">
 					<a href="7.1_Map.html">Main Map</a>
 					<a href="7.2_Freelocations.html"
@@ -475,8 +447,7 @@
 				</div>
 				<button class="dropdown-btn" aria-expanded="false">
 					Links
-					<span class="caret">&#9654;</span>
-				</button>
+					<span class="caret">&#9654;</span> </button>
 				<div class="dropdown-container">
 					<a href="8.1_Links.html">Links</a
 					><a href="8.2_Videos.html">Videos</a>
@@ -485,299 +456,336 @@
 		</div>
 
 		<div class="bodytext">
-			<h2 class="warning">
-				THIS PAGE IS A WORK IN PROGRESS
-			</h2>
 			<div class="outerimage">
-				<img src="img/31.jpeg" />
+				<img src="img/34.jpeg" />
 			</div>
-			<div class="outerheader">
-				<h1>Caravan Welcome Outpost</h1>
-			</div>
-
+			<h1>Freedom Prompts</h1>
 			<div class="innersection">
-				<div id="welcome">
-					<div class="headerbox">
-						<h2>The True Realm</h2>
-					</div>
-					<p>
-						The false realm most of us were born into does
-						not operate in the way it ought to. There are
-						countless lies we are raised reciting - such as
-						that the government is helpful and the cops
-						protect us. Lies like this have been projected
-						like a veil over our eyes, blinding us to the
-						truth of voluntary interactions and the
-						possibility of a peaceful pluralistic society.
-					</p>
-					<p>
-						We call this the false realm, as opposed to the
-						true realm. The True and False realms share the
-						same physical space, and constitute different
-						states of awareness and understanding of what
-						is. For some, the true realm is what we already
-						inhabit, although the veil has been pulled over
-						others' eyes and ears, preventing them from
-						seeing the full Truth. In order to facilitate
-						the lifting of this veil, we are facilitating
-						the growth of what we call the inter realm. The
-						inter realm is the conduit between the old and
-						new. We will clean the window that has been
-						sullied and take back that which is ours to make
-						in the correct fashion.
-					</p>
-					<p>
-						We are not like other movements. We can not
-						waste time on anything that does not honor and
-						understand the scope of our network. We are not
-						looking for ideas that would encompass and
-						change the focus, as the focus is to liberate
-						all people from slavery. We will exercise our
-						right to remove ourselves from situations that
-						do not represent our work.
-					</p>
-					<div class="headerbox">
-						<h2>Realm Boundaries</h2>
-					</div>
-					<div class="imagenoborder">
-						<a href="realms.html"
-							><img src="img/Realms.png"
-						/></a>
-					</div>
-					<p>
-						The true realm encompasses the following areas:
-					</p>
-					<div class="headerbox">
-						<h2>Inner Realm</h2>
-					</div>
-					<p>
-						The rule here is very important: no rulers. Zero
-						Aggression Principle. No coercion. There are
-						many ways to explain this number one rule. The
-						inner realm is protected because some things in
-						life need to be protected. Risks are necessary,
-						but we don’t need to risk everything. So we keep
-						a certain amount of spaces private to people who
-						have not expressed an understanding of our
-						Network and the nonaggression principle.
-					</p>
-					<p>
-						The entrance to the network’s Inner Realm is
-						through Admissions. There are many ways to
-						establish yourself as a trusted member of the
-						network. You can go through a Network Host, join
-						a caravan, or study the library to gain the
-						knowledge required to pass through Admissions.
-						Feel free to apply at any time.
-					</p>
-					<div class="headerbox">
-						<h2>Inter Realm</h2>
-					</div>
-					<p>
-						Wherever the caravan goes is the inter realm. We
-						are always traveling to outer city outposts and
-						any other location with our bus, the signage
-						doing much of the activism for us. This is all
-						for people to understand that they have to
-						translate their life into this place. It is not
-						a way to escape a lack of meaning, but it is a
-						path towards finding the best possible vocation
-						and living situation.
-					</p>
-					<div class="headerbox">
-						<h2>Outer Realm</h2>
-					</div>
-					<p>
-						The outer realm is what we enter into whe we do
-						outreach. It is the space you occupy when you
-						are behind enemy lines and there aren't many
-						other agorists around to maintain much more than
-						a bubble of freedom around you.
-					</p>
-
-					<div class="imagenoborder">
-						<a href="realms.html"
-							><img src="img/LocationsMapped.png"
-						/></a>
-					</div>
-				</div>
+				<p>How free are you, really? This page presents a series of insightful prompts designed for deep self-assessment, inviting you to reflect on your identity, purpose, and actions within the context of a life lived in true liberty. These questions are imperative to getting the most out of your existence and amplifying yourself towards a truly free and fulfilling life, unburdened by external coercion.</p>
 				<div class="headerbox">
-					<h2>Welcome Desk</h2>
+					<h3>
+						<strong>So... how free are you?</strong>
+					</h3>
+				</div>
+				<p>This is a self-assessment.</p>
+				<div class="callout">
+					<div class="callouttextlist">
+						<ul>
+							<li>Who am I?</li>
+							<li>Why am I here?</li>
+							<li>What am I doing?</li>
+						</ul>
+					</div>
 				</div>
 				<p>
-					Welcome Desks exist in various forms throughout
-					the network. A welcome desk is any informed point
-					of contact or location where you can obtain
-					information on the local network and its
-					affiliates and offerings.
+					These questions are imperative to getting the most
+					out of your existence. Have you designed your life
+					to fit your identity and what you&rsquo;re here to
+					do? Here are more important questions to ask
+					yourself:
 				</p>
-				<div class="image">
-					<img src="img/welcome.jpeg" />
-				</div>
-			</div>
-			<div class="innersection">
-				<div id="tavern">
-					<div class="headerbox">
-						<h2>Tavern Hall</h2>
-					</div>
-					<p>
-						This is an outdoor hall intended for community
-						discussions, trade of information, and
-						networking. We value conversation over other
-						diversions and this is the place to discuss.
-					</p>
-					<div class="image">
-						<img src="img/tavern.jpeg" />
-					</div>
-					<br />
-				</div>
-			</div>
-			<div class="innersection">
-				<div id="inner">
-					<div class="headerbox">
-						<h2>Inner Realm Bazaar</h2>
-					</div>
-					<p>
-						This is a market space for those who have proven
-						themselves well-boundaried and knowledgeable of
-						the non-aggression principle, self-defense
-						principle, and the right of restitution for
-						damages done except when done in self-defense.
-					</p>
-					<p>
-						The bazaar is the local manifestation of the
-						marketplace that exists in some form or another
-						in all&nbsp;locations of the network. Only those
-						who have passed through admissions may buy or
-						sell in this marketplace. The Bounty Board is
-						the online version of this.
-					</p>
-					<div class="image">
-						<img src="img/innerbazaar.jpeg" />
-					</div>
-					<br />
-				</div>
-			</div>
-			<div class="innersection">
-				<div id="outer">
-					<div class="headerbox">
-						<h2>Outer Realm Bazaar</h2>
-					</div>
-					<p>
-						This is a space for transactions with
-						individuals still attempting to prove themselves
-						to be well-boundaried as described in the
-						previous section.
-					</p>
-					<div class="image">
-						<img src="img/outer1.jpeg" />
-					</div>
-					<br />
-				</div>
-			</div>
-			<div class="innersection">
-				<div id="library">
-					<div class="headerbox">
-						<h2>Library</h2>
-					</div>
-					<p>
-						This is a repository of information in the form
-						of links to writings on agorism and
-						voluntaryism. Here are links to essays and
-						information on agorism, voluntaryism, and
-						stateless society.
-					</p>
-					<div class="image">
-						<img src="img/library1.jpeg" />
-					</div>
-					<br />
-				</div>
-			</div>
-			<div class="innersection">
-				<div id="admissions">
-					<div class="headerbox">
-						<h2>Admissions Portal</h2>
-					</div>
-					<p>
-						<a href="2.1_AdmissionsPortal.html">Here</a>
-						you can apply for admission to the inner realm.
-					</p>
-					<div class="image">
-						<img src="img/admissions1.jpeg" />
-					</div>
-				</div>
-			</div>
-			<div class="innersection">
-				<div class="headerbox">
-					<h2>A Day in The Life: Caravaneer</h2>
-				</div>
-				<p></p>
-			</div>
-			<div class="innersection">
-				<h2>Levels Of Participation</h2>
-				<br />
-				<div class="imagenoborder">
-					<img src="img/networksubnet.png" />
-				</div>
-				<br />
-				<div class="imagenoborder">
-					<img src="img/subnet.png" />
-				</div>
-				<h3>Title</h3>
+				<p>
+					Here are some more questions of self-reflection
+					and self-change that you can go through to amplify
+					yourself towards a more free (from government) and
+					fulfilling life:
+				</p>
 				<div class="callout">
-					<div class="callouttext1">
+					<div class="callouttextlist">
+						<ul>
+							<li>How can anarchy work?</li>
+							<li>
+								What will constitute learning and growth?
+							</li>
+							<li>
+								In what ways are your actions making anarchy
+								possible?
+							</li>
+							<li>
+								In what ways are your actions making slavery
+								more comfortable for yourself and others?
+							</li>
+						</ul>
+					</div>
+				</div>
+				<p>
+					Here are some more questions of self-reflection
+					and self-change that you can go through to amplify
+					yourself towards a more free (from government) and
+					fulfilling life:
+				</p>
+				<div class="callout">
+					<div class="callouttextlist">
 						<ul>
 							<li>
-								<h4>Level 0: The Uninitiated</h4>
-								People who don’t value freedom enough to
-								allow others to peacefully coexist.
+								How often do you reflect upon your place and
+								purpose in this lifetime?
 							</li>
 							<li>
-								<h4>Level 1: The Outer Network</h4>
-								People who are willing to trade and interact
-								with our network.
+								Do you understand what your objective is in
+								this realm?
 							</li>
 							<li>
-								<h4>Level 2: Trusted Network</h4>
-								People who respect the non-aggression
-								principle, self-defense principle, and
-								refrain from advocating for or taking direct
-								action toward the destruction or restriction
-								of your freedom to peacefully conduct
-								yourself and your property as a physical
-								extension of yourself in this world which
-								you (the owner) alone possess authority
-								over.
+								How do you use what you have? aka time and
+								attention
 							</li>
 							<li>
-								<h4>Level 3: Preferred Network</h4>
-								Those from level 2 who also prioritize
-								interactions with those who aim to make
-								freedom more accessible to others. Bonus if
-								they can understand a way towards freedom
-								from coercion in this lifetime.
+								Are you furthering this objective with the
+								way you live your life?
+							</li>
+							<li>Where are you spending your money?</li>
+							<li>
+								Is it going towards a network of individuals
+								who value freedom?
 							</li>
 							<li>
-								<h4>Level 4: The Subnet</h4>
-								A subnet, or subnetwork, is a network within
-								a network. Those who seek to grow (in
-								“magnitude”) and strengthen the subnet.
-							</li>
-							<li>
-								<h4>Level 5: The Active-Subnet</h4>
-								Includes those in your subnet with whom you
-								interact and communicate with on a regular
-								basis. This is the inner-most circle.
+								How do you innovate your approach to
+								building trust in relationships?<strong
+									><br
+								/></strong>
 							</li>
 						</ul>
 					</div>
 				</div>
 			</div>
+			<div class="innersection">
+				<div class="headerbox">
+					<h3 style="font-size: 5vw">
+						<strong>Relationship Maximization</strong>
+					</h3>
+				</div>
+				<p>
+					Does your partner use their time to attain more
+					freedom for both of you?
+				</p>
+				<p>
+					To what degree does your relationship empower you?
+				</p>
+				<p>
+					To what degree does your relationship hinder your
+					freedom?
+				</p>
+				<p>
+					What do you get out of your relationship,
+					freedom-wise?
+				</p>
+				<p>Do you feel you are fully expressed?</p>
+				<p>
+					Could your life be better? If so, how is your
+					partner helping you?<strong><br /></strong>
+				</p>
+			</div>
+			<div class="innersection">
+				<div class="headerbox">
+					<h3 style="font-size: 5vw">
+						<strong>Philosophy</strong
+						><strong><br /></strong>
+					</h3>
+				</div>
+				<div class="headerbox">
+					<h3><strong>Ethos</strong></h3>
+				</div>
+				<p>
+					Do you believe all actions should be voluntary
+					(aka no force or coercion present)? Consensual
+					between all?
+				</p>
+				<p>Do you recognize property rights?</p>
+				<p>How do you define property?</p>
+				<p>What is the purpose of property?</p>
+				<p>Does your home or business support the state?</p>
+				<p>Do you want to make life better for others?</p>
+
+				<div class="headerbox">
+					<h3><strong>Life Goals</strong></h3>
+				</div>
+				<p>
+					To what degree and in what ways do you have
+					control of your life?
+				</p>
+				<p>
+					Do you create freedom for others and yourself
+					daily?
+				</p>
+				<p>
+					Do your actions lead to a world freed from
+					slavery?
+				</p>
+				<p>
+					Is most of your time spent as you would ideally
+					want?
+				</p>
+				<p>
+					Are all of your interactions in line with your
+					highest goal?
+				</p>
+				<p>
+					Is this how you would do your life ideally if you
+					designed it?
+				</p>
+				<p>
+					Do you feel empowered to do what you are here to
+					do?<strong><br /></strong>
+				</p>
+			</div>
+			<div class="innersection">
+				<div class="headerbox">
+					<h3 style="font-size: 5vw">
+						<strong>Survival</strong><strong><br /></strong>
+					</h3>
+				</div>
+				<div class="headerbox">
+					<h3>
+						<strong>Survive vs Thrive</strong>
+					</h3>
+				</div>
+				<p>
+					Do you see a positive outcome for you in case of
+					an emergency?
+				</p>
+				<p>
+					Do you have a feasible plan to execute this goal?
+				</p>
+				<p>
+					How much time will it take to reach your long-term
+					prepping goals?
+				</p>
+				<br />
+				<div class="headerbox">
+					<h3><strong>Backup Plan</strong></h3>
+				</div>
+				<p>
+					Do you have a backup bug-out plan in case your
+					first option fails?
+				</p>
+				<p>
+					Do you have a plan for getting to your safe
+					location no matter where you are?
+				</p>
+				<p>
+					Do you have multiple sources of food and shelter
+					in case of sabotage?
+				</p>
+				<p>Can you survive on foot?</p>
+				<p>
+					Do you have a trade for post-society? Or trade
+					items?
+				</p>
+				<p>
+					Do you have a discrete &ldquo;get-home&rdquo; bag
+					that does not make you a target?<strong
+						><br
+					/></strong>
+				</p>
+			</div>
+			<div class="innersection">
+				<div class="headerbox">
+					<h3 style="font-size: 5vw">
+						<strong>Wealth</strong><strong><br /></strong>
+					</h3>
+				</div>
+				<div class="headerbox">
+					<h3>
+						<strong>Is Your Wealth Maximized?</strong>
+					</h3>
+				</div>
+				<p>Is your money being inflated?</p>
+				<p>
+					Do you have backup currency to battle inflation?
+				</p>
+				<p>
+					What percentage of your paycheck goes towards
+					government expenses and taxes?
+				</p>
+				<div class="headerbox">
+					<h3>
+						<strong>Is your Spending Maximized?</strong>
+					</h3>
+				</div>
+				<p>Are your purchases supporting what you want?</p>
+				<p>
+					Are your purchases supporting something that will
+					support you in the long run?
+				</p>
+				<br />
+				<div class="headerbox">
+					<h3>
+						<strong>Is Your Income Maximized?</strong>
+					</h3>
+				</div>
+				<p>Does your work empower you fully?</p>
+				<p>Are you paid enough for what you do?</p>
+				<p>
+					Could you earn more if you had more control over
+					aspects of your work/trade?
+				</p>
+				<p>
+					Would you be doing the same job if money
+					wasn&rsquo;t an issue? If you weren&rsquo;t paid
+					for it?
+				</p>
+				<p>
+					Could you be using your time better, either on the
+					job or with more time for personal projects?
+				</p>
+				<p>
+					Does your work direct profit towards warlords or
+					the enslavement of your fellow man?
+				</p>
+				<p>
+					Is this the way you would have ideally designed
+					your income?
+				</p>
+				<p>
+					Do you have a side gig? Are you an
+					entrepreneur?<strong><br /></strong>
+				</p>
+			</div>
+			<div class="innersection">
+				<div class="headerbox">
+					<h3 style="font-size: 5vw">
+						<strong>Business</strong><strong></strong>
+					</h3>
+				</div>
+				<div class="headerbox">
+					<h3><strong>Business Ethos</strong></h3>
+				</div>
+				<p>Do you minimize taxed transactions?</p>
+				<p>
+					Do you prioritize interactions with those who
+					don&rsquo;t support the state?
+				</p>
+				<p>
+					Do you have a way of funneling people into agorist
+					marketplaces?&nbsp;
+				</p>
+				<p>
+					How prosperous is the future your business
+					creates? What mark does it leave on the world and
+					on others?
+				</p>
+				<div class="headerbox">
+					<h3>
+						<strong>Business Income</strong>
+					</h3>
+				</div>
+				<p>
+					What does your business lead to after you have
+					taken care of your basic needs (not necessarily
+					the business's needs because the business itself
+					may be a leech on society if not formulated
+					properly). Does your plan include an altruistic
+					vision?
+				</p>
+				<p>
+					What is your business doing to advance freedom?
+				</p>
+			</div>
 			<br />
 			<div class="nextpage">
 				<h3>
-					<a href="4.1_StartHere.html"
-						>Next Chapter: Start Here</a
+					<a href="4.4_AnarchyDegrees.html"
+						>Next Chapter: Anarchy Degrees</a
 					>
 				</h3>
 			</div>
