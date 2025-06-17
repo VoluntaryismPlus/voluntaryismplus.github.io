@@ -191,6 +191,12 @@
 	.overlay h3 {
 		font-size: 5vw;
 	}
+	.caravanarchy {
+		display: none;
+	}
+	.overlay p{
+		font-size: 5vw;
+	}
 }
 
 /* Hide topnav and overlay on desktop */

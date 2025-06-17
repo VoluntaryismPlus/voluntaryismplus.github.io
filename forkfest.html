@@ -69,8 +69,8 @@
 	</head>
 
 	<body>
-<div id="sidebar-include"></div>
-<script src="sidebar.js"></script>
+		<div id="sidebar-include"></div>
+		<script src="sidebar.js"></script>
 
 		<div class="bodytext">
 			<div class="image">
@@ -79,27 +79,19 @@
 			<h1>Forkfest</h1>
 			<div class="innersection">
 				<div class="headerboxcolor"><h2>Info</h2></div>
-				<p>
-.
-				</p>
-				<p>
-.
-				</p>
+				<p>.</p>
+				<p>.</p>
 				<a href="https://forkfest.party/"
 					><h3>Link to Forkfest</h3></a
 				>
 			</div>
-			<div class="image">
-
-			</div>
-			</div>
+			<div class="image"></div>
 			<div class="innersection">
 				<div class="headerboxcolor">
 					<h2>Photo Gallery</h2>
 				</div>
 			</div>
-			<div class="image">
-			</div>
+			<div class="image"></div>
 			<br />
 			<div class="nextpage">
 				<h3>
@@ -113,24 +105,5 @@
 				<p>Contact us by Email: caravanarchy@proton.me</p>
 			</div>
 		</div>
-
-		<script>
-			/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-			var dropdown =
-				document.getElementsByClassName("dropdown-btn");
-			var i;
-
-			for (i = 0; i < dropdown.length; i++) {
-				dropdown[i].addEventListener("click", function () {
-					this.classList.toggle("active");
-					var dropdownContent = this.nextElementSibling;
-					if (dropdownContent.style.display === "block") {
-						dropdownContent.style.display = "none";
-					} else {
-						dropdownContent.style.display = "block";
-					}
-				});
-			}
-		</script>
 	</body>
 </html>
