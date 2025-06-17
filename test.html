@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Overlay Test</title>
+  <style>
+    .overlay {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      background: rgba(0,0,0,0.95);
+      overflow-x: hidden;
+      transition: width 0.4s;
+      display: block;
+    }
+    .overlay-content { color: #fff; padding: 40px; }
+    .closebtn { color: #fff; position: absolute; top: 0; right: 0; font-size: 40px; }
+    .topnav { background: #000; height: 40px; display: flex; align-items: center; }
+    .logo img { height: 28px; }
+  </style>
+</head>
+<body>
+<div class="topnav">
+  <a href="#" class="logo"><img src="img/vroad.png" /></a>
+  <button id="hamburger" class="hamburger-btn">&#9776;<span class="caravanarchy">Caravanarchy</span></button>
+</div>
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" id="closeNav">&times;</a>
+  <div class="overlay-content">
+    <p>Overlay content here</p>
+  </div>
+</div>
+<script>
+document.getElementById("hamburger").onclick = function() {
+  document.getElementById("myNav").style.width = "100%";
+  document.body.classList.add("overlay-open");
+};
+document.getElementById("closeNav").onclick = function() {
+  document.getElementById("myNav").style.width = "0";
+  document.body.classList.remove("overlay-open");
+};
+</script>
+</body>
+</html>

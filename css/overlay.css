@@ -1,8 +1,25 @@
+/* --- COLORS & BASE --- */
+.overlay,
+.overlay * {
+	font-family: "Kode Mono", monospace;
+	color: #818181; /* base color for links and text */
+	box-sizing: border-box;
+}
+.overlay a {
+	color: #818181;
+	text-decoration: none;
+	transition: color 0.3s;
+}
 .overlay a:hover,
 .overlay a:focus {
 	color: #f1f1f1;
+	background-color: #23232a;
 }
-
+.overlay h3,
+.overlay p {
+	font-family: "Share Tech Mono", monospace;
+	color: #fff;
+}
 .overlay h3 {
 	text-align: center;
 	background-color: #32717c;
@@ -11,58 +28,94 @@
 	margin-left: 1px;
 	padding: 4px;
 	font-size: 4vw;
+	margin-top: 18px;
+	margin-bottom: 8px;
+	letter-spacing: 0.03em;
 }
-
+.overlay p {
+	text-align: center;
+	margin: 12px 0 2px 0;
+	font-size: 3vw;
+	font-weight: 600;
+	letter-spacing: 0.01em;
+	color: #c1d3d9;
+}
+.overlay ul {
+	margin: 0 0 10px 0;
+	padding: 0;
+}
 .overlay li {
 	list-style-type: none;
 	outline: none;
-	padding: 5px;
+	padding: 5px 0;
 	text-align: center;
 	font-size: 2.5vw;
+	border-bottom: 1px solid #23232a;
+}
+.overlay li:last-child {
+	border-bottom: none;
 }
 
-.overlay,
-.overlay * {
-	font-family: "Kode Mono", monospace; /* or your desired font */
-	color: #818181; /* base color for links and text */
-	box-sizing: border-box;
-}
-
-.overlay h3,
-.overlay p {
-	font-family: "Share Tech Mono", monospace;
-	color: #fff; /* or another color for headings/paragraphs */
-}
-.overlay a {
-	color: #818181;
-	text-decoration: none;
-	transition: color 0.3s;
-}
-
-body.overlay-open .topnav {
-	display: none !important;
-}
-
+/* --- OVERLAY LOGO --- */
 .overlaylogo {
 	text-align: center;
 	width: 100%;
-	margin: 0 auto;
+	margin: 0 auto 10px auto;
 }
 .overlaylogo img {
 	width: 70vw;
-	max-width: 196px; /* or your preferred max-width */
+	max-width: 196px;
 	height: auto;
 	display: inline-block;
+	border-radius: 4px;
+	margin-top: 10px;
 }
 
-/* --- TOP NAV (MOBILE NAVIGATION BAR) --- */
+/* --- CLOSE BUTTON --- */
+.overlay .closebtn {
+	font-size: 40px !important;
+	color: #fff;
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 12px 18px;
+	line-height: 1;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 11;
+}
+
+/* --- OVERLAY CONTAINER --- */
+.overlay {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.95);
+	overflow-x: hidden;
+	transition: width 0.4s;
+	display: block;
+}
+.overlay-content {
+	position: relative;
+	width: 100%;
+	text-align: left;
+	margin-top: 0;
+	padding: 20px 0 0 0;
+	box-sizing: border-box;
+}
+
+/* --- TOPNAV (MOBILE NAVIGATION BAR) --- */
 .topnav {
 	background-color: #000;
 	position: fixed;
 	top: 0;
 	width: 100vw;
 	height: 40px;
-	z-index: 3;
+	z-index: 12;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -71,8 +124,6 @@ body.overlay-open .topnav {
 	box-sizing: border-box;
 	left: 0;
 }
-
-/* Hamburger: far left */
 .hamburger-btn {
 	font-size: 22px;
 	background: none;
@@ -88,8 +139,6 @@ body.overlay-open .topnav {
 	margin: 0;
 	font-family: "Kode Mono", monospace;
 }
-
-/* Caravanarchy: always centered */
 .caravanarchy {
 	position: absolute;
 	left: 50%;
@@ -98,11 +147,9 @@ body.overlay-open .topnav {
 	color: #fff;
 	white-space: nowrap;
 	font-family: "Kode Mono", monospace;
-	pointer-events: none; /* allows clicks to "pass through" the span */
+	pointer-events: none;
 	letter-spacing: 0.05em;
 }
-
-/* Logo: far right */
 .topnav .logo {
 	display: flex;
 	align-items: center;
@@ -111,84 +158,18 @@ body.overlay-open .topnav {
 	width: 44px;
 	margin-right: 8px;
 }
-
 .topnav .logo img {
 	height: 28px;
 	width: auto;
 	max-width: 38px;
 	display: block;
 }
-
-/* Layout fix: Ensure space for left/right so center text doesn't overlap */
-
 .hamburger-btn,
 .topnav .logo {
 	flex: 0 0 44px;
 }
 
-/* --- OVERLAY (MOBILE NAVIGATION) --- */
-.overlay {
-	height: 100%;
-	width: 0;
-	position: fixed;
-	z-index: 10;
-	left: 0;
-	top: 0;
-	background-color: rgba(0, 0, 0, 0.9);
-	overflow-x: hidden;
-	transition: 0.4s;
-	display: block;
-}
-
-.overlay-content {
-	position: relative;
-	width: 100%;
-	text-align: left;
-	margin-top: 0;
-	padding: 20px 0 0 0;
-	box-sizing: border-box;
-}
-
-.overlay .closebtn {
-	font-size: 40px !important;
-	color: #fff;
-	background: none;
-	border: none;
-	cursor: pointer;
-	padding: 12px 18px;
-	line-height: 1;
-	position: absolute;
-	top: 0;
-	right: 0;
-	z-index: 11;
-}
-
-/* (Other overlay styles remain unchanged) */
-
 /* --- MOBILE LAYOUT TWEAKS --- */
-/*
-@media screen and (max-height: 450px) {
-	.overlay a {
-		font-size: 11px;
-	}
-	.overlay .closebtn {
-		font-size: 30px;
-	}
-	.overlay p {
-		font-size: 13px;
-	}
-	.overlay h3 {
-		font-size: 16px;
-	}
-	.overlay-content {
-		padding-top: 10px;
-	}
-	.overlaylogo img {
-		width: 80vw;
-	}
-}
-*/
-
 @media (max-width: 300px) {
 	.overlaylogo img {
 		max-width: 150px;
@@ -200,7 +181,6 @@ body.overlay-open .topnav {
 		font-size: 3.4vw;
 	}
 }
-
 @media (max-width: 250px) {
 	.overlay li {
 		font-size: 4.8vw;
@@ -213,11 +193,39 @@ body.overlay-open .topnav {
 	}
 }
 
+/* Hide topnav and overlay on desktop */
 @media (min-width: 523px) {
 	.topnav {
 		display: none !important;
 	}
 	.overlay {
 		display: none;
+	}
+}
+
+/* --- BODY CLASS FOR OVERLAY OPEN (OPTIONAL) --- */
+body.overlay-open .topnav {
+	display: none !important;
+}
+
+/* --- ACCESSIBILITY: FOCUS --- */
+.overlay a:focus-visible {
+	outline: 2px solid #32717c;
+	outline-offset: 2px;
+}
+
+/* --- OPTIONAL: SMOOTH ANIMATION FOR OVERLAY WIDTH --- */
+.overlay[style*="width: 100%"] {
+	overflow-y: auto;
+}
+
+/* --- OPTIONAL: NARROWER SCREEN ADJUSTMENTS --- */
+@media (max-width: 400px) {
+	.overlaylogo img {
+		width: 90vw;
+		max-width: 160px;
+	}
+	.overlay h3 {
+		font-size: 5vw;
 	}
 }

@@ -99,6 +99,7 @@
 .side a:focus {
 	background-color: #23232a;
 	color: #4f5aaa;
+	border-left: 3px solid #9b97f5;
 }
 
 /* --- DROPDOWN BUTTONS --- */
@@ -145,8 +146,7 @@
 	font-size: 1.1em;
 	color: #bbbbc7;
 	padding: 7px 16px 7px 13px;
-	background: #222;
-	border-left: 4px solid #bbbbc7;
+	background: #1e1e21;
 	margin: 6px 0 2px 0;
 	letter-spacing: 0.02em;
 	transition:
@@ -158,6 +158,7 @@
 .dropdown-btn.dropdown-subheader-btn:focus {
 	background: #343439;
 	color: #fffbe1;
+	border-left: 4px solid #bbbbc7;
 }
 .dropdown-btn.dropdown-subheader-btn.active,
 .dropdown-btn.dropdown-subheader-btn[aria-expanded="true"] {
@@ -204,9 +205,9 @@
 }
 .dropdown-container.subheader-links a:hover,
 .dropdown-container.subheader-links a:focus {
-	color: #fffbe1;
-	background: #343439;
-	border-left: 3px solid #fffbe1;
+	color: #8e94ff;
+	background: #191919;
+	border-left: 3px solid #9b97f5;
 }
 
 /* --- "THIS PAGE" HIGHLIGHT --- */
