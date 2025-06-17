@@ -143,7 +143,7 @@
 /* --- SUBHEADER DROPDOWN BUTTONS --- */
 .dropdown-btn.dropdown-subheader-btn {
 	font-family: "Courier New", Courier, monospace;
-	font-size: 1.1em;
+	font-size: 1em;
 	color: #bbbbc7;
 	padding: 7px 16px 7px 13px;
 	background: #1e1e21;
@@ -211,7 +211,7 @@
 }
 
 /* --- "THIS PAGE" HIGHLIGHT --- */
-.thispage {
+.sidebar .thispage {
 	background-color: #163e50;
 	outline: 1px solid white;
 	padding: 3px 0 3px 0;
@@ -241,7 +241,7 @@
 	background-color: #b9b0fe;
 	color: #2b0050 !important;
 	font-weight: bold;
-	border-left: 3px solid #d7d3ef;
+	border-left: 2.5px solid #d7d3ef;
 	padding: 6px 6px 6px 13px;
 }
 
