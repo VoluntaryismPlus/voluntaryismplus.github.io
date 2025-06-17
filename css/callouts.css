@@ -1,217 +1,100 @@
-.index {
-	background-color: rgba(29, 29, 29, 0.86);
-	outline: 1spx solid white;
-	padding: 0 1px 10px 1px;
-	float: right;
-	width: 90vw;
-	margin-bottom: 20px;
-	text-align: center;
-}
-
-.indextitle {
-	padding: 6px 5px 1px 5px;
-	background-color: rgba(51, 51, 51, 0.63);
-	margin: 0 0 5px 0;
-	text-align: center;
-}
-.indextitle h3 {
-	width: auto;
-	/*margin-left: 33vw; */
-}
-
-.indexcallout {
-	background-color: rgba(43, 42, 46, 0.91);
-	outline: 1px solid white;
-	color: #cccccc;
-	margin: 10px;
-	width: 86.9vw;
-}
-
-.indexcallout2 {
-	background-color: rgba(43, 42, 46, 0.91);
-	outline: 1px solid white;
-	color: #cccccc;
-	margin: 10px;
-	width: 86.9vw;
-}
+/* --- Simplified and Modernized Callout Styles --- */
 
 .callout {
-	background-color: rgba(43, 42, 46, 0.91);
-	outline: 1px solid white;
+	background: rgba(43, 42, 46, 0.92);
+	border-left: 4px solid #87cefa; /* Light blue accent, can be changed */
 	color: #cccccc;
-	margin: 10px;
-	width: 80.2vw;
+	margin: 1.5em 0;
+	padding: 1em 1.5em;
+	border-radius: 6px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+	width: 100%;
+	box-sizing: border-box;
 }
 
-.outercallout {
-	background-color: rgba(43, 42, 46, 0.91);
-	outline: 1px solid white;
-	color: #cccccc;
-	margin: 10px;
-	width: 92vw;
-}
-.callouttitle {
+/* Optional: If you want a different accent for ordered lists */
+.callout ol {
+	list-style: decimal inside;
+	padding-left: 1em;
 	margin: 0;
-	padding: 10px;
-	background-color: #222222;
-	border: 1px solid #1f1f1f;
 }
 
-.calloutimage img {
-	width: 59vw;
-	display: none;
-}
-.callouttext {
-	padding: 8px 23px 8px 32px;
-	width: 87vw;
+.callout ul {
+	list-style: disc inside;
+	padding-left: 1em;
+	margin: 0;
 }
 
-.callouttextsmall {
-	padding: 8px 23px 8px 32px;
-	width: 87vw;
+/* For headings inside callout */
+.callout h3,
+.callout h4,
+.callout h5 {
+	margin-top: 0.3em;
+	margin-bottom: 0.7em;
+	color: #e4eaff;
 }
 
-.callouttextsmall li {
-	font-size: 3vw;
+/* Title for special callouts */
+.callouttitle {
+	margin: 0 0 0.7em 0;
+	padding: 0.4em 1em;
+	background: #222;
+	border-radius: 5px 5px 0 0;
+	border-bottom: 1px solid #333;
+	color: #f8faff;
+	font-weight: bold;
 }
 
-.calloutcenter {
-	padding: 12px 8px 8px 8px;
+/* Responsive tweaks */
+@media (max-width: 700px) {
+	.callout {
+		padding: 1em 0.5em;
+		font-size: 1em;
+	}
+}
+
+/* Optional: Center content modifier */
+.callout.center {
 	text-align: center;
 }
 
-.callouttext1 {
-	padding: 10px 10px 8px 10px;
-	width: 80vw;
-}
-
-.callouttext1 ul {
-	list-style-type: none;
-}
-
-.callouttext1 li {
-	margin: 0 5px 13px 5px;
-}
-
-.callouttext2 {
-	padding: 8px 2px;
-}
-
-.callouttextlist {
-	margin-left: 28px;
-	padding: 10px 8px 8px 8px;
-}
-
-.callout1 {
-	background-color: rgba(82, 82, 82, 0.91);
-	outline: 1px solid white;
-	padding: 2px 0 2px 0;
-	color: #cccccc;
-}
-
-.callout1text {
-	margin: 10px;
-}
-
+/* Remove legacy widths & floats */
+.index,
+.indexcallout,
+.indexcallout2,
+.outercallout,
+.callouttext,
+.callouttext1,
+.callouttextsmall,
+.callouttextlist,
+.callout1,
+.callout2,
+.callout3,
+.callout4,
+.callout4title,
 .callouttext4 {
-	margin: 10px 10px 10px 30px;
-}
-.callout2 {
-	background-color: #2f2f2f;
-	outline: 1px solid white;
-	padding: 2px 10px 2px 10px;
+	/* Deprecated: No longer needed */
+	all: unset;
 }
 
-.callout3 {
-	display: flex;
-	justify-content: center; /* centers horizontally */
-	align-items: center; /* centers vertically (if you want) */
-	height: 100px;
+/* Utility for images inside callouts */
+.callout img {
+	max-width: 100%;
+	margin: 1em 0;
+	border-radius: 5px;
+	display: block;
 }
 
-.callout4title {
-	background-color: #1f1f1f;
-	float: right;
-	outline: 1px solid white;
-	padding: 0;
-	margin: 10px;
+/* Example for warning/info/success callout variants */
+.callout.warning {
+	border-left-color: #ffa726;
+	background: #3a2d15;
 }
-.callout4title h4 {
-	font-size: 20px;
+.callout.success {
+	border-left-color: #66bb6a;
+	background: #21321d;
 }
-.callout4 {
-	background-color: #2f2f2f;
-	outline: 1px solid white;
-	padding: 5px 0 0 0;
-	color: #cccccc;
-	width: 235.43px;
-}
-.callout4 ol {
-	padding: 0 0 5px 20px;
-	margin: 0 5px 0 5px;
-}
-
-.nextpage {
-	background-color: rgba(0, 0, 0, 0.86);
-	margin: 0 0 1px 0;
-	padding: 16px 6px 16px 6px;
-	width: 88.1vw;
-	border: 2px solid white;
-}
-
-.nextpage a {
-	color: #ffffff;
-}
-
-.festivals {
-	background-color: rgba(108, 108, 108, 0.49);
-	margin: 10px;
-	padding: 5px;
-	border: 1px solid #7c7272;
-}
-
-@media (min-width: 523px) {
-	.index {
-		width: 240px;
-		margin: 15px 5px 10px 10px;
-	}
-	.indexcallout {
-		width: calc(100vw - 29.5vw - 240px);
-	}
-	.indexcallout2 {
-		width: calc(100vw - 29.5vw);
-	}
-	.callout {
-		width: calc(100vw - 29.5vw);
-	}
-	.outercallout {
-		width: calc(100vw - 25.7vw);
-	}
-	.callouttext {
-		width: calc(100vw - 30.5vw);
-	}
-	.callouttext1 {
-		width: calc(100vw - 30.5vw);
-	}
-	.nextpage {
-		width: calc(100vw - 30.4vw);
-	}
-}
-@media (min-width: 900px) {
-	.callout {
-		width: calc(100vw - 267px);
-	}
-	.outercallout {
-		width: calc(100vw - 28vw);
-	}
-	.nextpage {
-		margin-left: -3px;
-		width: calc(100vw - 225px);
-	}
-	.indexcallout {
-		width: calc(100vw - 510px);
-	}
-	.indexcallout2 {
-		width: calc(100vw - 510px);
-	}
+.callout.info {
+	border-left-color: #42a5f5;
+	background: #232b36;
 }
