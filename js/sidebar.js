@@ -1,9 +1,8 @@
-// --- SIDEBAR HTML LOADER FOR STATIC SITES, WITH OVERLAY SUPPORT ---
-// Place <div id="sidebar-include"></div> where you want the sidebar on each page.
-// Place <script src="sidebar.js"></script> after that div or before </body>.
+// --- SIDEBAR & OVERLAY LOADER FOR STATIC SITES, WITH HIGHLIGHT & EXPAND CURRENT PAGE SUPPORT ---
+// Place <div id="sidebar-include"></div> where you want the sidebar/overlay loaded on each page.
+// Place <script src="js/sidebar.js"></script> after that div or before </body>.
 
 document.addEventListener("DOMContentLoaded", function () {
-  // --- SIDEBAR HTML INJECTION ---
   var sidebarTarget = document.getElementById(
     "sidebar-include"
   );
@@ -18,7 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
         sidebarTarget.innerHTML = data;
         setupSidebarDropdowns();
         highlightNav("#sideNav");
-        setupOverlayEvents(); // Attach overlay event listeners AFTER injection
+        highlightNav(".overlay-content");
+        setupOverlayEvents();
       })
       .catch((err) => {
         console.warn(err);
@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // If no loader, still run logic for statically present sidebar/overlay HTML
     setupSidebarDropdowns();
     highlightNav("#sideNav");
+    highlightNav(".overlay-content");
     setupOverlayEvents();
   }
 
@@ -104,6 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // --- HIGHLIGHT CURRENT PAGE AND OPEN RELEVANT DROPDOWNS ---
   function highlightNav(rootSelector) {
     var path = window.location.pathname.split("/").pop();
+    if (!path || path === "") path = "index.html";
     document
       .querySelectorAll(
         rootSelector +
@@ -115,35 +117,39 @@ document.addEventListener("DOMContentLoaded", function () {
         let linkHref = link.getAttribute("href")
           ? link.getAttribute("href").split(/[?#]/)[0]
           : "";
-        if (linkHref === path) {
-          // Highlight: add 'thispage' class to parent (div or li) if possible, else to <a>
-          if (
-            link.parentElement.classList.contains(
-              "dropdown-container"
-            ) ||
-            link.parentElement.tagName === "LI"
-          ) {
-            link.classList.add("thispage");
-          } else {
-            link.parentElement.classList.add("thispage");
-          }
-          // Open dropdown in sidebar
-          const dropdownContainer = link.closest(
-            ".dropdown-container"
-          );
-          if (dropdownContainer) {
-            const dropdownBtn =
-              dropdownContainer.previousElementSibling;
-            if (
-              dropdownBtn &&
-              dropdownBtn.classList.contains("dropdown-btn")
-            ) {
-              dropdownBtn.classList.add("active");
-              dropdownBtn.setAttribute(
-                "aria-expanded",
-                "true"
-              );
-              dropdownContainer.classList.add("show");
+        if (
+          linkHref === path ||
+          (path === "index.html" &&
+            linkHref === "index.html")
+        ) {
+          // Highlight the current page
+          link.classList.add("thispage");
+          // Recursively open all parent dropdowns
+          let currentElement = link;
+          while (currentElement) {
+            // Find the nearest dropdown-container
+            const dropdownContainer =
+              currentElement.closest(".dropdown-container");
+            if (dropdownContainer) {
+              // Find the previous sibling dropdown-btn
+              const dropdownBtn =
+                dropdownContainer.previousElementSibling;
+              if (
+                dropdownBtn &&
+                dropdownBtn.classList.contains(
+                  "dropdown-btn"
+                )
+              ) {
+                dropdownBtn.classList.add("active");
+                dropdownBtn.setAttribute(
+                  "aria-expanded",
+                  "true"
+                );
+                dropdownContainer.classList.add("show");
+              }
+              currentElement = dropdownBtn; // Keep bubbling up
+            } else {
+              break;
             }
           }
         }

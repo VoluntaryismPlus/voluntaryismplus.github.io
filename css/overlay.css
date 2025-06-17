@@ -15,15 +15,17 @@
 	color: #f1f1f1;
 	background-color: #23232a;
 }
+
+/* --- HEADERS & PARAGRAPHS --- */
 .overlay h3,
 .overlay p {
 	font-family: "Share Tech Mono", monospace;
 	color: #fff;
+	margin: 0;
+	padding: 0;
 }
 .overlay h3 {
 	text-align: center;
-	background-color: #32717c;
-	border: 5px solid #163342;
 	width: inherit;
 	margin-left: 1px;
 	padding: 4px;
@@ -32,6 +34,72 @@
 	margin-bottom: 8px;
 	letter-spacing: 0.03em;
 }
+
+/* --- RAINBOW HEADER COLORS --- */
+#h1 {
+	/* Red */
+	background-color: #c05a6b;
+	border-top: 3px solid #e18b9b;
+	border-left: 3px solid #e18b9b;
+	border-bottom: 3px solid #852a3d;
+	border-right: 3px solid #e18b9b;
+	border-radius: 6px;
+}
+#h2 {
+	/* Orange */
+	background-color: #e09b5c;
+	border-top: 3px solid #ffca8c;
+	border-left: 3px solid #ffca8c;
+	border-bottom: 3px solid #a86c23;
+	border-right: 3px solid #ffca8c;
+	border-radius: 6px;
+}
+#h3 {
+	/* Yellow */
+	background-color: #f3db7b;
+	border-top: 3px solid #fff9c6;
+	border-left: 3px solid #fff9c6;
+	border-bottom: 3px solid #bfac33;
+	border-right: 3px solid #fff9c6;
+	border-radius: 6px;
+}
+#h4 {
+	/* Green */
+	background-color: #6db89b;
+	border-top: 3px solid #a8e1c6;
+	border-left: 3px solid #a8e1c6;
+	border-bottom: 3px solid #347d5e;
+	border-right: 3px solid #a8e1c6;
+	border-radius: 6px;
+}
+#h5 {
+	/* Blue */
+	background-color: #4c7fb8;
+	border-top: 3px solid #7cb1e8;
+	border-left: 3px solid #7cb1e8;
+	border-bottom: 3px solid #25497a;
+	border-right: 3px solid #7cb1e8;
+	border-radius: 6px;
+}
+#h6 {
+	/* Purple */
+	background-color: #7b5fc7;
+	border-top: 3px solid #baa0f6;
+	border-left: 3px solid #baa0f6;
+	border-bottom: 3px solid #46318d;
+	border-right: 3px solid #baa0f6;
+	border-radius: 6px;
+}
+#h7 {
+	/* Pink */
+	background-color: #d37ad7;
+	border-top: 3px solid #f3c8f6;
+	border-left: 3px solid #f3c8f6;
+	border-bottom: 3px solid #993399;
+	border-right: 3px solid #f3c8f6;
+	border-radius: 6px;
+}
+
 .overlay p {
 	text-align: center;
 	margin: 12px 0 2px 0;
@@ -40,6 +108,8 @@
 	letter-spacing: 0.01em;
 	color: #c1d3d9;
 }
+
+/* --- LIST STYLES --- */
 .overlay ul {
 	margin: 0 0 10px 0;
 	padding: 0;
@@ -47,13 +117,33 @@
 .overlay li {
 	list-style-type: none;
 	outline: none;
-	padding: 5px 0;
+	padding: 0;
 	text-align: center;
 	font-size: 2.5vw;
 	border-bottom: 1px solid #23232a;
 }
 .overlay li:last-child {
 	border-bottom: none;
+}
+
+/* --- MAKE ENTIRE LINK ROW CLICKABLE --- */
+.overlay ul li a {
+	display: block;
+	width: 100%;
+	padding: 7px 0;
+	text-align: center;
+	color: inherit;
+	background: none;
+	border-radius: 0;
+	transition:
+		background 0.2s,
+		color 0.2s;
+}
+.overlay ul li a:hover,
+.overlay ul li a:focus,
+.overlay ul li a:active {
+	background-color: #23232a;
+	color: #f1f1f1;
 }
 
 /* --- OVERLAY LOGO --- */
@@ -67,7 +157,6 @@
 	max-width: 196px;
 	height: auto;
 	display: inline-block;
-	border-radius: 4px;
 	margin-top: 10px;
 }
 
@@ -169,6 +258,72 @@
 	flex: 0 0 44px;
 }
 
+/* --- CURRENT PAGE HIGHLIGHT (3D EFFECT) --- */
+.overlay-content .thispage,
+.overlay-content li .thispage,
+.overlay-content li a.thispage {
+	background-color: #e6e8ee;
+	color: #23232a !important;
+	font-weight: bold;
+	padding: 6px 6px;
+	border-top: 2.5px solid #f6f7fa; /* Light (top) */
+	border-left: 2.5px solid #f6f7fa; /* Light (left) */
+	border-bottom: 2.5px solid #c1c4cc; /* Dark (bottom) */
+	border-right: 2.5px solid #f6f7fa; /* Light (right) */
+	border-radius: 6px;
+	transition:
+		background 0.15s,
+		border 0.15s,
+		color 0.15s;
+}
+/* Remove li border when thispage is present to avoid double border */
+.overlay li:has(.thispage) {
+	border-bottom: none !important;
+}
+
+/* Fallback for browsers without :has() */
+@supports not (selector(:has(*))) {
+	.overlay li .thispage {
+		border-bottom: 2.5px solid #c1c4cc;
+	}
+	.overlay li .thispage ~ * {
+		border-bottom: none !important;
+	}
+}
+
+/* --- HOVER STATES FOR THISPAGE --- */
+.overlay-content .thispage:hover,
+.overlay-content .thispage:focus,
+.overlay-content li .thispage:hover,
+.overlay-content li .thispage:focus,
+.overlay-content li a.thispage:hover,
+.overlay-content li a.thispage:focus {
+	background-color: #dde0e7;
+	color: #23232a !important;
+}
+
+/* --- DARK ELEMENT SAMPLE (for future/alternate use) --- */
+.your-dark-element {
+	background-color: #23232a;
+	color: #e6e8ee !important;
+	font-weight: bold;
+	border-top: 2.5px solid #474757; /* Light (top) */
+	border-left: 2.5px solid #474757; /* Light (left) */
+	border-bottom: 2.5px solid #16161a; /* Dark (bottom) */
+	border-right: 2.5px solid #474757; /* Light (right) */
+	border-radius: 6px;
+	padding: 6px 12px;
+	transition:
+		background 0.15s,
+		border 0.15s,
+		color 0.15s;
+}
+.your-dark-element:hover,
+.your-dark-element:focus {
+	background-color: #353543;
+	color: #e6e8ee !important;
+}
+
 /* --- MOBILE LAYOUT TWEAKS --- */
 @media (max-width: 300px) {
 	.overlaylogo img {
@@ -194,7 +349,7 @@
 	.caravanarchy {
 		display: none;
 	}
-	.overlay p{
+	.overlay p {
 		font-size: 5vw;
 	}
 }

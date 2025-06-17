@@ -236,6 +236,15 @@
 	letter-spacing: 0.04em;
 }
 
+#sideNav .thispage,
+#sideNav a.thispage {
+	background-color: #b9b0fe;
+	color: #2b0050 !important;
+	font-weight: bold;
+	border-left: 3px solid #d7d3ef;
+	padding: 6px 6px 6px 13px;
+}
+
 /* --- SIDEBAR RESPONSIVE VISIBILITY AND WIDTH --- */
 @media (max-width: 522px) {
 	.sidenav {
