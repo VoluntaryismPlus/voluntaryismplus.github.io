@@ -62,7 +62,7 @@ h3 {
 	text-decoration: none;
 }
 h4 {
-	font-size: 4vw;
+	font-size: 5vw;
 	padding: 0;
 	margin: 5px;
 	font-family: caudex, georgia;
@@ -140,15 +140,6 @@ h6 {
 		margin-left: 0;
 		width: auto;
 		font-size: 2.5vw;
-	}
-}
-
-@media (min-width: 524px) and (max-width: 899px) {
-	p {
-		font-size: 15px;
-	}
-	li {
-		font-size: 15px;
 	}
 }
 

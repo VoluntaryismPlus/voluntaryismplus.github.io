@@ -2,8 +2,7 @@
 	--sidebar-width: clamp(160px, 20vw, 220px);
 	--sidebar-width-desktop: 187px;
 	--sidebar-gap: 3px;
-	--accent-grey: #e3cc6c; /* legacy, not used in greyscale */
-}
+	}
 
 /* --- SIDEBAR LAYOUT --- */
 .sidenav {
