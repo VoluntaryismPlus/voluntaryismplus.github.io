@@ -49,7 +49,14 @@ body {
 		margin 0.2s,
 		width 0.2s;
 }
-
+.button-row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	/* Optional: Add spacing between lines */
+	gap: 8px;
+}
 .button {
 	border: none;
 	color: #0b6d98;
@@ -89,6 +96,21 @@ body {
 
 .button2:hover {
 	background-color: #096d8e;
+	color: white;
+}
+
+.button3 {
+	background-color: #291c64;
+	font-size: 4vw;
+	color: black;
+	padding: 7px 9px;
+	border-radius: 6px;
+	width: 100%;
+	border: 2px solid #af5bf0;
+}
+
+.button3:hover {
+	background-color: #6136de;
 	color: white;
 }
 
@@ -177,6 +199,44 @@ body {
 .book h4 a {
 	color: white;
 }
+
+.faq-question {
+	cursor: pointer;
+	padding: 0.6em;
+	background: #000000;
+	border-radius: 7px;
+	margin-bottom: 4px;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	transition: background 0.2s;
+	font-size: 5vw;
+}
+.faq-question:hover {
+	background: #e6f4fa;
+}
+.faq-answer {
+	display: none;
+	margin: 0.5em 0 1.2em 2em;
+	background: #000000;
+	border-left: 3px solid #0b6d98;
+	padding: 1em;
+	border-radius: 0 7px 7px 0;
+	font-size: 4.2vw;
+}
+.faq-item.open .faq-answer {
+	display: block;
+}
+.arrow {
+	display: inline-block;
+	transition: transform 0.2s;
+	margin-right: 0.7em;
+	font-size: 1.2em;
+}
+.faq-item.open .arrow {
+	transform: rotate(90deg);
+}
+
 #lyrics {
 	background-color: rgba(23, 41, 33, 0.8);
 	text-align: center;
@@ -406,18 +466,6 @@ body {
 	}
 }
 
-@media (min-width: 900px) {
-	.buttona,
-	.buttonb {
-		margin: 10px 95px;
-	}
-}
-@media (min-width: 523px) and (max-width: 899px) {
-	.buttona,
-	.buttonb {
-		margin: 10px 76px;
-	}
-}
 /*
 .footer {
 	padding: 5px 20px;
@@ -448,6 +496,12 @@ body {
 @media (min-width: 523px) {
 	.listsection {
 		flex-direction: row;
+	}
+	.faq-answer {
+		font-size: 1.5vw;
+	}
+	.faq-question {
+		font-size: 2vw;
 	}
 }
 @media (max-width: 320px) {

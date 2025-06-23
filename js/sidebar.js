@@ -187,3 +187,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+// FAQ toggle logic
+document.addEventListener("DOMContentLoaded", function () {
+  document
+    .querySelectorAll(".faq-question")
+    .forEach(function (q) {
+      q.addEventListener("click", function () {
+        var item = this.parentElement;
+        item.classList.toggle("open");
+      });
+    });
+});
