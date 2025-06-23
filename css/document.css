@@ -299,6 +299,41 @@ body {
 	transform: scale(0.98);
 }
 
+.footer {
+	padding: 12px 24px;
+	background-color: #000;
+	border: 1px solid #fff;
+	margin: -10px 0 0 0;
+	border-radius: 6px;
+	color: #e5e5e5;
+	font-size: 1em;
+	text-align: center;
+	font-family: "Kode Mono", "Roboto Mono", monospace;
+	letter-spacing: 0.01em;
+	box-shadow: 0 2px 18px 0 rgba(60, 30, 120, 0.1) inset;
+}
+
+/* Optional: Add link styling for your footer */
+.footer a {
+	color: #8cc9b6;
+	text-decoration: underline;
+	transition: color 0.2s;
+}
+
+.footer a:hover,
+.footer a:focus {
+	color: #a387e9;
+	text-decoration: none;
+}
+
+/* Optional: Responsive for mobile */
+@media (max-width: 600px) {
+	.footer {
+		font-size: 0.95em;
+		padding: 10px 10px;
+	}
+}
+
 @media (max-width: 480px) {
 	.nextpage-arrow {
 		display: none;
@@ -383,6 +418,7 @@ body {
 		margin: 10px 76px;
 	}
 }
+/*
 .footer {
 	padding: 5px 20px;
 	background-color: black;
@@ -390,6 +426,7 @@ body {
 	margin: -10px 0 0 0;
 	border-radius: 6px;
 }
+*/
 .innersection h5 a {
 	color: #708cdb;
 }
