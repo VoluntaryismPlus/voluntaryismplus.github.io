@@ -4,32 +4,20 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    background-color: rgba(0,0,0,.4);
-      /*-webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);*/
+	border-radius: 5px;
+	background-color: rgba(0, 0, 0, 0.4);
+	/*-webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);*/
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(0,0,0,.6);
+	background: rgba(0, 0, 0, 0.6);
 }
 
 ::-webkit-scrollbar-corner {
-    background: rgba(0,0,0,0);
+	background: rgba(0, 0, 0, 0);
 }
+/*
 
-.side-bar{
-	background: #1b1a1b;
-	backdrop-filter: blur(15px);
-	width: 180px;
-	height: 100vh;
-	position: fixed;
-	top: 0;
-	left: -180px;
-	overflow-y: auto;
-	transition: 0.6s ease;
-	transition-property: left;
-	z-index: 1;
-}
 .side-bar::-webkit-scrollbar {
 	width: 0;
 }
@@ -81,41 +69,146 @@
 	padding-left: 80px;
 }
 
-.close-btn{
-	position: absolute;
-	color: #fff;
-	font-size: 23px;
-	right:  0;
-	margin: 15px;
-	cursor: pointer;
-}
-
-.menu-btn{
-	position: absolute;
-	color: rgb(255, 255, 255);
-	font-size: 15px;
-	margin: 0;
-	cursor: pointer;
-}
-
-.menuwords {
-	font-family: "Reggae One";
-	color: white;
-	font-size: 28px;
-	text-align: center;
-	border: 0;
-	padding-bottom: 5px;
-	margin: 0 0 15px 0;
-	background-color: #222222;
-}
-
-#logo{
-	width: 130px;
-	margin: 10px;
-	margin-left: 24px;
-	border-radius: 50%;
-	/*  border: 3px solid #b4b8b9;*/
-}
 header{
 	background: #33363a;
+}
+*/
+
+.menu-btn {
+	position: fixed;
+	left: 18px;
+	top: 18px;
+	z-index: 200;
+	font-size: 16px;
+	color: var(--blue2);
+	cursor: pointer;
+	background: rgba(83, 179, 203, 0.12);
+	padding: 3px 9px;
+	border-radius: 6px;
+	transition: background 0.2s;
+}
+.menu-btn:hover {
+	background: rgba(83, 179, 203, 0.3);
+}
+
+.side-bar {
+	position: fixed;
+	top: 0;
+	left: -320px;
+	width: var(--sidebar-width);
+	height: 100vh;
+	background: var(--sidebar-bg);
+	color: #fff;
+	z-index: 300;
+	transition: left 0.3s ease;
+	box-shadow: 2px 0 6px #0007;
+	display: flex;
+	flex-direction: column;
+	background: #1b1a1b;
+	overflow-y: auto;
+	backdrop-filter: blur(15px);
+}
+
+.side-bar.active {
+	left: 0;
+}
+.side-bar header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0.4em 0 0.8em 0;
+	border-bottom: 1px solid var(--blue2);
+	background: #171f20;
+	position: relative; /* for absolute positioning of close-btn */
+}
+
+.close-btn {
+	position: absolute;
+	top: 10px; /* adjust as needed */
+	right: 10px; /* adjust as needed */
+	font-size: 1.7em;
+	cursor: pointer;
+	color: var(--blue2);
+	margin: 0; /* ensure no margin */
+	line-height: 1; /* optional: helps keep box tight */
+	z-index: 2;
+}
+
+.logo {
+	display: block;
+	margin: 8px auto 1px auto; /* This ensures the image is centered horizontally */
+	width: 200px;
+	border-radius: 50%;
+	border: 3px solid #b4b8b9;
+}
+
+.menu {
+	flex: 1;
+	padding: 1.1em 0.7em;
+}
+.item {
+	margin-bottom: 1em;
+}
+.item > a {
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	font-weight: 600;
+	padding: 0.6em 0.7em;
+	border-radius: 4px;
+	background: none;
+	transition: background 0.2s;
+	cursor: pointer;
+}
+
+.sub-menu {
+	display: none;
+	padding-left: 1em;
+	margin-top: 0.1em;
+}
+.item .sub-item {
+	display: block;
+	color: var(--blue3);
+	text-decoration: none;
+	font-weight: 400;
+	padding: 0.4em 0.6em;
+	border-radius: 4px;
+	margin: 2px 0;
+	font-size: 0.97em;
+	transition: background 0.2s;
+}
+
+/* Main menu items hover */
+.item > a:hover {
+	background: var(
+		--blue1
+	); /* Or choose a color, e.g. #53b3cb */
+	color: #fff;
+	margin-left: 5px;
+	box-shadow: 0 2px 8px #53b3cb33;
+	transition:
+		background 0.2s,
+		color 0.2s,
+		box-shadow 0.2s;
+}
+
+/* Submenu items hover */
+.sub-item:hover {
+	background: var(--blue4); /* Or another accent color */
+	color: #fff;
+	margin-left: 5px;
+	box-shadow: 0 2px 8px #1d6a7e33;
+	transition:
+		background 0.2s,
+		color 0.2s,
+		box-shadow 0.2s;
+}
+
+@media (max-width: 300px) {
+	.menu-btn {
+		left: 9px;
+		top: 9px;
+		font-size: 14px;
+		padding: 0 5px 2px 6px;
+	}
 }

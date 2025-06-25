@@ -82,15 +82,37 @@ ul {
 	font-size: 20px;
 }
 
-.menuwords {
-	font-family: "Reggae One";
-	color: white;
-	font-size: 28px;
-	text-align: center;
-	border: 0;
-	padding-bottom: 5px;
-	margin: 0 0 15px 0;
-	background-color: #222222;
+.title .reggae-one-regular {
+	font-family: "Reggae One", cursive, Arial, sans-serif;
+	font-size: 2.3em;
+	color: #222;
+	letter-spacing: 2px;
+	/*text-shadow: 0 2px 6px #eee9;*/
+	margin: 0;
+	font-weight: bold;
+}
+.title h1 {
+	margin: 0 0 0 10px;
+	font-size: 2em;
+	color: var(--blue1);
+	/*text-shadow: 0 2px 6px #eee9;*/
+	font-family: inherit;
+}
+
+.homebutton a {
+	text-decoration: none;
+	color: var(--blue1);
+	background: none;
+	display: block;
+	padding: 0.7em 1em 0.35em 1em;
+}
+.homebutton a h2 {
+	margin: 0;
+	font-size: 1.45em;
+	letter-spacing: 1.4px;
+	font-family: inherit;
+	font-weight: bold;
+	/*text-shadow: 0 1px 4px #fff7;*/
 }
 
 @media (min-width: 500px) {

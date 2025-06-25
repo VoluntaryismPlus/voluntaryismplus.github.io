@@ -1,114 +1,128 @@
+:root {
+	--blue1: #1d6a7e;
+	--blue2: #53b3cb;
+	--blue3: #b8d3da;
+	--blue4: #639fab;
+	--background: #1d1d1d;
+	--sidebar-bg: #222;
+	--sidebar-width: 270px;
+}
+
 html,
 body {
+	margin: 0;
+	padding: 0;
 	width: 100vw;
-	overflow: hidden;
-	background-color: #1d1d1d;
-	background-image: url("../img/igloo.png");
+	min-height: 100vh;
+	box-sizing: border-box;
+	background-color: var(--background);
+	background-image: url("img/igloo.png");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: 50% 25%;
 	background-size: 100vw;
+	font-family: "Reggae One", Arial, sans-serif;
+	overflow-x: hidden;
 }
 
+/* Title Section */
 .title {
-	width: calc(100vw - 75px);
-	border: 10px solid #1d6a7e;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	width: 100%;
+	border: 6px solid var(--blue1);
 	background-color: rgba(83, 179, 203, 0.7);
-	margin-left: 20px;
-	z-index: -1;
+	margin: 0 auto 22px auto;
+	padding: 12px 0;
+	position: relative;
+	flex-wrap: wrap;
 }
 
-/* home page */
+#hibiscus,
+#hibiscus1 {
+	width: 48px;
+	height: 48px;
+	object-fit: contain;
+	margin: 0 2px;
+}
+
+/* Decorative black hibiscus */
+#blackhibiscus,
+#blackhibiscus1 {
+	position: absolute;
+	top: 16px;
+	right: 2vw;
+	width: 38px;
+	opacity: 0.23;
+	z-index: 0;
+	pointer-events: none;
+}
+#blackhibiscus1 {
+	top: unset;
+	bottom: 14px;
+	left: 2vw;
+	right: unset;
+}
+
+/* Home Buttons Section */
 .homebuttons {
 	display: grid;
-	grid-auto-rows: max-content;
-	grid-gap: 10px;
-	grid-auto-columns: max-content;
-	/*grid-template-columns: calc(100vw - 55px);*/
-	margin: 4px 0 0 20px;
-	overflow-y: scroll;
-	overflow-x: hidden;
-	height: calc(100vh - 151px);
-	width: calc(100vw - 51px);
+	grid-template-columns: 1fr;
+	gap: 18px;
+	width: 94vw;
+	max-width: 600px;
+	margin: 0 auto 40px auto;
+	z-index: 1;
 }
 
-.homebuttons a {
-	text-decoration: none;
+.homebutton {
+	background: rgba(99, 159, 171, 0.75);
+	border: 7px solid var(--blue3);
+	border-radius: 13px;
+	overflow: hidden;
+	transition: box-shadow 0.18s;
+	box-shadow: 0 2px 10px #0004;
+	display: flex;
+	flex-direction: column;
+}
+.homebutton:nth-child(even) {
+	background: rgba(184, 211, 218, 0.75);
 }
 
-/* buttons */
 
-homebutton1 a:hover {
-	background-color: rgba(99, 159, 171, 0.9);
+.homebutton img {
+	width: 100%;
+	height: 35vw;
+	max-height: 210px;
+	object-fit: cover;
+	border-top: 4px solid var(--blue3);
+	display: block;
+	margin: 0;
+	background: #eee;
+	transition: filter 0.2s;
+}
+.homebutton:hover,
+.homebutton:focus-within {
+	box-shadow: 0 6px 16px #2228;
+}
+.homebutton:hover img,
+.homebutton:focus-within img {
+	filter: brightness(0.96) contrast(1.07) saturate(1.17);
 }
 
-.homebutton1 {
-	grid-column: 1;
-	grid-row: 1;
-	background-color: rgba(99, 159, 171, 0.7);
-	border: 10px solid #b8d3da;
-}
-
-.homebutton2 {
-	grid-column: 1;
-	grid-row: 3;
-	background-color: rgba(184, 211, 218, 0.7);
-	border: 10px solid #b8d3da;
-}
-
-.homebutton3 {
-	grid-column: 1;
-	grid-row: 5;
-	background-color: rgba(99, 159, 171, 0.7);
-	border: 10px solid #b8d3da;
-}
-
-.homebutton4 {
-	grid-column: 1;
-	grid-row: 7;
-	background-color: rgba(184, 211, 218, 0.7);
-	border: 10px solid #b8d3da;
-}
-
-.homebuttons img {
-	width: calc(100vw - 75px);
-	border-top: 10px solid #b8d3da;
-	margin-bottom: -4px;
-}
-
-@media (min-width: 500px) {
+@media (min-width: 650px) {
 	.homebuttons {
-		width: calc(100vw - 50px);
-		height: calc(100vh - 185.8px);
-		grid-template-columns: fit-content fit-content;
-		margin-left: 20px;
+		grid-template-columns: 1fr 1fr;
+		max-width: 880px;
 	}
-
-	.homebuttons img {
-		width: calc(50vw - 53px);
+	.homebutton img {
+		height: 180px;
 	}
-
-	.homebutton1 {
-		grid-column: 1;
-		grid-row: 1;
-		/*height: fit-content;*/
-	}
-
-	.homebutton2 {
-		grid-column: 2;
-		grid-row: 1;
-		/*height: fit-content;*/
-	}
-
-	.homebutton3 {
-		grid-column: 1;
-		grid-row: 3;
-		/*height: fit-content;*/
-	}
-
-	.homebutton4 {
-		grid-column: 2;
-		grid-row: 3;
-		/*height: fit-content;*/
+	.title {
+		gap: 40px;
+		padding-left: 32px;
+		padding-right: 32px;
 	}
 }
