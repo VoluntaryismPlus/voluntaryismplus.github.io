@@ -70,6 +70,9 @@ h4 {
 	color: white;
 }
 
+h4 a {
+	font-size: 5vw;
+}
 h5 {
 	font-size: 4vw;
 	padding: 0;
