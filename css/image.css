@@ -9,7 +9,7 @@ body {
 
 .image img {
 	width: inherit;
-	margin: inherit;
+	/*margin: inherit;*/
 	border: 5px solid black;
 }
 
@@ -164,8 +164,7 @@ body {
 }
 @media (min-width: 523px) {
 	.image img {
-		width: 60vw;
-		margin: 0 0 0 7vw;
+		margin: 0;
 	}
 
 	.openerimage img {
