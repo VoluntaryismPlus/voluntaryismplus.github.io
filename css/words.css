@@ -24,7 +24,9 @@ li {
 	font-size: 4vw;
 	font-family: spectral, garamond;
 }
-
+ol li {
+	margin: 15px 3px;
+}
 p {
 	font-size: 4.5vw;
 	font-family: spectral, garamond;
