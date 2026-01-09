@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="img/vroad64.ico" />
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Goods - Bounty Board</title>
+		<script src="js/document.js"></script>
+		<link
+			href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+			rel="stylesheet"
+			type="text/css" />
+		<link
+			href="css/document.css"
+			rel="stylesheet"
+			type="text/css" />
+		<link
+			href="css/image.css"
+			rel="stylesheet"
+			type="text/css" />
+		<link
+			href="css/words.css"
+			rel="stylesheet"
+			type="text/css" />
+		<link
+			href="css/sidebar.css"
+			rel="stylesheet"
+			type="text/css" />
+		<link
+			href="css/overlay.css"
+			rel="stylesheet"
+			type="text/css" />
+		<link
+			href="css/accordion.css"
+			rel="stylesheet"
+			type="text/css" />
+		<link
+			href="css/scrollbar.css"
+			rel="stylesheet"
+			type="text/css" />
+				<link
+			href="css/bounty.css"
+			rel="stylesheet"
+			type="text/css" />
+		<link
+			href="css/callouts.css"
+			rel="stylesheet"
+			type="text/css" />
+		<link
+			href="css/select.css"
+			rel="stylesheet"
+			type="text/css" />
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com" />
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+			rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Caudex"
+			rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Spectral"
+			rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap"
+			rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
+			rel="stylesheet" />
+		<script src="js/sidebar.js" defer></script>
+	</head>
+
+	<body>
+		<div id="sidebar-include"></div>
+		<script src="sidebar.js"></script>
+
+		<div class="bodytext">
+			<div class="breadcrumb">
+				<a href="6_bountyboard.html">← Back to Bounty Board</a> / Goods
+			</div>
+<h1>Goods</h1>
+			<div class="innersection">
+				
+				<p style="margin: 0.5rem 0 0 0;">
+					Physical products, materials, equipment, and tangible items available for trade
+				</p>
+			</div>
+
+			<div class="innersection">
+				<div class="headerbox">
+					<h3><em>Browse by Subcategory</em></h3>
+				</div>
+				<p>
+					Find exactly what you're looking for by exploring specific categories of goods available in the network.
+				</p>
+
+				<div class="subcategory-grid">
+					<button class="subcategory-btn" onclick="filterCategory('food')">🌾 Food & Garden</button>
+					<button class="subcategory-btn" onclick="filterCategory('tools')">🔧 Tools & Equipment</button>
+					<button class="subcategory-btn" onclick="filterCategory('homestead')">🏡 Homestead Supplies</button>
+					<button class="subcategory-btn" onclick="filterCategory('craft')">✨ Handcrafted Items</button>
+					<button class="subcategory-btn" onclick="filterCategory('tech')">💻 Technology</button>
+					<button class="subcategory-btn" onclick="filterCategory('vehicle')">🚗 Vehicles & Parts</button>
+					<button class="subcategory-btn" onclick="filterCategory('material')">📦 Raw Materials</button>
+					<button class="subcategory-btn" onclick="filterCategory('energy')">⚡ Energy & Power</button>
+					<button class="subcategory-btn" onclick="filterCategory('medical')">⚕️ Health & Medical</button>
+					<button class="subcategory-btn" onclick="filterCategory('all')">📋 View All</button>
+				</div>
+			</div>
+
+			<div class="filter-bar">
+				<div class="filter-options">
+					<span class="filter-label">Sort by:</span>
+					<select class="filter-select" id="sortSelect">
+						<option value="date">Most Recent</option>
+						<option value="location">Location</option>
+						<option value="title">Title A-Z</option>
+						<option value="price">Price: Low to High</option>
+					</select>
+
+					<span class="filter-label" style="margin-left: 2rem;">Location:</span>
+					<select class="filter-select" id="locationSelect">
+						<option value="all">All Locations</option>
+						<option value="west">Western States</option>
+						<option value="midwest">Midwest</option>
+						<option value="south">South</option>
+						<option value="northeast">Northeast</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="innersection">
+				<div class="headerbox">
+					<h2>Current Listings</h2>
+				</div>
+				<p>
+					Below are example listings. In the live version, you'll see real offerings from network members.
+				</p>
+
+				<div class="listing-card">
+					<div class="listing-header">
+						<div class="listing-title">Organic Heirloom Seeds Collection</div>
+						<div class="listing-badge">OFFERING</div>
+					</div>
+					<div class="listing-meta">
+						📍 Oregon • Posted 1 day ago • Price: $25 silver or crypto
+					</div>
+					<div class="listing-description">
+						Complete starter collection of open-pollinated heirloom seeds. Includes 15 varieties: tomatoes, peppers, beans, squash, herbs, and leafy greens. All seeds saved from last season's harvest. Non-GMO, chemical-free. Perfect for new homesteaders. Detailed growing instructions included.
+					</div>
+					<div class="contact-info">
+						💬 Contact: Reply via network message or email bountyboard@example.com
+					</div>
+				</div>
+
+				<div class="listing-card">
+					<div class="listing-header">
+						<div class="listing-title">Solar Panel System - 400W Kit</div>
+						<div class="listing-badge">OFFERING</div>
+					</div>
+					<div class="listing-meta">
+						📍 Arizona • Posted 3 days ago • Price: 0.008 BTC or $400 silver
+					</div>
+					<div class="listing-description">
+						Complete off-grid solar kit: 4x 100W panels, charge controller, mounting hardware, and all cables. Lightly used for 6 months. Perfect for RV, tiny home, or backup power. Can power lights, devices, and small appliances. Will help with installation guidance if local.
+					</div>
+					<div class="contact-info">
+						💬 Contact: solarprepper@protonmail.com
+					</div>
+				</div>
+
+				<div class="listing-card">
+					<div class="listing-header">
+						<div class="listing-title">SEEKING: Wood-Fired Cookstove</div>
+						<div class="listing-badge">WANTED</div>
+					</div>
+					<div class="listing-meta">
+						📍 Montana • Posted 5 days ago • Budget: Up to $800 or trade
+					</div>
+					<div class="listing-description">
+						Looking for a quality wood-burning cookstove for off-grid cabin. Preferably cast iron with oven. Willing to trade: smoked meats, leather goods, firewood (split/delivered), or pay in silver/crypto. Can travel up to 200 miles for pickup.
+					</div>
+					<div class="contact-info">
+						💬 Contact: Network referral required
+					</div>
+				</div>
+
+				<div class="listing-card">
+					<div class="listing-header">
+						<div class="listing-title">Hand-Forged Kitchen Knives</div>
+						<div class="listing-badge">OFFERING</div>
+					</div>
+					<div class="listing-meta">
+						📍 Tennessee • Available ongoing • Price: $80-$200 per knife
+					</div>
+					<div class="listing-description">
+						Traditional blacksmith-crafted kitchen knives. Each piece unique, made from high-carbon steel with hardwood handles. Chef's knives, cleavers, paring knives, and custom orders available. Sharpening service included for life. Built to last generations. Photos and testimonials available.
+					</div>
+					<div class="contact-info">
+						💬 Contact: forgemaster@protonmail.com • Meet at regional meetups
+					</div>
+				</div>
+
+				<div class="listing-card">
+					<div class="listing-header">
+						<div class="listing-title">Laptop - ThinkPad T480 (Refurbished)</div>
+						<div class="listing-badge">OFFERING</div>
+					</div>
+					<div class="listing-meta">
+						📍 Colorado • Posted 1 week ago • Price: 0.005 BTC or $250 silver
+					</div>
+					<div class="listing-description">
+						Fully refurbished Lenovo ThinkPad T480. i5 processor, 16GB RAM, 256GB SSD, fresh battery. Preloaded with Linux for privacy. Perfect for secure communications and general use. 90-day warranty on hardware. Can install additional privacy tools on request.
+					</div>
+					<div class="contact-info">
+						💬 Contact: techfreedom@tutanota.com
+					</div>
+				</div>
+
+				<div class="listing-card">
+					<div class="listing-header">
+						<div class="listing-title">Raw Honey - 5 Gallon Buckets</div>
+						<div class="listing-badge">OFFERING</div>
+					</div>
+					<div class="listing-meta">
+						📍 North Carolina • Seasonal availability • Price: $180/bucket or trade
+					</div>
+					<div class="listing-description">
+						Pure, unfiltered honey from our apiary. No processing, heating, or additives—just honey as the bees made it. Wildflower variety from pristine mountain location. Will trade for equipment, tools, or accept silver/crypto. Local pickup preferred or can coordinate delivery.
+					</div>
+					<div class="contact-info">
+						💬 Contact: mountainbeekeeper@protonmail.com
+					</div>
+				</div>
+
+				<div class="listing-card">
+					<div class="listing-header">
+						<div class="listing-title">SEEKING: Firearms - .22 Rifle & 12ga Shotgun</div>
+						<div class="listing-badge">WANTED</div>
+					</div>
+					<div class="listing-meta">
+						📍 Texas • Flexible • Budget: Market value in silver or crypto
+					</div>
+					<div class="listing-description">
+						Looking to acquire: .22 caliber rifle (prefer Ruger 10/22 or similar) and 12-gauge shotgun for homestead security and hunting. Private sale, no paperwork. Must be in good working condition. Have references in network. Serious inquiries only.
+					</div>
+					<div class="contact-info">
+						💬 Contact: Network introduction required • In-person meeting only
+					</div>
+				</div>
+
+				<div class="listing-card">
+					<div class="listing-header">
+						<div class="listing-title">Sourdough Starter (Active & Healthy)</div>
+						<div class="listing-badge">OFFERING</div>
+					</div>
+					<div class="listing-meta">
+						📍 Washington • Available now • Price: $10 or barter
+					</div>
+					<div class="listing-description">
+						100+ year old sourdough starter culture, very active and reliable. Includes feeding instructions and basic bread recipe. Perfect for off-grid baking. Will trade for garden seeds, honey, or just about anything. Available at local meetups or can mail carefully packaged.
+					</div>
+					<div class="contact-info">
+						💬 Contact: breadbaker@protonmail.com
+					</div>
+				</div>
+			</div>
+
+			<div class="callout">
+				<div class="callouttext">
+					<h3>Ready to Post Your Own Goods?</h3>
+					<p>
+						Have items to offer or specific goods you're seeking? Contact us at <strong>caravanarchy@proton.me</strong> with:
+					</p>
+					<ul>
+						<li>Clear description of the item(s)</li>
+						<li>Your general location</li>
+						<li>Asking price or trade preferences</li>
+						<li>Contact method (encrypted email, network referral, etc.)</li>
+					</ul>
+					<p>
+						<em>We prioritize listings from verified network members. Build your reputation through successful trades!</em>
+					</p>
+				</div>
+			</div>
+
+			<a href="6_services.html">
+				<div class="nextpage">
+					<span class="nextpage-text">Next Page: Browse Services</span>
+					<span class="nextpage-arrow">→</span>
+				</div>
+			</a>
+
+			<br /><br />
+			<div class="footer">
+				Contact us:
+				<a href="mailto:caravanarchy@proton.me"
+					>caravanarchy@proton.me</a
+				>
+			</div>
+		</div>
+
+		<script>
+			function filterCategory(category) {
+				if (category === 'all') {
+					alert('Showing all goods listings');
+				} else {
+					alert('Filtering to show: ' + category + ' category\n\nThis feature will filter listings in the live version.');
+				}
+			}
+
+			document.getElementById('sortSelect').addEventListener('change', function() {
+				alert('Sorting by: ' + this.options[this.selectedIndex].text + '\n\nThis will reorganize listings in the live version.');
+			});
+
+			document.getElementById('locationSelect').addEventListener('change', function() {
+				alert('Filtering location: ' + this.options[this.selectedIndex].text + '\n\nThis will show only relevant locations in the live version.');
+			});
+		</script>
+	</body>
+</html>

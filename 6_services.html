@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="img/vroad64.ico" />
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Services - Bounty Board</title>
+		<script src="js/document.js"></script>
+		<link
+			href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+			rel="stylesheet"
+			type="text/css" />
+		<link
+			href="css/document.css"
+			rel="stylesheet"
+			type="text/css" />
+		<link
+			href="css/image.css"
+			rel="stylesheet"
+			type="text/css" />
+		<link
+			href="css/words.css"
+			rel="stylesheet"
+			type="text/css" />
+		<link
+			href="css/sidebar.css"
+			rel="stylesheet"
+			type="text/css" />
+		<link
+			href="css/overlay.css"
+			rel="stylesheet"
+			type="text/css" />
+				<link
+			href="css/bounty.css"
+			rel="stylesheet"
+			type="text/css" />
+		<link
+			href="css/accordion.css"
+			rel="stylesheet"
+			type="text/css" />
+		<link
+			href="css/scrollbar.css"
+			rel="stylesheet"
+			type="text/css" />
+		<link
+			href="css/callouts.css"
+			rel="stylesheet"
+			type="text/css" />
+		<link
+			href="css/select.css"
+			rel="stylesheet"
+			type="text/css" />
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com" />
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+			rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Caudex"
+			rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Spectral"
+			rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap"
+			rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
+			rel="stylesheet" />
+		<script src="js/sidebar.js" defer></script>
+	</head>
+
+	<body>
+		<div id="sidebar-include"></div>
+		<script src="sidebar.js"></script>
+
+		<div class="bodytext">
+			<div class="breadcrumb">
+				<a href="6_bountyboard.html">← Back to Bounty Board</a> / Services
+			</div>
+
+			<div class="category-header">
+				<h1 style="margin: 0; color: #97DB4F;">Services</h1>
+				<p style="margin: 0.5rem 0 0 0; color: #e8f5e9;">
+					Skills, expertise, labor, and professional offerings within the agorist network
+				</p>
+			</div>
+
+			<div class="innersection">
+				<div class="headerbox">
+					<h3><em>Browse by Subcategory</em></h3>
+				</div>
+				<p>
+					Find the skills and services you need from trusted network members across all disciplines.
+				</p>
+
+				<div class="subcategory-grid">
+					<button class="subcategory-btn" onclick="filterCategory('tech')">💻 Tech & Digital</button>
+					<button class="subcategory-btn" onclick="filterCategory('trade')">🔨 Skilled Trades</button>
+					<button class="subcategory-btn" onclick="filterCategory('consulting')">💼 Consulting</button>
+					<button class="subcategory-btn" onclick="filterCategory('education')">📚 Education & Training</button>
+					<button class="subcategory-btn" onclick="filterCategory('transport')">🚚 Transportation</button>
+					<button class="subcategory-btn" onclick="filterCategory('health')">⚕️ Health & Wellness</button>
+					<button class="subcategory-btn" onclick="filterCategory('creative')">🎨 Creative Services</button>
+					<button class="subcategory-btn" onclick="filterCategory('homestead')">🌱 Homesteading</button>
+					<button class="subcategory-btn" onclick="filterCategory('security')">🛡️ Security Services</button>
+					<button class="subcategory-btn" onclick="filterCategory('all')">📋 View All</button>
+				</div>
+			</div>
+
+			<div class="filter-bar">
+				<div class="filter-options">
+					<span class="filter-label">Sort by:</span>
+					<select class="filter-select" id="sortSelect">
+						<option value="date">Most Recent</option>
+						<option value="rating">Highest Rated</option>
+						<option value="location">Location</option>
+						<option value="price">Price Range</option>
+					</select>
+
+					<span class="filter-label" style="margin-left: 2rem;">Availability:</span>
+					<select class="filter-select" id="availabilitySelect">
+						<option value="all">All Providers</option>
+						<option value="immediate">Available Now</option>
+						<option value="remote">Remote Services</option>
+						<option value="local">Local Only</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="innersection">
+				<div class="headerbox">
+					<h2>Current Service Listings</h2>
+				</div>
+				<p style="color: #666; font-style: italic; margin-bottom: 2rem;">
+					Below are example listings showing the types of services available. Live version will feature real providers.
+				</p>
+
+				<div class="listing-card">
+					<div class="listing-header">
+						<div class="listing-title">Web Development & Privacy-First Hosting</div>
+						<div class="listing-badge">OFFERING</div>
+					</div>
+					<div class="listing-meta">
+						📍 Remote / Anywhere • Available ongoing • <span class="rating-display">⭐⭐⭐⭐⭐ 12 reviews</span>
+					</div>
+					<div class="listing-description">
+						Full-stack developer specializing in secure, privacy-respecting websites and applications. Experience with e-commerce, portfolios, and custom solutions. Setup on decentralized hosting, accept crypto payments, and implement end-to-end encryption. Can also rescue existing sites from big tech platforms.
+					</div>
+					<div class="skills-tags">
+						<span class="skill-tag">HTML/CSS/JS</span>
+						<span class="skill-tag">Privacy Tech</span>
+						<span class="skill-tag">Crypto Integration</span>
+						<span class="skill-tag">Self-Hosting</span>
+					</div>
+					<div class="contact-info">
+						💰 Rates: 0.001-0.005 BTC per project • 💬 Contact: webfreedom@protonmail.com
+					</div>
+				</div>
+
+				<div class="listing-card">
+					<div class="listing-header">
+						<div class="listing-title">Mobile Diesel Mechanic</div>
+						<div class="listing-badge">OFFERING</div>
+					</div>
+					<div class="listing-meta">
+						📍 Southwest Region (AZ, NM, TX) • Available most weeks • <span class="rating-display">⭐⭐⭐⭐⭐ 8 reviews</span>
+					</div>
+					<div class="listing-description">
+						ASE certified with 18 years experience. Specialize in diesel trucks, RVs, and older vehicles. I come to you with fully equipped service truck. Diagnostics, repairs, preventative maintenance, and conversions. Can work on biodiesel setups. No shop overhead = better prices. References available.
+					</div>
+					<div class="skills-tags">
+						<span class="skill-tag">Diesel Expert</span>
+						<span class="skill-tag">Mobile Service</span>
+						<span class="skill-tag">RV Specialist</span>
+						<span class="skill-tag">Biodiesel</span>
+					</div>
+					<div class="contact-info">
+						💰 Rates: $75/hr labor + parts • 💬 Contact: dieseltech@tutanota.com
+					</div>
+				</div>
+
+				<div class="listing-card">
+					<div class="listing-header">
+						<div class="listing-title">SEEKING: Spanish Language Tutor</div>
+						<div class="listing-badge">WANTED</div>
+					</div>
+					<div class="listing-meta">
+						📍 Online/Video Call Preferred • Start ASAP • Budget: Negotiable
+					</div>
+					<div class="listing-description">
+						Looking for conversational Spanish tutor for family of 4 (2 adults, 2 teens). We have basic knowledge but need practice and guidance. 2-3 sessions per week via encrypted video call. Prefer native speaker. Can pay in crypto, silver, or barter (we have skills in carpentry, gardening).
+					</div>
+					<div class="contact-info">
+						💬 Contact: familylearning@protonmail.com
+					</div>
+				</div>
+
+				<div class="listing-card">
+					<div class="listing-header">
+						<div class="listing-title">Permaculture Design & Consultation</div>
+						<div class="listing-badge">OFFERING</div>
+					</div>
+					<div class="listing-meta">
+						📍 Pacific Northwest (travel available) • Ongoing projects • <span class="rating-display">⭐⭐⭐⭐⭐ 15 reviews</span>
+					</div>
+					<div class="listing-description">
+						Certified permaculture designer with 10+ years creating sustainable food systems. Services include: property assessment, master planning, food forest design, water management, soil building strategies. Can work remotely with photos/video or in-person site visits. Transform your land into abundance.
+					</div>
+					<div class="skills-tags">
+						<span class="skill-tag">Permaculture</span>
+						<span class="skill-tag">Food Forests</span>
+						<span class="skill-tag">Water Systems</span>
+						<span class="skill-tag">Soil Health</span>
+					</div>
+					<div class="contact-info">
+						💰 Rates: Consultation $100, Design packages from $500 • 💬 Contact: permafreedom@protonmail.com
+					</div>
+				</div>
+
+				<div class="listing-card">
+					<div class="listing-header">
+						<div class="listing-title">Legal Research & Document Preparation</div>
+						<div class="listing-badge">OFFERING</div>
+					</div>
+					<div class="listing-meta">
+						📍 Remote / All states • Available by appointment • <span class="rating-display">⭐⭐⭐⭐⭐ 6 reviews</span>
+					</div>
+					<div class="listing-description">
+						Not a lawyer but specialized in helping people navigate legal processes without expensive attorneys. Can assist with: LLC formation, contracts, property issues, family law paperwork, and legal research. Operated within lawful bounds helping you represent yourself. Discrete, professional.
+					</div>
+					<div class="skills-tags">
+						<span class="skill-tag">Legal Research</span>
+						<span class="skill-tag">Document Prep</span>
+						<span class="skill-tag">Self-Representation</span>
+						<span class="skill-tag">Confidential</span>
+					</div>
+					<div class="contact-info">
+						💰 Rates: $50-150 per project • 💬 Contact: legalhelp@protonmail.com
+					</div>
+				</div>
+
+				<div class="listing-card">
+					<div class="listing-header">
+						<div class="listing-title">Freight & Vehicle Transport</div>
+						<div class="listing-badge">OFFERING</div>
+					</div>
+					<div class="listing-meta">
+						📍 Mountain West Region • Regular routes • <span class="rating-display">⭐⭐⭐⭐⭐ 10 reviews</span>
+					</div>
+					<div class="listing-description">
+						Professional trucker offering freight services and vehicle transport between MT, WY, CO, UT, ID. Can handle large loads, vehicles, equipment. Insured and reliable. Regular routes monthly, can coordinate special trips. Discrete pickups/deliveries. Network references available.
+					</div>
+					<div class="skills-tags">
+						<span class="skill-tag">CDL Driver</span>
+						<span class="skill-tag">Freight</span>
+						<span class="skill-tag">Auto Transport</span>
+						<span class="skill-tag">Insured</span>
+					</div>
+					<div class="contact-info">
+						💰 Rates: By quote, competitive pricing • 💬 Contact: mountainhaul@tutanota.com
+					</div>
+				</div>
+
+				<div class="listing-card">
+					<div class="listing-header">
+						<div class="listing-title">SEEKING: Midwife / Birth Assistant</div>
+						<div class="listing-badge">WANTED</div>
+					</div>
+					<div class="listing-meta">
+						📍 Tennessee • Due date: April 2024 • Willing to pay: $1500-2500
+					</div>
+					<div class="listing-description">
+						Expecting couple seeking experienced midwife or birth assistant for home birth. This is our second child, first home birth. Looking for someone with solid experience, good references, and aligned values (medical freedom, natural birth). Prenatal visits and birth support needed.
+					</div>
+					<div class="contact-info">
+						💬 Contact: Network referral required • In-person interview necessary
+					</div>
+				</div>
+
+				<div class="listing-card">
+					<div class="listing-header">
+						<div class="listing-title">Homestead Carpentry & Building</div>
+						<div class="listing-badge">OFFERING</div>
+					</div>
+					<div class="listing-meta">
+						📍 Upper Midwest • Seasonal availability • <span class="rating-display">⭐⭐⭐⭐⭐ 9 reviews</span>
+					</div>
+					<div class="listing-description">
+						Master carpenter specializing in homestead structures: barns, chicken coops, greenhouses, sheds, decks, and small cabins. Can work from your plans or help design. Traditional joinery, quality materials, built to last. Competitive rates, can accept payment in stages. Will train apprentices.
+					</div>
+					<div class="skills-tags">
+						<span class="skill-tag">Master Carpenter</span>
+						<span class="skill-tag">Homestead Build</span>
+						<span class="skill-tag">Custom Design</span>
+						<span class="skill-tag">Mentorship</span>
+					</div>
+					<div class="contact-info">
+						💰 Rates: $45/hr + materials or project bid • 💬 Contact: builderfreedom@protonmail.com
+					</div>
+				</div>
+
+				<div class="listing-card">
+					<div class="listing-header">
+						<div class="listing-title">Cybersecurity & OPSEC Training</div>
+						<div class="listing-badge">OFFERING</div>
+					</div>
+					<div class="listing-meta">
+						📍 Remote / Online • Available ongoing • <span class="rating-display">⭐⭐⭐⭐⭐ 7 reviews</span>
+					</div>
+					<div class="listing-description">
+						Former IT security professional now helping individuals and small groups achieve digital privacy and operational security. One-on-one training covering: encrypted communications, secure browsing, crypto privacy, device security, and threat modeling. Customized to your needs and technical level.
+					</div>
+					<div class="skills-tags">
+						<span class="skill-tag">Cybersecurity</span>
+						<span class="skill-tag">Privacy Tools</span>
+						<span class="skill-tag">OPSEC</span>
+						<span class="skill-tag">Training</span>
+					</div>
+					<div class="contact-info">
+						💰 Rates: $100 initial consultation, packages available • 💬 Contact: securitymentor@protonmail.com
+					</div>
+				</div>
+
+				<div class="listing-card">
+					<div class="listing-header">
+						<div class="listing-title">Graphic Design & Branding</div>
+						<div class="listing-badge">OFFERING</div>
+					</div>
+					<div class="listing-meta">
+						📍 Remote / Anywhere • Available most weeks • <span class="rating-display">⭐⭐⭐⭐⭐ 14 reviews</span>
+					</div>
+					<div class="listing-description">
+						Professional designer helping businesses and creators establish their visual identity. Logos, branding packages, print materials, and digital assets. Portfolio available. Understand agorist businesses need discreet, professional presentation. Quick turnaround, unlimited revisions until satisfied.
+					</div>
+					<div class="skills-tags">
+						<span class="skill-tag">Logo Design</span>
+						<span class="skill-tag">Branding</span>
+						<span class="skill-tag">Print Design</span>
+						<span class="skill-tag">Digital Assets</span>
+					</div>
+					<div class="contact-info">
+						💰 Rates: Logos from $200, packages from $500 • 💬 Contact: designfreedom@tutanota.com
+					</div>
+				</div>
+			</div>
+
+			<div class="callout">
+				<div class="callouttext">
+					<h3>Ready to Offer Your Services?</h3>
+					<p>
+						Have skills to share with the network? Contact us at <strong>caravanarchy@proton.me</strong> with:
+					</p>
+					<ul>
+						<li>Description of services offered</li>
+						<li>Your experience and qualifications</li>
+						<li>Service area or remote availability</li>
+						<li>Rate structure and accepted payments</li>
+						<li>References from network members (if available)</li>
+					</ul>
+					<p>
+						<em>Building your reputation through quality service creates lasting opportunities and referrals within the network.</em>
+					</p>
+				</div>
+			</div>
+
+			<a href="7_events.html">
+				<div class="nextpage">
+					<span class="nextpage-text">Next: Events & Festivals</span>
+					<span class="nextpage-arrow">→</span>
+				</div>
+			</a>
+
+			<br /><br />
+			<div class="footer">
+				Contact us:
+				<a href="mailto:caravanarchy@proton.me"
+					>caravanarchy@proton.me</a
+				>
+			</div>
+		</div>
+
+		<script>
+			function filterCategory(category) {
+				if (category === 'all') {
+					alert('Showing all service listings');
+				} else {
+					alert('Filtering to show: ' + category + ' services\n\nThis feature will filter listings in the live version.');
+				}
+			}
+
+			document.getElementById('sortSelect').addEventListener('change', function() {
+				alert('Sorting by: ' + this.options[this.selectedIndex].text + '\n\nThis will reorganize listings in the live version.');
+			});
+
+			document.getElementById('availabilitySelect').addEventListener('change', function() {
+				alert('Filtering availability: ' + this.options[this.selectedIndex].text + '\n\nThis will show only relevant providers in the live version.');
+			});
+		</script>
+	</body>
+</html>
