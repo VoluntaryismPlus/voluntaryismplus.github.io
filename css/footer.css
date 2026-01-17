@@ -1,0 +1,143 @@
+/* Enhanced Footer Styles for CaravAnarchy */
+
+.site-footer {
+	background-color: #000;
+	border: 1px solid #fff;
+	margin: 2rem 0 0 0;
+	padding: 2rem 1.5rem 1rem 1.5rem;
+	border-radius: 10px;
+	color: #e5e5e5;
+	font-family: "Kode Mono", "Roboto Mono", monospace;
+	box-shadow: 0 2px 18px 0 rgba(60, 30, 120, 0.1) inset;
+}
+
+.footer-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	gap: 2rem;
+	margin-bottom: 1rem;
+}
+
+.footer-section {
+	min-width: 150px;
+}
+
+.footer-section h4 {
+	color: #8cc9b6;
+	font-size: 1.1em;
+	margin: 0 0 0.8rem 0;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+
+.footer-section ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.footer-section ul li {
+	margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+	color: #bbb;
+	text-decoration: none;
+	transition: color 0.2s;
+	font-size: 0.95em;
+}
+
+.footer-section a:hover,
+.footer-section a:focus {
+	color: #a387e9;
+	text-decoration: underline;
+}
+
+.footer-section p {
+	color: #bbb;
+	font-size: 0.95em;
+	margin: 0.5rem 0;
+}
+
+.newsletter-signup {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.footer-bottom {
+	text-align: center;
+	margin-top: 2rem;
+	padding-top: 1rem;
+	border-top: 1px solid #333;
+	color: #888;
+	font-size: 0.9em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+	.footer-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.5rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.footer-grid {
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+	}
+	
+	.site-footer {
+		padding: 1.5rem 1rem;
+	}
+	
+	.footer-section h4 {
+		font-size: 1em;
+	}
+}
+
+/* Path Card Styles (for homepage) */
+.path-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 1.5rem;
+	margin: 2rem 0;
+}
+
+.path-card {
+	background-color: rgba(0, 0, 0, 0.7);
+	border: 2px solid #4c7fb8;
+	border-radius: 10px;
+	padding: 1.5rem;
+	text-align: center;
+	transition: all 0.3s;
+}
+
+.path-card:hover {
+	border-color: #8cc9b6;
+	background-color: rgba(0, 0, 0, 0.85);
+	transform: translateY(-5px);
+	box-shadow: 0 8px 20px rgba(76, 127, 184, 0.3);
+}
+
+.path-card h4 {
+	color: #fff;
+	font-size: 1.3em;
+	margin: 0 0 0.5rem 0;
+	font-family: "Kode Mono", monospace;
+}
+
+.path-card p {
+	color: #bbb;
+	font-size: 0.95em;
+	margin: 0 0 1rem 0;
+	line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+	.path-grid {
+		grid-template-columns: 1fr;
+	}
+}
