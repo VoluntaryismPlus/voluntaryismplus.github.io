@@ -182,7 +182,7 @@
 .overlay-content {
 	position: relative;
 	width: 100%;
-	text-align: left;
+	text-align: center;
 	margin-top: 0;
 	padding: 20px 0 0 0;
 	box-sizing: border-box;
@@ -190,20 +190,63 @@
 
 /* --- TOPNAV (MOBILE NAVIGATION BAR) --- */
 .topnav {
-	background-color: #000;
 	position: fixed;
 	top: 0;
+	left: 0;
 	width: 100vw;
 	height: 40px;
 	z-index: 12;
+
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
-	padding: 0;
-	margin: 0;
+
+	background-color: #000;
 	box-sizing: border-box;
-	left: 0;
 }
+
+/* Left + right slots */
+.topnav > * {
+	flex: 0 0 44px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Center title */
+.caravanarchy {
+	flex: 1 1 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	font-size: 1.1em;
+	color: #fff;
+	white-space: nowrap;
+	font-family: "Kode Mono", monospace;
+	pointer-events: none;
+	letter-spacing: 0.05em;
+}
+
+/* Hamburger */
+.hamburger-btn {
+	font-size: 22px;
+	background: none;
+	border: none;
+	color: inherit;
+	cursor: pointer;
+	width: 44px;
+	height: 40px;
+	font-family: "Kode Mono", monospace;
+}
+
+/* Logo */
+.topnav .logo img {
+	height: 28px;
+	width: auto;
+	max-width: 38px;
+	display: block;
+}
+
 .hamburger-btn {
 	font-size: 22px;
 	background: none;
@@ -219,17 +262,7 @@
 	margin: 0;
 	font-family: "Kode Mono", monospace;
 }
-.caravanarchy {
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	font-size: 1.1em;
-	color: #fff;
-	white-space: nowrap;
-	font-family: "Kode Mono", monospace;
-	pointer-events: none;
-	letter-spacing: 0.05em;
-}
+
 .topnav .logo {
 	display: flex;
 	align-items: center;
