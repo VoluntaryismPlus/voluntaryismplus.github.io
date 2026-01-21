@@ -1,289 +1,103 @@
-body {
-	background-color: #1d1d1d;
-}
-
-.image {
-	width: 100%;
-	margin-right: 0;
-}
-
-.image img {
-	width: inherit;
-	/*margin: inherit;*/
-	border: 5px solid black;
-}
-
-.image1 {
-	width: 100%;
-	margin-right: 0;
-}
-
-.image1 img {
-	width: inherit;
-	margin-right: 10px;
-}
-
-.image2 {
-	width: 100%;
-	margin-right: 0;
-}
-
-.image2 img {
-	width: inherit;
-	margin: 10px 0 10px 0;
+/* --- Global image safety --- */
+img {
+	max-width: 100%;
+	height: auto;
 	display: block;
 }
 
+/* --- Base image wrappers --- */
+.image,
+.image1,
+.image2,
+.linkimage,
+.openerimage,
+.openerversion,
+.imagenoborder,
+.imagenoborder1,
+.outerimage,
+.businessimage,
+.businessimage1 {
+	width: 100%;
+	margin: 0 auto;
+}
+
+/* --- Default images --- */
+.image img,
+.image1 img,
+.image2 img,
+.linkimage img {
+	border: 5px solid black;
+}
+
+/* --- Special cases --- */
 .smallimage {
 	width: 24%;
 }
 
-.linkimage {
-	width: 100%;
-	margin-right: 0;
-}
-
-.linkimage img {
-	width: inherit;
-	margin-right: 10px;
-	border: 5px solid black;
-}
-.openerimage {
-	width: 100%;
-	margin-right: 0;
-}
-.openerimage img {
-	display: none;
-	width: 92vw;
-	margin-right: 10px;
-	border: 5px solid black;
-}
-.openerversion {
-	width: 100%;
-	margin-right: 0;
-}
-
-.openerversion img {
-	width: 91vw;
-	margin-right: 10px;
-	border: 5px solid black;
-}
-
-.linkimage a {
-	width: inherit;
-	margin-right: 10px;
-}
-.imgrt img {
-	position: absolute;
-	margin-right: 1vw;
-	display: none;
-}
-
-.imglt img {
-	display: none;
-	float: left;
-	margin: 5px 0 0 1vw;
-	padding: 6px;
-	width: 40vw;
-}
-
-.imagenoborder {
-	width: 100%;
-	margin-right: 0;
-}
-
-.imagenoborder img {
-	width: 84vw;
-}
-
-.imagenoborder1 {
-	width: 100%;
-	margin-right: 0;
-}
-
-.imagenoborder1 img {
-	width: 94vw;
-}
-
-.imagelarge {
-	width: 100%;
-	margin-right: 0;
-	display: none;
-}
-
-.imagelarge img {
-	width: 73.5vw;
-}
-
 .listimage img {
-	width: 100%;
-
+	max-width: 30rem;
 	margin: 0 auto;
 }
 
-.outerimage img {
-	margin-left: 2px;
-	width: 87vw;
-	border: 5px solid black;
-	display: block;
-	margin-right: 1px;
-	margin-bottom: 10px;
-}
-
-.businessimage {
-	width: 100%;
-	margin-right: 0;
-}
-
+/* --- Business image rows --- */
+.businessimage,
 .businessimage1 {
-	width: 100%;
-	margin-right: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	justify-content: center;
 }
 
-.businessimage img {
-	width: 88vw;
-	background-color: black;
-	border: 5px solid white;
-}
-
+.businessimage img,
 .businessimage1 img {
-	width: 87vw;
+	flex: 1 1 300px;
 	border: 5px solid white;
+	background: black;
+	width: 100%;
+	max-width: 374px;
+	height: auto;
 }
 
-.vehicles img {
-	width: 44vw;
+/* --- Opener images --- */
+.openerimage img,
+.openerversion img {
+	border: 5px solid black;
+	margin: 0 auto;
+}
+
+/* --- Outer / hero image (this was your overflow culprit) --- */
+.outerimage img {
+	max-width: min(100%, 72ch);
+	margin: 0 auto 1rem auto;
 	border: 5px solid black;
 }
 
-.bigimage img {
-	width: 100%;
+/* --- Vehicles --- */
+.vehicles img {
+	max-width: 44ch;
+	border: 5px solid black;
 }
 
-@media (max-width: 300px) {
-	.vehicles img {
-		width: 87vw;
-		border: 5px solid black;
-	}
-}
+/* --- Responsive switches --- */
 @media (min-width: 523px) {
-	.image img {
-		margin: 0;
-	}
-
-	.openerimage img {
-		display: block;
-		width: 73.3vw;
-		margin: 0 0 0 0.5vw;
-	}
 	.openerversion img {
 		display: none;
 	}
-	.listimage img {
-		width: 30vw;
-	}
-	.vehicles img {
-		width: 37.5vw;
-	}
-	.businessimage {
-		width: 75vw;
-		display: flex;
-	}
-	.businessimage img {
-		width: 35.5vw;
-		margin: 5px;
-	}
-	.businessimage1 {
-		width: 74vw;
-	}
-	.businessimage1 img {
-		width: 73vw;
-		margin: 5px;
-	}
-	.outerimage img {
-		width: 60vw;
-		margin: auto;
-	}
-
-	.imagenoborder img {
-		width: 73vw;
-	}
-	.imagenoborder1 img {
-		width: 73vw;
-	}
-}
-
-@media (min-width: 680px) {
-	.businessimage {
-		width: 75vw;
-		display: flex;
-	}
-	.businessimage img {
-		width: 36vw;
-		margin: 5px;
-	}
-	.businessimage1 {
-		width: 75vw;
-		display: flex;
-	}
-	.businessimage1 img {
-		width: 36vw;
-		margin: 5px;
-	}
-	.imagenoborder1 img {
-		display: none;
-	}
-	.imagelarge {
-		display: block;
-	}
-	.image1 img {
-		display: block;
-	}
-	.image2 img {
-		display: none;
-	}
-}
-
-@media (min-width: 900px) {
-	.image img {
-		width: calc(80vw - 225px);
-		margin: 0 0 0 8.7vw;
-	}
-	.vehicles img {
-		width: calc((100vw - 225px) / 2);
-	}
-	.businessimage {
-		width: calc(100vw - 225px);
-		display: flex;
-		padding: 10px;
-	}
-	.businessimage img {
-		width: calc((100vw - 265px) / 2);
-		margin: 5px;
-	}
-	.businessimage1 {
-		width: calc(100vw - 225px);
-		display: flex;
-		padding: 10px;
-	}
-	.businessimage1 img {
-		width: calc((100vw - 265px) / 2);
-		margin: 5px;
-	}
-	.outerimage img {
-		margin-left: calc((100vw - 225px) / 4);
-		width: calc((100vw - 225px) / 2);
-		/*display: none;*/
-	}
 	.openerimage img {
-		width: calc(100vw - 260px);
-	}
-	imgrt img {
 		display: block;
 	}
+}
 
-	imglt img {
+@media (max-width: 522px) {
+	.openerimage img {
+		display: none;
+	}
+	.openerversion img {
 		display: block;
-		width: 50vw;
+	}
+}
+@media (min-width: 900px) {
+	.businessimage1 img {
+		max-width: 374px;
 	}
 }

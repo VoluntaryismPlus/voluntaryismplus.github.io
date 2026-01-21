@@ -19,7 +19,7 @@
 
 	/* Content width control */
 	--content-max: 68ch;
-
+	--layout-max: 1400px;
 	--bg-main: rgba(0, 0, 0, 0.9);
 	--bg-panel: rgba(0, 0, 0, 0.85);
 	--text-main: #7f8c8d;
@@ -64,6 +64,7 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	width: 99vw;
+	max-width: var(--layout-max);
 	padding-left: 0;
 	padding-right: 0;
 	transition:
@@ -130,7 +131,7 @@ body {
 
 .button--primary {
 	background: #0b4467;
-	color: #000;
+	color: #ffffff;
 	border-color: #1ea2ad;
 	font-size: clamp(1.6rem, 2.8vw, 2.4rem);
 	padding: 0.8em 1.6em;
@@ -138,13 +139,13 @@ body {
 
 .button--primary:hover {
 	background: #1ea2ad;
-	color: #fff;
+	color: #bef2e2;
 	transform: translateY(-1px);
 }
 
 .button--secondary {
 	background: #1c5364;
-	color: #000;
+	color: #ffffff;
 	border-color: #008cba;
 	font-size: clamp(1.3rem, 2.2vw, 1.8rem);
 	padding: 0.55em 1em;
@@ -152,13 +153,13 @@ body {
 
 .button--secondary:hover {
 	background: #096d8e;
-	color: #fff;
+	color: #bef2e2;
 }
 
 .button--block {
 	width: 100%;
 	background: #291c64;
-	color: #000;
+	color: #ffffff;
 	border-color: #af5bf0;
 	font-size: clamp(1.4rem, 2.5vw, 2.1rem);
 	padding: 0.6em 1em;
@@ -407,32 +408,8 @@ body {
 	background-color: rgba(13, 13, 13, 0.92);
 }
 
-.overview-title {
-	flex: 0 0 100%;
-	width: 100%;
-	font-size: 1.4em;
-	font-weight: bold;
-	text-align: left;
-}
-
 .overview-text {
 	flex: 2;
-}
-
-.overview-image {
-	flex: 1;
-	max-width: 150px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.overview-image img {
-	width: 100%;
-	aspect-ratio: 1/1;
-	object-fit: cover;
-	border-radius: 8px;
-	display: block;
 }
 
 .nextpage {
@@ -536,6 +513,10 @@ body {
 	text-decoration: none;
 }
 
+.innersection h5 a {
+	color: #708cdb;
+}
+
 /* Optional: Responsive for mobile */
 @media (max-width: 600px) {
 	.footer {
@@ -555,23 +536,6 @@ body {
 		flex-direction: column;
 		gap: 1em;
 		align-items: stretch;
-	}
-	.overview-title {
-		text-align: center;
-	}
-	.overview-image {
-		max-width: 100%;
-		margin: 0 auto;
-		width: 70vw;
-		min-width: 120px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-	.overview-image img {
-		width: 100%;
-		max-width: 200px;
-		margin: 0 auto;
 	}
 }
 
@@ -610,21 +574,6 @@ body {
 		margin-left: auto;
 		margin-right: auto;
 	}
-}
-
-/*
-.footer {
-	padding: 5px 20px;
-	background-color: black;
-	border: 1px solid #fff;
-	margin: -10px 0 0 0;
-	border-radius: 6px;
-}
-*/
-.innersection h5 a {
-	color: #708cdb;
-}
-@media (max-width: 520px) {
 	.outerheader,
 	.headerbox,
 	.headerboxcolor,
