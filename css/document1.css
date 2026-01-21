@@ -69,7 +69,7 @@ body {
     font-family: courier;
 }
 
-.button1 {
+.button--primary {
     background-color: #0b4467;
     color: black;
     padding: 16px 32px;
@@ -79,12 +79,12 @@ body {
     border: 2px solid #1ea2ad;
 }
 
-.button1:hover {
+.button--primary:hover {
     background-color: #1ea2ad;
     color: white;
 }
 
-.button2 {
+.button--secondary {
     background-color: #1c5364;
     font-size: 3vw;
     color: black;
@@ -94,12 +94,12 @@ body {
     border: 2px solid #008cba;
 }
 
-.button2:hover {
+.button--secondary:hover {
     background-color: #096d8e;
     color: white;
 }
 
-.button3 {
+.button--block {
     background-color: #291c64;
     font-size: 4vw;
     color: black;
@@ -109,7 +109,7 @@ body {
     border: 2px solid #af5bf0;
 }
 
-.button3:hover {
+.button--block:hover {
     background-color: #6136de;
     color: white;
 }
@@ -129,7 +129,7 @@ body {
 }
 
 /* --- Section Containers --- */
-.innersection {
+.innersection panel stack {
     background-color: rgba(0, 0, 0, 0.85);
     margin: 2.2rem 0 2.4rem 0;
     padding: 1.2rem 1.5rem;
@@ -520,7 +520,7 @@ body {
 	border-radius: 6px;
 }
 */
-.innersection h5 a {
+.innersection panel stack h5 a {
     color: #708cdb;
 }
 @media (max-width: 520px) {
@@ -531,7 +531,7 @@ body {
         padding-left: 4vw;
         padding-right: 4vw;
     }
-    .innersection,
+    .innersection panel stack,
     .book,
     .bookheader {
         padding-left: 2vw;

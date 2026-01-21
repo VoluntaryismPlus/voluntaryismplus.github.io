@@ -1,15 +1,25 @@
+:root {
+	--callout-bg: rgba(43, 42, 46, 0.92);
+	--callout-border: #87cefa;
+	--callout-text: #cccccc;
+	--callout-heading: #e4eaff;
+}
 /* --- Simplified and Modernized Callout Styles --- */
 
 .callout {
-	background: rgba(43, 42, 46, 0.92);
-	border-left: 4px solid #87cefa; /* Light blue accent, can be changed */
-	color: #cccccc;
-	margin: 1.5em 0;
-	padding: 1em 1.5em;
+	background: var(--callout-bg);
+	border-left: 4px solid var(--callout-border);
+	color: var(--callout-text);
 	border-radius: 6px;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 	width: 100%;
 	box-sizing: border-box;
+	margin: var(--space-md) 0;
+	padding: var(--space-md);
+}
+
+.callout > p {
+	max-width: 60ch;
 }
 
 /* Optional: If you want a different accent for ordered lists */
@@ -31,7 +41,7 @@
 .callout h5 {
 	margin-top: 0.3em;
 	margin-bottom: 0.7em;
-	color: #e4eaff;
+	color: var(--callout-heading);
 }
 
 /* Title for special callouts */
@@ -51,30 +61,6 @@
 		padding: 1em 0.5em;
 		font-size: 1em;
 	}
-}
-
-/* Optional: Center content modifier */
-.callout.center {
-	text-align: center;
-}
-
-/* Remove legacy widths & floats */
-.index,
-.indexcallout,
-.indexcallout2,
-.outercallout,
-.callouttext,
-.callouttext1,
-.callouttextsmall,
-.callouttextlist,
-.callout1,
-.callout2,
-.callout3,
-.callout4,
-.callout4title,
-.callouttext4 {
-	/* Deprecated: No longer needed */
-	all: unset;
 }
 
 /* Utility for images inside callouts */
@@ -98,3 +84,20 @@
 	border-left-color: #42a5f5;
 	background: #232b36;
 }
+
+.callout .button {
+	display: block;
+	margin-inline: auto;
+	max-width: clamp(240px, 60%, 420px);
+	margin-top: 1.2em;
+}
+
+.callout .button--primary {
+	box-shadow: 0 6px 20px -10px rgba(30, 162, 173, 0.8);
+}
+
+/*
+.callout > *:last-child {
+	margin-bottom: 0;
+}
+*/

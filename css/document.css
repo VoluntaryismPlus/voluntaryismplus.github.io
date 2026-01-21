@@ -7,6 +7,28 @@
 	); /* Tablet default */
 	--sidebar-width-desktop: 187px; /* Desktop override */
 	--sidebar-gap: 5px; /* Set to 20px for extra space between sidebar and main content */
+
+	/* Layout rhythm */
+	--space-xs: 0.6rem;
+	--space-sm: 1rem;
+	--space-md: 1.5rem;
+	--space-lg: 2.2rem;
+	--space-xl: 3rem;
+
+	--radius-panel: 10px;
+
+	/* Content width control */
+	--content-max: 68ch;
+
+	--bg-main: rgba(0, 0, 0, 0.9);
+	--bg-panel: rgba(0, 0, 0, 0.85);
+	--text-main: #7f8c8d;
+}
+
+[data-theme="light"] {
+	--bg-main: #f6f7fb;
+	--bg-panel: #ffffff;
+	--text-main: #222;
 }
 
 html {
@@ -20,12 +42,12 @@ html {
 	box-sizing: inherit;
 }
 body {
-	background-color: rgba(0, 0, 0, 0.9);
+	background-color: var(--bg-main);
+	color: var(--text-main);
 	background-image: url("../img/compass.jpeg");
 	background-attachment: fixed;
 	background-size: cover;
 	min-height: 100vh;
-	color: #7f8c8d;
 	font-size: 13px;
 	overflow-y: scroll;
 	overflow-x: hidden;
@@ -41,8 +63,7 @@ body {
 	margin-top: 33px;
 	margin-left: auto;
 	margin-right: auto;
-	width: 96vw;
-	max-width: var(--body-max-width);
+	width: 99vw;
 	padding-left: 0;
 	padding-right: 0;
 	transition:
@@ -57,61 +78,90 @@ body {
 	/* Optional: Add spacing between lines */
 	gap: 8px;
 }
+
+.stack {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-md);
+}
+
+.stack--sm {
+	gap: var(--space-sm);
+}
+.stack--lg {
+	gap: var(--space-lg);
+}
+
+.cluster {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--space-sm);
+	align-items: center;
+}
+
+.cluster--center {
+	justify-content: center;
+}
+
+.cluster--spread {
+	justify-content: space-between;
+}
+
 .button {
-	border: none;
-	color: #0b6d98;
-	text-align: center;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.4em;
+	min-height: 44px;
+	font-family: "Kode Mono", monospace;
+	font-weight: 600;
 	text-decoration: none;
-	display: inline-block;
-	margin: 4px 2px;
-	transition-duration: 0.4s;
 	cursor: pointer;
-	font-family: courier;
-}
 
-.button1 {
-	background-color: #0b4467;
-	color: black;
-	padding: 16px 32px;
-	margin: 10px;
 	border-radius: 10px;
-	font-size: 5vw;
-	border: 2px solid #1ea2ad;
+	border: 2px solid transparent;
+
+	transition:
+		background 0.2s,
+		color 0.2s,
+		box-shadow 0.2s,
+		transform 0.12s;
 }
 
-.button1:hover {
-	background-color: #1ea2ad;
-	color: white;
+.button--primary {
+	background: #0b4467;
+	color: #000;
+	border-color: #1ea2ad;
+	font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+	padding: 0.8em 1.6em;
 }
 
-.button2 {
-	background-color: #1c5364;
-	font-size: 3vw;
-	color: black;
-	padding: 7px 9px;
-	border-radius: 6px;
-
-	border: 2px solid #008cba;
+.button--primary:hover {
+	background: #1ea2ad;
+	color: #fff;
+	transform: translateY(-1px);
 }
 
-.button2:hover {
-	background-color: #096d8e;
-	color: white;
+.button--secondary {
+	background: #1c5364;
+	color: #000;
+	border-color: #008cba;
+	font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+	padding: 0.55em 1em;
 }
 
-.button3 {
-	background-color: #291c64;
-	font-size: 4vw;
-	color: black;
-	padding: 7px 9px;
-	border-radius: 6px;
+.button--secondary:hover {
+	background: #096d8e;
+	color: #fff;
+}
+
+.button--block {
 	width: 100%;
-	border: 2px solid #af5bf0;
-}
-
-.button3:hover {
-	background-color: #6136de;
-	color: white;
+	background: #291c64;
+	color: #000;
+	border-color: #af5bf0;
+	font-size: clamp(1.4rem, 2.5vw, 2.1rem);
+	padding: 0.6em 1em;
 }
 
 .listsection {
@@ -129,15 +179,72 @@ body {
 }
 
 /* --- Section Containers --- */
-.innersection {
-	background-color: rgba(0, 0, 0, 0.85);
-	margin: 2.2rem 0 2.4rem 0;
-	padding: 1.2rem 1.5rem;
-	border-radius: 10px;
+
+.panel {
+	background-color: var(--bg-panel);
+	border-radius: var(--radius-panel);
 	box-shadow: 0 2px 8px #0002;
+	padding: var(--space-md);
+}
+
+.panel--tight {
+	padding: var(--space-sm);
+}
+
+/*
+.innersection {
 	width: 99%;
-	max-width: 100%;
 	overflow-x: auto;
+	margin: var(--space-lg) 0;
+	max-width: var(--content-max);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.innersection > p,
+.panel > p {
+	max-width: 60ch;
+}
+*/
+
+.innersection {
+	width: 100%; /* allow the block to fill the screen */
+	max-width: none; /* override previous max-width */
+	margin: var(--space-lg) 0;
+	padding: var(
+		--space-md
+	); /* optional padding for breathing room */
+	background-color: rgba(
+		0,
+		0,
+		0,
+		0.85
+	); /* match panel look or adjust */
+	border-radius: var(--radius-panel);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.innersection > p,
+.innersection > h3,
+.innersection > h4,
+.innersection > h5 {
+	max-width: 60ch; /* keep text lines readable */
+	margin-left: auto;
+	margin-right: auto; /* center the text inside the block */
+}
+
+/* Optional: callouts inside innersections */
+.innersection .callout {
+	width: 100%; /* stretch the callout full width */
+	max-width: none; /* remove text box restriction */
+	padding: var(--space-md);
+	margin: var(--space-md) 0;
+}
+
+.innersection .callout > p {
+	max-width: 60ch; /* keep paragraph text readable */
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .outerheader {
@@ -158,7 +265,7 @@ body {
 	margin: 0 0 1rem 0;
 	padding: 0.6rem 0.7rem;
 	width: 100%;
-	max-width: var(--body-max-width);
+	max-width: var(--content-max);
 }
 .headerboxcolor {
 	background-color: rgba(0, 0, 0, 0.76);
@@ -478,7 +585,6 @@ body {
 			100vw - var(--sidebar-width) - var(--sidebar-gap) -
 				2vw
 		);
-		max-width: var(--body-max-width);
 	}
 	.outerheader {
 		max-width: calc(100vw - 215px);
@@ -495,7 +601,6 @@ body {
 			100vw - var(--sidebar-width-desktop) -
 				var(--sidebar-gap) - 2vw
 		);
-		max-width: var(--body-max-width);
 	}
 }
 
@@ -504,8 +609,6 @@ body {
 	.bodytext {
 		margin-left: auto;
 		margin-right: auto;
-		width: 96vw;
-		max-width: 99vw;
 	}
 }
 
@@ -555,8 +658,15 @@ body {
 		background-attachment: scroll;
 	}
 }
-@media (min-width: 950px) {
-	.button {
-		font-size: 2vw;
+
+@media (prefers-reduced-motion: reduce) {
+	* {
+		transition: none !important;
+		transform: none !important;
 	}
+}
+
+.button:focus-visible {
+	outline: 3px solid #8cc9b6;
+	outline-offset: 3px;
 }

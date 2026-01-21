@@ -32,25 +32,25 @@
     height: calc(100vh - 272px);
 }
 
-.button1 {
+.button--primary {
     grid-column: 1;
     background-color: rgba(99,159,171,0.7);
     border: 10px solid;
     border-color: #639FAB;
 }
 
-button1 a:hover {
+button--primary a:hover {
   background-color: rgba(99,159,171,0.9);
 }
 
-.button2 {
+.button--secondary {
     grid-column: 2;
     background-color: rgba(184,211,218,0.7);
     border: 10px solid;
     border-color: #B8D3DA;
 }
 
-.aboutbutton1 {
+.aboutbutton--primary {
     grid-column: 1;
     background-color: rgba(99,159,171,0.7);
     border: 10px solid;
@@ -58,11 +58,11 @@ button1 a:hover {
 	width: calc(100vw - 70px);
 }
 
-aboutbutton1 a:hover {
+aboutbutton--primary a:hover {
   background-color: rgba(99,159,171,0.9);
 }
 
-.aboutbutton2 {
+.aboutbutton--secondary {
     background-color: rgba(184,211,218,0.7);
     border: 10px solid;
     border-color: #B8D3DA;
@@ -135,7 +135,7 @@ aboutbutton1 a:hover {
 	.inneringredients {
 		display: none;
 	}
-	.aboutbutton1 {
+	.aboutbutton--primary {
 		width: 60vw;	
     }  
     .about {

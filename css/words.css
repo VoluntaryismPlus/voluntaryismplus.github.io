@@ -93,21 +93,6 @@ h6 {
 	*/
 }
 
-.index p {
-	font-size: 2.7vw;
-	padding: 0;
-	margin: 0;
-}
-.index h3 {
-	width: 230px;
-	margin-left: 5px;
-}
-
-.index h6 {
-	margin-left: 3px;
-	font-size: 18px;
-}
-
 @media (min-width: 423px) {
 	p {
 		font-size: 3.5vw;
@@ -140,19 +125,8 @@ h6 {
 	h6 {
 		font-size: 1vw;
 	}
-
-	.indextitle h3 {
-		margin-left: 0;
-		width: auto;
-		font-size: 2.5vw;
-	}
 }
 
-@media (min-width: 650px) {
-	.index p {
-		font-size: 1.7vw;
-	}
-}
 
 @media (min-width: 900px) {
 	p {
