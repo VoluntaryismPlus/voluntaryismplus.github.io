@@ -1,8 +1,511 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Title</title>
-    </head>
-    <body></body>
+	<head>
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="img/vroad64.ico" />
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Collaborations - Bounty Board</title>
+		<script src="js/document.js"></script>
+		<link
+			href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+			rel="stylesheet"
+			type="text/css" />
+		<link
+			href="css/document.css"
+			rel="stylesheet"
+			type="text/css" />
+		<link
+			href="css/image.css"
+			rel="stylesheet"
+			type="text/css" />
+		<link
+			href="css/words.css"
+			rel="stylesheet"
+			type="text/css" />
+		<link
+			href="css/sidebar.css"
+			rel="stylesheet"
+			type="text/css" />
+		<link
+			href="css/overlay.css"
+			rel="stylesheet"
+			type="text/css" />
+		<link
+			href="css/bounty.css"
+			rel="stylesheet"
+			type="text/css" />
+		<link
+			href="css/accordion.css"
+			rel="stylesheet"
+			type="text/css" />
+		<link
+			href="css/scrollbar.css"
+			rel="stylesheet"
+			type="text/css" />
+		<link
+			href="css/callouts.css"
+			rel="stylesheet"
+			type="text/css" />
+		<link
+			href="css/select.css"
+			rel="stylesheet"
+			type="text/css" />
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com" />
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+			rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Caudex"
+			rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Spectral"
+			rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap"
+			rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
+			rel="stylesheet" />
+		<script src="js/sidebar.js" defer></script>
+	</head>
+
+	<body>
+		<div id="sidebar-include"></div>
+		<script src="sidebar.js"></script>
+
+		<div class="bodytext">
+			<div class="breadcrumb">
+				<a href="6_bountyboard.html">← Back to Bounty Board</a> / Collaborations
+			</div>
+<h1>Collaborations</h1>
+			<div class="innersection">
+				
+				<p style="margin: 0.5rem 0 0 0;">
+					Project partnerships, co-founders, learning exchanges, and community building opportunities
+				</p>
+			</div>
+
+			<div class="innersection">
+				<div class="headerbox">
+					<h3><em>Browse by Collaboration Type</em></h3>
+				</div>
+				<p>
+					Find partners, collaborators, mentors, and opportunities to build something together within the network.
+				</p>
+
+				<div class="subcategory-grid">
+					<button class="subcategory-btn" onclick="filterCategory('cofounders')">🤝 Co-Founders & Partners</button>
+					<button class="subcategory-btn" onclick="filterCategory('projects')">🚀 Project Collaborators</button>
+					<button class="subcategory-btn" onclick="filterCategory('learning')">📚 Learning Exchanges</button>
+					<button class="subcategory-btn" onclick="filterCategory('housing')">🏡 Housing & Land Sharing</button>
+					<button class="subcategory-btn" onclick="filterCategory('travel')">🚐 Travel Companions</button>
+					<button class="subcategory-btn" onclick="filterCategory('organizers')">📍 Local Organizers</button>
+					<button class="subcategory-btn" onclick="filterCategory('mentorship')">👥 Mentors & Apprentices</button>
+					<button class="subcategory-btn" onclick="filterCategory('community')">🌱 Community Building</button>
+					<button class="subcategory-btn" onclick="filterCategory('skills')">🔧 Skill Swaps</button>
+					<button class="subcategory-btn" onclick="filterCategory('all')">📋 View All</button>
+				</div>
+			</div>
+
+			<div class="filter-bar">
+				<div class="filter-options">
+					<span class="filter-label">Sort by:</span>
+					<select class="filter-select" id="sortSelect">
+						<option value="date">Most Recent</option>
+						<option value="location">Location</option>
+						<option value="commitment">Time Commitment</option>
+						<option value="type">Collaboration Type</option>
+					</select>
+
+					<span class="filter-label" style="margin-left: 2rem;">Location:</span>
+					<select class="filter-select" id="locationSelect">
+						<option value="all">All Locations</option>
+						<option value="remote">Remote/Online</option>
+						<option value="regional">Regional</option>
+						<option value="inperson">In-Person Only</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="innersection">
+				<div class="headerbox">
+					<h2>Current Collaboration Opportunities</h2>
+				</div>
+				<p style="color: #666; font-style: italic; margin-bottom: 2rem;">
+					Below are example listings. In the live version, you'll see real collaboration opportunities from network members.
+				</p>
+
+				<!-- CO-FOUNDERS & PARTNERS -->
+				<div class="listing-card">
+					<div class="listing-header">
+						<div class="listing-title">Seeking Co-Founder for Agorist Marketplace App</div>
+						<div class="listing-badge">SEEKING PARTNER</div>
+					</div>
+					<div class="listing-meta">
+						🌐 Remote • Posted 2 days ago • Commitment: 10-20 hrs/week
+					</div>
+					<div class="listing-description">
+						Building a decentralized marketplace app for counter-economic trade. MVP complete, need technical co-founder with blockchain/crypto experience to help scale. Vision: Encrypted P2P trading platform that can't be shut down. Equity split negotiable. Looking for someone aligned with agorist principles and committed long-term.
+					</div>
+					<div class="skills-tags">
+						<span class="skill-tag">Blockchain</span>
+						<span class="skill-tag">Full-Stack Dev</span>
+						<span class="skill-tag">Crypto</span>
+						<span class="skill-tag">Long-Term</span>
+					</div>
+					<div class="contact-info">
+						💬 Contact: marketplacefounder@protonmail.com • Network references required
+					</div>
+				</div>
+
+				<div class="listing-card">
+					<div class="listing-header">
+						<div class="listing-title">OFFERING: Business Partner for Mobile Food Vendor</div>
+						<div class="listing-badge">OFFERING PARTNERSHIP</div>
+					</div>
+					<div class="listing-meta">
+						📍 Southwest US • Posted 1 week ago • Commitment: Full-time
+					</div>
+					<div class="listing-description">
+						Established mobile food business (pizza/ice cream) seeking partner to expand operations. I have the equipment, recipes, and festival connections. Need someone with: business acumen, willingness to travel, and commitment to cash/crypto-only operations. Profit-sharing arrangement. Perfect for someone wanting to escape the 9-5 and build something real.
+					</div>
+					<div class="skills-tags">
+						<span class="skill-tag">Food Industry</span>
+						<span class="skill-tag">Business Skills</span>
+						<span class="skill-tag">Nomadic</span>
+						<span class="skill-tag">Profit-Share</span>
+					</div>
+					<div class="contact-info">
+						💬 Contact: chewswisely@protonmail.com
+					</div>
+				</div>
+
+				<!-- PROJECT COLLABORATORS -->
+				<div class="listing-card">
+					<div class="listing-header">
+						<div class="listing-title">Documentary Film Project - Need Camera/Editor</div>
+						<div class="listing-badge">SEEKING COLLABORATOR</div>
+					</div>
+					<div class="listing-meta">
+						📍 West Coast • Posted 3 days ago • Commitment: 6 months project
+					</div>
+					<div class="listing-description">
+						Creating documentary about agorist communities and counter-economic success stories. Have funding, story direction, and access to interview subjects. Need talented camera operator and/or editor who understands and shares our values. This will travel to multiple festivals and communities. Compensation: upfront payment + revenue share when complete.
+					</div>
+					<div class="skills-tags">
+						<span class="skill-tag">Cinematography</span>
+						<span class="skill-tag">Video Editing</span>
+						<span class="skill-tag">Travel Required</span>
+						<span class="skill-tag">Paid Position</span>
+					</div>
+					<div class="contact-info">
+						💬 Contact: freedomfilms@tutanota.com
+					</div>
+				</div>
+
+				<div class="listing-card">
+					<div class="listing-header">
+						<div class="listing-title">Open Source Privacy Tools - Seeking Developers</div>
+						<div class="listing-badge">SEEKING COLLABORATORS</div>
+					</div>
+					<div class="listing-meta">
+						🌐 Remote • Ongoing • Commitment: Flexible, volunteer basis
+					</div>
+					<div class="listing-description">
+						Building suite of open-source privacy tools for activists and counter-economists. Current projects: encrypted messenger, decentralized file sharing, privacy-focused browser extension. Looking for developers (any skill level) who want to contribute. Great for learning and building portfolio. May transition to paid positions as project grows.
+					</div>
+					<div class="skills-tags">
+						<span class="skill-tag">Open Source</span>
+						<span class="skill-tag">Privacy Tech</span>
+						<span class="skill-tag">Remote</span>
+						<span class="skill-tag">Volunteer → Paid</span>
+					</div>
+					<div class="contact-info">
+						💬 Contact: privacytools@protonmail.com • GitHub profile preferred
+					</div>
+				</div>
+
+				<!-- LEARNING EXCHANGES -->
+				<div class="listing-card">
+					<div class="listing-header">
+						<div class="listing-title">Trade: Welding Instruction for Carpentry Skills</div>
+						<div class="listing-badge">SKILL EXCHANGE</div>
+					</div>
+					<div class="listing-meta">
+						📍 Colorado • Posted 4 days ago • Commitment: Weekly sessions
+					</div>
+					<div class="listing-description">
+						Experienced welder (MIG, TIG, stick) willing to teach welding fundamentals in exchange for carpentry/woodworking instruction. I have full shop setup, tools, and materials. Looking for someone patient who can teach joinery, furniture making, and finish work. Ideally local for regular meetups, but could do some remote instruction via video.
+					</div>
+					<div class="skills-tags">
+						<span class="skill-tag">Welding Teacher</span>
+						<span class="skill-tag">Seeking Carpentry</span>
+						<span class="skill-tag">Skill Trade</span>
+						<span class="skill-tag">Local Preferred</span>
+					</div>
+					<div class="contact-info">
+						💬 Contact: welderfreedom@protonmail.com
+					</div>
+				</div>
+
+				<div class="listing-card">
+					<div class="listing-header">
+						<div class="listing-title">Homesteading Mentorship - Seeking Apprentice</div>
+						<div class="listing-badge">OFFERING MENTORSHIP</div>
+					</div>
+					<div class="listing-meta">
+						📍 Tennessee • Posted 1 week ago • Commitment: 3-6 months live-in
+					</div>
+					<div class="listing-description">
+						Established homestead with livestock, gardens, food preservation, and off-grid systems. Seeking motivated individual/couple to live and work here while learning comprehensive homesteading skills. Private cabin provided, meals included. Expect 20-30 hrs/week hands-on work in exchange for intensive education. Perfect for someone transitioning to self-sufficient lifestyle.
+					</div>
+					<div class="skills-tags">
+						<span class="skill-tag">Homesteading</span>
+						<span class="skill-tag">Live-In</span>
+						<span class="skill-tag">Comprehensive Training</span>
+						<span class="skill-tag">Housing Included</span>
+					</div>
+					<div class="contact-info">
+						💬 Contact: homesteadmentor@protonmail.com • Video call interview required
+					</div>
+				</div>
+
+				<!-- HOUSING & LAND SHARING -->
+				<div class="listing-card">
+					<div class="listing-header">
+						<div class="listing-title">Seeking Land-Share Partner for Permaculture Project</div>
+						<div class="listing-badge">SEEKING PARTNER</div>
+					</div>
+					<div class="listing-meta">
+						📍 Pacific Northwest • Posted 5 days ago • Commitment: Long-term
+					</div>
+					<div class="listing-description">
+						Have 20 acres in rural Oregon, seeking 1-2 individuals/families to develop permaculture food forest together. Shared investment in infrastructure (water, power, structures). Each party gets designated area for private dwelling plus collaborative growing spaces. Looking for people with: permaculture knowledge, construction skills, and commitment to building resilient community. 
+					</div>
+					<div class="skills-tags">
+						<span class="skill-tag">Land Share</span>
+						<span class="skill-tag">Permaculture</span>
+						<span class="skill-tag">Long-Term</span>
+						<span class="skill-tag">Equity Model</span>
+					</div>
+					<div class="contact-info">
+						💬 Contact: landshare@tutanota.com • In-person visit required
+					</div>
+				</div>
+
+				<div class="listing-card">
+					<div class="listing-header">
+						<div class="listing-title">OFFERING: RV Parking + Workshop Access</div>
+						<div class="listing-badge">OFFERING ARRANGEMENT</div>
+					</div>
+					<div class="listing-meta">
+						📍 New Mexico • Available now • Commitment: Month-to-month
+					</div>
+					<div class="listing-description">
+						Property with space for 2-3 RVs/vehicles. Includes: electrical hookups, well water, workshop with tools, community garden space. Seeking responsible network members who contribute: either $200/month, labor on property projects, or teaching/sharing skills. Prefer people building businesses or projects who'll add value to emerging local network. Quiet, private location.
+					</div>
+					<div class="skills-tags">
+						<span class="skill-tag">RV Parking</span>
+						<span class="skill-tag">Workshop Access</span>
+						<span class="skill-tag">Flexible Terms</span>
+						<span class="skill-tag">Community Focus</span>
+					</div>
+					<div class="contact-info">
+						💬 Contact: landhost@protonmail.com
+					</div>
+				</div>
+
+				<!-- TRAVEL COMPANIONS -->
+				<div class="listing-card">
+					<div class="listing-header">
+						<div class="listing-title">Seeking Travel Partner for Festival Circuit</div>
+						<div class="listing-badge">SEEKING COMPANION</div>
+					</div>
+					<div class="listing-meta">
+						📍 Nomadic • Posted 2 days ago • Commitment: Summer season (Jun-Sept)
+					</div>
+					<div class="listing-description">
+						Solo van-dweller planning festival circuit (Porcfest, regional gatherings, etc). Seeking travel companion(s) for safety, shared costs, and good company. I have mobile business selling crafts. Looking for someone with their own vehicle/income or willing to help with business in exchange for travel costs. Must be: reliable, easy-going, low-drama, and committed to the journey.
+					</div>
+					<div class="skills-tags">
+						<span class="skill-tag">Van Life</span>
+						<span class="skill-tag">Festival Circuit</span>
+						<span class="skill-tag">Shared Costs</span>
+						<span class="skill-tag">Summer 2025</span>
+					</div>
+					<div class="contact-info">
+						💬 Contact: festivalroads@protonmail.com
+					</div>
+				</div>
+
+				<!-- LOCAL ORGANIZERS -->
+				<div class="listing-card">
+					<div class="listing-header">
+						<div class="listing-title">Building Local Network Hub - Need Organizer</div>
+						<div class="listing-badge">SEEKING ORGANIZER</div>
+					</div>
+					<div class="listing-meta">
+						📍 Austin, TX area • Posted 1 week ago • Commitment: Ongoing, part-time
+					</div>
+					<div class="listing-description">
+						Growing local agorist community needs someone to coordinate: monthly meetups, skill shares, local bounty board, and visiting network members. Not a boss position - just someone organized who'll take initiative. Small stipend available or can be volunteer. Perfect for someone building local reputation and connections. Must be: social, reliable, aligned with network values.
+					</div>
+					<div class="skills-tags">
+						<span class="skill-tag">Community Organizing</span>
+						<span class="skill-tag">Event Planning</span>
+						<span class="skill-tag">Local Focus</span>
+						<span class="skill-tag">Stipend Available</span>
+					</div>
+					<div class="contact-info">
+						💬 Contact: atxfreedom@protonmail.com • Local residents only
+					</div>
+				</div>
+
+				<div class="listing-card">
+					<div class="listing-header">
+						<div class="listing-title">OFFERING: Help Starting Regional Meetups</div>
+						<div class="listing-badge">OFFERING SUPPORT</div>
+					</div>
+					<div class="listing-meta">
+						🌐 Remote/Regional • Ongoing • Commitment: Flexible
+					</div>
+					<div class="listing-description">
+						Experienced organizer who's successfully built local network presence in multiple cities. Offering free mentorship to anyone wanting to start meetups in their area. Can help with: finding venues, structuring events, attracting members, handling conflicts, and building sustainable communities. Available via encrypted calls and email. No cost - just passionate about growing the network.
+					</div>
+					<div class="skills-tags">
+						<span class="skill-tag">Mentorship</span>
+						<span class="skill-tag">Community Building</span>
+						<span class="skill-tag">Free Service</span>
+						<span class="skill-tag">Remote Support</span>
+					</div>
+					<div class="contact-info">
+						💬 Contact: organizermentor@tutanota.com
+					</div>
+				</div>
+
+				<!-- COMMUNITY BUILDING -->
+				<div class="listing-card">
+					<div class="listing-header">
+						<div class="listing-title">Forming Intentional Community - Seeking Families</div>
+						<div class="listing-badge">SEEKING MEMBERS</div>
+					</div>
+					<div class="listing-meta">
+						📍 Missouri • Planning phase • Commitment: Long-term residence
+					</div>
+					<div class="listing-description">
+						Group of 4 families planning intentional community on 80 acres. Seeking 2-3 more families to join before land purchase. Vision: Private family dwellings, shared community spaces, homeschool co-op, food production, workshops. Each family contributes to land purchase proportionally. Looking for: families with kids, practical skills, financial stability, and commitment to voluntary cooperation model.
+					</div>
+					<div class="skills-tags">
+						<span class="skill-tag">Intentional Community</span>
+						<span class="skill-tag">Family-Focused</span>
+						<span class="skill-tag">Land Purchase</span>
+						<span class="skill-tag">Long-Term</span>
+					</div>
+					<div class="contact-info">
+						💬 Contact: familycommunity@protonmail.com • Video interviews required
+					</div>
+				</div>
+
+				<!-- SKILL SWAPS -->
+				<div class="listing-card">
+					<div class="listing-header">
+						<div class="listing-title">Trade: Vehicle Repairs for Web Development</div>
+						<div class="listing-badge">SKILL SWAP</div>
+					</div>
+					<div class="listing-meta">
+						📍 Colorado/Utah area • Posted 3 days ago • Commitment: Project-based
+					</div>
+					<div class="listing-description">
+						ASE certified mechanic willing to do vehicle repairs/maintenance in exchange for website development. I need: business website with booking system, payment integration (crypto), and basic SEO. Can handle most vehicle repairs - diagnostics, brakes, suspension, engines, etc. Fair trade based on hours/complexity. References available.
+					</div>
+					<div class="skills-tags">
+						<span class="skill-tag">Mechanic Services</span>
+						<span class="skill-tag">Seeking Web Dev</span>
+						<span class="skill-tag">Fair Trade</span>
+						<span class="skill-tag">Project-Based</span>
+					</div>
+					<div class="contact-info">
+						💬 Contact: mechanicswap@protonmail.com
+					</div>
+				</div>
+			</div>
+
+			<div class="callout">
+				<div class="callouttext">
+					<h3>Ready to Find Collaborators?</h3>
+					<p>
+						Looking for partners, mentors, or community members? Contact us at <strong>caravanarchy@protonmail.com</strong> with:
+					</p>
+					<ul>
+						<li><strong>Collaboration type:</strong> Partnership, mentorship, skill exchange, etc.</li>
+						<li><strong>What you're offering:</strong> Skills, resources, time, space</li>
+						<li><strong>What you're seeking:</strong> Specific skills, commitment level, location needs</li>
+						<li><strong>Time commitment:</strong> Short-term project, ongoing, live-in, etc.</li>
+						<li><strong>Location requirements:</strong> Remote, specific region, in-person</li>
+					</ul>
+					<p>
+						<em>Successful collaborations are built on clear expectations and shared values. Be specific about what you're looking for!</em>
+					</p>
+				</div>
+			</div>
+
+			<div class="callout" style="background-color: rgba(13, 13, 13, 0.92); border-left: 4px solid #4c7fb8; margin-top: 2rem;">
+				<div class="callouttext">
+					<h3>Tips for Successful Collaborations</h3>
+					<ul>
+						<li><strong>Be specific:</strong> Vague requests get fewer responses. Clearly define what you need and what you offer.</li>
+						<li><strong>Start small:</strong> Test compatibility with a short project before committing long-term.</li>
+						<li><strong>Use network trust:</strong> Ask for references from other members. Build your own reputation.</li>
+						<li><strong>Document agreements:</strong> Even simple written agreements prevent misunderstandings.</li>
+						<li><strong>Communicate often:</strong> Over-communication early prevents problems later.</li>
+						<li><strong>Have exit plans:</strong> Agree upfront how to part ways if it doesn't work out.</li>
+					</ul>
+				</div>
+			</div>
+
+			<a href="6_bountyboard.html">
+				<div class="nextpage">
+					<span class="nextpage-text">Back to Bounty Board Overview</span>
+					<span class="nextpage-arrow">→</span>
+				</div>
+			</a>
+
+			<br /><br />
+			<div class="footer">
+				Contact us:
+				<a href="mailto:caravanarchy@proton.me"
+					>caravanarchy@proton.me</a
+				>
+			</div>
+		</div>
+
+		<script>
+			function filterCategory(category) {
+				if (category === 'all') {
+					alert('Showing all collaboration listings');
+				} else {
+					alert('Filtering to show: ' + category + ' collaborations\n\nThis feature will filter listings in the live version.');
+				}
+			}
+
+			document.getElementById('sortSelect').addEventListener('change', function() {
+				alert('Sorting by: ' + this.options[this.selectedIndex].text + '\n\nThis will reorganize listings in the live version.');
+			});
+
+			document.getElementById('locationSelect').addEventListener('change', function() {
+				alert('Filtering location: ' + this.options[this.selectedIndex].text + '\n\nThis will show only relevant opportunities in the live version.');
+			});
+		</script>
+	</body>
 </html>
