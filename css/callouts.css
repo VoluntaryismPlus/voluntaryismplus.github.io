@@ -1,6 +1,6 @@
 :root {
 	--callout-bg: rgba(43, 42, 46, 0.92);
-	--callout-border: #87cefa;
+	--callout-border: #6ce0e5;
 	--callout-text: #cccccc;
 	--callout-heading: #e4eaff;
 }
@@ -114,3 +114,9 @@
 	margin-bottom: 0;
 }
 */
+
+@media (min-width: 700px) {
+	.callout h3 {
+		margin: 0 -20px 13px -20px;
+	}
+}
