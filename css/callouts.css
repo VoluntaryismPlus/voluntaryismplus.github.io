@@ -12,14 +12,28 @@
 	color: var(--callout-text);
 	border-radius: 6px;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+	overflow: hidden;
 	width: 100%;
-	box-sizing: border-box;
 	margin: var(--space-md) 0;
-	padding: var(--space-md);
+	padding: 0 var(--space-md) var(--space-md);
+}
+
+.callout h3 {
+	margin: -14px -11px;
+	padding: 0.9rem 1rem;
+	max-width: none;
+	background: linear-gradient(90deg, #1ea2ad, #4c7fb8);
+	color: #000;
+
+	border-radius: var(--radius-panel) var(--radius-panel) 0 0;
+	font-family: "Kode Mono", monospace;
+	letter-spacing: 0.03em;
 }
 
 .callout > p {
 	max-width: 60ch;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /* Optional: If you want a different accent for ordered lists */
@@ -39,7 +53,6 @@
 .callout h3,
 .callout h4,
 .callout h5 {
-	margin-top: 0.3em;
 	margin-bottom: 0.7em;
 	color: var(--callout-heading);
 }

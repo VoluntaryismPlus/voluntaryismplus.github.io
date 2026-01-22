@@ -226,24 +226,10 @@ body {
 }
 
 .innersection > p,
-.innersection > h3,
+.innersection > h3:not(.callout h3),
 .innersection > h4,
 .innersection > h5 {
-	max-width: 60ch; /* keep text lines readable */
-	margin-left: auto;
-	margin-right: auto; /* center the text inside the block */
-}
-
-/* Optional: callouts inside innersections */
-.innersection .callout {
-	width: 100%; /* stretch the callout full width */
-	max-width: none; /* remove text box restriction */
-	padding: var(--space-md);
-	margin: var(--space-md) 0;
-}
-
-.innersection .callout > p {
-	max-width: 60ch; /* keep paragraph text readable */
+	max-width: 60ch;
 	margin-left: auto;
 	margin-right: auto;
 }
