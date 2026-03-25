@@ -1,0 +1,840 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<link rel="icon" type="image/x-icon" href="img/vroad64.ico" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Housing Cost Comparison - CaravAnarchy</title>
+		<script src="js/document.js"></script>
+		<link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css" />
+		<link href="css/document.css" rel="stylesheet" type="text/css" />
+		<link href="css/image.css" rel="stylesheet" type="text/css" />
+		<link href="css/words.css" rel="stylesheet" type="text/css" />
+		<link href="css/sidebar.css" rel="stylesheet" type="text/css" />
+		<link href="css/overlay.css" rel="stylesheet" type="text/css" />
+		<link href="css/accordion.css" rel="stylesheet" type="text/css" />
+		<link href="css/scrollbar.css" rel="stylesheet" type="text/css" />
+		<link href="css/callouts.css" rel="stylesheet" type="text/css" />
+		<link href="css/footer.css" rel="stylesheet" type="text/css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Caudex" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Spectral" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+		<script src="js/sidebar.js" defer></script>
+		
+		<style>
+			/* Housing Comparison Specific Styles */
+			.comparison-container {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+				gap: 1.5rem;
+				margin: 2rem 0;
+			}
+			
+			.housing-card {
+				background: rgba(13, 13, 13, 0.92);
+				border-radius: 10px;
+				padding: 1.5rem;
+				border: 2px solid #333;
+				transition: transform 0.2s, border-color 0.2s;
+			}
+			
+			.housing-card:hover {
+				transform: translateY(-4px);
+				border-color: #4c7fb8;
+			}
+			
+			.housing-card.recommended {
+				border-color: #51cf66;
+				box-shadow: 0 0 20px rgba(81, 207, 102, 0.2);
+			}
+			
+			.housing-card.expensive {
+				border-color: #ff6b6b;
+			}
+			
+			.housing-header {
+				text-align: center;
+				margin-bottom: 1.5rem;
+			}
+			
+			.housing-title {
+				font-size: 1.8rem;
+				font-weight: bold;
+				margin-bottom: 0.5rem;
+			}
+			
+			.housing-subtitle {
+				color: #888;
+				font-size: 0.95rem;
+			}
+			
+			.cost-highlight {
+				background: rgba(76, 127, 184, 0.2);
+				border-left: 4px solid #4c7fb8;
+				padding: 1rem;
+				margin: 1rem 0;
+				border-radius: 6px;
+			}
+			
+			.cost-highlight.low {
+				background: rgba(81, 207, 102, 0.2);
+				border-left-color: #51cf66;
+			}
+			
+			.cost-highlight.high {
+				background: rgba(255, 107, 107, 0.2);
+				border-left-color: #ff6b6b;
+			}
+			
+			.monthly-cost {
+				font-size: 2.2rem;
+				font-weight: bold;
+				text-align: center;
+				margin: 0.5rem 0;
+			}
+			
+			.cost-range {
+				text-align: center;
+				color: #aaa;
+				font-size: 0.95rem;
+				margin-bottom: 1rem;
+			}
+			
+			.breakdown-list {
+				list-style: none;
+				padding: 0;
+				margin: 1rem 0;
+			}
+			
+			.breakdown-list li {
+				padding: 0.5rem 0;
+				border-bottom: 1px solid #333;
+				display: flex;
+				justify-content: space-between;
+			}
+			
+			.breakdown-list li:last-child {
+				border-bottom: none;
+			}
+			
+			.breakdown-item {
+				color: #bbb;
+			}
+			
+			.breakdown-cost {
+				color: #fff;
+				font-weight: bold;
+			}
+			
+			.badge {
+				display: inline-block;
+				padding: 0.3rem 0.8rem;
+				border-radius: 20px;
+				font-size: 0.85rem;
+				font-weight: bold;
+				margin-top: 0.5rem;
+			}
+			
+			.badge.recommended {
+				background: #51cf66;
+				color: #000;
+			}
+			
+			.badge.traditional {
+				background: #ff6b6b;
+				color: #fff;
+			}
+			
+			.badge.intermediate {
+				background: #ffa726;
+				color: #000;
+			}
+			
+			.yearly-total {
+				background: rgba(0, 0, 0, 0.5);
+				padding: 1rem;
+				border-radius: 8px;
+				margin-top: 1.5rem;
+				text-align: center;
+			}
+			
+			.yearly-amount {
+				font-size: 1.8rem;
+				color: #4c7fb8;
+				font-weight: bold;
+			}
+			
+			.comparison-table {
+				width: 100%;
+				border-collapse: collapse;
+				margin: 2rem 0;
+				background: rgba(13, 13, 13, 0.92);
+				border-radius: 10px;
+				overflow: hidden;
+			}
+			
+			.comparison-table th {
+				background: #1a1a1a;
+				padding: 1rem;
+				text-align: left;
+				color: #51cf66;
+				font-weight: bold;
+			}
+			
+			.comparison-table td {
+				padding: 1rem;
+				border-bottom: 1px solid #333;
+			}
+			
+			.comparison-table tr:last-child td {
+				border-bottom: none;
+			}
+			
+			.comparison-table tr:hover {
+				background: rgba(76, 127, 184, 0.1);
+			}
+			
+			.pro-icon {
+				color: #51cf66;
+			}
+			
+			.con-icon {
+				color: #ff6b6b;
+			}
+			
+			@media (max-width: 768px) {
+				.comparison-container {
+					grid-template-columns: 1fr;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="sidebar-include"></div>
+		<script src="sidebar.js"></script>
+		<div class="bodytext">
+			<div class="outerimage">
+				<img src="img/compass3.jpeg" alt="Housing Cost Comparison" />
+			</div>
+
+			<div class="outerheader">
+				<h1>Housing Cost Comparison</h1>
+				<p>The Real Numbers: Traditional vs. Alternative Housing</p>
+			</div>
+
+			<!-- INTRO -->
+			<div class="innersection">
+				<div class="headerbox">
+					<h2>Stop Bleeding Money on Housing</h2>
+				</div>
+				<p>
+					Housing is the single biggest expense for most people—and the biggest trap keeping you dependent 
+					on the system. The average American spends 30-50% of their income on housing. That's money that 
+					could be building freedom instead.
+				</p>
+				<p>
+					Below are real numbers comparing traditional housing costs to network alternatives. These aren't 
+					theoretical—they're based on actual member experiences and current market rates.
+				</p>
+			</div>
+
+			<!-- MONTHLY COST COMPARISON CARDS -->
+			<div class="innersection">
+				<div class="headerbox">
+					<h2>Monthly Cost Comparison</h2>
+				</div>
+
+				<div class="comparison-container">
+					<!-- TRADITIONAL APARTMENT/HOUSE -->
+					<div class="housing-card expensive">
+						<div class="housing-header">
+							<div class="housing-title" style="color: #ff6b6b;">Traditional Housing</div>
+							<div class="housing-subtitle">Rent or Mortgage</div>
+							<span class="badge traditional">MOST EXPENSIVE</span>
+						</div>
+						
+						<div class="cost-highlight high">
+							<div class="monthly-cost" style="color: #ff6b6b;">$1,800</div>
+							<div class="cost-range">Typical Range: $1,200 - $2,800/month</div>
+						</div>
+
+						<ul class="breakdown-list">
+							<li>
+								<span class="breakdown-item">Rent/Mortgage</span>
+								<span class="breakdown-cost">$1,200 - 2,200</span>
+							</li>
+							<li>
+								<span class="breakdown-item">Utilities</span>
+								<span class="breakdown-cost">$150 - 300</span>
+							</li>
+							<li>
+								<span class="breakdown-item">Internet/Cable</span>
+								<span class="breakdown-cost">$80 - 150</span>
+							</li>
+							<li>
+								<span class="breakdown-item">Renter's/Home Insurance</span>
+								<span class="breakdown-cost">$50 - 200</span>
+							</li>
+							<li>
+								<span class="breakdown-item">Parking (urban)</span>
+								<span class="breakdown-cost">$0 - 300</span>
+							</li>
+						</ul>
+
+						<div class="yearly-total">
+							<div style="color: #aaa; margin-bottom: 0.5rem;">Annual Cost</div>
+							<div class="yearly-amount" style="color: #ff6b6b;">$14,400 - 33,600</div>
+						</div>
+					</div>
+
+					<!-- VAN/RV LIVING -->
+					<div class="housing-card recommended">
+						<div class="housing-header">
+							<div class="housing-title" style="color: #51cf66;">Van/RV Living</div>
+							<div class="housing-subtitle">Full Nomad Life</div>
+							<span class="badge recommended">BEST VALUE</span>
+						</div>
+						
+						<div class="cost-highlight low">
+							<div class="monthly-cost" style="color: #51cf66;">$900</div>
+							<div class="cost-range">Typical Range: $600 - 1,400/month</div>
+						</div>
+
+						<ul class="breakdown-list">
+							<li>
+								<span class="breakdown-item">Vehicle Payment (if any)</span>
+								<span class="breakdown-cost">$0 - 400</span>
+							</li>
+							<li>
+								<span class="breakdown-item">Gas/Fuel</span>
+								<span class="breakdown-cost">$200 - 400</span>
+							</li>
+							<li>
+								<span class="breakdown-item">Insurance</span>
+								<span class="breakdown-cost">$100 - 200</span>
+							</li>
+							<li>
+								<span class="breakdown-item">Maintenance Fund</span>
+								<span class="breakdown-cost">$200 - 300</span>
+							</li>
+							<li>
+								<span class="breakdown-item">Campground Fees (occasional)</span>
+								<span class="breakdown-cost">$100 - 200</span>
+							</li>
+						</ul>
+
+						<div class="yearly-total">
+							<div style="color: #aaa; margin-bottom: 0.5rem;">Annual Cost</div>
+							<div class="yearly-amount" style="color: #51cf66;">$7,200 - 16,800</div>
+							<div style="color: #51cf66; margin-top: 0.5rem; font-weight: bold;">
+								SAVE $7,200 - 16,800/year
+							</div>
+						</div>
+					</div>
+
+					<!-- HOMESTEAD -->
+					<div class="housing-card">
+						<div class="housing-header">
+							<div class="housing-title" style="color: #6db89b;">Homestead Living</div>
+							<div class="housing-subtitle">Own Land or Long-term Lease</div>
+							<span class="badge intermediate">LOW COST</span>
+						</div>
+						
+						<div class="cost-highlight">
+							<div class="monthly-cost" style="color: #6db89b;">$800</div>
+							<div class="cost-range">Typical Range: $400 - 1,200/month</div>
+						</div>
+
+						<ul class="breakdown-list">
+							<li>
+								<span class="breakdown-item">Land Payment/Lease</span>
+								<span class="breakdown-cost">$200 - 600</span>
+							</li>
+							<li>
+								<span class="breakdown-item">Property Tax</span>
+								<span class="breakdown-cost">$50 - 300</span>
+							</li>
+							<li>
+								<span class="breakdown-item">Building Materials (DIY)</span>
+								<span class="breakdown-cost">$100 - 300</span>
+							</li>
+							<li>
+								<span class="breakdown-item">Well/Septic Maintenance</span>
+								<span class="breakdown-cost">$50 - 100</span>
+							</li>
+							<li>
+								<span class="breakdown-item">Solar/Generator Fuel</span>
+								<span class="breakdown-cost">$50 - 150</span>
+							</li>
+						</ul>
+
+						<div class="yearly-total">
+							<div style="color: #aaa; margin-bottom: 0.5rem;">Annual Cost</div>
+							<div class="yearly-amount" style="color: #6db89b;">$4,800 - 14,400</div>
+							<div style="color: #51cf66; margin-top: 0.5rem; font-weight: bold;">
+								SAVE $9,600 - 19,200/year
+							</div>
+						</div>
+					</div>
+
+					<!-- NETWORK HOSTS -->
+					<div class="housing-card recommended">
+						<div class="housing-header">
+							<div class="housing-title" style="color: #51cf66;">Network Hosts</div>
+							<div class="housing-subtitle">Free to Low-Cost Stays</div>
+							<span class="badge recommended">CHEAPEST</span>
+						</div>
+						
+						<div class="cost-highlight low">
+							<div class="monthly-cost" style="color: #51cf66;">$200</div>
+							<div class="cost-range">Typical Range: $0 - 400/month</div>
+						</div>
+
+						<ul class="breakdown-list">
+							<li>
+								<span class="breakdown-item">Hosting Fee (optional)</span>
+								<span class="breakdown-cost">$0 - 200</span>
+							</li>
+							<li>
+								<span class="breakdown-item">Food Contribution</span>
+								<span class="breakdown-cost">$0 - 100</span>
+							</li>
+							<li>
+								<span class="breakdown-item">Work Trade (labor value)</span>
+								<span class="breakdown-cost">$0 - 150</span>
+							</li>
+							<li>
+								<span class="breakdown-item">Utilities Share</span>
+								<span class="breakdown-cost">$50 - 100</span>
+							</li>
+							<li>
+								<span class="breakdown-item">Transportation Between Hosts</span>
+								<span class="breakdown-cost">$100 - 200</span>
+							</li>
+						</ul>
+
+						<div class="yearly-total">
+							<div style="color: #aaa; margin-bottom: 0.5rem;">Annual Cost</div>
+							<div class="yearly-amount" style="color: #51cf66;">$0 - 4,800</div>
+							<div style="color: #51cf66; margin-top: 0.5rem; font-weight: bold;">
+								SAVE $14,400 - 33,600/year
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- DETAILED COMPARISON TABLE -->
+			<div class="innersection">
+				<div class="headerbox">
+					<h2>Side-by-Side Feature Comparison</h2>
+				</div>
+
+				<table class="comparison-table">
+					<thead>
+						<tr>
+							<th>Feature</th>
+							<th>Traditional</th>
+							<th>Van/RV</th>
+							<th>Homestead</th>
+							<th>Network Hosts</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><strong>Monthly Cost</strong></td>
+							<td>$1,200 - 2,800</td>
+							<td>$600 - 1,400</td>
+							<td>$400 - 1,200</td>
+							<td>$0 - 400</td>
+						</tr>
+						<tr>
+							<td><strong>Upfront Cost</strong></td>
+							<td>$2,000 - 5,000<br><span style="font-size: 0.85rem; color: #888;">(deposit + first/last)</span></td>
+							<td>$5,000 - 40,000<br><span style="font-size: 0.85rem; color: #888;">(vehicle purchase)</span></td>
+							<td>$3,000 - 50,000<br><span style="font-size: 0.85rem; color: #888;">(land down payment)</span></td>
+							<td>$0 - 500<br><span style="font-size: 0.85rem; color: #888;">(initial travel)</span></td>
+						</tr>
+						<tr>
+							<td><strong>Location Freedom</strong></td>
+							<td><span class="con-icon">✗</span> Fixed location</td>
+							<td><span class="pro-icon">✓</span> Total mobility</td>
+							<td><span class="con-icon">✗</span> Fixed location</td>
+							<td><span class="pro-icon">✓</span> High mobility</td>
+						</tr>
+						<tr>
+							<td><strong>Privacy</strong></td>
+							<td><span class="pro-icon">✓</span> High</td>
+							<td><span class="pro-icon">✓</span> High</td>
+							<td><span class="pro-icon">✓</span> Very high</td>
+							<td><span class="con-icon">~</span> Shared space</td>
+						</tr>
+						<tr>
+							<td><strong>Building Equity</strong></td>
+							<td><span class="con-icon">✗</span> Rent = nothing<br><span class="pro-icon">~</span> Mortgage = slow equity</td>
+							<td><span class="pro-icon">✓</span> Own vehicle</td>
+							<td><span class="pro-icon">✓</span> Own land/structure</td>
+							<td><span class="con-icon">✗</span> No equity</td>
+						</tr>
+						<tr>
+							<td><strong>Space</strong></td>
+							<td><span class="pro-icon">✓</span> 500-1,500 sq ft</td>
+							<td><span class="con-icon">~</span> 60-200 sq ft</td>
+							<td><span class="pro-icon">✓</span> Unlimited</td>
+							<td><span class="con-icon">~</span> Varies</td>
+						</tr>
+						<tr>
+							<td><strong>Utilities</strong></td>
+							<td><span class="pro-icon">✓</span> Grid connected</td>
+							<td><span class="con-icon">~</span> Limited/mobile</td>
+							<td><span class="pro-icon">~</span> Solar/well possible</td>
+							<td><span class="pro-icon">✓</span> Usually included</td>
+						</tr>
+						<tr>
+							<td><strong>Landlord/HOA</strong></td>
+							<td><span class="con-icon">✗</span> Yes, constant control</td>
+							<td><span class="pro-icon">✓</span> No landlord</td>
+							<td><span class="pro-icon">✓</span> You're the owner</td>
+							<td><span class="pro-icon">~</span> Voluntary agreements</td>
+						</tr>
+						<tr>
+							<td><strong>Maintenance</strong></td>
+							<td><span class="pro-icon">✓</span> Landlord's problem<br><span class="con-icon">✗</span> Your problem (if own)</td>
+							<td><span class="con-icon">✗</span> All on you</td>
+							<td><span class="con-icon">✗</span> All on you</td>
+							<td><span class="pro-icon">✓</span> Host's responsibility</td>
+						</tr>
+						<tr>
+							<td><strong>Community</strong></td>
+							<td><span class="con-icon">~</span> Isolated/unknown neighbors</td>
+							<td><span class="pro-icon">~</span> Festival circuit community</td>
+							<td><span class="pro-icon">✓</span> Build your own</td>
+							<td><span class="pro-icon">✓</span> Built-in network</td>
+						</tr>
+						<tr>
+							<td><strong>State Dependence</strong></td>
+							<td><span class="con-icon">✗</span> High (permits, zoning, taxes)</td>
+							<td><span class="pro-icon">✓</span> Low (just vehicle registration)</td>
+							<td><span class="con-icon">~</span> Medium (property tax)</td>
+							<td><span class="pro-icon">✓</span> Minimal</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<!-- 5-YEAR COST PROJECTION -->
+			<div class="innersection">
+				<div class="headerbox">
+					<h2>5-Year Cost Projection</h2>
+				</div>
+				<p>
+					Here's what these monthly costs add up to over 5 years—the difference is staggering:
+				</p>
+
+				<div class="callout">
+					<h3>Total 5-Year Housing Costs</h3>
+					<ul>
+						<li><strong>Traditional Housing:</strong> $72,000 - 168,000</li>
+						<li><strong>Van/RV Living:</strong> $36,000 - 84,000 <span style="color: #51cf66;">(Save $36,000 - 84,000)</span></li>
+						<li><strong>Homestead:</strong> $24,000 - 72,000 <span style="color: #51cf66;">(Save $48,000 - 96,000)</span></li>
+						<li><strong>Network Hosts:</strong> $0 - 24,000 <span style="color: #51cf66;">(Save $72,000 - 168,000)</span></li>
+					</ul>
+				</div>
+
+				<div class="callout">
+					<h3>What You Could Do With $50,000 Saved</h3>
+					<p>If you save just $50,000 over 5 years by choosing alternative housing:</p>
+					<ul>
+						<li>💰 <strong>Buy land outright</strong> - Own your homestead with no mortgage</li>
+						<li>🚐 <strong>Purchase vehicle + conversion</strong> - Full mobile setup, no payments</li>
+						<li>🏗️ <strong>Build your own home</strong> - Materials for small cabin or earthship</li>
+						<li>💼 <strong>Start agorist business</strong> - Capital to launch without debt</li>
+						<li>🌱 <strong>Complete self-sufficiency setup</strong> - Solar, well, food systems</li>
+						<li>🛡️ <strong>Financial freedom</strong> - 2-3 years of living expenses saved</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- HIDDEN COSTS OF TRADITIONAL HOUSING -->
+			<div class="innersection">
+				<div class="headerbox">
+					<h2>Hidden Costs of Traditional Housing</h2>
+				</div>
+				<p>
+					The numbers above don't tell the whole story. Traditional housing has hidden costs that don't 
+					show up on your monthly bill:
+				</p>
+
+				<div class="callout">
+					<h3>What Traditional Housing REALLY Costs You</h3>
+					<ul>
+						<li><strong>Commute costs:</strong> $200-500/month in gas, car maintenance, time (because you must live near work)</li>
+						<li><strong>Furniture & appliances:</strong> $3,000-10,000 upfront to fill the space</li>
+						<li><strong>Lifestyle inflation:</strong> Bigger space = more stuff = more spending</li>
+						<li><strong>Trapped location:</strong> Can't move for better opportunities without breaking lease or selling</li>
+						<li><strong>Job dependence:</strong> Must keep job to pay rent, even if you hate it</li>
+						<li><strong>Lost opportunities:</strong> $1,500/month rent = $1,500 NOT invested in freedom</li>
+					</ul>
+				</div>
+
+				<div class="callout">
+					<h3>The Freedom Cost</h3>
+					<p>
+						The biggest cost of traditional housing isn't money—it's <strong>freedom</strong>. When you're 
+						locked into a lease or mortgage, you're locked into a location, a job, a lifestyle. You can't 
+						take a 3-month road trip. You can't move to a better opportunity. You can't experiment with 
+						different ways of living.
+					</p>
+					<p>
+						Alternative housing gives you options. Even if the monthly cost was the same (it's not), the 
+						freedom alone makes it worthwhile.
+					</p>
+				</div>
+			</div>
+
+			<!-- WHICH OPTION IS RIGHT FOR YOU -->
+			<div class="innersection">
+				<div class="headerbox">
+					<h2>Which Housing Option Is Right for You?</h2>
+				</div>
+
+				<div class="book">
+					<div class="bookheader">
+						<h4>Choose Van/RV Living If:</h4>
+					</div>
+					<ul>
+						<li>✓ You value mobility and adventure</li>
+						<li>✓ You can earn income remotely or at festivals</li>
+						<li>✓ You're comfortable with minimal space</li>
+						<li>✓ You enjoy or don't mind vehicle maintenance</li>
+						<li>✓ You want to test nomad life before committing to land</li>
+					</ul>
+					<p><strong>Best for:</strong> Digital nomads, festival vendors, those testing freedom</p>
+					<a href="0_nomads.html" class="button button2">Learn More About Nomad Life</a>
+				</div>
+
+				<div class="book">
+					<div class="bookheader">
+						<h4>Choose Homestead Living If:</h4>
+					</div>
+					<ul>
+						<li>✓ You want to build equity and own land</li>
+						<li>✓ You have or want to develop building/farming skills</li>
+						<li>✓ You prefer stability and putting down roots</li>
+						<li>✓ You want to grow food and achieve self-sufficiency</li>
+						<li>✓ You have (or want) kids and need more space</li>
+					</ul>
+					<p><strong>Best for:</strong> Families, builders, farmers, those seeking long-term stability</p>
+					<a href="8_freelocations.html" class="button button2">Browse Free Land Locations</a>
+				</div>
+
+				<div class="book">
+					<div class="bookheader">
+						<h4>Choose Network Hosts If:</h4>
+					</div>
+					<ul>
+						<li>✓ You're transitioning and need low-cost temporary housing</li>
+						<li>✓ You want to travel but don't want vehicle living</li>
+						<li>✓ You value community and shared living</li>
+						<li>✓ You have skills to trade for housing (work exchange)</li>
+						<li>✓ You want to test different locations before committing</li>
+					</ul>
+					<p><strong>Best for:</strong> Transitions, testing locations, community seekers, work traders</p>
+					<a href="8_hosts.html" class="button button2">Find Network Hosts</a>
+				</div>
+			</div>
+
+			<!-- TRANSITION STRATEGIES -->
+			<div class="innersection">
+				<div class="headerbox">
+					<h2>How to Transition from Traditional Housing</h2>
+				</div>
+
+				<div class="callout">
+					<h3>Don't Quit Your Apartment Tomorrow</h3>
+					<p>
+						Most people shouldn't make a sudden leap. Here's a gradual transition that reduces risk:
+					</p>
+				</div>
+
+				<div class="book">
+					<div class="bookheader">
+						<h4>Phase 1: Test While You Still Have Housing (1-3 months)</h4>
+					</div>
+					<ul>
+						<li>Visit network hosts for weekends or week-long stays</li>
+						<li>Attend festivals and camp in various conditions</li>
+						<li>Try van/RV life by renting for 1-2 weeks</li>
+						<li>Visit homesteads to see if that lifestyle appeals</li>
+						<li>Calculate your actual housing costs (track every dollar)</li>
+					</ul>
+					<p><strong>Goal:</strong> Know which alternative appeals to you before committing</p>
+				</div>
+
+				<div class="book">
+					<div class="bookheader">
+						<h4>Phase 2: Prepare While Still Housed (3-6 months)</h4>
+					</div>
+					<ul>
+						<li>Save money from reduced spending (aim for $3,000-10,000)</li>
+						<li>Sell possessions you won't need (minimize, get cash)</li>
+						<li>If going nomad: Buy and set up vehicle while you have stable base</li>
+						<li>If going homestead: Research land, connect with sellers</li>
+						<li>Build agorist income to $500+/month while rent is stable</li>
+					</ul>
+					<p><strong>Goal:</strong> Have alternative ready before leaving traditional housing</p>
+				</div>
+
+				<div class="book">
+					<div class="bookheader">
+						<h4>Phase 3: Make the Leap (Month 6-12)</h4>
+					</div>
+					<ul>
+						<li>Give notice on lease/apartment</li>
+						<li>Move into your alternative housing (van, homestead, host network)</li>
+						<li>Have 3-6 months expenses saved as buffer</li>
+						<li>Stay connected to network support</li>
+						<li>Adjust and troubleshoot as issues arise</li>
+					</ul>
+					<p><strong>Goal:</strong> Successful transition with minimal stress</p>
+				</div>
+			</div>
+
+			<!-- REAL MEMBER EXAMPLES -->
+			<div class="innersection">
+				<div class="headerbox">
+					<h2>Real Network Member Housing Costs</h2>
+				</div>
+
+				<div class="callout">
+					<h3>Sarah, 29 - Van Life</h3>
+					<p>
+						<em>"I was paying $1,400/month for a studio apartment in Denver. Now I pay $600/month for 
+						van life (gas, insurance, maintenance fund, occasional campground). I save $800/month—$9,600/year. 
+						In 2 years I'll have saved enough to buy land outright."</em>
+					</p>
+					<p><strong>Monthly housing cost:</strong> $1,400 → $600 (57% reduction)</p>
+				</div>
+
+				<div class="callout">
+					<h3>Marcus & Julia, 35 & 33 - Homestead</h3>
+					<p>
+						<em>"We were paying $2,100/month rent plus $200 utilities. Bought 5 acres for $15,000 cash, 
+						built a small cabin ourselves for $8,000 materials. Now we pay $180/month property tax plus 
+						~$100 for solar/propane. $280/month total. We'll never pay rent again."</em>
+					</p>
+					<p><strong>Monthly housing cost:</strong> $2,300 → $280 (88% reduction)</p>
+				</div>
+
+				<div class="callout">
+					<h3>Alex, 41 - Network Host Circuit</h3>
+					<p>
+						<em>"I spent 8 months traveling between network hosts while building my consulting business. 
+						Paid $0-200/month depending on location (some hosts free, some I contributed). Average was 
+						$150/month total housing cost. Saved over $12,000 during that transition period."</em>
+					</p>
+					<p><strong>Monthly housing cost:</strong> $1,600 (previous apartment) → $150 (91% reduction)</p>
+				</div>
+			</div>
+
+			<!-- FINAL CTA -->
+			<div class="innersection">
+				<div class="headerbox">
+					<h2>Ready to Stop Bleeding Money on Housing?</h2>
+				</div>
+
+				<div class="callout">
+					<h3>Your Next Steps</h3>
+					<p>The numbers are clear: alternative housing can save you $7,000-25,000 per year. That's real money 
+					that can build real freedom. Here's how to start:</p>
+					
+					<div class="button-row">
+						<a href="1_housing.html" class="button button1">Read The Housing Path Guide</a>
+						<a href="8_hosts.html" class="button button1">Find Network Hosts Near You</a>
+						<a href="0_nomads.html" class="button button1">Explore Van/RV Living</a>
+						<a href="8_freelocations.html" class="button button1">Browse Free Land Options</a>
+					</div>
+				</div>
+
+				<p style="text-align: center; font-size: 1.2em; margin-top: 2rem;">
+					<strong>Questions about alternative housing?</strong><br />
+					<a href="mailto:caravanarchy@proton.me">caravanarchy@proton.me</a>
+				</p>
+			</div>
+
+			<!-- NEXT PAGE -->
+			<a href="1_wealth.html">
+				<div class="nextpage">
+					<span class="nextpage-text">Next: The Wealth Path (Income Strategies)</span>
+					<span class="nextpage-arrow">→</span>
+				</div>
+			</a>
+
+			<br /><br />
+
+			<!-- FOOTER -->
+			<footer class="site-footer">
+				<div class="footer-grid">
+					<div class="footer-section">
+						<h4>START</h4>
+						<ul>
+							<li><a href="index.html">Homepage</a></li>
+							<li><a href="1_orientation.html">Camp Orientation</a></li>
+							<li><a href="1_FAQ.html">FAQ</a></li>
+						</ul>
+					</div>
+
+					<div class="footer-section">
+						<h4>LEARN</h4>
+						<ul>
+							<li><a href="3_library.html">The Library</a></li>
+							<li><a href="3_IntroVoluntaryism.html">Intro to Voluntaryism</a></li>
+							<li><a href="3_WhyAgorismWorks.html">Why Agorism Works</a></li>
+						</ul>
+					</div>
+
+					<div class="footer-section">
+						<h4>BUILD</h4>
+						<ul>
+							<li><a href="4_workshop.html">The Workshop</a></li>
+							<li><a href="4_tactics.html">Agorist Tactics</a></li>
+							<li><a href="4_guilds.html">Guilds</a></li>
+						</ul>
+					</div>
+
+					<div class="footer-section">
+						<h4>CONNECT</h4>
+						<ul>
+							<li><a href="5_community.html">Community</a></li>
+							<li><a href="5_directory.html">Network Directory</a></li>
+						</ul>
+					</div>
+
+					<div class="footer-section">
+						<h4>ACT</h4>
+						<ul>
+							<li><a href="6_agora.html">The Agora</a></li>
+							<li><a href="6_bountyboard.html">Bounty Board</a></li>
+							<li><a href="7_events.html">Events</a></li>
+							<li><a href="8_maps.html">Maps</a></li>
+						</ul>
+					</div>
+
+					<div class="footer-section">
+						<h4>CONTACT</h4>
+						<p><a href="mailto:caravanarchy@proton.me">caravanarchy@proton.me</a></p>
+					</div>
+				</div>
+
+				<div class="footer-bottom">
+					<p>© 2025 CaravAnarchy Network Support | Building freedom through voluntary exchange</p>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

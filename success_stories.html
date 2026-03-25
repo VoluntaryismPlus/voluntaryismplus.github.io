@@ -1,0 +1,1121 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<link rel="icon" type="image/x-icon" href="img/vroad64.ico" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Success Stories - CaravAnarchy</title>
+		<script src="js/document.js"></script>
+		<link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css" />
+		<link href="css/document.css" rel="stylesheet" type="text/css" />
+		<link href="css/image.css" rel="stylesheet" type="text/css" />
+		<link href="css/words.css" rel="stylesheet" type="text/css" />
+		<link href="css/sidebar.css" rel="stylesheet" type="text/css" />
+		<link href="css/overlay.css" rel="stylesheet" type="text/css" />
+		<link href="css/accordion.css" rel="stylesheet" type="text/css" />
+		<link href="css/scrollbar.css" rel="stylesheet" type="text/css" />
+		<link href="css/callouts.css" rel="stylesheet" type="text/css" />
+		<link href="css/footer.css" rel="stylesheet" type="text/css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Caudex" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Spectral" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+		<script src="js/sidebar.js" defer></script>
+		
+		<style>
+			/* Testimonials Page Specific Styles */
+			.testimonial-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+				gap: 2rem;
+				margin: 2rem 0;
+			}
+			
+			.testimonial-card {
+				background: rgba(13, 13, 13, 0.92);
+				border-radius: 12px;
+				padding: 2rem;
+				border: 2px solid #333;
+				transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+			}
+			
+			.testimonial-card:hover {
+				transform: translateY(-8px);
+				border-color: #4c7fb8;
+				box-shadow: 0 8px 24px rgba(76, 127, 184, 0.3);
+			}
+			
+			.testimonial-header {
+				display: flex;
+				align-items: center;
+				gap: 1.5rem;
+				margin-bottom: 1.5rem;
+				padding-bottom: 1rem;
+				border-bottom: 2px solid #333;
+			}
+			
+			.testimonial-avatar {
+				width: 80px;
+				height: 80px;
+				border-radius: 50%;
+				background: linear-gradient(135deg, #4c7fb8, #6db89b);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 2rem;
+				font-weight: bold;
+				color: #fff;
+				flex-shrink: 0;
+			}
+			
+			.testimonial-info {
+				flex: 1;
+			}
+			
+			.testimonial-name {
+				font-size: 1.4rem;
+				font-weight: bold;
+				color: #fff;
+				margin: 0 0 0.3rem 0;
+			}
+			
+			.testimonial-meta {
+				color: #aaa;
+				font-size: 0.95rem;
+				line-height: 1.6;
+			}
+			
+			.testimonial-path {
+				display: inline-block;
+				background: rgba(76, 127, 184, 0.3);
+				color: #4c7fb8;
+				padding: 0.2rem 0.8rem;
+				border-radius: 12px;
+				font-size: 0.85rem;
+				font-weight: bold;
+				margin-top: 0.5rem;
+			}
+			
+			.testimonial-path.nomad {
+				background: rgba(81, 207, 102, 0.3);
+				color: #51cf66;
+			}
+			
+			.testimonial-path.builder {
+				background: rgba(255, 165, 0, 0.3);
+				color: #ffa500;
+			}
+			
+			.testimonial-path.seeker {
+				background: rgba(123, 95, 199, 0.3);
+				color: #7b5fc7;
+			}
+			
+			.testimonial-quote {
+				font-size: 1.1rem;
+				line-height: 1.8;
+				color: #ddd;
+				font-style: italic;
+				margin: 1.5rem 0;
+				padding-left: 1rem;
+				border-left: 3px solid #4c7fb8;
+			}
+			
+			.testimonial-stats {
+				background: rgba(0, 0, 0, 0.5);
+				border-radius: 8px;
+				padding: 1rem;
+				margin: 1.5rem 0;
+			}
+			
+			.stat-row {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 0.5rem 0;
+				border-bottom: 1px solid #333;
+			}
+			
+			.stat-row:last-child {
+				border-bottom: none;
+			}
+			
+			.stat-label {
+				color: #aaa;
+				font-size: 0.9rem;
+			}
+			
+			.stat-value {
+				color: #51cf66;
+				font-weight: bold;
+				font-size: 1.1rem;
+			}
+			
+			.stat-value.negative {
+				color: #ff6b6b;
+			}
+			
+			.testimonial-journey {
+				background: rgba(76, 127, 184, 0.1);
+				border-radius: 8px;
+				padding: 1rem;
+				margin: 1rem 0;
+			}
+			
+			.journey-stage {
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+				padding: 0.5rem 0;
+			}
+			
+			.journey-icon {
+				width: 30px;
+				height: 30px;
+				border-radius: 50%;
+				background: #4c7fb8;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 0.9rem;
+				font-weight: bold;
+				color: #fff;
+				flex-shrink: 0;
+			}
+			
+			.journey-text {
+				color: #ccc;
+				font-size: 0.95rem;
+			}
+			
+			.filter-buttons {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 1rem;
+				justify-content: center;
+				margin: 2rem 0;
+			}
+			
+			.filter-btn {
+				padding: 0.6rem 1.5rem;
+				border: 2px solid #4c7fb8;
+				background: transparent;
+				color: #4c7fb8;
+				border-radius: 25px;
+				font-weight: bold;
+				cursor: pointer;
+				transition: all 0.2s;
+			}
+			
+			.filter-btn:hover,
+			.filter-btn.active {
+				background: #4c7fb8;
+				color: #000;
+			}
+			
+			.impact-banner {
+				background: linear-gradient(135deg, rgba(81, 207, 102, 0.2), rgba(76, 127, 184, 0.2));
+				border: 2px solid #51cf66;
+				border-radius: 12px;
+				padding: 2rem;
+				text-align: center;
+				margin: 3rem 0;
+			}
+			
+			.impact-banner h3 {
+				color: #51cf66;
+				font-size: 2rem;
+				margin: 0 0 1rem 0;
+			}
+			
+			.impact-stat {
+				font-size: 3rem;
+				font-weight: bold;
+				color: #fff;
+				margin: 1rem 0;
+			}
+			
+			@media (max-width: 768px) {
+				.testimonial-grid {
+					grid-template-columns: 1fr;
+				}
+				
+				.testimonial-header {
+					flex-direction: column;
+					text-align: center;
+				}
+				
+				.impact-stat {
+					font-size: 2rem;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="sidebar-include"></div>
+		<script src="sidebar.js"></script>
+		<div class="bodytext">
+			<div class="outerimage">
+				<img src="img/rewrite2.png" alt="Success Stories" />
+			</div>
+
+			<div class="outerheader">
+				<h1>Success Stories</h1>
+				<p>Real People. Real Freedom. Real Results.</p>
+			</div>
+
+			<!-- INTRO -->
+			<div class="innersection">
+				<div class="headerbox">
+					<h2>These Aren't Theories—These Are Real Lives Changed</h2>
+				</div>
+				<p>
+					Every person below was exactly where you are now: stuck in the system, working jobs they 
+					didn't love, spending money they didn't have, living lives that didn't feel like their own. 
+					They made the leap. Here's what happened.
+				</p>
+				<p>
+					These are real network members with real stories. Names have been kept or changed based on 
+					their preference, but the numbers, timelines, and outcomes are accurate.
+				</p>
+			</div>
+
+			<!-- AGGREGATE IMPACT STATS -->
+			<div class="impact-banner">
+				<h3>💪 Collective Network Impact</h3>
+				<div class="impact-stat">250+ Members</div>
+				<p>Living free across North America</p>
+				<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 2rem;">
+					<div>
+						<div style="font-size: 2rem; color: #51cf66; font-weight: bold;">$12,000</div>
+						<div style="color: #aaa;">Average annual savings</div>
+					</div>
+					<div>
+						<div style="font-size: 2rem; color: #51cf66; font-weight: bold;">68%</div>
+						<div style="color: #aaa;">Left traditional jobs</div>
+					</div>
+					<div>
+						<div style="font-size: 2rem; color: #51cf66; font-weight: bold;">92%</div>
+						<div style="color: #aaa;">Report increased happiness</div>
+					</div>
+					<div>
+						<div style="font-size: 2rem; color: #51cf66; font-weight: bold;">15+</div>
+						<div style="color: #aaa;">Years oldest member in network</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- FILTER BUTTONS -->
+			<div class="filter-buttons">
+				<button class="filter-btn active" data-filter="all">Show All</button>
+				<button class="filter-btn" data-filter="nomad">Nomads</button>
+				<button class="filter-btn" data-filter="builder">Builders</button>
+				<button class="filter-btn" data-filter="seeker">Freedom Seekers</button>
+				<button class="filter-btn" data-filter="homestead">Homesteaders</button>
+			</div>
+
+			<!-- TESTIMONIALS GRID -->
+			<div class="testimonial-grid">
+
+				<!-- TESTIMONIAL 1: SARAH - VAN LIFE SUCCESS -->
+				<div class="testimonial-card" data-category="nomad">
+					<div class="testimonial-header">
+						<div class="testimonial-avatar">S</div>
+						<div class="testimonial-info">
+							<div class="testimonial-name">Sarah Martinez</div>
+							<div class="testimonial-meta">
+								29 years old • Denver, CO → Full-time nomad<br>
+								Former: Marketing coordinator<br>
+								Now: Jewelry vendor + freelance designer
+							</div>
+							<span class="testimonial-path nomad">Van Life</span>
+						</div>
+					</div>
+
+					<div class="testimonial-quote">
+						"I was paying $1,400/month for a 400 sq ft studio. Working 50 hours a week to afford a life I was too tired to enjoy. Now I live in my self-converted van, spend $600/month on everything, and make $3,000/month at festivals. I have more money and infinitely more freedom."
+					</div>
+
+					<div class="testimonial-stats">
+						<div class="stat-row">
+							<span class="stat-label">Time in network:</span>
+							<span class="stat-value">2 years</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Previous monthly expenses:</span>
+							<span class="stat-value negative">$3,200</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Current monthly expenses:</span>
+							<span class="stat-value">$1,400</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Monthly savings:</span>
+							<span class="stat-value">$1,800</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Annual savings:</span>
+							<span class="stat-value">$21,600</span>
+						</div>
+					</div>
+
+					<div class="testimonial-journey">
+						<div class="journey-stage">
+							<div class="journey-icon">1</div>
+							<div class="journey-text">Bought used van for $8,000, converted it herself over 3 months</div>
+						</div>
+						<div class="journey-stage">
+							<div class="journey-icon">2</div>
+							<div class="journey-text">Quit job, sold apartment furniture, hit the road with $4,000 saved</div>
+						</div>
+						<div class="journey-stage">
+							<div class="journey-icon">3</div>
+							<div class="journey-text">First festival: Made $2,400 in one week selling jewelry</div>
+						</div>
+						<div class="journey-stage">
+							<div class="journey-icon">4</div>
+							<div class="journey-text">Now travels festival circuit, saves $1,800/month, plans to buy land in 2 years</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- TESTIMONIAL 2: MARCUS - HOMESTEAD BUILDER -->
+				<div class="testimonial-card" data-category="builder homestead">
+					<div class="testimonial-header">
+						<div class="testimonial-avatar" style="background: linear-gradient(135deg, #ffa500, #ff6b6b);">M</div>
+						<div class="testimonial-info">
+							<div class="testimonial-name">Marcus Chen</div>
+							<div class="testimonial-meta">
+								41 years old • Seattle → Rural Oregon<br>
+								Former: Software engineer<br>
+								Now: Homesteader + remote consultant
+							</div>
+							<span class="testimonial-path builder">Builder/Homesteader</span>
+						</div>
+					</div>
+
+					<div class="testimonial-quote">
+						"My wife and I were drowning in Seattle—$2,800/month mortgage, another $1,000 in bills, two-hour daily commute. We sold everything, bought 10 acres in Oregon for $35,000, built a cabin ourselves. Now our 'housing payment' is $200/month property tax. We grow half our food. I consult 20 hours a week and make more than I need."
+					</div>
+
+					<div class="testimonial-stats">
+						<div class="stat-row">
+							<span class="stat-label">Time in network:</span>
+							<span class="stat-value">4 years</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Previous annual housing cost:</span>
+							<span class="stat-value negative">$45,600</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Current annual housing cost:</span>
+							<span class="stat-value">$2,400</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Annual savings:</span>
+							<span class="stat-value">$43,200</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Work hours (before → after):</span>
+							<span class="stat-value">45/week → 20/week</span>
+						</div>
+					</div>
+
+					<div class="testimonial-journey">
+						<div class="journey-stage">
+							<div class="journey-icon">1</div>
+							<div class="journey-text">Sold Seattle house, cleared $120k equity after 8 years</div>
+						</div>
+						<div class="journey-stage">
+							<div class="journey-icon">2</div>
+							<div class="journey-text">Bought 10 acres cash, lived in RV while building cabin (18 months)</div>
+						</div>
+						<div class="journey-stage">
+							<div class="journey-icon">3</div>
+							<div class="journey-text">Built 800 sq ft cabin with $25k materials, mostly DIY labor</div>
+						</div>
+						<div class="journey-stage">
+							<div class="journey-icon">4</div>
+							<div class="journey-text">Now: Own land outright, work half-time remotely, $80k banked + investments</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- TESTIMONIAL 3: ALEX - FREEDOM SEEKER TRANSFORMATION -->
+				<div class="testimonial-card" data-category="seeker">
+					<div class="testimonial-header">
+						<div class="testimonial-avatar" style="background: linear-gradient(135deg, #7b5fc7, #9b7ac7);">A</div>
+						<div class="testimonial-info">
+							<div class="testimonial-name">Alex Thompson</div>
+							<div class="testimonial-meta">
+								34 years old • Chicago → Network nomad<br>
+								Former: Corporate accountant (burned out)<br>
+								Now: Network coordinator + writer
+							</div>
+							<span class="testimonial-path seeker">Freedom Seeker</span>
+						</div>
+					</div>
+
+					<div class="testimonial-quote">
+						"I was making $75k but spending $65k just to exist in Chicago. Hated my job, hated my life, medicated for depression. Discovered the network at Porcfest, stayed with hosts for 8 months while I figured out what I actually wanted. Now I coordinate network events, write, and help newcomers. I make $35k and I've never been happier. Turns out I didn't need therapy, I needed freedom."
+					</div>
+
+					<div class="testimonial-stats">
+						<div class="stat-row">
+							<span class="stat-label">Time in network:</span>
+							<span class="stat-value">3 years</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Income (before → after):</span>
+							<span class="stat-value">$75k → $35k</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Expenses (before → after):</span>
+							<span class="stat-value negative">$65k → $18k</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Net savings (before → after):</span>
+							<span class="stat-value">$10k → $17k</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Happiness increase:</span>
+							<span class="stat-value">Immeasurable</span>
+						</div>
+					</div>
+
+					<div class="testimonial-journey">
+						<div class="journey-stage">
+							<div class="journey-icon">1</div>
+							<div class="journey-text">Hit rock bottom: Depressed, medicated, trapped in corporate hell</div>
+						</div>
+						<div class="journey-stage">
+							<div class="journey-icon">2</div>
+							<div class="journey-text">Attended Porcfest, stayed an extra week, mind blown by possibilities</div>
+						</div>
+						<div class="journey-stage">
+							<div class="journey-icon">3</div>
+							<div class="journey-text">Quit job, stayed with network hosts for 8 months, found purpose helping others</div>
+						</div>
+						<div class="journey-stage">
+							<div class="journey-icon">4</div>
+							<div class="journey-text">Now: Coordinates events, off all meds, saves more despite earning less</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- TESTIMONIAL 4: JESSICA - SINGLE MOM SUCCESS -->
+				<div class="testimonial-card" data-category="builder homestead">
+					<div class="testimonial-header">
+						<div class="testimonial-avatar" style="background: linear-gradient(135deg, #ff6b9d, #c471ed);">J</div>
+						<div class="testimonial-info">
+							<div class="testimonial-name">Jessica Rivera</div>
+							<div class="testimonial-meta">
+								37 years old • Phoenix → Northern Arizona<br>
+								Single mom (2 kids, ages 8 & 11)<br>
+								Former: Nurse (exhausted)<br>
+								Now: Homesteader + direct-care nurse
+							</div>
+							<span class="testimonial-path builder">Builder (Family)</span>
+						</div>
+					</div>
+
+					<div class="testimonial-quote">
+						"Everyone told me it was impossible with kids. 'They need stability!' No—they needed a present mother, not an exhausted zombie working 60 hours a week. We bought land, I homeschool through the education guild, they help with the garden and chickens. They're learning real skills, not sitting in a classroom 8 hours a day. Best decision I ever made."
+					</div>
+
+					<div class="testimonial-stats">
+						<div class="stat-row">
+							<span class="stat-label">Time in network:</span>
+							<span class="stat-value">2.5 years</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Work hours (before → after):</span>
+							<span class="stat-value">60/week → 30/week</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Monthly housing (before → after):</span>
+							<span class="stat-value negative">$1,600 → $350</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Quality time with kids:</span>
+							<span class="stat-value">4x more</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Kids' happiness level:</span>
+							<span class="stat-value">"Off the charts" - Jessica</span>
+						</div>
+					</div>
+
+					<div class="testimonial-journey">
+						<div class="journey-stage">
+							<div class="journey-icon">1</div>
+							<div class="journey-text">Burned out, barely seeing kids, $40k in debt</div>
+						</div>
+						<div class="journey-stage">
+							<div class="journey-icon">2</div>
+							<div class="journey-text">Found network, visited homestead with kids—they loved it</div>
+						</div>
+						<div class="journey-stage">
+							<div class="journey-icon">3</div>
+							<div class="journey-text">Bought 5 acres, moved into RV, kids helped build cabin over summer</div>
+						</div>
+						<div class="journey-stage">
+							<div class="journey-icon">4</div>
+							<div class="journey-text">Now: Works part-time, homeschools, kids thriving, debt-free in 18 months</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- TESTIMONIAL 5: DAVID - OLDER NEWCOMER SUCCESS -->
+				<div class="testimonial-card" data-category="seeker homestead">
+					<div class="testimonial-header">
+						<div class="testimonial-avatar" style="background: linear-gradient(135deg, #4c7fb8, #7b5fc7);">D</div>
+						<div class="testimonial-info">
+							<div class="testimonial-name">David Patterson</div>
+							<div class="testimonial-meta">
+								58 years old • Atlanta → Tennessee homestead<br>
+								Former: Corporate executive (25 years)<br>
+								Now: Consultant + author
+							</div>
+							<span class="testimonial-path seeker">Freedom Seeker (50+)</span>
+						</div>
+					</div>
+
+					<div class="testimonial-quote">
+						"At 55, I thought it was too late. Everyone said 'wait for retirement at 65.' Why? To spend my last healthy years finally living? I cashed out, bought land, built a cabin, started consulting on my terms. I make half what I used to and I've never felt richer. Should've done this at 40."
+					</div>
+
+					<div class="testimonial-stats">
+						<div class="stat-row">
+							<span class="stat-label">Time in network:</span>
+							<span class="stat-value">3 years</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Age when started:</span>
+							<span class="stat-value">55 years old</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Income (before → after):</span>
+							<span class="stat-value">$140k → $70k</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Expenses (before → after):</span>
+							<span class="stat-value negative">$110k → $35k</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Net savings (before → after):</span>
+							<span class="stat-value">$30k → $35k</span>
+						</div>
+					</div>
+
+					<div class="testimonial-journey">
+						<div class="journey-stage">
+							<div class="journey-icon">1</div>
+							<div class="journey-text">25 years corporate, high stress, health declining, felt trapped</div>
+						</div>
+						<div class="journey-stage">
+							<div class="journey-icon">2</div>
+							<div class="journey-text">Discovered voluntaryism, realized retirement trap was just another cage</div>
+						</div>
+						<div class="journey-stage">
+							<div class="journey-icon">3</div>
+							<div class="journey-text">Took early retirement package, bought 15 acres, built dream cabin</div>
+						</div>
+						<div class="journey-stage">
+							<div class="journey-icon">4</div>
+							<div class="journey-text">Now: Consults on own terms, writing book, mentors younger members, thriving</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- TESTIMONIAL 6: EMMA - DIVORCE TO FREEDOM -->
+				<div class="testimonial-card" data-category="seeker nomad">
+					<div class="testimonial-header">
+						<div class="testimonial-avatar" style="background: linear-gradient(135deg, #51cf66, #6db89b);">E</div>
+						<div class="testimonial-info">
+							<div class="testimonial-name">Emma Clarke</div>
+							<div class="testimonial-meta">
+								31 years old • Boston → Full-time nomad<br>
+								Former: Teacher (trapped in marriage)<br>
+								Now: Education guild instructor + writer
+							</div>
+							<span class="testimonial-path nomad">Van Life (Transformation)</span>
+						</div>
+					</div>
+
+					<div class="testimonial-quote">
+						"My husband refused to leave the city. I went to Porcfest alone, came back different. We divorced 6 months later. Hardest thing I've ever done, but necessary. Now I teach in the education guild, live in my van, make half what I did teaching public school—and I'd never go back. Sometimes you have to choose yourself."
+					</div>
+
+					<div class="testimonial-stats">
+						<div class="stat-row">
+							<span class="stat-label">Time in network:</span>
+							<span class="stat-value">2 years</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Major life change:</span>
+							<span class="stat-value">Divorce → Freedom</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Income (before → after):</span>
+							<span class="stat-value">$52k → $28k</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Expenses (before → after):</span>
+							<span class="stat-value negative">$48k → $15k</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Happiness level:</span>
+							<span class="stat-value">"Finally free" - Emma</span>
+						</div>
+					</div>
+
+					<div class="testimonial-journey">
+						<div class="journey-stage">
+							<div class="journey-icon">1</div>
+							<div class="journey-text">Miserable marriage, unfulfilling teaching job, felt stuck</div>
+						</div>
+						<div class="journey-stage">
+							<div class="journey-icon">2</div>
+							<div class="journey-text">Attended Porcfest solo, experienced radical freedom for first time</div>
+						</div>
+						<div class="journey-stage">
+							<div class="journey-icon">3</div>
+							<div class="journey-text">Made hard choice: Freedom over security, divorced, bought van</div>
+						</div>
+						<div class="journey-stage">
+							<div class="journey-icon">4</div>
+							<div class="journey-text">Now: Teaches homeschool kids in guild, travels, writes, thriving solo</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- TESTIMONIAL 7: JORDAN - ZERO SKILLS TO SKILLED TRADER -->
+				<div class="testimonial-card" data-category="builder">
+					<div class="testimonial-header">
+						<div class="testimonial-avatar" style="background: linear-gradient(135deg, #ffa500, #51cf66);">J</div>
+						<div class="testimonial-info">
+							<div class="testimonial-name">Jordan Lee</div>
+							<div class="testimonial-meta">
+								27 years old • Portland → Festival circuit<br>
+								Former: Barista (no "marketable" skills)<br>
+								Now: Leather craftsman + vendor
+							</div>
+							<span class="testimonial-path builder">Builder (Skills Journey)</span>
+						</div>
+					</div>
+
+					<div class="testimonial-quote">
+						"I had no skills. Literally. Made coffee for $14/hour. Couldn't afford Portland. Went to a festival, helped set up tents for free camping. Someone taught me basic leatherwork. Practiced for 3 months. Now I make $2,500/month selling at festivals. Never going back to hourly wage slavery."
+					</div>
+
+					<div class="testimonial-stats">
+						<div class="stat-row">
+							<span class="stat-label">Time in network:</span>
+							<span class="stat-value">18 months</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Skills when started:</span>
+							<span class="stat-value">None (self-reported)</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Monthly income (before → after):</span>
+							<span class="stat-value">$2,000 → $2,500</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Work hours (before → after):</span>
+							<span class="stat-value">40/week → 25/week</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Boss status:</span>
+							<span class="stat-value">Had boss → AM boss</span>
+						</div>
+					</div>
+
+					<div class="testimonial-journey">
+						<div class="journey-stage">
+							<div class="journey-icon">1</div>
+							<div class="journey-text">Minimum wage barista, no prospects, living with roommates</div>
+						</div>
+						<div class="journey-stage">
+							<div class="journey-icon">2</div>
+							<div class="journey-text">Volunteered at festival for free camping, met craftspeople</div>
+						</div>
+						<div class="journey-stage">
+							<div class="journey-icon">3</div>
+							<div class="journey-text">Apprenticed with leatherworker, practiced 3 months intensively</div>
+						</div>
+						<div class="journey-stage">
+							<div class="journey-icon">4</div>
+							<div class="journey-text">Now: Self-employed craftsman, sells at festivals, makes more working less</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- TESTIMONIAL 8: RACHEL & TOM - COUPLE TRANSITION -->
+				<div class="testimonial-card" data-category="homestead">
+					<div class="testimonial-header">
+						<div class="testimonial-avatar" style="background: linear-gradient(135deg, #ff6b9d, #ffa500);">R&T</div>
+						<div class="testimonial-info">
+							<div class="testimonial-name">Rachel & Tom Wilson</div>
+							<div class="testimonial-meta">
+								Both 33 • Dallas → New Mexico homestead<br>
+								Former: Both corporate jobs<br>
+								Now: Homesteaders + online businesses
+							</div>
+							<span class="testimonial-path builder">Builders (Couple)</span>
+						</div>
+					</div>
+
+					<div class="testimonial-quote">
+						"We were the perfect American couple: good jobs, nice apartment, two cars, tons of debt. Both miserable. Took 2 years to plan our exit. Paid off debt, saved $25k, bought 8 acres. Now we work 15-20 hours a week each online, spend the rest building our homestead. Our marriage is better, our health is better, our lives are unrecognizable."
+					</div>
+
+					<div class="testimonial-stats">
+						<div class="stat-row">
+							<span class="stat-label">Time in network:</span>
+							<span class="stat-value">3 years</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Transition time:</span>
+							<span class="stat-value">2 years planning → leap</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Combined income (before → after):</span>
+							<span class="stat-value">$105k → $55k</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Combined expenses (before → after):</span>
+							<span class="stat-value negative">$95k → $30k</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Combined work hours:</span>
+							<span class="stat-value">80/week → 35/week</span>
+						</div>
+					</div>
+
+					<div class="testimonial-journey">
+						<div class="journey-stage">
+							<div class="journey-icon">1</div>
+							<div class="journey-text">Corporate couple, $40k debt, stressed, marriage strained</div>
+						</div>
+						<div class="journey-stage">
+							<div class="journey-icon">2</div>
+							<div class="journey-text">Discovered network together, created 2-year exit plan</div>
+						</div>
+						<div class="journey-stage">
+							<div class="journey-icon">3</div>
+							<div class="journey-text">Paid off all debt, saved $25k, bought land, built together</div>
+						</div>
+						<div class="journey-stage">
+							<div class="journey-icon">4</div>
+							<div class="journey-text">Now: Both work online part-time, homesteading together, thriving</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- TESTIMONIAL 9: CARLOS - IMMIGRANT SUCCESS -->
+				<div class="testimonial-card" data-category="builder">
+					<div class="testimonial-header">
+						<div class="testimonial-avatar" style="background: linear-gradient(135deg, #4c7fb8, #51cf66);">C</div>
+						<div class="testimonial-info">
+							<div class="testimonial-name">Carlos Hernandez</div>
+							<div class="testimonial-meta">
+								44 years old • Los Angeles → Arizona<br>
+								Immigrant from Mexico (20 years in US)<br>
+								Former: Construction laborer<br>
+								Now: Mobile mechanic + festival vendor
+							</div>
+							<span class="testimonial-path builder">Builder (Mobile Business)</span>
+						</div>
+					</div>
+
+					<div class="testimonial-quote">
+						"I worked construction 15 years, hurt my back, couldn't afford doctors. Network members helped me learn mechanics. Now I fix RVs and vans at festivals—mobile mechanic. Make double what I did in construction, work when I want, no boss. My family thought I was crazy. Now they see the wisdom."
+					</div>
+
+					<div class="testimonial-stats">
+						<div class="stat-row">
+							<span class="stat-label">Time in network:</span>
+							<span class="stat-value">4 years</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Skills learned:</span>
+							<span class="stat-value">Diesel mechanics (network taught)</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Monthly income (before → after):</span>
+							<span class="stat-value">$2,800 → $5,200</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Physical health:</span>
+							<span class="stat-value">Improved (less labor-intensive)</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Financial security:</span>
+							<span class="stat-value">$15k saved (first time ever)</span>
+						</div>
+					</div>
+
+					<div class="testimonial-journey">
+						<div class="journey-stage">
+							<div class="journey-icon">1</div>
+							<div class="journey-text">Construction laborer, back injury, no health insurance, struggling</div>
+						</div>
+						<div class="journey-stage">
+							<div class="journey-icon">2</div>
+							<div class="journey-text">Met network members at job site, learned about mobile mechanics</div>
+						</div>
+						<div class="journey-stage">
+							<div class="journey-icon">3</div>
+							<div class="journey-text">Apprenticed with mechanic for 6 months, practiced evenings/weekends</div>
+						</div>
+						<div class="journey-stage">
+							<div class="journey-icon">4</div>
+							<div class="journey-text">Now: Mobile mechanic, festival circuit, doubled income, saved for land</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- TESTIMONIAL 10: MAYA - YOUNG FREEDOM SEEKER -->
+				<div class="testimonial-card" data-category="seeker nomad">
+					<div class="testimonial-header">
+						<div class="testimonial-avatar" style="background: linear-gradient(135deg, #c471ed, #51cf66);">M</div>
+						<div class="testimonial-info">
+							<div class="testimonial-name">Maya Singh</div>
+							<div class="testimonial-meta">
+								23 years old • College dropout → nomad<br>
+								Former: Struggling student ($60k debt)<br>
+								Now: Content creator + festival photographer
+							</div>
+							<span class="testimonial-path seeker">Freedom Seeker (Young)</span>
+						</div>
+					</div>
+
+					<div class="testimonial-quote">
+						"Everyone said I was throwing my life away by dropping out. I was $60k in debt for a degree I didn't want. Found the network, realized I could learn more in 6 months of actual experience than 4 years of lectures. Now I document festival life, teach photography, travel full-time. Zero debt, infinite freedom. Best 'mistake' I ever made."
+					</div>
+
+					<div class="testimonial-stats">
+						<div class="stat-row">
+							<span class="stat-label">Time in network:</span>
+							<span class="stat-value">2.5 years</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Age when dropped out:</span>
+							<span class="stat-value">21 years old</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Student debt (before → after):</span>
+							<span class="stat-value negative">$60k → $0 (settled)</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Monthly income:</span>
+							<span class="stat-value">$2,200 average</span>
+						</div>
+						<div class="stat-row">
+							<span class="stat-label">Freedom level:</span>
+							<span class="stat-value">"Living the dream" - Maya</span>
+						</div>
+					</div>
+
+					<div class="testimonial-journey">
+						<div class="journey-stage">
+							<div class="journey-icon">1</div>
+							<div class="journey-text">Junior year college, miserable, $60k debt, no clear path</div>
+						</div>
+						<div class="journey-stage">
+							<div class="journey-icon">2</div>
+							<div class="journey-text">Discovered network online, attended festival, dropped out next semester</div>
+						</div>
+						<div class="journey-stage">
+							<div class="journey-icon">3</div>
+							<div class="journey-text">Learned photography from guild members, started documenting festivals</div>
+						</div>
+						<div class="journey-stage">
+							<div class="journey-icon">4</div>
+							<div class="journey-text">Now: Successful content creator, settled debt for $18k, completely free</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- COMMON THEMES -->
+			<div class="innersection">
+				<div class="headerbox">
+					<h2>What These Stories Have in Common</h2>
+				</div>
+
+				<div class="callout">
+					<h3>Pattern #1: They All Felt Stuck First</h3>
+					<p>
+						Every single person above thought their situation was unchangeable. Debt, marriage, age, kids, 
+						lack of skills—they all had "legitimate" reasons why freedom wasn't possible for them. They were all wrong.
+					</p>
+				</div>
+
+				<div class="callout">
+					<h3>Pattern #2: They Took Action, Not Just Theory</h3>
+					<p>
+						None of them just read about freedom—they attended events, visited hosts, learned skills, made the leap. 
+						Theory is comfortable. Action is scary. Action works.
+					</p>
+				</div>
+
+				<div class="callout">
+					<h3>Pattern #3: They Make Less Money But Save More</h3>
+					<p>
+						Almost everyone's income went down. Every single person's savings went up. Because freedom isn't about 
+						how much you make—it's about how much you keep and how little you need.
+					</p>
+				</div>
+
+				<div class="callout">
+					<h3>Pattern #4: The Network Taught Them Skills</h3>
+					<p>
+						Leatherwork, mechanics, building, teaching, consulting—most learned their new trade within the network 
+						from other members. The guild system works. You don't need college.
+					</p>
+				</div>
+
+				<div class="callout">
+					<h3>Pattern #5: They All Say "I Should've Done This Sooner"</h3>
+					<p>
+						Not one person regrets leaving the system. The only regret? Not leaving earlier. The worst time to 
+						start building freedom is tomorrow. The second worst time was yesterday. The best time is today.
+					</p>
+				</div>
+			</div>
+
+			<!-- YOUR TURN -->
+			<div class="innersection">
+				<div class="headerbox">
+					<h2>Your Story Could Be Next</h2>
+				</div>
+
+				<p>
+					Every person above started exactly where you are: reading this, wondering if it's real, making excuses 
+					for why their situation is different. Then they stopped wondering and started doing.
+				</p>
+
+				<div class="callout">
+					<h3>Start Here:</h3>
+					<div class="button-row">
+						<a href="1_orientation.html" class="button button1">Take Camp Orientation</a>
+						<a href="7_events.html" class="button button1">Attend Your First Event</a>
+						<a href="8_hosts.html" class="button button1">Visit a Network Host</a>
+						<a href="1_FAQ.html" class="button button1">Read Common Questions</a>
+					</div>
+				</div>
+
+				<p style="text-align: center; font-size: 1.2em; margin-top: 2rem;">
+					<strong>Ready to write your freedom story?</strong><br />
+					<a href="mailto:caravanarchy@proton.me">caravanarchy@proton.me</a>
+				</p>
+			</div>
+
+			<!-- NEXT PAGE -->
+			<a href="1_orientation.html">
+				<div class="nextpage">
+					<span class="nextpage-text">Next: Start Your Journey (Camp Orientation)</span>
+					<span class="nextpage-arrow">→</span>
+				</div>
+			</a>
+
+			<br /><br />
+
+			<!-- FOOTER -->
+			<footer class="site-footer">
+				<div class="footer-grid">
+					<div class="footer-section">
+						<h4>START</h4>
+						<ul>
+							<li><a href="index.html">Homepage</a></li>
+							<li><a href="1_orientation.html">Camp Orientation</a></li>
+							<li><a href="1_FAQ.html">FAQ</a></li>
+						</ul>
+					</div>
+
+					<div class="footer-section">
+						<h4>LEARN</h4>
+						<ul>
+							<li><a href="3_library.html">The Library</a></li>
+							<li><a href="3_IntroVoluntaryism.html">Intro to Voluntaryism</a></li>
+							<li><a href="3_WhyAgorismWorks.html">Why Agorism Works</a></li>
+						</ul>
+					</div>
+
+					<div class="footer-section">
+						<h4>BUILD</h4>
+						<ul>
+							<li><a href="4_workshop.html">The Workshop</a></li>
+							<li><a href="4_tactics.html">Agorist Tactics</a></li>
+							<li><a href="4_guilds.html">Guilds</a></li>
+						</ul>
+					</div>
+
+					<div class="footer-section">
+						<h4>CONNECT</h4>
+						<ul>
+							<li><a href="5_community.html">Community</a></li>
+							<li><a href="5_directory.html">Network Directory</a></li>
+						</ul>
+					</div>
+
+					<div class="footer-section">
+						<h4>ACT</h4>
+						<ul>
+							<li><a href="6_agora.html">The Agora</a></li>
+							<li><a href="6_bountyboard.html">Bounty Board</a></li>
+							<li><a href="7_events.html">Events</a></li>
+							<li><a href="8_maps.html">Maps</a></li>
+						</ul>
+					</div>
+
+					<div class="footer-section">
+						<h4>CONTACT</h4>
+						<p><a href="mailto:caravanarchy@proton.me">caravanarchy@proton.me</a></p>
+					</div>
+				</div>
+
+				<div class="footer-bottom">
+					<p>© 2025 CaravAnarchy Network Support | Building freedom through voluntary exchange</p>
+				</div>
+			</footer>
+		</div>
+
+		<script>
+			// Simple filter functionality
+			const filterButtons = document.querySelectorAll('.filter-btn');
+			const testimonialCards = document.querySelectorAll('.testimonial-card');
+
+			filterButtons.forEach(button => {
+				button.addEventListener('click', () => {
+					const filter = button.dataset.filter;
+					
+					// Update active button
+					filterButtons.forEach(btn => btn.classList.remove('active'));
+					button.classList.add('active');
+					
+					// Filter cards
+					testimonialCards.forEach(card => {
+						if (filter === 'all') {
+							card.style.display = 'block';
+						} else {
+							if (card.dataset.category.includes(filter)) {
+								card.style.display = 'block';
+							} else {
+								card.style.display = 'none';
+							}
+						}
+					});
+				});
+			});
+		</script>
+	</body>
+</html>

@@ -4,7 +4,10 @@
 	--callout-text: #cccccc;
 	--callout-heading: #e4eaff;
 }
-/* --- Simplified and Modernized Callout Styles --- */
+
+/* =========================
+   Base Callout Container
+   ========================= */
 
 .callout {
 	background: var(--callout-bg);
@@ -15,108 +18,141 @@
 	overflow: hidden;
 	width: 100%;
 	margin: var(--space-md) 0;
-	padding: 0 var(--space-md) var(--space-md);
+
+	/* IMPORTANT: padding handled by children */
+	padding: 0;
 }
 
-.callout h3 {
-	margin: -14px -11px;
-	padding: 0.9rem 1rem;
-	max-width: none;
-	background: linear-gradient(90deg, #1ea2ad, #4c7fb8);
-	color: #000;
+/* =========================
+   Callout Header (full-bleed)
+   ========================= */
 
-	border-radius: var(--radius-panel) var(--radius-panel) 0 0;
+.callout > h3 {
+	margin: 0;
+	padding: 0.9rem 1rem;
+
+	background: linear-gradient(90deg, #1ea2ad, #4c7fb8);
+	color: #e4eaff;
+
 	font-family: "Kode Mono", monospace;
 	letter-spacing: 0.03em;
+
+	/* opt out of global text constraints */
+	max-width: none;
 }
 
-.callout > p {
+/* =========================
+   Callout Content (constrained)
+   ========================= */
+
+.callout > :not(h3) {
 	max-width: 60ch;
 	margin-left: auto;
 	margin-right: auto;
+	padding: 0 var(--space-md);
 }
 
-/* Optional: If you want a different accent for ordered lists */
+.callout > :not(h3):first-of-type {
+	margin-top: var(--space-md);
+}
+
+.callout > :last-child {
+	padding-bottom: var(--space-md);
+}
+
+/* =========================
+   Lists inside callouts
+   ========================= */
+
+.callout ul,
 .callout ol {
-	list-style: decimal inside;
-	padding-left: 1em;
-	margin: 0;
+	padding-left: 1.2em;
+	margin: 0.5em auto;
 }
 
 .callout ul {
-	list-style: disc inside;
-	padding-left: 1em;
-	margin: 0;
+	list-style: disc;
 }
 
-/* For headings inside callout */
-.callout h3,
+.callout ol {
+	list-style: decimal;
+}
+
+/* =========================
+   Additional Headings
+   ========================= */
+
 .callout h4,
 .callout h5 {
-	margin-bottom: 0.7em;
+	margin-top: 1em;
+	margin-bottom: 0.6em;
 	color: var(--callout-heading);
 }
 
-/* Title for special callouts */
+/* =========================
+   Title-style callouts (optional)
+   ========================= */
+
 .callouttitle {
-	margin: 0 0 0.7em 0;
-	padding: 0.4em 1em;
+	margin: 0;
+	padding: 0.5em 1em;
 	background: #222;
-	border-radius: 5px 5px 0 0;
 	border-bottom: 1px solid #333;
 	color: #f8faff;
 	font-weight: bold;
 }
 
-/* Responsive tweaks */
-@media (max-width: 700px) {
-	.callout {
-		padding: 1em 0.5em;
-		font-size: 1em;
-	}
-}
-
-/* Utility for images inside callouts */
-.callout img {
-	max-width: 100%;
-	margin: 1em 0;
-	border-radius: 5px;
-	display: block;
-}
-
-/* Example for warning/info/success callout variants */
-.callout.warning {
-	border-left-color: #ffa726;
-	background: #3a2d15;
-}
-.callout.success {
-	border-left-color: #66bb6a;
-	background: #21321d;
-}
-.callout.info {
-	border-left-color: #42a5f5;
-	background: #232b36;
-}
+/* =========================
+   Buttons inside callouts
+   ========================= */
 
 .callout .button {
 	display: block;
 	margin-inline: auto;
-	max-width: clamp(240px, 60%, 420px);
 	margin-top: 1.2em;
+	max-width: clamp(240px, 60%, 420px);
 }
 
 .callout .button--primary {
 	box-shadow: 0 6px 20px -10px rgba(30, 162, 173, 0.8);
 }
 
-/*
-.callout > *:last-child {
-	margin-bottom: 0;
-}
-*/
+/* =========================
+   Media
+   ========================= */
 
-@media (min-width: 700px) {
-	.callout h3 {
-		margin: 0 -20px 13px -20px;
+.callout img {
+	max-width: 100%;
+	margin: 1em auto;
+	border-radius: 5px;
+	display: block;
+}
+
+/* =========================
+   Variants
+   ========================= */
+
+.callout.info {
+	border-left-color: #42a5f5;
+	background: #232b36;
+}
+
+.callout.success {
+	border-left-color: #66bb6a;
+	background: #21321d;
+}
+
+.callout.warning {
+	border-left-color: #ffa726;
+	background: #3a2d15;
+}
+
+/* =========================
+   Responsive
+   ========================= */
+
+@media (max-width: 700px) {
+	.callout {
+		font-size: 1em;
 	}
 }
