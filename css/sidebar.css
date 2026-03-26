@@ -2,7 +2,7 @@
 	--sidebar-width: clamp(160px, 20vw, 220px);
 	--sidebar-width-desktop: 187px;
 	--sidebar-gap: 3px;
-	}
+}
 
 /* --- SIDEBAR LAYOUT --- */
 .sidenav {
@@ -136,7 +136,7 @@
 }
 .dropdown-btn.active .caret,
 .dropdown-btn[aria-expanded="true"] .caret {
-	transform: rotate(90deg);
+	transform: rotate(90deg) !important;
 }
 
 /* --- SUBHEADER DROPDOWN BUTTONS --- */
