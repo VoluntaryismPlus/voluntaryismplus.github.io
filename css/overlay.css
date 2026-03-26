@@ -163,7 +163,7 @@ body.overlay-open .overlay {
 
 /* --- TOPNAV (HAMBURGER LEFT, TEXT CENTER, LOGO RIGHT) --- */
 .topnav {
-	display: flex;
+	display: none;
 	align-items: center;
 	justify-content: space-between;
 	padding: 0 0.4rem; /* only horizontal padding */
@@ -283,6 +283,9 @@ body.overlay-open .overlay-content ul li {
 	}
 	.overlay li {
 		font-size: 3.4vw;
+	}
+	.topnav {
+		display: flex;
 	}
 }
 @media (max-width: 250px) {
